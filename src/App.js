@@ -2,8 +2,9 @@ import './App.css';
 
 const App = () => {
   return (
-    <div >
-    </div>
+    <h1 >
+      hola
+    </h1>
   );
 }
 
