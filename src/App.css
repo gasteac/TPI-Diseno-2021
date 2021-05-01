@@ -1,0 +1,59 @@
+:root {
+    --rosa1: #B3BCE8;
+    --rosa2: #8E97C8;
+    --violetaOscuro2: #50628C;
+}
+
+h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 1rem auto;
+}
+
+.bg-violetaOscuro-2 {
+    background-color: var(--violetaOscuro2);
+}
+.bg-rosa1 {
+    background-color: var(--rosa1);
+}
+.bg-rosa2 {
+    background-color: var(--rosa2);
+}
+.text-white {
+    color: white;
+}
+
+.siimple-card-body {
+    border-top: 0;
+}
+
+#border-cero div {
+    border: 0px;
+}
+
+
+.logo {
+    max-height: 100%;
+}
+
+.siimple-card-header {
+    border-top-right-radius: 16px!important;
+    border-top-left-radius: 16px!important;
+}
+
+.textButtonsCard {
+    text-align: center;
+}
+
+.buttonsCard {
+    border-radius: 16px;
+    min-height: 180px;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 1rem;
+}
