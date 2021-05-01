@@ -2,4 +2,4 @@
 ## Instalar dependencias
 - Luego de clonar el repositorio, dentro de la carpeta ejecutar el comando.
 
-###npm install
+### npm install
