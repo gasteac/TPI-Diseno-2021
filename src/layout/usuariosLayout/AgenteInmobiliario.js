@@ -13,11 +13,11 @@ const AgenteInmobiliario = () => {
           </div>
           <div className="siimple-grid-col siimple-grid-col--6">
             <div className="siimple-grid-row siimple--display-flex" style={{justifyContent:"space-evenly"}}>
-              <ButtonCard />
-              <ButtonCard />
+              <ButtonCard usuario={'agente-inmobiliario'} seccion={'Agenda'}/>
+              <ButtonCard usuario={'agente-inmobiliario'} seccion={'Agenda'}/>
             </div>
             <div className="siimple-grid-row siimple--display-flex"  style={{justifyContent:"center"}}>
-              <ButtonCard />
+              <ButtonCard usuario={'agente-inmobiliario'} seccion={'Agenda'}/>
             </div>
           </div>
         </div>
