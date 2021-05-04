@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "./NavBar";
 
-const Layout = ({items, ...props}) => {
+const Layout = ({items, usuario, ...props}) => {
   return (
     <>
-      <NavBar items={items}/>
+      <NavBar items={items} usuario={usuario} />
       <main>{props.children}</main>
     </>
   );
