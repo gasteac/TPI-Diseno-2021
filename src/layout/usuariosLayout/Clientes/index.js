@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../Layout";
-import Buscador from "./components/Buscador";
 import Container from "./components/Container";
+import Buscador from "./components/Buscador";
 
 const Clientes = () => {
   return (
