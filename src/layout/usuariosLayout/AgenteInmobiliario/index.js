@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../Layout";
-import Notificaciones from "../../components/Notificaciones";
-import ButtonCard from "../../components/ButtonCard";
+import Layout from "../../Layout";
+import Notificaciones from "../../../components/Notificaciones";
+import ButtonCard from "../../../components/ButtonCard";
 
 const AgenteInmobiliario = () => {
 

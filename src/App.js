@@ -1,6 +1,6 @@
 import "./App.css";
-import AgenteInmobiliario from "./layout/usuariosLayout/AgenteInmobiliario";
 import Login from "./components/Login";
+import AgenteInmobiliario from "./layout/usuariosLayout/AgenteInmobiliario/";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
