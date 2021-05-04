@@ -1,14 +1,12 @@
 import { useMemo } from "react";
-import MOCK_DATA from './MOCK_DATA.json';
-import { COLUMNS } from './columns';
 import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination } from "react-table";
 import GlobalFilter from "./GlobalFilter";
 import ColumnFilter from "./ColumnFilter";
 
-export default function Table() {
+export default function Table({ columnas, datos }) {
 
-    const columns = useMemo(() => COLUMNS, [])
-    const data = useMemo(() => MOCK_DATA, [])
+    const columns = useMemo(() => columnas, [])
+    const data = useMemo(() => datos, [])
 
     const defaultColumn = useMemo(() => {
         return {
