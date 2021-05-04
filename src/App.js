@@ -1,8 +1,10 @@
 import "./App.css";
 import Login from "./components/Login";
 import AgenteInmobiliario from "./layout/usuariosLayout/AgenteInmobiliario/";
-import Clientes from './layout/usuariosLayout/Clientes/';
 import Agenda from "./layout/usuariosLayout/AgenteInmobiliario/views/Agenda";
+
+import Clientes from './layout/usuariosLayout/Clientes/';
+import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos";
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 
@@ -13,7 +15,11 @@ const App = () => {
         <Route exact path="/" component={Login} />
         <Route exact path="/agente-inmobiliario/inicio" component={AgenteInmobiliario} />
         <Route exact path="/agente-inmobiliario/Agenda" component={Agenda} />
+
+        { /* Clientes */}
         <Route exact path="/clientes/inicio" component={Clientes} />
+        <Route exact path="/clientes/quienessomos" component={QuienesSomos} />
+
         
         <Redirect to="/"/>
       </Switch>
