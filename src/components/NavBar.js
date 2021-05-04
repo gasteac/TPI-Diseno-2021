@@ -9,8 +9,8 @@ const NavBar = ({items, usuario}) => {
         <img className="logo" src={Logo} alt="logo" />
       </a>
       <div className="siimple--float-right">
-        {items.map(item => (
-            <Link to={`/${usuario}/${item}`} className="siimple-navbar-item">{item}</Link>
+        {items && items.map(item => (
+            <Link to={`/${usuario}/${item.toLowerCase()}`} className="siimple-navbar-item">{item}</Link>
         ))}
       </div>
     </div>
