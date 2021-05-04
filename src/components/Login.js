@@ -1,12 +1,13 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
-    return (
-        <Link to="/agente-inmobiliario">
-            Agente Inmobiliario
-        </Link>
-    )
-}
+  return (
+    <>
+      <Link to="/agente-inmobiliario/inicio">Agente Inmobiliario</Link>
+      <Link to="/clientes/inicio">Clientes</Link>
+    </>
+  );
+};
 
-export default Login
+export default Login;

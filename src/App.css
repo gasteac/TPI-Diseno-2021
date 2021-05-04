@@ -40,9 +40,9 @@ h1, h2 {
     width: 100%;
 }
 
-.navbar {
+/* .navbar {
     height: 163px;
-}
+} */
 
 .siimple-card-header {
     border-top-right-radius: 16px!important;
@@ -62,4 +62,31 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     margin: 1rem 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+.input-icons img {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+}
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    min-height: 44px;
 }
