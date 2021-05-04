@@ -1,7 +1,10 @@
 import { useMemo } from "react";
-import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination } from "react-table";
-import GlobalFilter from "./GlobalFilter";
-import ColumnFilter from "./ColumnFilter";
+import { useTable, useSortBy, useGlobalFilter, useFilters, usePagination, useRowSelect } from "react-table";
+import GlobalFilter from "./components/GlobalFilter";
+import ColumnFilter from "./components/ColumnFilter";
+import { Checkbox } from "./components/Checkbox";
+import Delete from "./components/Delete";
+import ModifyState from "./components/ModifyState";
 
 export default function Table({ columnas, datos }) {
 
@@ -19,7 +22,24 @@ export default function Table({ columnas, datos }) {
         data,
         defaultColumn,
     },
-    useFilters ,useGlobalFilter, useSortBy, usePagination)
+    useFilters ,useGlobalFilter, useSortBy, usePagination, useRowSelect, 
+    (hooks) => {
+        hooks.visibleColumns.push((columns) => {
+            return [
+                {
+                    id: 'selection',
+                    Header: ({ getToggleAllRowsSelectedProps }) => (
+                        <Checkbox {...getToggleAllRowsSelectedProps()} />
+                    ),
+                    Cell: ({ row }) => (
+                        <Checkbox {...row.getToggleRowSelectedProps()} />
+                    )
+                },
+                ...columns,
+            ]
+        })
+    }
+    )
 
     const { 
         getTableProps, 
@@ -34,6 +54,7 @@ export default function Table({ columnas, datos }) {
         canNextPage,
         canPreviousPage,
         pageOptions,
+        selectedFlatRows
     } = tableInstance
 
     const { globalFilter, pageIndex } = state
@@ -85,7 +106,20 @@ export default function Table({ columnas, datos }) {
                     <strong>{pageIndex + 1} of {pageOptions.length}</strong>{' '}
                 </span>
                 <button onClick={() => nextPage()} disabled={!canNextPage}>Next</button>
+                {/* <Delete itemsToDelete={selectedFlatRows} items={datos} />
+                <ModifyState itemsToModifyState={selectedFlatRows} items={datos} /> */}
             </div>
+            <pre>
+                <code>
+                    {JSON.stringify(
+                        {
+                            selectedFlatRows: selectedFlatRows.map((row) => row.original),
+                        },
+                        null,
+                        2
+                    )}
+                </code>
+            </pre>
         </>
     );
 }
