@@ -1,26 +1,30 @@
+import { format } from 'date-fns';
+import ColumnFilter from './ColumnFilter';
+
 export const COLUMNS = [
     {
         Header: 'Id',
-        accessor: 'id'
+        accessor: 'id',
     },
     {
         Header: 'Nombre',
-        accessor: 'first_name'
+        accessor: 'first_name',
     },
     {
         Header: 'Apellido',
-        accessor: 'last_name'
+        accessor: 'last_name',
     },
     {
         Header: 'E-mail',
-        accessor: 'email'
+        accessor: 'email',
     },
     {
-        Header: 'Fecha(M/D/A)',
-        accessor: 'date'
+        Header: 'Fecha',
+        accessor: 'date',
+        Cell: ({ value }) => { return format(new Date(Number(value)), 'dd/MM/yyyy HH:mm')},
     },
     {
         Header: 'Estado',
-        accessor: 'state'
+        accessor: 'state',
     }
 ]

@@ -12,7 +12,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/agente-inmobiliario/inicio" component={AgenteInmobiliario} />
-        <Route exact path="/agente-inmobiliario/Agenda" component={Agenda} />
+        <Route exact path="/agente-inmobiliario/agenda" component={Agenda} />
         <Route exact path="/clientes/inicio" component={Clientes} />
         
         <Redirect to="/"/>
