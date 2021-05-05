@@ -25,6 +25,12 @@ h1, h2 {
     color: white;
 }
 
+a { text-decoration: none; color: #fff; }
+a:visited { text-decoration: none; color: #fff; }
+a:hover { text-decoration: none; color: #fff; }
+a:focus { text-decoration: none; color: #fff; }
+a:hover, .a:active { text-decoration: none; color: #fff; }
+
 .siimple-card-body {
     border-top: 0;
 }
