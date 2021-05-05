@@ -3,7 +3,7 @@
 {"id":3,"nombre":"Trumpeter, green-winged","precio":352828,"tipo":"chalet","ubicacion":"8001 Anderson Alley","habitaciones":10,"baños":4,"m2totales":93},
 {"id":4,"nombre":"Swallow-tail gull","precio":497122,"tipo":"departamento","ubicacion":"9875 Swallow Center","habitaciones":7,"baños":4,"m2totales":500},
 {"id":5,"nombre":"Sidewinder","precio":130310,"tipo":"local","ubicacion":"1 Toban Crossing","habitaciones":5,"baños":4,"m2totales":112},
-{"id":6,"nombre":"European badger","precio":426222,"tipo":"chalet","ubicacion":"4269 Mifflin Street","habitaciones":10,"baños":10,"m2totales":350},
+{"id":6,"nombre":"Gaston Mendez","precio":426222,"tipo":"chalet","ubicacion":"4269 Mifflin Street","habitaciones":10,"baños":10,"m2totales":350},
 {"id":7,"nombre":"White rhinoceros","precio":264975,"tipo":"chalet","ubicacion":"05 Donald Lane","habitaciones":9,"baños":6,"m2totales":370},
 {"id":8,"nombre":"Squirrel, thirteen-lined","precio":300992,"tipo":"casa con local","ubicacion":"37 Esker Drive","habitaciones":1,"baños":4,"m2totales":273},
 {"id":9,"nombre":"Red squirrel","precio":344620,"tipo":"cochera","ubicacion":"1494 Eastwood Parkway","habitaciones":4,"baños":1,"m2totales":160},
