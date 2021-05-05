@@ -5,7 +5,7 @@ import Agenda from "./layout/usuariosLayout/AgenteInmobiliario/views/Agenda";
 import Propiedades from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades";
 
 import Clientes from './layout/usuariosLayout/Clientes/';
-import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos";
+import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos/";
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 
