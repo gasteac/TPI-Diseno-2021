@@ -17,13 +17,13 @@ export default function ListaPropiedades({ propiedades }) {
 
     const propiedadesFiltradas = propiedades.filter(propiedad => { 
 
-        const nombreBool = propiedad.nombre.toLowerCase().includes(nombre.toLowerCase()) || (nombre.length === 0);
-        const precioBool = (propiedad.precio < precioMayor && propiedad.precio > precioMenor);
-        const tipoBool = (tipo === propiedad.tipo) || (tipo.length === 0)
-        const ubicacionBool = (propiedad.ubicacion.toLowerCase().includes(ubicacion.toLowerCase())) || (ubicacion.length === 0);
-        const habitacionesBool = (Number(habitaciones) === propiedad.habitaciones) || (Number(habitaciones) === 0);
-        const bañosBool = (Number(baños) === propiedad.baños) || (Number(baños) === 0);
-        const m2Bool = (propiedad.m2totales < m2TotalesMayor && propiedad.m2totales > m2TotalesMenor);
+        const nombreBool = propiedad.tituloPropiedad.toLowerCase().includes(nombre.toLowerCase()) || (nombre.length === 0);
+        const precioBool = (propiedad.DatosDelInmueble.precio < precioMayor && propiedad.DatosDelInmueble.precio > precioMenor);
+        const tipoBool = (tipo === propiedad.DatosDelInmueble.tipo) || (tipo.length === 0)
+        const ubicacionBool = (propiedad.DatosDelInmueble.direccion.toLowerCase().includes(ubicacion.toLowerCase())) || (ubicacion.length === 0);
+        const habitacionesBool = (Number(habitaciones) === propiedad.DatosDelInmueble.habitaciones) || (Number(habitaciones) === 0);
+        const bañosBool = (Number(baños) === propiedad.DatosDelInmueble.banios) || (Number(baños) === 0);
+        const m2Bool = (propiedad.DatosDelInmueble.metrosCuadrados < m2TotalesMayor && propiedad.DatosDelInmueble.metrosCuadrados > m2TotalesMenor);
         
         return (nombreBool &&
         precioBool &&

@@ -1,33 +1,62 @@
 import PropiedadImg from "./../../../../../../../../static/images/Propiedad.svg";
 import Avatar from "./../../../../../../../../static/images/Avatar.svg";
-import './Propiedades.css';
+import { Card, Col, Container, Row } from "react-bootstrap";
+import GridPropiedadesGenerator from "./GridGenerator";
 
 export default function Propiedades({ propiedades }) {
+  const codPropiedades = propiedades.map((propiedad) => (
+    <Card style={{ width: "18rem" }} key={propiedad._id}>
+      <Card.Img variant="top" src={PropiedadImg} />
+      <Card.Body>
+        <Card.Title>
+          {propiedad.tituloPropiedad}, {propiedad.DatosDelInmueble.direccion}
+        </Card.Title>
+        <Card.Text>
+          <span className="font-weight-bold">
+            {propiedad.DatosDelInmueble.precio} USD
+          </span>
+            {" + "}
+          <span className="font-weight-light">
+            {propiedad.DatosDelInmueble.expensas} USD expensas
+          </span>
+        </Card.Text>
+        <Card.Text className="d-flex justify-content-around">
+          <div>
+            <span class="font-weight-bold">
+              {propiedad.DatosDelInmueble.metrosCuadrados}
+            </span>{" "}
+            m2 totales{" "}
+          </div>
+          <div>
+            <span class="font-weight-bold">
+              {propiedad.DatosDelInmueble.metrosCuadradosCubiertos}
+            </span>{" "}
+            Cubiertos
+          </div>
+        </Card.Text>
+        <Card.Text className="d-flex justify-content-around">
+          <div>
+            <span class="font-weight-bold">
+              {propiedad.DatosDelInmueble.espacios}
+            </span>{" "}
+            ambientes{" "}
+          </div>
+          <div>
+            <span class="font-weight-bold">
+              {propiedad.DatosDelInmueble.banios}
+            </span>{" "}
+            baños
+          </div>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  ));
 
-    const codPropiedades = propiedades.map(propiedad => (
-        <div key={propiedad.id} className='card'>
-            <img src={PropiedadImg} alt='imagen propiedad' />
-            <div>
-                <h5>{propiedad.nombre}, {propiedad.ubicacion}</h5>
-                <p>{propiedad.precio} USD</p>
-                <div className='desc'>
-                    <div className='desc1'>
-                        <p>{propiedad.m2totales} m2totales</p>
-                        <p>{propiedad.habitaciones}</p>
-                    </div>
-                    <div className='desc1'>
-                    <p>{propiedad.tipo}</p>
-                    <p>{propiedad.baños}</p>
-                    </div>
-                    <img src={Avatar} alt='profile'/>
-                </div>
-            </div>
-        </div>
-    ))
-
-    return (
-        <div className='cards'>
+  return (
+    <Container fluid="md">
+      <GridPropiedadesGenerator cols={3}>
         {codPropiedades}
-        </div>
-    );
+      </GridPropiedadesGenerator>
+    </Container>
+  );
 }
