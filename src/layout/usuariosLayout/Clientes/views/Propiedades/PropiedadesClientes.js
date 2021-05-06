@@ -5,6 +5,7 @@ import propiedades from '../../../../../assets/propiedades.json';
 
 
 const PropiedadesClientes = () => {
+    document.querySelector('body').style.background = ''
     return (
         <Layout
         items={["Inicio", "Propiedades", "Programar Cita", "¿Quienes somos?"]}

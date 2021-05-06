@@ -6,9 +6,9 @@ import {
 import { Link } from "react-router-dom";
 import Logo from "../static/images/inmoviliaria-1.svg";
 
-const NavBar = ({ items, usuario }) => {
+const NavBar = ({ items, usuario, cliente }) => {
   return (
-    <Navbar bg="dark" expand="lg">
+    <Navbar bg={cliente ? "" : "dark"} expand="lg">
       <Navbar.Brand>
         <Link to="/">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
@@ -22,11 +22,12 @@ const NavBar = ({ items, usuario }) => {
             items.map((item) => (
               <Nav.Link>
                 <Link
+                
                   to={`/${usuario}/${item
                     .toLowerCase()
                     .replace(" ", "")
                     .replace("¿", "")}`}
-                  style={{ textDecoration: "none" }}
+                  style={{color: cliente? "black" : "white", textDecoration: "none" }}
                 >
                   {item}
                 </Link>

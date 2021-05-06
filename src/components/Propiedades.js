@@ -1,8 +1,14 @@
 import PropiedadImg from "../static/images/Propiedad.svg";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row, Button, Image } from "react-bootstrap";
 import GridPropiedadesGenerator from "./GridGenerator";
+import Filter from "./Filter";
+import configure from '../static/images/Configure.svg'
+import { useState } from "react";
 
 export default function Propiedades({ propiedades }) {
+   
+  const [show, setShow] = useState(false);
+  
   const codPropiedades = propiedades.map((propiedad) => (
     <Card style={{ width: "18rem" }} key={propiedad._id}>
       <Card.Img variant="top" src={PropiedadImg} />
@@ -51,8 +57,29 @@ export default function Propiedades({ propiedades }) {
     </Card>
   ));
 
+  const handleShow = (show) => (
+    setShow(show)
+  )
+
+
   return (
-    <Container fluid="md">
+    <Container fluid className="position-relative" >
+      <Filter
+        setNombre={() => {}}
+        setPrecioMayor={() => {}}
+        setPrecioMenor={() => {}}
+        setTipo={() => {}}
+        setUbicacion={() => {}}
+        setHabitaciones={() => {}}
+        setBaños={() => {}}
+        setM2TotalesMayor={() => {}}
+        setM2TotalesMenor={() => {}}
+        show={show}
+        handleShow={handleShow}
+      />
+      <Button variant="outline-primary mt-3 ml-3" style={{width: "120px"}} onClick={() => handleShow(true)}>
+        <Image src={configure} />
+      </Button>
       <GridPropiedadesGenerator cols={3}>
         {codPropiedades}
       </GridPropiedadesGenerator>
