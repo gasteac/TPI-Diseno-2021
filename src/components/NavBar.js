@@ -8,7 +8,7 @@ import Logo from "../static/images/inmoviliaria-1.svg";
 
 const NavBar = ({ items, usuario, cliente }) => {
   return (
-    <Navbar bg={cliente ? "" : "dark"} expand="lg">
+    <Navbar style={{backgroundColor: cliente ? "" : "#50628C"}} expand="lg">
       <Navbar.Brand>
         <Link to="/">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
