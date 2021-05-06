@@ -1,5 +1,4 @@
-import PropiedadImg from "./../../../../../../../../static/images/Propiedad.svg";
-import Avatar from "./../../../../../../../../static/images/Avatar.svg";
+import PropiedadImg from "../static/images/Propiedad.svg";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import GridPropiedadesGenerator from "./GridGenerator";
 

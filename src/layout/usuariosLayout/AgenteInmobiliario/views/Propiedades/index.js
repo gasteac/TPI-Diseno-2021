@@ -1,6 +1,6 @@
 import Layout from '../../../../Layout';
-import propiedades from './assets/propiedades.json';
-import ListaPropiedades from './components/ListaPropiedades';
+import propiedades from '../../../../../assets/propiedades.json';
+import ListaPropiedades from '../../../../../components/ListaPropiedades';
 
 export default function Propiedades() {
     const usuario = 'agente-inmobiliario';

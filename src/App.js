@@ -6,6 +6,8 @@ import Propiedades from "./layout/usuariosLayout/AgenteInmobiliario/views/Propie
 
 import Clientes from './layout/usuariosLayout/Clientes/';
 import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos/";
+import PropiedadesClientes from "./layout/usuariosLayout/Clientes/views/Propiedades/PropiedadesClientes";
+
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 
@@ -20,6 +22,7 @@ const App = () => {
 
         { /* Clientes */}
         <Route exact path="/clientes/inicio" component={Clientes} />
+        <Route exact path="/clientes/propiedades" component={PropiedadesClientes} />
         <Route exact path="/clientes/quienessomos" component={QuienesSomos} />
 
         
