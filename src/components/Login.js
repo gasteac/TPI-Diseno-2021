@@ -3,7 +3,7 @@ import { Container, Form, Jumbotron, Button, Col, Row, Image } from "react-boots
 import Logo from '../static/images/inmoviliaria-1.svg'
 
 const Login = ({history}) => {
-  document.querySelector("body").style.background = "#FAFAFA";
+  document.querySelector("body").style.background = "#2B3860";
   const [login, setLogin] = useState(localStorage.setItem('user',''))
   const [bandera, setBandera] = useState(false);
   const handleSubmit = (e) => {
@@ -15,9 +15,11 @@ const Login = ({history}) => {
     }
     if (login?.includes('cliente')) {
       history.push('/clientes/inicio')
+      document.querySelector('body').style.background = ''
     }
     if (login?.includes('agente')) {
       history.push('/agente-inmobiliario/inicio')
+      document.querySelector('body').style.background = ''
     }
     localStorage.setItem('user', login)
   };
