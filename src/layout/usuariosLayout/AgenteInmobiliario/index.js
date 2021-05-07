@@ -4,23 +4,31 @@ import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
 
 const AgenteInmobiliario = () => {
-
-  const usuario = 'agente-inmobiliario';
+  const usuario = "agente-inmobiliario";
 
   return (
-    <Layout items={["Inicio", "Clientes", "Agenda", "Propiedades"]} usuario={usuario}>
+    <Layout
+      items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
+      usuario={usuario}
+    >
       <div className="container-fluid">
+        {/* parte izquierda */}
         <div className="row">
-          <div className="col mt-5">
+          <div className="col-5 mt-5">
             <Notificaciones />
           </div>
-          <div className="col">
-            <div className="siimple-grid-row siimple--display-flex" style={{justifyContent:"space-evenly"}}>
-              <ButtonCard usuario={usuario} seccion={'Agenda'}/>
-              <ButtonCard usuario={usuario} seccion={'Propiedades'}/>
-            </div>
-            <div className="siimple-grid-row siimple--display-flex"  style={{justifyContent:"center"}}>
-              <ButtonCard usuario={usuario} seccion={'Clientes'}/>
+          {/* parte derecha */}
+          <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
+            <div className="row">
+              <div className="col">
+                <ButtonCard usuario={usuario} seccion={"Agenda"} />
+              </div>
+              <div className="col">
+                <ButtonCard usuario={usuario} seccion={"Propiedades"} />
+              </div>
+              <div className="col">
+                <ButtonCard usuario={usuario} seccion={"Clientes"} />
+              </div>
             </div>
           </div>
         </div>
