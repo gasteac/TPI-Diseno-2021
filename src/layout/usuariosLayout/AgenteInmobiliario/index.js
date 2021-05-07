@@ -10,12 +10,12 @@ const AgenteInmobiliario = ({history}) => {
 
   return (
     <Layout items={["Inicio", "Clientes", "Agenda", "Propiedades"]} usuario={usuario}>
-      <div className="siimple-grid siimple--ml-3">
-        <div className="siimple-grid-row">
-          <div className="siimple-grid-col siimple-grid-col--6">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col mt-5">
             <Notificaciones />
           </div>
-          <div className="siimple-grid-col siimple-grid-col--6">
+          <div className="col">
             <div className="siimple-grid-row siimple--display-flex" style={{justifyContent:"space-evenly"}}>
               <ButtonCard usuario={usuario} seccion={'Agenda'}/>
               <ButtonCard usuario={usuario} seccion={'Propiedades'}/>
