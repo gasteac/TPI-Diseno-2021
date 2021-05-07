@@ -10,13 +10,13 @@ export default function Propiedades({ propiedades }) {
   const [show, setShow] = useState(false);
   
   const codPropiedades = propiedades.map((propiedad) => (
-    <Card style={{ width: "18rem" }} key={propiedad._id}>
+    <Card className='shadow mb-3' style={{ width: "18rem", borderRadius:'12px', alignContent:'center', boxShadow:''}} key={propiedad._id}>
       <Card.Img variant="top" src={PropiedadImg} />
       <Card.Body>
         <Card.Title>
           {propiedad.tituloPropiedad}, {propiedad.DatosDelInmueble.direccion}
         </Card.Title>
-        <Card.Text>
+        <Card.Text className="d-flex justify-content-around">
           <span className="font-weight-bold">
             {propiedad.DatosDelInmueble.precio} USD
           </span>
@@ -77,7 +77,7 @@ export default function Propiedades({ propiedades }) {
         show={show}
         handleShow={handleShow}
       />
-      <Button variant="outline-primary mt-3 ml-3" style={{width: "120px"}} onClick={() => handleShow(true)}>
+      <Button variant="outline-primary mt-3 ml-6" style={{width: "120px", border:'1px solid #50628C', background:'#50628C'}} onClick={() => handleShow(true)}>
         <Image src={configure} />
       </Button>
       <GridPropiedadesGenerator cols={3}>
