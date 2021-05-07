@@ -4,15 +4,13 @@ import imagenes from './../static/imagenes.js';
 
 
 const ButtonCard = ({ usuario, seccion }) => {
-
-
   return (
-    <div className="buttonsCard siimple-card siimple--display-inline-block bg-rosa1">
-      <div className="buttonsCard">
+    <div className="">
+      <div className="buttonsCard bg-rosa1">
         <div>
           <img src={imagenes[seccion]} alt="agenda logo" />
         </div>
-        <div className="textButtonsCard">
+        <div className="">
           <Link to={`/${usuario}/${seccion}`}>
             <h4>{seccion}</h4>
           </Link>
