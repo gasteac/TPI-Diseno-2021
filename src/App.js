@@ -10,6 +10,7 @@ import PropiedadesClientes from "./layout/usuariosLayout/Clientes/views/Propieda
 
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import { useEffect } from "react";
 
 const App = () => {
   return (
