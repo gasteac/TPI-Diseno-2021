@@ -3,7 +3,7 @@ import { Container, Form, Jumbotron, Button, Col, Row, Image } from "react-boots
 import Logo from '../static/images/inmoviliaria-1.svg'
 
 const Login = ({history}) => {
-  document.querySelector("body").style.background = "#2B3860";
+  document.querySelector("body").style.background = "#FAFAFA";
   const [login, setLogin] = useState(localStorage.setItem('user',''))
   const handleSubmit = (e) => {
     e.preventDefault()
