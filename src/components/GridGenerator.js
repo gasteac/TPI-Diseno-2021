@@ -2,7 +2,7 @@ import React from "react";
 import {chunk} from 'lodash'
 import {Col, Row } from "react-bootstrap";
 
-const GridPropiedadesGenerator = ({ cols, propiedades, children }) => {
+const GridPropiedadesGenerator = ({ cols, children }) => {
   const colWidth = 12 / cols;
   const rows = chunk(React.Children.toArray(children), cols);
   return (

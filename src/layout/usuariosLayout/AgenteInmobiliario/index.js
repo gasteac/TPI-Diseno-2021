@@ -3,9 +3,10 @@ import Layout from "../../Layout";
 import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
 
-const AgenteInmobiliario = () => {
+const AgenteInmobiliario = ({history}) => {
 
   const usuario = 'agente-inmobiliario';
+  
 
   return (
     <Layout items={["Inicio", "Clientes", "Agenda", "Propiedades"]} usuario={usuario}>
