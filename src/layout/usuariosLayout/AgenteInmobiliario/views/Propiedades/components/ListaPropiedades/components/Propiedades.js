@@ -16,8 +16,8 @@ export default function Propiedades({ propiedades }) {
                         <p>{propiedad.habitaciones}</p>
                     </div>
                     <div className='desc1'>
-                    <p>{propiedad.tipo}</p>
-                    <p>{propiedad.baños}</p>
+                        <p>{propiedad.tipo}</p>
+                        <p>{propiedad.baños}</p>
                     </div>
                     <img src={Avatar} alt='profile'/>
                 </div>
