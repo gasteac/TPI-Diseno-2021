@@ -190,7 +190,7 @@ const FormCita = () => {
               value={hora}
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" className="ml-auto">
             Programar
           </Button>
         </Form>
