@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Form, Jumbotron, Button, Col, Row, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Logo from '../static/images/inmoviliaria-1.svg'
 
 const Login = ({history}) => {
