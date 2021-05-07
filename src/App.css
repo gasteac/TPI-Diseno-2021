@@ -8,9 +8,7 @@ h3, h4, h5, h6 {
     margin: 0;
 }
 
-h1, h2 {
-    margin: 1rem auto;
-}
+
 
 .bg-violetaOscuro-2 {
     background-color: var(--violetaOscuro2);
@@ -87,7 +85,7 @@ a:hover, .a:active { text-decoration: none; color: #fff; }
 }
   
 .icon {
-    padding: 10px;
+    padding: 7px;
 }
   
 .input-field {
@@ -95,4 +93,13 @@ a:hover, .a:active { text-decoration: none; color: #fff; }
     padding: 10px;
     text-align: center;
     min-height: 44px;
+}
+
+/*Sidebar*/
+.sidebar {
+    position: fixed;
+    top: 86px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
 }

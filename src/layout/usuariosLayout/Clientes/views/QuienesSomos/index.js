@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Layout from "../../../../Layout";
-import Container from "../../components/Container";
+import Fondo from '../../../../../static/images/fondoClientes1.jpg'
+import Descripcion from "./components/Descripcion";
+import LogoJumbotron from "./components/Logo";
 
 const QuienesSomos = () => {
+  
+  document.querySelector('body').style.background = `url(${Fondo})`
+  document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout
       items={["Inicio", "Propiedades", "Programar Cita", "¿Quienes somos?"]}
       usuario={"clientes"}
+      cliente={true}
     >
-      <Container>
-        <div className="siimple-grid">
-          <div className="siimple-grid-row">
-            <div className="siimple-grid-col siimple-grid-col--6">6</div>
-            <div className="siimple-grid-col siimple-grid-col--6">6</div>
-          </div>
-        </div>
+      <Container fluid="md">
+        <Row>
+          <Col>
+              <LogoJumbotron />
+          </Col>
+          <Col>
+            <Descripcion style={{background: "rgba(255,255,255,.7)"}} />
+          </Col>
+        </Row>
       </Container>
     </Layout>
   );

@@ -1,11 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import NavBar from "../components/NavBar";
 
-const Layout = ({items, usuario, ...props}) => {
+const Layout = ({items, usuario, cliente, ...props}) => {
   return (
     <>
-      <NavBar items={items} usuario={usuario} />
-      <main>{props.children}</main>
+      <NavBar items={items} usuario={usuario} cliente={cliente} />
+      {props.children}
     </>
   );
 };

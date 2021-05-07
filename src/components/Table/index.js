@@ -62,7 +62,7 @@ export default function Table({ columnas, datos }) {
     return (
         <>
             <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-            <table {...getTableProps()}>
+            <table {...getTableProps()} className='tabla'>
                 <thead>
                     {
                         headerGroups.map(headerGroup => (
