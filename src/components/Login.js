@@ -29,7 +29,7 @@ const Login = ({history}) => {
   }
   return (
     <>
-      <Container fluid="xs" className="mt-5 mx-auto" style={{maxWidth: "70%"}}>
+      <Container fluid="xs" className="mt-5 mx-auto " style={{maxWidth: "60%"}}>
         <Jumbotron className="p-0">
           <Row>
             <Col
@@ -38,7 +38,7 @@ const Login = ({history}) => {
               style={{
                 display: "grid",
                 justifyContent: "center",
-                background: "#3A4971",
+                background: "",
                 borderTopLeftRadius: ".3rem",
                 borderBottomLeftRadius: ".3rem",
               }}
@@ -46,21 +46,18 @@ const Login = ({history}) => {
               <h1 className="font-weight-bold">Ingresar a Dofus</h1>
               <Form onSubmit={(e) => handleSubmit(e)}>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" onChange={e => handleChange(e)} />
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
+                  <Form.Label>Correo electronico</Form.Label>
+                  <Form.Control type="email" placeholder="example@example.com" onChange={e => handleChange(e)} />
+                  <Form.Text className="text-muted ml-1">
+                    Nunca compartiremos tu contraseña con nadie. 
                   </Form.Text>
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Label>Contraseña</Form.Label>
+                  <Form.Control type="password" placeholder="Contraseña" />
                 </Form.Group>
-                <Form.Group controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" block style={{background:'#8E97C8', border:'none', borderRadius:'9px'}}>
                 Ingresar
                 </Button>
               </Form>

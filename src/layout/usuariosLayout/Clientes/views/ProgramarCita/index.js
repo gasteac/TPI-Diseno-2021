@@ -10,7 +10,7 @@ const ProgramarCitaCliente = () => {
       items={["Inicio", "Propiedades", "Programar Cita", "¿Quienes somos?"]}
       usuario={"clientes"}
     >
-      <Container>
+      <Container className='mt-4 mb-5'>
         <FormCita />
       </Container>
     </Layout>

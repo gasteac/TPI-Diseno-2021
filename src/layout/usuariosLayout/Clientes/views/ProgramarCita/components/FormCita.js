@@ -54,6 +54,7 @@ const FormCita = () => {
     });
   };
   return (
+
     <Card>
       <Card.Header as="h1">Programar Cita</Card.Header>
       <Card.Body>
