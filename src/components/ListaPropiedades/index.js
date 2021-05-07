@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Propiedades from "./Propiedades";
-import Filter from "./Filter";
+import Propiedades from "./components/Propiedades";
+import Filter from "../Filter";
 import { Container } from "react-bootstrap";
 
 export default function ListaPropiedades({ propiedades }) {

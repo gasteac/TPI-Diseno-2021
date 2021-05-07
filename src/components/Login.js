@@ -5,12 +5,18 @@ import Logo from '../static/images/inmoviliaria-1.svg'
 const Login = ({history}) => {
   document.querySelector("body").style.background = "#2B3860";
   const [login, setLogin] = useState(localStorage.setItem('user',''))
+  const [bandera, setBandera] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (login.includes('cliente')) {
+    setBandera(false);
+    if (login?.length === 0) {
+      setBandera(true);
+      return
+    }
+    if (login?.includes('cliente')) {
       history.push('/clientes/inicio')
     }
-    if (login.includes('agente')) {
+    if (login?.includes('agente')) {
       history.push('/agente-inmobiliario/inicio')
     }
     localStorage.setItem('user', login)

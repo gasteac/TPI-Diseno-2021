@@ -1,8 +1,8 @@
-import PropiedadImg from "../static/images/Propiedad.svg";
+import PropiedadImg from "../../../static/images/Propiedad.svg";
 import { Card, Col, Container, Row, Button, Image } from "react-bootstrap";
-import GridPropiedadesGenerator from "./GridGenerator";
-import Filter from "./Filter";
-import configure from '../static/images/Configure.svg'
+import GridPropiedadesGenerator from "../../GridGenerator";
+import Filter from "../../Filter";
+import configure from '../../../static/images/Configure.svg'
 import { useState } from "react";
 
 export default function Propiedades({ propiedades }) {
