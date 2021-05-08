@@ -7,13 +7,13 @@ const { Lupa } = imagenes;
 const Buscador = () => {
   return (
     <Jumbotron style={{background: "rgba(255,255,255,.7)"}}>
-      <h1 className='mb-3'>Encuentra la propiedad perfecta en Dofus 2.0</h1>
+      <h1>Encuentra la propiedad perfecta en Dofus 2.0</h1>
       <InputGroup className="mb-3">
         <InputGroup.Prepend>
           <img src={Lupa} alt="buscador" className="icon" />
         </InputGroup.Prepend>
         <FormControl
-          placeholder="Ingrese aqui la ubicación deseada"
+          placeholder="Username"
           aria-label="Username"
           aria-describedby="basic-addon1"
         />
