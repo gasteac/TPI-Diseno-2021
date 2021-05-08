@@ -6,7 +6,7 @@ const Descripcion = () => {
     <Jumbotron className="text-center" style={{background: "rgba(255,255,255,.7)", minHeight: "100%"}}>
       <h3>SOBRE NOSOTROS</h3>
       <p>
-        Inmobiliaria AR se fundó en el año 1997 en la Ciudad de Corrientes.
+        Dofus 2.0 se fundó en el año 1997 en la Ciudad de Corrientes.
         Tenemos años de experiencia en los que además pudimos perfeccionar
         nuestra atención para poder cubrir todas las necesidades de los
         clientes.
