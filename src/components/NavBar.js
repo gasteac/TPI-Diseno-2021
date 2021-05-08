@@ -11,6 +11,7 @@ const NavBar = ({ cliente }) => {
   const items = {
     cliente: ["Inicio", "Propiedades", "Programar Cita", "¿Quienes Somos?"],
     agenteinmobiliario: ["Inicio", "Clientes", "Agenda", "Propiedades"],
+    secretariacomercializacion: ["Inicio", "Agenda", "Citas"],
   };
 
   const handleClick = (i) => {
