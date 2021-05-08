@@ -81,10 +81,10 @@ const FormCita = () => {
               value={nombre}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              Daaaaaaaaaaaale viejo, no es muy dificil
+              
             </Form.Control.Feedback>
             <Form.Control.Feedback className="feedbackCustom">
-              Bien master! Sabes leer
+              
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="form-group-2" controlId="validationSurName">
@@ -108,10 +108,10 @@ const FormCita = () => {
               value={apellido}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              Daaaaaaaaaaaale viejo, no es muy dificil
+              
             </Form.Control.Feedback>
             <Form.Control.Feedback className="feedbackCustom">
-              Bien master! Sabes leer
+              
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="form-group-2" controlId="validationEmail">
@@ -135,10 +135,10 @@ const FormCita = () => {
               value={email}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              Daaaaaaaaaaaale viejo, no es muy dificil
+              
             </Form.Control.Feedback>
             <Form.Control.Feedback className="feedbackCustom">
-              Bien master! Sabes leer
+              
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group className="form-group-2" controlId="validationTel">
@@ -162,10 +162,10 @@ const FormCita = () => {
               value={telefono}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              Daaaaaaaaaaaale viejo, no es muy dificil
+              
             </Form.Control.Feedback>
             <Form.Control.Feedback className="feedbackCustom">
-              Bien master! Sabes leer
+              
             </Form.Control.Feedback>
           </Form.Group>
 
