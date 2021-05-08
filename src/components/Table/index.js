@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import "./index.css";
 import {
   useTable,
@@ -8,10 +8,11 @@ import {
   usePagination,
   useRowSelect,
 } from "react-table";
+import GlobalFilter from "./components/GlobalFilter";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos, rows=6 }) {
+export default function Table({ columnas, datos }) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -60,22 +61,15 @@ export default function Table({ columnas, datos, rows=6 }) {
     page,
     prepareRow,
     state,
+    setGlobalFilter,
     nextPage,
     previousPage,
     canNextPage,
     canPreviousPage,
     pageOptions,
-    setPageSize,
   } = tableInstance;
-  // eslint-disable-next-line
-  const { globalFilter, pageIndex, pageSize } = state;
 
-  useEffect(() => {
-    setPageSize(rows);
-    // eslint-disable-next-line
-  }, [])
-  
-  // eslint-disable-next-line
+  const { globalFilter, pageIndex } = state;
 
   return (
     <>
@@ -97,7 +91,7 @@ export default function Table({ columnas, datos, rows=6 }) {
                           ? column.isSortedDesc
                             ? " ↓"
                             : " ↑"
-                          : " -"}
+                          : " "}
                       </span>
                     </div>
                     <div>
@@ -112,7 +106,7 @@ export default function Table({ columnas, datos, rows=6 }) {
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()}>
+                <tr className="table" style={{background:'#F5F5F5', textAlign:'center'}} {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     return (
                       <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
