@@ -91,7 +91,7 @@ export default function Table({ columnas, datos }) {
                           ? column.isSortedDesc
                             ? " ↓"
                             : " ↑"
-                          : ". "}
+                          : " "}
                       </span>
                     </div>
                     <div>
