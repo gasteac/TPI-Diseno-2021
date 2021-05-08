@@ -41,6 +41,11 @@ const App = () => {
             path="/agenteinmobiliario/propiedades/agregarpropiedad"
             component={AgregarPropiedad}
           />
+          <Route
+            exact
+            path="/agenteinmobiliario/ListaClientes"
+            component={ListaClientes}
+          />
 
           {/* CLiente-Agente */}
           <Route
