@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import "./index.css";
 import {
   useTable,
@@ -12,7 +12,7 @@ import GlobalFilter from "./components/GlobalFilter";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos }) {
+export default function Table({ columnas, datos, rows=8 }) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -67,9 +67,16 @@ export default function Table({ columnas, datos }) {
     canNextPage,
     canPreviousPage,
     pageOptions,
+    setPageSize,
   } = tableInstance;
 
-  const { globalFilter, pageIndex } = state;
+  const { globalFilter, pageIndex, pageSize } = state;
+
+  useEffect(() => {
+    setPageSize(rows);
+  }, [])
+  
+  
 
   return (
     <>
