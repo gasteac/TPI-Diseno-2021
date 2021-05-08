@@ -16,6 +16,8 @@ import {
 } from "react-router-dom";
 import ProgramarCitaCliente from "./layout/usuariosLayout/Clientes/views/ProgramarCita";
 import GlobalState from "./context/globalState";
+import AgregarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/AgregarPropiedad/AgregarPropiedad";
+import Propiedad from "./components/Propiedad";
 
 const App = () => {
   return (
@@ -33,6 +35,18 @@ const App = () => {
             exact
             path="/agenteinmobiliario/Propiedades"
             component={Propiedades}
+          />
+          <Route
+            exact
+            path="/agenteinmobiliario/propiedades/agregarpropiedad"
+            component={AgregarPropiedad}
+          />
+
+          {/* CLiente-Agente */}
+          <Route
+            exact
+            path="/agenteinmobiliario/propiedades/propiedad"
+            component={Propiedad}
           />
 
           {/* Clientes */}

@@ -1,6 +1,6 @@
 import Propiedades from "./components/Propiedades";
 
-export default function ListaPropiedades({ propiedades }) {
+export default function ListaPropiedades({history, propiedades }) {
   // const [nombre, setNombre] = useState("");
   // const [precioMayor, setPrecioMayor] = useState(0);
   // const [precioMenor, setPrecioMenor] = useState(0);
@@ -47,7 +47,7 @@ export default function ListaPropiedades({ propiedades }) {
 
   return (
     <>
-      <Propiedades propiedades={propiedades} />
+      <Propiedades propiedades={propiedades} history={history}/>
     </>
   );
 }
