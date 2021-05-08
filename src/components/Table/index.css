@@ -35,6 +35,15 @@ table tr:first-child th:last-child {
 table tr:last-child td{
     border: none;
 }
-table tr, th, td{
+table tr, td{
     border:black
+}
+table tr td:nth-child(2){
+    width: 10px;
+}
+table tr th:nth-child(2){
+    width: 10px;
+}
+table tr th:nth-child(2) input{
+    width: 10px;
 }

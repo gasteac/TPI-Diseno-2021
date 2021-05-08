@@ -7,7 +7,7 @@ export default function BackButton({ history }) {
 
     return (
         <Link to={`/${user}/inicio`}>
-            <div class='back-button' style={{color:'black'}}><h1>Volver</h1></div>
+            <div className='bg-botoncito btn mt-3 ml-3' type="button">Volver</div>
         </Link>
     );
 }
