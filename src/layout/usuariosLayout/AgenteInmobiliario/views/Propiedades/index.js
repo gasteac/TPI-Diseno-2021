@@ -7,10 +7,9 @@ export default function Propiedades({history}) {
   const user = useAuth(history)
   return (
     <Layout
-      items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
       usuario={user}
     >
-      <ListaPropiedades propiedades={propiedades} />
+      <ListaPropiedades propiedades={propiedades} history={history}/>
     </Layout>
   );
 }

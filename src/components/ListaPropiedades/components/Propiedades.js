@@ -5,30 +5,31 @@ import {
   Button,
   Image,
   FormControl,
-  InputGroup
+  InputGroup,
 } from "react-bootstrap";
 import GridPropiedadesGenerator from "../../GridGenerator";
 import Filter from "../../Filter";
 import configure from "../../../static/images/Configure.svg";
 import { useState } from "react";
 import search from "../../../static/images/Search.svg";
-import useAuth from '../../../hooks/useAuth'
+import useAuth from "../../../hooks/useAuth";
 
-export default function Propiedades({history, propiedades }) {
+import './Propiedad.css'
+
+export default function Propiedades({ history, propiedades }) {
   const [show, setShow] = useState(false);
   // eslint-disable-next-line
-  const user = useAuth()
+  const user = useAuth();
+
+  const handleClickPropiedad = () => {
+    history.push('/agenteinmobiliario/propiedades/propiedad')
+  }
 
   const codPropiedades = propiedades.map((propiedad) => (
     <Card
-      className="shadow mb-3"
-      style={{
-        width: "18rem",
-        borderRadius: "12px",
-        alignContent: "center",
-        boxShadow: "",
-      }}
+      className="shadow mb-3 card-custom"
       key={propiedad._id}
+      onClick={handleClickPropiedad}
     >
       <Card.Img variant="top" src={PropiedadImg} />
       <Card.Body>
@@ -77,9 +78,12 @@ export default function Propiedades({history, propiedades }) {
   ));
 
   const handleShow = (show) => setShow(show);
+  const handleClick = () => {
+    history.push('/agenteinmobiliario/propiedades/agregarpropiedad')
+  }
 
   return (
-    <Container fluid className="position-relative">
+    <Container fluid >
       <Filter
         setNombre={() => {}}
         setPrecioMayor={() => {}}
@@ -93,12 +97,11 @@ export default function Propiedades({history, propiedades }) {
         show={show}
         handleShow={handleShow}
       />
-      <InputGroup className="mt-3 ml-3">
+      <InputGroup className="mt-3">
         <Button
-          variant="outline-primary mt-3 ml-6"
+          variant="outline-primary"
           style={{
             width: "120px",
-            border: "1px solid #50628C",
             background: "#50628C",
           }}
           onClick={() => handleShow(true)}
@@ -106,10 +109,20 @@ export default function Propiedades({history, propiedades }) {
           <Image src={configure} />
         </Button>
 
-        <InputGroup.Prepend className="ml-5 mr-1">
+        <InputGroup.Prepend className="ml-5 mr-2">
           <Image src={search} />
         </InputGroup.Prepend>
         <FormControl style={{ maxWidth: "40%" }} placeholder="Buscar" />
+        <Button
+          variant="outline-primary ml-auto"
+          style={{
+            color: "white",
+            background: "#50628C",
+          }}
+          onClick={handleClick}
+        >
+          Agregar Propiedad
+        </Button>
       </InputGroup>
       <GridPropiedadesGenerator cols={3}>
         {codPropiedades}

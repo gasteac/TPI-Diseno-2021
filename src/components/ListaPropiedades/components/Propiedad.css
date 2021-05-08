@@ -1,0 +1,11 @@
+.card-custom {
+  width: 24rem;
+  border-radius: 12px;
+  align-content: center;
+  box-shadow: "";
+}
+
+.card-custom:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
