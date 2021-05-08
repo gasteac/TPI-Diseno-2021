@@ -23,7 +23,7 @@ const Login = ({ history }) => {
       history.push("/cliente/inicio");
       document.querySelector("body").style.background = "";
     }
-    if (login?.includes("agente")) {
+    if (login?.includes("agenteinmobiliario")) {
       history.push("/agenteinmobiliario/inicio");
       document.querySelector("body").style.background = "";
     }

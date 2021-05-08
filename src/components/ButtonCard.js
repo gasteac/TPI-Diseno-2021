@@ -5,18 +5,18 @@ import imagenes from './../static/imagenes.js';
 
 const ButtonCard = ({ user, seccion }) => {
   return (
-    <div className="">
-      <div className="buttonsCard bg-rosa1">
-        <div>
-          <img src={imagenes[seccion]} alt="agenda logo" />
-        </div>
-        <div className="">
-          <Link to={`/${user}/${seccion}`}>
-            <h4>{seccion}</h4>
-          </Link>
+    <Link to={`/${user}/${seccion}`}>
+      <div className="">
+        <div className="buttonsCard bg-rosa1">
+          <div>
+            <img src={imagenes[seccion]} alt="agenda logo" />
+          </div>
+          <div className="">
+              <h4>{seccion}</h4>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

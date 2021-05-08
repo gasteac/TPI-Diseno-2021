@@ -20,13 +20,13 @@ const AgenteInmobiliario = ({history}) => {
           <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
             <div className="row">
               <div className="col">
-                <ButtonCard usuario={user} seccion={"Agenda"} />
+                <ButtonCard user={user} seccion={"Agenda"} />
               </div>
               <div className="col">
-                <ButtonCard usuario={user} seccion={"Propiedades"} />
+                <ButtonCard user={user} seccion={"Propiedades"} />
               </div>
               <div className="col">
-                <ButtonCard usuario={user} seccion={"Clientes"} />
+                <ButtonCard user={user} seccion={"Clientes"} />
               </div>
             </div>
           </div>
