@@ -11,17 +11,18 @@ import {
 import GlobalFilter from "./components/GlobalFilter";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
-import Delete from "./components/Delete";
-import ModifyState from "./components/ModifyState";
 
 export default function Table({ columnas, datos }) {
+  // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
+  // eslint-disable-next-line
   const data = useMemo(() => datos, []);
 
   const defaultColumn = useMemo(() => {
     return {
       Filter: ColumnFilter,
     };
+    // eslint-disable-next-line
   }, []);
 
   const tableInstance = useTable(
@@ -66,7 +67,6 @@ export default function Table({ columnas, datos }) {
     canNextPage,
     canPreviousPage,
     pageOptions,
-    selectedFlatRows,
   } = tableInstance;
 
   const { globalFilter, pageIndex } = state;

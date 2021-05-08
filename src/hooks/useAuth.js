@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import globalContext from "../context/globalContext";
 
 const useAuth = (history) => {
@@ -12,6 +12,7 @@ const useAuth = (history) => {
     } else {
         setUsuarioAutenticado(user)
     }
+    // eslint-disable-next-line
   }, [user]);
   return usuarioAutenticado;
 };

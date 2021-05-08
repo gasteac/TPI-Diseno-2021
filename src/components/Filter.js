@@ -18,7 +18,9 @@ export default function Filter({
   setM2TotalesMenor,
   handleShow
 }) {
+  // eslint-disable-next-line
   const [valor, setValor] = useState({ min: 50000, max: 500000 });
+  // eslint-disable-next-line
   const [m2, setM2] = useState({ min: 10, max: 600 });
 
   useEffect(() => {
@@ -26,6 +28,7 @@ export default function Filter({
     setPrecioMenor(valor.min);
     setM2TotalesMayor(m2.max);
     setM2TotalesMenor(m2.min);
+    // eslint-disable-next-line
   }, []);
 
   return (

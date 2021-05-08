@@ -10,8 +10,8 @@ const Notificaciones = () => {
     </div>
     <div className="card-body" style={{borderTopRightRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}>
         <div className="card mb-2" style={{ borderRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}><Notificacion/></div>
-        <div className="card mb-2" style={{border:'none', borderRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}><Notificacion/></div>
-        <div className="card mt-2" style={{border:'none', borderRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}><Notificacion/></div>
+        <div className="card mb-2" style={{borderRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}><Notificacion/></div>
+        <div className="card mt-2" style={{borderRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}><Notificacion/></div>
     </div>
   </div>
     // <div className="siimple-card radius-16">

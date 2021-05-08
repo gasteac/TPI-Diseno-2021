@@ -5,6 +5,7 @@ import propiedades from "../../../../../assets/propiedades.json";
 import useAuth from "../../../../../hooks/useAuth";
 
 const PropiedadesClientes = ({history}) => {
+  // eslint-disable-next-line
   const user = useAuth(history)
 
 

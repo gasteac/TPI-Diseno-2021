@@ -17,14 +17,8 @@ const Login = ({ history }) => {
 
   document.querySelector("body").style.background = "#2B3860";
   const [login, setLogin] = useState(localStorage.setItem("user", ""));
-  const [bandera, setBandera] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setBandera(false);
-    if (login?.length === 0) {
-      setBandera(true);
-      return;
-    }
     if (login?.includes("cliente")) {
       history.push("/cliente/inicio");
       document.querySelector("body").style.background = "";

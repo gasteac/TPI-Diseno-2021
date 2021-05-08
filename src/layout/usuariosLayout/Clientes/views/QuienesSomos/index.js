@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Layout from "../../../../Layout";
 import Fondo from '../../../../../static/images/fondoClientes1.jpg'
 import Descripcion from "./components/Descripcion";
 import LogoJumbotron from "./components/Logo";
-import globalContext from "../../../../../context/globalContext";
 import useAuth from "../../../../../hooks/useAuth";
 
 const QuienesSomos = ({history}) => {
