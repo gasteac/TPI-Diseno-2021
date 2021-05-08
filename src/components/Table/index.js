@@ -73,7 +73,6 @@ export default function Table({ columnas, datos }) {
 
   return (
     <>
-      <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
       <div style={{overflowX: "auto"}}>
         <table {...getTableProps()} className="table tabla-propia">
           <thead className="tabla-header-propio">
@@ -83,9 +82,9 @@ export default function Table({ columnas, datos }) {
                   <th
                     scope="col"
                     className="th-propio"
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                    // {...column.getHeaderProps(column.getSortByToggleProps())}
                   >
-                    <div>
+                    <div {...column.getHeaderProps(column.getSortByToggleProps())}>
                       {" "}
                       {column.render("Header")}
                       <span>
