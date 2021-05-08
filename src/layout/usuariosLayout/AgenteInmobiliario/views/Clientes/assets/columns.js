@@ -18,7 +18,6 @@ export const COLUMNS = [
     {
         Header: 'Celular',
         accessor: 'phone',
-        Cell: ({ value }) => { return format(new Date(Number(value)), 'dd/MM/yyyy HH:mm')},
     },
     {
         Header: 'País',
