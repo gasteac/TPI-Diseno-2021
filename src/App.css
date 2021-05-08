@@ -2,13 +2,23 @@
     --rosa1: #B3BCE8;
     --rosa2: #8E97C8;
     --violetaOscuro2: #50628C;
+    --botoncitos: #2B3860;
 }
 
 h3, h4, h5, h6 {
     margin: 0;
 }
 
+.bg-botoncito{
+    border:2px solid var(--botoncitos)!important;
 
+
+}
+
+.bg-botoncito:hover{
+    background: var(--botoncitos) ;
+    color: white !important;
+}
 
 .bg-violetaOscuro-2 {
     background-color: var(--violetaOscuro2);
@@ -102,4 +112,7 @@ a:hover, .a:active { text-decoration: none; color: #fff; }
     bottom: 0;
     left: 0;
     z-index: 100;
+}
+.nav-pills .nav-link.active{
+    background: #2B3860 !important;
 }
