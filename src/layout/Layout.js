@@ -1,11 +1,10 @@
-import React, {useEffect} from "react";
+import React from "react";
 import NavBar from "../components/NavBar";
 
-const Layout = ({items, usuario, cliente, ...props}) => {
-  
+const Layout = ({cliente, ...props}) => {
   return (
     <>
-      <NavBar items={items} usuario={usuario} cliente={cliente} />
+      <NavBar cliente={cliente} />
       {props.children}
     </>
   );

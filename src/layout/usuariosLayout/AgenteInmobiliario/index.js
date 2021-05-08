@@ -8,7 +8,6 @@ const AgenteInmobiliario = () => {
 
   return (
     <Layout
-      items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
       usuario={usuario}
     >
       <div className="container-fluid">

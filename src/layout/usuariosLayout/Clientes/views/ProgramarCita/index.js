@@ -7,8 +7,6 @@ const ProgramarCitaCliente = () => {
   document.querySelector('body').style.background = ''
   return (
     <Layout
-      items={["Inicio", "Propiedades", "Programar Cita", "¿Quienes somos?"]}
-      usuario={"clientes"}
     >
       <Container>
         <FormCita />

@@ -9,8 +9,6 @@ const Clientes = () => {
   document.querySelector("body").style.backgroundSize = `cover`;
   return (
     <Layout
-      items={["Inicio", "Propiedades", "Programar Cita", "¿Quienes somos?"]}
-      usuario={"clientes"}
       cliente={true}
     >
       <Container>

@@ -1,0 +1,3 @@
+export const ACTIVE_NAVAR_LINK = 'ACTIVE_NAVAR_LINK'
+
+export const USER_LOGIN = 'USER_LOGIN'
