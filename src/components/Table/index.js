@@ -8,7 +8,6 @@ import {
   usePagination,
   useRowSelect,
 } from "react-table";
-import GlobalFilter from "./components/GlobalFilter";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
@@ -61,7 +60,6 @@ export default function Table({ columnas, datos }) {
     page,
     prepareRow,
     state,
-    setGlobalFilter,
     nextPage,
     previousPage,
     canNextPage,
@@ -69,6 +67,7 @@ export default function Table({ columnas, datos }) {
     pageOptions,
   } = tableInstance;
 
+  // eslint-disable-next-line
   const { globalFilter, pageIndex } = state;
 
   return (
