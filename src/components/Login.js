@@ -55,7 +55,7 @@ const Login = ({ history }) => {
               style={{
                 display: "grid",
                 justifyContent: "center",
-                background: "#3A4971",
+                background: "",
                 borderTopLeftRadius: ".3rem",
                 borderBottomLeftRadius: ".3rem",
               }}
@@ -75,14 +75,11 @@ const Login = ({ history }) => {
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Label>Contraseña</Form.Label>
+                  <Form.Control type="password" placeholder="Contraseña" />
                 </Form.Group>
-                <Form.Group controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Ingresar
+                <Button variant="primary" type="submit" block style={{background:'#8E97C8', border:'none', borderRadius:'9px'}}>
+                Ingresar
                 </Button>
               </Form>
             </Col>

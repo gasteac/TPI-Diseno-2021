@@ -8,7 +8,7 @@ const ProgramarCitaCliente = () => {
   return (
     <Layout
     >
-      <Container>
+      <Container className='mt-4 mb-5'>
         <FormCita />
       </Container>
     </Layout>
