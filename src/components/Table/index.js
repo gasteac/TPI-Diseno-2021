@@ -74,19 +74,18 @@ export default function Table({ columnas, datos }) {
   return (
     <>
       <div style={{overflowX: "auto"}}>
-        <table {...getTableProps()} className="table tabla-propia">
-          <thead className="tabla-header-propio">
+        <table {...getTableProps()} className="table tabla-propia" >
+          <thead className="tabla-header-propio" >
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
                   <th
                     scope="col"
-                    className="th-propio"
-                    // {...column.getHeaderProps(column.getSortByToggleProps())}
+                    className="th-propio" style={{background:'#50628C', borderTop:'none', color:'white'}}
                   >
                     <div {...column.getHeaderProps(column.getSortByToggleProps())}>
                       {" "}
-                      {column.render("Header")}
+                      {column.render("Header") }
                       <span>
                         {column.isSorted
                           ? column.isSortedDesc
@@ -103,11 +102,11 @@ export default function Table({ columnas, datos }) {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody {...getTableBodyProps()} >
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr className="table-primary" {...row.getRowProps()}>
+                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     return (
                       <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
@@ -120,7 +119,7 @@ export default function Table({ columnas, datos }) {
         </table>
       </div>
 
-      <nav aria-label="Page navigation example">
+      <nav aria-label="Page navigation example" className='d-flex justify-content-end mr-3'>
         <ul className="pagination">
           <li className="page-item">
             <button
