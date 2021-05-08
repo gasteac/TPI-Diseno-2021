@@ -10,13 +10,18 @@ import {
 import GridPropiedadesGenerator from "../../GridGenerator";
 import Filter from "../../Filter";
 import configure from "../../../static/images/Configure.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import search from "../../../static/images/Search.svg";
 import useAuth from "../../../hooks/useAuth";
 
 import './Propiedad.css'
+import globalContext from "../../../context/globalContext";
 
 export default function Propiedades({ history, propiedades }) {
+
+  const GlobalContext = useContext(globalContext);
+  const { setNombre } = GlobalContext;
+
   const [show, setShow] = useState(false);
   // eslint-disable-next-line
   const user = useAuth();
@@ -112,7 +117,7 @@ export default function Propiedades({ history, propiedades }) {
         <InputGroup.Prepend className="ml-5 mr-2">
           <Image src={search} />
         </InputGroup.Prepend>
-        <FormControl style={{ maxWidth: "40%" }} placeholder="Buscar" />
+        <FormControl style={{ maxWidth: "40%" }} placeholder="Buscar" onChange={(e) => setNombre(e.target.value)}/>
         <Button
           variant="outline-primary ml-auto"
           style={{
