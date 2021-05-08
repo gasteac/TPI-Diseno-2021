@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import "./index.css";
 import {
   useTable,
@@ -8,11 +8,10 @@ import {
   usePagination,
   useRowSelect,
 } from "react-table";
-import GlobalFilter from "./components/GlobalFilter";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos }) {
+export default function Table({ columnas, datos, rows=6 }) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -61,15 +60,22 @@ export default function Table({ columnas, datos }) {
     page,
     prepareRow,
     state,
-    setGlobalFilter,
     nextPage,
     previousPage,
     canNextPage,
     canPreviousPage,
     pageOptions,
+    setPageSize,
   } = tableInstance;
+  // eslint-disable-next-line
+  const { globalFilter, pageIndex, pageSize } = state;
 
-  const { globalFilter, pageIndex } = state;
+  useEffect(() => {
+    setPageSize(rows);
+    // eslint-disable-next-line
+  }, [])
+  
+  // eslint-disable-next-line
 
   return (
     <>
@@ -91,7 +97,7 @@ export default function Table({ columnas, datos }) {
                           ? column.isSortedDesc
                             ? " ↓"
                             : " ↑"
-                          : " "}
+                          : " -"}
                       </span>
                     </div>
                     <div>
@@ -106,7 +112,7 @@ export default function Table({ columnas, datos }) {
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr className="table" style={{background:'#F5F5F5', textAlign:'center'}} {...row.getRowProps()}>
+                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     return (
                       <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
