@@ -27,10 +27,6 @@ const Login = ({ history }) => {
       history.push("/agenteinmobiliario/inicio");
       document.querySelector("body").style.background = "";
     }
-    if (login?.includes("secretariacomercializacion")) {
-      history.push("/secretariacomercializacion/inicio");
-      document.querySelector("body").style.background = "";
-    }
     localStorage.setItem("user", login);
     userLogin(login);
   };

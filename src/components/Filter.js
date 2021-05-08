@@ -1,3 +1,4 @@
+import { useContext, useEffect, useState } from "react";
 import { Card, Accordion, Image } from "react-bootstrap";
 
 import "react-input-range/lib/css/index.css";
