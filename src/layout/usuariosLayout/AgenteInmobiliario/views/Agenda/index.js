@@ -11,7 +11,6 @@ export default function Agenda({history}) {
 
   return (
     <Layout
-      items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
       usuario={user}
     >
       <BackButton history={history} />
