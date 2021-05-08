@@ -8,11 +8,10 @@ import {
   usePagination,
   useRowSelect,
 } from "react-table";
-import GlobalFilter from "./components/GlobalFilter";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos, rows=8 }) {
+export default function Table({ columnas, datos, rows=6 }) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -61,7 +60,6 @@ export default function Table({ columnas, datos, rows=8 }) {
     page,
     prepareRow,
     state,
-    setGlobalFilter,
     nextPage,
     previousPage,
     canNextPage,
@@ -69,31 +67,31 @@ export default function Table({ columnas, datos, rows=8 }) {
     pageOptions,
     setPageSize,
   } = tableInstance;
-
+  // eslint-disable-next-line
   const { globalFilter, pageIndex, pageSize } = state;
 
   useEffect(() => {
     setPageSize(rows);
+    // eslint-disable-next-line
   }, [])
   
-  
+  // eslint-disable-next-line
 
   return (
     <>
       <div style={{overflowX: "auto"}}>
-        <table {...getTableProps()} className="table tabla-propia">
-          <thead className="tabla-header-propio">
+        <table {...getTableProps()} className="table tabla-propia" >
+          <thead className="tabla-header-propio" >
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
                   <th
                     scope="col"
-                    className="th-propio"
-                    // {...column.getHeaderProps(column.getSortByToggleProps())}
+                    className="th-propio" style={{background:'#50628C', borderTop:'none', color:'white'}}
                   >
                     <div {...column.getHeaderProps(column.getSortByToggleProps())}>
                       {" "}
-                      {column.render("Header")}
+                      {column.render("Header") }
                       <span>
                         {column.isSorted
                           ? column.isSortedDesc
@@ -110,11 +108,11 @@ export default function Table({ columnas, datos, rows=8 }) {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody {...getTableBodyProps()} >
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr className="table-primary" {...row.getRowProps()}>
+                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     return (
                       <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
@@ -127,7 +125,7 @@ export default function Table({ columnas, datos, rows=8 }) {
         </table>
       </div>
 
-      <nav aria-label="Page navigation example">
+      <nav aria-label="Page navigation example" className='d-flex justify-content-end mr-3'>
         <ul className="pagination">
           <li className="page-item">
             <button

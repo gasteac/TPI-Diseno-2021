@@ -1,4 +1,6 @@
-export const COLUMS1 = [
+import { format } from 'date-fns';
+
+export const COLUMNS1 = [
     {
         Header: 'Nombre',
         accessor: 'first_name',
@@ -13,24 +15,20 @@ export const COLUMS1 = [
     },
     {
         Header: 'Estado',
-        accessor: 'email',
+        accessor: 'estado',
     },
     {
         Header: 'Fecha',
         accessor: 'date',
         Cell: ({ value }) => { return format(new Date(Number(value)), 'dd/MM/yyyy HH:mm')},
-    },
-    {
-        Header: 'Hora',
-        accessor: 'state',
     },
     {
         Header: 'Agente',
-        accessor: 'state',
+        accessor: 'agent',
     }
 ]
 
-export const COLUMS2 = [
+export const COLUMNS2 = [
     {
         Header: 'Nombre',
         accessor: 'first_name',
@@ -45,15 +43,11 @@ export const COLUMS2 = [
     },
     {
         Header: 'Estado',
-        accessor: 'email',
+        accessor: 'estado',
     },
     {
         Header: 'Fecha',
         accessor: 'date',
         Cell: ({ value }) => { return format(new Date(Number(value)), 'dd/MM/yyyy HH:mm')},
-    },
-    {
-        Header: 'Hora',
-        accessor: 'state',
     }
 ]
