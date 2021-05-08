@@ -106,7 +106,7 @@ export default function Table({ columnas, datos }) {
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()}>
+                <tr className="table" style={{background:'#F5F5F5', textAlign:'center'}} {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     return (
                       <td {...cell.getCellProps()}>{cell.render("Cell")}</td>

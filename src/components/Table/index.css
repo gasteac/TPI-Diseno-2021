@@ -60,3 +60,8 @@ table th:nth-child(7) input{
 table th:nth-child(9) input{
     width: 110px !important;
 }
+
+table th input{
+    border-radius: 5px !important;
+    border: 4px solid #B3BCE8;
+}
