@@ -31,7 +31,7 @@ export default function Propiedades({ history, propiedades }) {
   const codPropiedades = propiedades.map((propiedad) => (
     <Card
       className="shadow mb-3 mt-3 card-custom"
-      style={{ width: "350px" }}
+      style={{width:'350px', border:'none'}}
       key={propiedad._id}
       onClick={handleClickPropiedad}
     >
