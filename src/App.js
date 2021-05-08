@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import AgenteInmobiliario from "./layout/usuariosLayout/AgenteInmobiliario/";
 import Agenda from "./layout/usuariosLayout/AgenteInmobiliario/views/Agenda";
 import Propiedades from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades";
+import ListaClientes from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/";
 
 import Clientes from "./layout/usuariosLayout/Clientes/";
 import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos/";
@@ -40,6 +41,11 @@ const App = () => {
             exact
             path="/agenteinmobiliario/propiedades/agregarpropiedad"
             component={AgregarPropiedad}
+          />
+          <Route
+            exact
+            path="/agenteinmobiliario/Clientes"
+            component={ListaClientes}
           />
 
           {/* CLiente-Agente */}
