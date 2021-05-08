@@ -4,13 +4,9 @@ import { Link } from "react-router-dom";
 import globalContext from "../context/globalContext";
 import Logo from "../static/images/inmoviliaria-1.svg";
 
-
-
 const NavBar = ({ cliente }) => {
-
-  
   const GlobalContext = useContext(globalContext);
-  const {user, activeNavBarLink, setActiveNavbarLink, userLogin} = GlobalContext;
+  const { user, activeNavBarLink, setActiveNavbarLink } = GlobalContext;
 
   const items = {
     cliente: ["Inicio", "Propiedades", "Programar Cita", "¿Quienes Somos?"],
@@ -18,10 +14,8 @@ const NavBar = ({ cliente }) => {
   };
 
   const handleClick = (i) => {
-    setActiveNavbarLink(
-      `link-${i}`
-    )
-  }
+    setActiveNavbarLink(`link-${i}`);
+  };
   return (
     <Navbar style={{ backgroundColor: cliente ? "" : "#50628C" }} expand="lg">
       <Navbar.Brand>
@@ -32,11 +26,14 @@ const NavBar = ({ cliente }) => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto" variant="pills" defaultActiveKey={activeNavBarLink}>
-          {user && items[user].map((item, i) => (
-              <Nav.Item
-                  onClick={() => handleClick(i)}
-              >
+        <Nav
+          className="ml-auto"
+          variant="pills"
+          defaultActiveKey={activeNavBarLink}
+        >
+          {user &&
+            items[user].map((item, i) => (
+              <Nav.Item onClick={() => handleClick(i)}>
                 <Nav.Link eventKey={`link-${i}`}>
                   <Link
                     to={`/${user}/${item

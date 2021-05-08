@@ -2,13 +2,13 @@ import React from "react";
 import Layout from "../../Layout";
 import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
+import useAuth from "../../../hooks/useAuth";
 
-const AgenteInmobiliario = () => {
-  const usuario = "agente-inmobiliario";
-
+const AgenteInmobiliario = ({history}) => {
+  const user = useAuth(history)
   return (
     <Layout
-      usuario={usuario}
+      usuario={user}
     >
       <div className="container-fluid">
         {/* parte izquierda */}
@@ -20,13 +20,13 @@ const AgenteInmobiliario = () => {
           <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
             <div className="row">
               <div className="col">
-                <ButtonCard usuario={usuario} seccion={"Agenda"} />
+                <ButtonCard usuario={user} seccion={"Agenda"} />
               </div>
               <div className="col">
-                <ButtonCard usuario={usuario} seccion={"Propiedades"} />
+                <ButtonCard usuario={user} seccion={"Propiedades"} />
               </div>
               <div className="col">
-                <ButtonCard usuario={usuario} seccion={"Clientes"} />
+                <ButtonCard usuario={user} seccion={"Clientes"} />
               </div>
             </div>
           </div>

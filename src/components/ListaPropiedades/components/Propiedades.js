@@ -10,11 +10,19 @@ import {
 import GridPropiedadesGenerator from "../../GridGenerator";
 import Filter from "../../Filter";
 import configure from "../../../static/images/Configure.svg";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import search from "../../../static/images/Search.svg";
+import globalContext from "../../../context/globalContext";
 
-export default function Propiedades({ propiedades }) {
+export default function Propiedades({history, propiedades }) {
   const [show, setShow] = useState(false);
+  const GlobalContext = useContext(globalContext);
+  const { user } = GlobalContext;
+  useEffect(() => {
+    if (!user) {
+      history.push('/')
+    }
+  }, [user])
 
   const codPropiedades = propiedades.map((propiedad) => (
     <Card

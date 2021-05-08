@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import imagenes from './../static/imagenes.js';
 
 
-const ButtonCard = ({ usuario, seccion }) => {
+const ButtonCard = ({ user, seccion }) => {
   return (
     <div className="">
       <div className="buttonsCard bg-rosa1">
@@ -11,7 +11,7 @@ const ButtonCard = ({ usuario, seccion }) => {
           <img src={imagenes[seccion]} alt="agenda logo" />
         </div>
         <div className="">
-          <Link to={`/${usuario}/${seccion}`}>
+          <Link to={`/${user}/${seccion}`}>
             <h4>{seccion}</h4>
           </Link>
         </div>
