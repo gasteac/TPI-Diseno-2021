@@ -32,7 +32,8 @@ export default function Propiedades({ history, propiedades }) {
 
   const codPropiedades = propiedades.map((propiedad) => (
     <Card
-      className="shadow mb-3 card-custom"
+      className="shadow mb-3 mt-3 card-custom"
+      style={{width:'350px'}}
       key={propiedad._id}
       onClick={handleClickPropiedad}
     >
@@ -106,6 +107,8 @@ export default function Propiedades({ history, propiedades }) {
         <Button
           variant="outline-primary"
           style={{
+            borderRadius:'9px',
+            border:'none',
             width: "120px",
             background: "#50628C",
           }}
@@ -117,10 +120,12 @@ export default function Propiedades({ history, propiedades }) {
         <InputGroup.Prepend className="ml-5 mr-2">
           <Image src={search} />
         </InputGroup.Prepend>
-        <FormControl style={{ maxWidth: "40%" }} placeholder="Buscar" onChange={(e) => setNombre(e.target.value)}/>
+        <FormControl style={{ maxWidth: "78%" }} placeholder="Buscar" onChange={(e) => setNombre(e.target.value)}/>
         <Button
-          variant="outline-primary ml-auto"
+          variant="outline-primary ml-5"
           style={{
+            borderRadius:'9px',
+            border:'none',
             color: "white",
             background: "#50628C",
           }}
