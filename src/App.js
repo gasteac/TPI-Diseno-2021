@@ -19,7 +19,6 @@ import ProgramarCitaCliente from "./layout/usuariosLayout/Clientes/views/Program
 import GlobalState from "./context/globalState";
 import AgregarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/AgregarPropiedad/AgregarPropiedad";
 import Propiedad from "./components/Propiedad";
-import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComercializacion";
 
 const App = () => {
   return (
@@ -49,7 +48,7 @@ const App = () => {
             component={ListaClientes}
           />
 
-          {/* Cliente-Agente */}
+          {/* CLiente-Agente */}
           <Route
             exact
             path="/agenteinmobiliario/propiedades/propiedad"
@@ -69,13 +68,6 @@ const App = () => {
             component={ProgramarCitaCliente}
           />
           <Route exact path="/cliente/quienessomos" component={QuienesSomos} />
-
-          {/* SecretariaComercializacion */}
-          <Route
-            exact
-            path="/secretariacomercializacion/inicio"
-            component={SecretariaComercializacion}
-          />
 
           <Redirect to="/" />
         </Switch>

@@ -3,6 +3,8 @@ import {
   Col,
   Container,
   Row,
+  Image,
+  Form,
   Card,
   Button,
 } from "react-bootstrap";
@@ -13,7 +15,6 @@ import "./AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
 
 const AgregarPropiedad = ({history}) => {
-  // eslint-disable-next-line
     const user = useAuth(history)
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
 
