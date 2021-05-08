@@ -1,21 +1,18 @@
 import React, { useState } from "react";
-import {
-  Col,
-  Container,
-  Row,
-  Card,
-  Button,
-} from "react-bootstrap";
+import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import Layout from "../../../../../Layout";
-import DatosDeLaPropiedadForm from "./components/DatosDeLaPropiedadForm";
-import DatosDelPropietario from "./components/DatosDelPropietario";
-import "./AgregarPropiedad.css";
+import DatosDeLaPropiedadForm from "../AgregarPropiedad/components/DatosDeLaPropiedadForm";
+import DatosDelPropietario from "../AgregarPropiedad/components/DatosDelPropietario";
+import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
+import propiedades from "../../../../../../assets/propiedades.json";
 
-const AgregarPropiedad = ({history}) => {
+const EditarPropiedad = ({ history }) => {
   // eslint-disable-next-line
-    const user = useAuth(history)
+  const user = useAuth(history);
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
+
+  const { DatosDeContacto, DatosDelInmueble, tituloPropiedad } = propiedades[0];
 
   const handleSubmitPropiedad = (event) => {
     const form = event.currentTarget;
@@ -26,6 +23,8 @@ const AgregarPropiedad = ({history}) => {
 
     setValidatedPropiedad(true);
   };
+
+  const handleSubmitELiminar = () => {}
   return (
     <Layout>
       <Container fluid>
@@ -37,6 +36,8 @@ const AgregarPropiedad = ({history}) => {
                 <DatosDeLaPropiedadForm
                   validatedPropiedad={validatedPropiedad}
                   handleSubmitPropiedad={handleSubmitPropiedad}
+                  DatosDelInmueble={DatosDelInmueble}
+                  tituloPropiedad={tituloPropiedad}
                 />
               </Card.Body>
             </Card>
@@ -45,15 +46,20 @@ const AgregarPropiedad = ({history}) => {
             <Card>
               <Card.Header as="h2">Datos del Propietario</Card.Header>
               <Card.Body>
-                <DatosDelPropietario />
+                <DatosDelPropietario DatosDeContacto={DatosDeContacto}/>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-        <Row className="justify-content-center my-3" >
+        <Row className="justify-content-center my-3">
           <Col xs={3}>
             <Button type="sumbit" variant="success" onClick={handleSubmitPropiedad} block>
-              Agregar Propiedad
+              Editar Propiedad
+            </Button>
+          </Col>
+          <Col xs={2}>
+            <Button type="sumbit" variant="outline-danger" onClick={handleSubmitELiminar} block>
+              Eliminar Propiedad
             </Button>
           </Col>
         </Row>
@@ -62,4 +68,4 @@ const AgregarPropiedad = ({history}) => {
   );
 };
 
-export default AgregarPropiedad;
+export default EditarPropiedad;

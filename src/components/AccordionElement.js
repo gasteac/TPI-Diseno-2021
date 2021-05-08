@@ -55,7 +55,7 @@ const AccordionElement = ({ eventKey, nombre }) => {
                 setTipo(e.target.value);
               }}
             />
-            <label for="cabaña">Cabaña</label>
+            <label htmlFor="cabaña">Cabaña</label>
             <input
               type="radio"
               name="tipo"
@@ -65,7 +65,7 @@ const AccordionElement = ({ eventKey, nombre }) => {
                 setTipo(e.target.value);
               }}
             />
-            <label for="casa-con-local">Casa con local</label>
+            <label htmlFor="casa-con-local">Casa con local</label>
             <input
               type="radio"
               name="tipo"
@@ -75,7 +75,7 @@ const AccordionElement = ({ eventKey, nombre }) => {
                 setTipo(e.target.value);
               }}
             />
-            <label for="chalet">Chalet</label>
+            <label htmlFor="chalet">Chalet</label>
             <input
               type="radio"
               name="tipo"
@@ -85,7 +85,7 @@ const AccordionElement = ({ eventKey, nombre }) => {
                 setTipo(e.target.value);
               }}
             />
-            <label for="cochera">Cochera</label>
+            <label htmlFor="cochera">Cochera</label>
             <input
               type="radio"
               name="tipo"
@@ -95,7 +95,7 @@ const AccordionElement = ({ eventKey, nombre }) => {
                 setTipo(e.target.value);
               }}
             />
-            <label for="departamento">Departamento</label>
+            <label htmlFor="departamento">Departamento</label>
             <input
               type="radio"
               name="tipo"
@@ -105,7 +105,7 @@ const AccordionElement = ({ eventKey, nombre }) => {
                 setTipo(e.target.value);
               }}
             />
-            <label for="local">Local</label>
+            <label htmlFor="local">Local</label>
           </>
         );
       case "Ubicación":

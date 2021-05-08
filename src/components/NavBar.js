@@ -33,20 +33,20 @@ const NavBar = ({ cliente }) => {
         >
           {user &&
             items[user].map((item, i) => (
-              <Nav.Item onClick={() => handleClick(i)}>
-                <Nav.Link eventKey={`link-${i}`}>
-                  <Link
-                    to={`/${user}/${item
-                      .toLowerCase()
-                      .replace(" ", "")
-                      .replace("¿", "")}`}
-                    style={{
-                      color: cliente ? "black" : "white",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {item}
-                  </Link>
+              <Nav.Item onClick={() => handleClick(i)} key={i}>
+                <Nav.Link
+                  as={Link}
+                  to={`/${user}/${item
+                    .toLowerCase()
+                    .replace(" ", "")
+                    .replace("¿", "")}`}
+                  style={{
+                    color: cliente ? "black" : "white",
+                    textDecoration: "none",
+                  }}
+                  eventKey={`link-${i}`}
+                >
+                  {item}
                 </Nav.Link>
               </Nav.Item>
             ))}

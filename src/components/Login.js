@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
   Container,
   Form,
@@ -13,7 +13,7 @@ import Logo from "../static/images/inmoviliaria-1.svg";
 
 const Login = ({ history }) => {
   const GlobalContext = useContext(globalContext);
-  const { userLogin } = GlobalContext;
+  const { userLogin, setActiveNavbarLink } = GlobalContext;
 
   document.querySelector("body").style.background = "#2B3860";
   const [login, setLogin] = useState(localStorage.setItem("user", ""));
@@ -34,6 +34,10 @@ const Login = ({ history }) => {
   const handleChange = (e) => {
     setLogin(e.target.value.split("@")[0]);
   };
+
+  useEffect(() => {
+    setActiveNavbarLink('link-0')
+  }, [])
   return (
     <>
       <Container

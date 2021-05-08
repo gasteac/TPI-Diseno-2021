@@ -14,26 +14,24 @@ import { useContext, useState } from "react";
 import search from "../../../static/images/Search.svg";
 import useAuth from "../../../hooks/useAuth";
 
-import './Propiedad.css'
+import "./Propiedad.css";
 import globalContext from "../../../context/globalContext";
 
 export default function Propiedades({ history, propiedades }) {
-
   const GlobalContext = useContext(globalContext);
   const { setNombre } = GlobalContext;
 
   const [show, setShow] = useState(false);
-  // eslint-disable-next-line
   const user = useAuth();
 
   const handleClickPropiedad = () => {
-    history.push('/agenteinmobiliario/propiedades/propiedad')
-  }
+    history.push("/propiedades/propiedad");
+  };
 
   const codPropiedades = propiedades.map((propiedad) => (
     <Card
       className="shadow mb-3 mt-3 card-custom"
-      style={{width:'350px'}}
+      style={{ width: "350px" }}
       key={propiedad._id}
       onClick={handleClickPropiedad}
     >
@@ -53,13 +51,13 @@ export default function Propiedades({ history, propiedades }) {
         </Card.Text>
         <Card.Text className="d-flex justify-content-around">
           <div>
-            <span class="font-weight-bold">
+            <span className="font-weight-bold">
               {propiedad.DatosDelInmueble.metrosCuadrados}
             </span>{" "}
             m2 totales{" "}
           </div>
           <div>
-            <span class="font-weight-bold">
+            <span className="font-weight-bold">
               {propiedad.DatosDelInmueble.metrosCuadradosCubiertos}
             </span>{" "}
             Cubiertos
@@ -67,13 +65,13 @@ export default function Propiedades({ history, propiedades }) {
         </Card.Text>
         <Card.Text className="d-flex justify-content-around">
           <div>
-            <span class="font-weight-bold">
+            <span className="font-weight-bold">
               {propiedad.DatosDelInmueble.espacios}
             </span>{" "}
             ambientes{" "}
           </div>
           <div>
-            <span class="font-weight-bold">
+            <span className="font-weight-bold">
               {propiedad.DatosDelInmueble.banios}
             </span>{" "}
             baños
@@ -85,11 +83,11 @@ export default function Propiedades({ history, propiedades }) {
 
   const handleShow = (show) => setShow(show);
   const handleClick = () => {
-    history.push('/agenteinmobiliario/propiedades/agregarpropiedad')
-  }
+    history.push("/agenteinmobiliario/propiedades/agregarpropiedad");
+  };
 
   return (
-    <Container fluid >
+    <Container fluid>
       <Filter
         setNombre={() => {}}
         setPrecioMayor={() => {}}
@@ -107,8 +105,8 @@ export default function Propiedades({ history, propiedades }) {
         <Button
           variant="outline-primary"
           style={{
-            borderRadius:'9px',
-            border:'none',
+            borderRadius: "9px",
+            border: "none",
             width: "120px",
             background: "#50628C",
           }}
@@ -120,19 +118,25 @@ export default function Propiedades({ history, propiedades }) {
         <InputGroup.Prepend className="ml-5 mr-2">
           <Image src={search} />
         </InputGroup.Prepend>
-        <FormControl style={{ maxWidth: "78%" }} placeholder="Buscar" onChange={(e) => setNombre(e.target.value)}/>
-        <Button
-          variant="outline-primary ml-5"
-          style={{
-            borderRadius:'9px',
-            border:'none',
-            color: "white",
-            background: "#50628C",
-          }}
-          onClick={handleClick}
-        >
-          Agregar Propiedad
-        </Button>
+        <FormControl
+          style={{ maxWidth: "78%" }}
+          placeholder="Buscar"
+          onChange={(e) => setNombre(e.target.value)}
+        />
+        {user != "cliente" ? (
+          <Button
+            variant="outline-primary ml-5"
+            style={{
+              borderRadius: "9px",
+              border: "none",
+              color: "white",
+              background: "#50628C",
+            }}
+            onClick={handleClick}
+          >
+            Agregar Propiedad
+          </Button>
+        ) : null}
       </InputGroup>
       <GridPropiedadesGenerator cols={3}>
         {codPropiedades}

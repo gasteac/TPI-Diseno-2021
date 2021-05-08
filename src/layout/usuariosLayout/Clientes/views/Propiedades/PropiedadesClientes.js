@@ -12,7 +12,7 @@ const PropiedadesClientes = ({history}) => {
   document.querySelector("body").style.background = "";
   return (
     <Layout>
-      <ListaPropiedades propiedades={propiedades} />
+      <ListaPropiedades propiedades={propiedades} history={history}/>
     </Layout>
   );
 };
