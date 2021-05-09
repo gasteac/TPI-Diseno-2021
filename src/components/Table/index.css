@@ -52,20 +52,23 @@ table th:nth-child(1) input{
     width: 15px !important;
 }
 table th:nth-child(2) input{
-    width: 85px !important;
+    width: 100px !important;
 }
 table th:nth-child(3) input{
     width: 100px !important;
 }
 table th:nth-child(4) input{
-    width: 110px !important;
+    width: 150px !important;
 }
 table th:nth-child(8) input{
     width: 110px !important;
 }
 table th:nth-child(7) input{
-    width: 110px !important;
+    width: 150px !important;
 }
 table th:nth-child(9) input{
     width: 110px !important;
+}
+table tr{
+    text-align: center;
 }

@@ -15,7 +15,7 @@ export default function Agenda({history}) {
     >
       <BackButton history={history} />
       <Container fluid>
-        <Table columnas={COLUMNS} datos={MOCK_DATA} />
+        <Table columnas={COLUMNS} datos={MOCK_DATA} rows={8}/>
       </Container>
     </Layout>
   );

@@ -12,12 +12,13 @@ h3, h4, h5, h6 {
 .bg-botoncito{
     border:2px solid var(--botoncitos)!important;
 
-
 }
 
 .bg-botoncito:hover{
     background: var(--botoncitos) ;
     color: white !important;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .bg-violetaOscuro-2 {
@@ -115,4 +116,7 @@ a:hover, .a:active { text-decoration: none; color: #fff; }
 }
 .nav-pills .nav-link.active{
     background: #2B3860 !important;
+}
+.nav-link:hover{
+    background: #2b386050 !important;
 }

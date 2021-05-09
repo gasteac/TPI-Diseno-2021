@@ -13,12 +13,19 @@ export default function Citas({ history }) {
         <Layout
         usuario={user}
         >
+            
             <BackButton history={history} />
             <Container fluid>
-                <Table columnas={COLUMNS1} datos={columns1Data} rows={5}/>
+            <div className='d-flex my-auto' >
+            <h3 className='my-1 ml-4 mt-4' style={{background:'#50628C', color:'white', borderRadius:'10px', padding:'6px'}}>Citas confirmadas</h3>
+            </div>
+                <Table columnas={COLUMNS1} datos={columns1Data} rows={8}/>
             </Container>
             <Container fluid>
-                <Table columnas={COLUMNS2} datos={columns2Data} rows={5}/>
+            <div className='d-flex'>
+            <h3 className='my-1 ml-4' style={{background:'#50628C', color:'white', borderRadius:'10px', padding:'6px'}}>Citas sin agente designado</h3>
+            </div>
+                <Table columnas={COLUMNS2} datos={columns2Data} rows={8}/>
             </Container>
         </Layout>
     );

@@ -3,6 +3,7 @@ import Clientes from './images/Clientes.svg';
 import Propiedades from './images/Propiedades.svg';
 import Lupa from './images/Search.svg';
 import Fondo from './images/fondoClientes.jpg'
+import Citas from './images/Citas.svg'
 
 // eslint-disable-next-line
 export default {
@@ -10,5 +11,6 @@ export default {
     Clientes,
     Propiedades,
     Lupa,
-    Fondo
+    Fondo,
+    Citas
 }
