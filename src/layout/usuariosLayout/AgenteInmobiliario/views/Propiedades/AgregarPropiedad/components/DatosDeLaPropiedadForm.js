@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
-import Prueba from "./Prueba";
 
 const DatosDeLaPropiedadForm = ({
   validatedPropiedad,
