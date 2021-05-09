@@ -19,9 +19,9 @@ import ProgramarCitaCliente from "./layout/usuariosLayout/Clientes/views/Program
 import GlobalState from "./context/globalState";
 import AgregarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/AgregarPropiedad/AgregarPropiedad";
 import Propiedad from "./components/Propiedad";
-import EditarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/EditarPropiedad/EditarPropiedad";
 import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComercializacion";
 import Citas from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas";
+import AgendaSec from "./layout/usuariosLayout/SecretariaComercializacion/views/AgendaSec";
 
 const App = () => {
   return (
@@ -47,19 +47,14 @@ const App = () => {
           />
           <Route
             exact
-            path="/agenteinmobiliario/propiedades/editarpropiedad"
-            component={EditarPropiedad}
-          />
-          <Route
-            exact
             path="/agenteinmobiliario/Clientes"
             component={ListaClientes}
           />
 
-          {/* Cliente-Agente */}
+          {/* CLiente-Agente */}
           <Route
             exact
-            path="/propiedades/propiedad"
+            path="/agenteinmobiliario/propiedades/propiedad"
             component={Propiedad}
           />
 
@@ -87,6 +82,11 @@ const App = () => {
             exact
             path="/secretariacomercializacion/citas"
             component={Citas}
+          />
+          <Route
+            exact
+            path="/secretariacomercializacion/agenda"
+            component={AgendaSec}
           />
 
           <Redirect to="/" />
