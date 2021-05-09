@@ -9,8 +9,6 @@ import DatosDelInmuebleComponent from "./DatosDelInmuebleComponent";
 
 const Propiedad = ({ history }) => {
   const user = useAuth(history);
-  console.log(user);
-  console.log(propiedades[0]);
   const { DatosDeContacto, DatosDelInmueble } = propiedades[0];
   const handleClickEditar = () => {
     history.push("/agenteinmobiliario/propiedades/editarpropiedad");

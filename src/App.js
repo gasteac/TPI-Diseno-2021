@@ -18,6 +18,7 @@ import {
 import ProgramarCitaCliente from "./layout/usuariosLayout/Clientes/views/ProgramarCita";
 import GlobalState from "./context/globalState";
 import AgregarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/AgregarPropiedad/AgregarPropiedad";
+import EditarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/EditarPropiedad/EditarPropiedad";
 import Propiedad from "./components/Propiedad";
 import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComercializacion";
 import Citas from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas";
@@ -50,13 +51,14 @@ const App = () => {
             path="/agenteinmobiliario/Clientes"
             component={ListaClientes}
           />
-
-          {/* CLiente-Agente */}
           <Route
             exact
-            path="/agenteinmobiliario/propiedades/propiedad"
-            component={Propiedad}
+            path="/agenteinmobiliario/propiedades/editarpropiedad"
+            component={EditarPropiedad}
           />
+
+          {/* CLiente-Agente */}
+          <Route exact path="/propiedades/propiedad" component={Propiedad} />
 
           {/* Clientes */}
           <Route exact path="/cliente/inicio" component={Clientes} />
@@ -89,7 +91,7 @@ const App = () => {
             component={AgendaSec}
           />
 
-          <Redirect to="/" />
+          {/* <Redirect to="/" /> */}
         </Switch>
       </Router>
     </GlobalState>
