@@ -6,6 +6,7 @@ import DatosDelPropietario from "../AgregarPropiedad/components/DatosDelPropieta
 import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
 import propiedades from "../../../../../../assets/propiedades.json";
+import BackButton from "../../../../../../components/BackButton";
 
 const EditarPropiedad = ({ history }) => {
   // eslint-disable-next-line
@@ -28,8 +29,9 @@ const EditarPropiedad = ({ history }) => {
   const handleSubmitELiminar = () => {}
   return (
     <Layout>
+      <BackButton history={history} />
       <Container fluid>
-        <Row className="mt-5">
+        <Row className="mt-3">
           <Col xs={8}>
             <Card>
               <Card.Header as="h2">Datos de la propiedad</Card.Header>
