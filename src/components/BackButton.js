@@ -8,8 +8,8 @@ export default function BackButton({ history }) {
     const GlobalContext = useContext(globalContext);
     const {setActiveNavbarLink } = GlobalContext;
 
-    const volver = (i) => {
-        // setActiveNavbarLink(`link-0`);
+    const volver = () => {
+        setActiveNavbarLink('link-0');
         history.goBack();
         console.log(history);
       };

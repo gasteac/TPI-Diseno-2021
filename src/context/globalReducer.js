@@ -9,7 +9,7 @@ import {
     SET_HABITACIONES,
     SET_BAÑOS,
     SET_M2TOTALESMAYOR,
-    SET_M2TOTALESMENOR
+    SET_M2TOTALESMENOR,
  } from "./types";
 
  // eslint-disable-next-line
@@ -18,7 +18,8 @@ export default (state, action) => {
         case ACTIVE_NAVAR_LINK:
             return {
                 ...state,
-                activeNavBarLink: action.payload
+                previousNavBarLink: state.activeNavBarLink,
+                activeNavBarLink: action.payload,
             }
         case USER_LOGIN:
             return {

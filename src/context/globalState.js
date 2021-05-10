@@ -14,13 +14,14 @@ import {
     SET_HABITACIONES,
     SET_BAÑOS,
     SET_M2TOTALESMAYOR,
-    SET_M2TOTALESMENOR
+    SET_M2TOTALESMENOR,
 } from './types'
 
 const GlobalState = props => {
 
     const initialState = {
         activeNavBarLink: 'link-0',
+        previousNavBarLink: '',
         user: '',
         filter: {
             nombre: '',
@@ -120,6 +121,7 @@ const GlobalState = props => {
                 user: state.user,
                 filter: state.filter,
                 activeNavBarLink: state.activeNavBarLink,
+                previousNavBarLink: state.previousNavBarLink,
                 setActiveNavbarLink,
                 userLogin,
                 setNombre,

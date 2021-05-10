@@ -82,10 +82,11 @@ export default function Table({ columnas, datos, rows=6 }) {
       <div style={{overflowX: "auto"}}>
         <table {...getTableProps()} className="table tabla-propia" >
           <thead className="tabla-header-propio" >
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
+            {headerGroups.map((headerGroup, i) => (
+              <tr {...headerGroup.getHeaderGroupProps()} key={i}>
+                {headerGroup.headers.map((column, i) => (
                   <th
+                    key={i}
                     scope="col"
                     className="th-propio" style={{background:'#50628C', borderTop:'none', color:'white'}}
                   >
@@ -109,13 +110,13 @@ export default function Table({ columnas, datos, rows=6 }) {
             ))}
           </thead>
           <tbody {...getTableBodyProps()} >
-            {page.map((row) => {
+            {page.map((row, i) => {
               prepareRow(row);
               return (
-                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()}>
+                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()} key={i}>
                   {row.cells.map((cell) => {
                     return (
-                      <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                      <td {...cell.getCellProps()} >{cell.render("Cell")}</td>
                     );
                   })}
                 </tr>
