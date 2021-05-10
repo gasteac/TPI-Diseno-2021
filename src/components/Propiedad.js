@@ -6,22 +6,24 @@ import DatosDeContactoComponent from "./DatosDeContactoComponent";
 import propiedades from "../assets/propiedades.json";
 import PropiedadResize from "../static/images/Propiedad2.svg";
 import DatosDelInmuebleComponent from "./DatosDelInmuebleComponent";
+import BackButton from "./BackButton";
+
 
 const Propiedad = ({ history }) => {
   const user = useAuth(history);
-  console.log(user);
-  console.log(propiedades[0]);
   const { DatosDeContacto, DatosDelInmueble } = propiedades[0];
   const handleClickEditar = () => {
     history.push("/agenteinmobiliario/propiedades/editarpropiedad");
   };
   return (
+    
     <Layout>
-      <Container fluid>
+      <BackButton history={history} />
+      <Container fluid style={{marginTop:'20px', marginBottom:'20px'}}>
         <Row>
           <Col xs={7}>
             <Row>
-              <Image src={PropiedadResize} height={350} />
+              <Image src={PropiedadResize} height={350} style={{marginBottom:'20px'}} />
             </Row>
             <Row>
               <Card className="m-auto">
@@ -42,7 +44,7 @@ const Propiedad = ({ history }) => {
               </Card.Body>
             </Card>
             {user !== "cliente" ? (
-              <Button
+              <Button style={{marginTop:'20px'}}
                 type="button"
                 variant="outline-secondary"
                 onClick={() => handleClickEditar()}

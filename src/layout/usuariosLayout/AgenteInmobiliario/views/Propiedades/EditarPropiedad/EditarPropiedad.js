@@ -6,13 +6,14 @@ import DatosDelPropietario from "../AgregarPropiedad/components/DatosDelPropieta
 import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
 import propiedades from "../../../../../../assets/propiedades.json";
+import BackButton from "../../../../../../components/BackButton";
 
 const EditarPropiedad = ({ history }) => {
   // eslint-disable-next-line
   const user = useAuth(history);
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
 
-  const { DatosDeContacto, DatosDelInmueble, tituloPropiedad } = propiedades[0];
+  const { DatosDeContacto, DatosDelInmueble } = propiedades[0];
 
   const handleSubmitPropiedad = (event) => {
     const form = event.currentTarget;
@@ -24,11 +25,13 @@ const EditarPropiedad = ({ history }) => {
     setValidatedPropiedad(true);
   };
 
+
   const handleSubmitELiminar = () => {}
   return (
     <Layout>
+      <BackButton history={history} />
       <Container fluid>
-        <Row className="mt-5">
+        <Row className="mt-3">
           <Col xs={8}>
             <Card>
               <Card.Header as="h2">Datos de la propiedad</Card.Header>
@@ -37,7 +40,6 @@ const EditarPropiedad = ({ history }) => {
                   validatedPropiedad={validatedPropiedad}
                   handleSubmitPropiedad={handleSubmitPropiedad}
                   DatosDelInmueble={DatosDelInmueble}
-                  tituloPropiedad={tituloPropiedad}
                 />
               </Card.Body>
             </Card>

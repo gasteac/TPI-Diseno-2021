@@ -17,7 +17,7 @@ export default function ListaPropiedades({history, propiedades }) {
 
   const propiedadesFiltradas = propiedades.filter((propiedad) => {
     const nombreBool =
-      propiedad.tituloPropiedad.toLowerCase().includes(nombre.toLowerCase()) ||
+      propiedad.DatosDelInmueble.tituloPropiedad.toLowerCase().includes(nombre.toLowerCase()) ||
       nombre.length === 0;
     const precioBool =
       propiedad.DatosDelInmueble.precio < precioMayor &&

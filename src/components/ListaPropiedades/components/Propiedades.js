@@ -38,7 +38,7 @@ export default function Propiedades({ history, propiedades }) {
       <Card.Img variant="top" src={PropiedadImg} />
       <Card.Body>
         <Card.Title>
-          {propiedad.tituloPropiedad}, {propiedad.DatosDelInmueble.direccion}
+          {propiedad.DatosDelInmueble.tituloPropiedad}, {propiedad.DatosDelInmueble.direccion}
         </Card.Title>
         <Card.Text className="d-flex justify-content-around">
           <span className="font-weight-bold">

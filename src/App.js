@@ -18,12 +18,17 @@ import {
 import ProgramarCitaCliente from "./layout/usuariosLayout/Clientes/views/ProgramarCita";
 import GlobalState from "./context/globalState";
 import AgregarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/AgregarPropiedad/AgregarPropiedad";
+import EditarPropiedad from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades/EditarPropiedad/EditarPropiedad";
 import Propiedad from "./components/Propiedad";
 import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComercializacion";
 import Citas from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas";
 import AgendaSec from "./layout/usuariosLayout/SecretariaComercializacion/views/AgendaSec";
 import Cajera from "./layout/usuariosLayout/Cajera";
-import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja";
+import PagoVenta from "./layout/usuariosLayout/Cajera/views/PagoVenta";
+import PagoAlquiler from "./layout/usuariosLayout/Cajera/views/PagoAlquiler";
+import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida";
+import Transacciones from "./layout/usuariosLayout/Cajera/views/Transacciones";
+import CierreDeCaja from "./layout/usuariosLayout/Cajera/views/CierreDeCaja";
 
 const App = () => {
   return (
@@ -52,13 +57,14 @@ const App = () => {
             path="/agenteinmobiliario/Clientes"
             component={ListaClientes}
           />
-
-          {/* CLiente-Agente */}
           <Route
             exact
-            path="/agenteinmobiliario/propiedades/propiedad"
-            component={Propiedad}
+            path="/agenteinmobiliario/propiedades/editarpropiedad"
+            component={EditarPropiedad}
           />
+
+          {/* CLiente-Agente */}
+          <Route exact path="/propiedades/propiedad" component={Propiedad} />
 
           {/* Clientes */}
           <Route exact path="/cliente/inicio" component={Clientes} />
@@ -99,8 +105,28 @@ const App = () => {
           />
           <Route
             exact
-            path="/cajera/Cierre de caja"
-            component={CierreCaja}
+            path="/cajera/pagoventa"
+            component={PagoVenta}
+          />
+          <Route
+            exact
+            path="/cajera/pagoalquiler"
+            component={PagoAlquiler}
+          />
+          <Route
+            exact
+            path="/cajera/entradasalida"
+            component={EntradaSalida}
+          />
+          <Route
+            exact
+            path="/cajera/transacciones"
+            component={Transacciones}
+          />
+          <Route
+            exact
+            path="/cajera/cierredecaja"
+            component={CierreDeCaja}
           />
 
           {/* <Redirect to="/" /> */}

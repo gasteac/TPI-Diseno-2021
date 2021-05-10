@@ -1,40 +1,70 @@
-import Layout from "../../Layout";
-import Notificaciones from "../../../components/Notificaciones";
+import React from "react";
+import { Container, Jumbotron, Row, Col } from "react-bootstrap";
 import ButtonCard from "../../../components/ButtonCard";
 import useAuth from "../../../hooks/useAuth";
+import Layout from "../../Layout";
 
-export default function Cajera({ history }) {
-    const user = useAuth(history)
-    return (
-      <Layout
-        usuario={user}
-      >
-        <div className="container-fluid">
-          {/* parte izquierda */}
-          <div className="row">
-            <div className="col-5 mt-5">
-              <Notificaciones />
-            </div>
-            {/* parte derecha */}
-            <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
-              <div className="row">
-                <div className="col">
-                  <ButtonCard user={user} seccion={"Entrada/Salida"} link={'link-1'} />
-                </div>
-                <div className="col">
-                  <ButtonCard user={user} seccion={"Pago alquiler"} link={'link-2'} />
-                  <ButtonCard user={user} seccion={"Pago venta"} link={'link-3'} />
-                </div>
-                <div className="col">
-                  <ButtonCard user={user} seccion={"Transacciones"}  link={'link-4'} />
-                </div>
-                <div className="col">
-                  <ButtonCard user={user} seccion={"Cierre de caja"} link={'link-5'} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Layout>
-    );
-}
+const Cajera = ({ history }) => {
+  const user = useAuth(history);
+  return (
+    <Layout>
+      <Container fluid="sm">
+        <Jumbotron style={{minWidth: "980px", display: "grid", justifyContent: "space-evenly"}}>
+          <Row>
+            <Col>
+              <ButtonCard user={user} seccion="EntradaSalida" link={"link-1"} />
+            </Col>
+            <Col>
+              <Row>
+                <ButtonCard
+                  user={user}
+                  seccion="PagoAlquiler"
+                  link={"link-3"}
+                  style={{
+                    minWidth: "90px",
+                    minHeight: "80px",
+                    marginBottom: "10px",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-evenly",
+                  }}
+                />
+              </Row>
+              <Row>
+                <ButtonCard
+                  user={user}
+                  seccion="PagoVenta"
+                  link={"link-4"}
+                  style={{
+                    minWidth: "90px",
+                    minHeight: "80px",
+                    marginTop: "10px",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-evenly",
+                  }}
+                />
+              </Row>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <ButtonCard user={user} seccion="Transacciones" link={"link-2"} />
+            </Col>
+            <Col>
+              <ButtonCard
+                user={user}
+                seccion="CierreDeCaja"
+                link={"link-5"}
+              />
+            </Col>
+          </Row>
+        </Jumbotron>
+      </Container>
+    </Layout>
+  );
+};
+
+export default Cajera;

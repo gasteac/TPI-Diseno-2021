@@ -1,11 +1,12 @@
 import React from "react";
 import Notificacion from "./Notificacion";
 
-const Notificaciones = () => {
+
+const Notificaciones = ({nombreDeUsuario}) => {
   return (
     <div className="card ml-3" style={{backgroundColor: "#B3BCE8", border:'none', borderRadius:'9px'}}>
     <div className="card-header"  style={{backgroundColor: "#50628C", color:"#FAFAFA", borderTopRightRadius:'9px', borderTopLeftRadius:'9px'}}>
-       <h1>Bienvenido, Chifflets.</h1> 
+       <h1>Bienvenido, {nombreDeUsuario}.</h1> 
        <h6>Estas son tus notificaciones:</h6>
     </div>
     <div className="card-body" style={{borderTopRightRadius:'9px', borderTopLeftRadius:'9px', border:'9px'}}>

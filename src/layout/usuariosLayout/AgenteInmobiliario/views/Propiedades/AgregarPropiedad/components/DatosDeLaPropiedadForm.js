@@ -5,11 +5,12 @@ const DatosDeLaPropiedadForm = ({
   validatedPropiedad,
   handleSubmitPropiedad,
   DatosDelInmueble,
-  tituloPropiedad,
 }) => {
   const [formState, setFormState] = useState({
+    tituloPropiedad: "",
     nroInmueble: "",
     tipo: "",
+    con: "",
     contrato: "",
     pais: "",
     CP: 0,
@@ -30,8 +31,10 @@ const DatosDeLaPropiedadForm = ({
   });
 
   const {
+    tituloPropiedad,
     nroInmueble,
     tipo,
+    con,
     contrato,
     pais,
     CP,
@@ -57,10 +60,7 @@ const DatosDeLaPropiedadForm = ({
     }
   }, [DatosDelInmueble]);
 
-  const [tipoFinal, _, con] = tipo.split(" ");
   const [servicio1, servicio2, servicio3] = servicios
-    .replace(",", "")
-    .split(" ");
 
   const handleChange = (e) => {
     setFormState({
@@ -80,10 +80,12 @@ const DatosDeLaPropiedadForm = ({
           <Form.Label>Título</Form.Label>
           <Form.Control
             required
-            placeholder="Título"
+            placeholder="Título de la Propiedad"
             type="text"
-            name="titulo"
+            name="tituloPropiedad"
             value={tituloPropiedad}
+            onChange={handleChange}
+            defaultValue={tituloPropiedad}
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -94,21 +96,22 @@ const DatosDeLaPropiedadForm = ({
       <Form.Row>
         <Form.Group as={Col}>
           <Form.Label>Tipo</Form.Label>
-          <Form.Control as="select" name="tipo" required >
-            <option  hidden disabled value={tipoFinal} onChange={handleChange} defaultValue={tipoFinal ? tipoFinal : 'Seleccione un tipo'}>
-              {tipoFinal ? tipoFinal : 'Seleccione un tipo'}
-            </option>
-            <option>Casa</option>
-            <option>Departamento</option>
-            <option>PH</option>
-            <option>Oficina</option>
-          </Form.Control>
+          <Form.Control as="select" name="tipo" required value={tipo} onChange={handleChange}>
+              <option hidden disabled value="">
+                Seleccione un tipo
+              </option>
+
+              <option>Casa</option>
+              <option>Departamento</option>
+              <option>PH</option>
+              <option>Oficina</option>
+            </Form.Control>
         </Form.Group>
         <Form.Group as={Col}>
           <Form.Label>Con</Form.Label>
-          <Form.Control as="select" name="con" required>
-            <option  defaultValue={con} hidden disabled onChange={handleChange} value={con}>
-              {con}
+          <Form.Control as="select" name="con" required value={con} onChange={handleChange}>
+            <option hidden disabled value="">
+              Seleccione una opción
             </option>
             <option>Cochera</option>
             <option>Ascensor</option>
@@ -118,10 +121,17 @@ const DatosDeLaPropiedadForm = ({
       <Form.Row>
         <Form.Group as={Col}>
           <Form.Label>País</Form.Label>
-          <Form.Control as="select" name="pais" required >
-            <option  hidden disabled onChange={handleChange} defaultValue={pais ? pais : 'Seleccione un pais'}>
-              {pais ? pais : 'Seleccione un pais'}
+          <Form.Control
+            as="select"
+            name="pais"
+            required
+            value={provincia}
+            onChange={handleChange}
+          >
+            <option hidden disabled value="">
+              Seleccione un país
             </option>
+
             <option>Argentina</option>
             <option>Chile</option>
             <option>Uruguay</option>
@@ -131,28 +141,35 @@ const DatosDeLaPropiedadForm = ({
         </Form.Group>
         <Form.Group as={Col}>
           <Form.Label>Provincia</Form.Label>
-          <Form.Control as="select" name="provincia" required>
-            <option  defaultValue={provincia} hidden disabled onChange={handleChange} value={provincia} >
-              {provincia}
+          <Form.Control
+            as="select"
+            name="provincia"
+            required
+            onChange={handleChange}
+            value={provincia}
+          >
+            <option hidden disabled value="">
+              Seleccione una provincia
             </option>
-            <option>Chaco</option>
-            <option>Corrientes</option>
-            <option>Chubut</option>
-            <option>Buenos Aires</option>
-            <option>Mendoza</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Mendoza">Mendoza</option>
           </Form.Control>
         </Form.Group>
         <Form.Group as={Col}>
           <Form.Label>Localidad</Form.Label>
-          <Form.Control as="select" name="localidad" required>
-            <option   hidden disabled onChange={handleChange} value={localidad} defaultValue={localidad}>
-              {localidad}
-            </option>
-            <option>Resistencia</option>
-            <option>Corrientes</option>
-            <option>Barranqueras</option>
-            <option>Misiones</option>
-          </Form.Control>
+          <Form.Control as="select" name="localidad" required value={localidad} onChange={handleChange}>
+              <option hidden disabled value="">
+                Seleccione una localidad
+              </option>
+              <option>Resistencia</option>
+              <option>Corrientes</option>
+              <option>Barranqueras</option>
+              <option>Misiones</option>
+            </Form.Control>
+          
         </Form.Group>
       </Form.Row>
       <Form.Row>
@@ -269,7 +286,7 @@ const DatosDeLaPropiedadForm = ({
       <Form.Row>
         <Form.Group as={Col}>
           <Form.Label>Servicios</Form.Label>
-          <Form.Control as="select" multiple required onChange={handleChange}>
+          <Form.Control as="select" multiple required>
             <option selected={servicio1 && servicio1}>Agua</option>
             <option selected={servicio2 && servicio2}>Luz</option>
             <option>Limpieza</option>
@@ -296,9 +313,9 @@ const DatosDeLaPropiedadForm = ({
           <Row>
             <Form.Group as={Col}>
               <Form.Label>Contrato</Form.Label>
-              <Form.Control as="select" required >
-                <option hidden disabled onChange={handleChange} value={contrato} defaultValue={contrato}>
-                  {contrato}
+              <Form.Control as="select" required value={contrato} onChange={handleChange}>
+                <option hidden disabled value="">
+                  Seleccione un contrato
                 </option>
                 <option>Venta</option>
                 <option>Alquiler</option>

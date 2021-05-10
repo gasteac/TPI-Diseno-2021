@@ -12,7 +12,7 @@ const NavBar = ({ cliente }) => {
     cliente: ["Inicio", "Propiedades", "Programar Cita", "¿Quienes Somos?"],
     agenteinmobiliario: ["Inicio", "Clientes", "Agenda", "Propiedades"],
     secretariacomercializacion: ["Inicio", "Agenda", "Citas"],
-    cajera: ['Inicio', 'Entrada/Salida', 'Pago alquiler', 'Pago venta', 'Transacciones', 'Cierre de caja']
+    cajera: ['Inicio', "Entrada/Salida", "Transacciones", "Pago alquiler", "Pago venta", "Cierre de caja"]
   };
 
   const handleClick = (i) => {
@@ -21,9 +21,9 @@ const NavBar = ({ cliente }) => {
   return (
     <Navbar style={{ backgroundColor: cliente ? "" : "#50628C" }} expand="lg">
       <Navbar.Brand>
-        <Link to="/">
+        <Link to="/" className='d-flex align-items-center'>
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
-          Dofus 2.0{" "}
+          <h3 className='mt-3 ml-3' style={{}}>Dofus 2.0</h3>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -39,10 +39,16 @@ const NavBar = ({ cliente }) => {
                 <Nav.Link
                   as={Link}
                   to={`/${user}/${item
-                    .toLowerCase()}`}
+                    .toLowerCase()
+                    .replaceAll(" ", "")
+                    .replace("¿", "")
+                    .replace('/', '')}`}
                   style={{
-                    color: cliente ? "black" : "white",
+                    color: cliente ? "white" : "white",
+                    background: cliente ? "#50628C85" : "",
+                    borderRadius:'8px',
                     textDecoration: "none",
+                    marginLeft:'5px'
                   }}
                   eventKey={`link-${i}`}
                 >

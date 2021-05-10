@@ -27,6 +27,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             placeholder="Número de Cliente"
             name="nroCliente"
             value={nroCliente}
+            onChange={() => {}}
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -37,6 +38,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="tipo"
             disabled
             value={tipoCliente}
+            readOnly
           />
         </Form.Group>
       </Form.Row>
@@ -49,6 +51,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="nombre"
             disabled
             value={nombre2}
+            readOnly
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -59,6 +62,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="apellido"
             disabled
             value={apellido}
+            readOnly
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -69,6 +73,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="dni"
             disabled
             value={12312313}
+            readOnly
           />
         </Form.Group>
       </Form.Row>
@@ -81,6 +86,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="pais"
             disabled
             value={"Argentina"}
+            readOnly
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -91,6 +97,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="provincia"
             disabled
             value={"Chaco"}
+            readOnly
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -101,6 +108,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="direccion"
             disabled
             value={direccion}
+            readOnly
           />
         </Form.Group>
       </Form.Row>
@@ -113,6 +121,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="telefono"
             disabled
             value={telefono}
+            readOnly
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -123,6 +132,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
             name="email"
             disabled
             value={email}
+            readOnly
           />
         </Form.Group>
       </Form.Row>
