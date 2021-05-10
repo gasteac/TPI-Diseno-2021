@@ -10,13 +10,13 @@ const ButtonCard = ({ user, seccion, link, style }) => {
   const { setActiveNavbarLink } = GlobalContext;
   return (
     <Link to={`/${user}/${seccion}`} onClick={() => setActiveNavbarLink(link)}>
-      <div>
-        <div className="buttonsCard bg-rosa1" style={style}>
+      <div className='btnsuper'>
+        <div className="buttonsCard bg-rosa1 btnxd" style={style}>
           <div>
-            <img src={imagenes[seccion]} alt="agenda logo" />
+            <img src={imagenes[seccion]} alt="agenda logo"  />
           </div>
           <div className="">
-              <h4 style={{color:'white'}}>{seccion}</h4>
+              <h4 style={{color:'white'}}>{seccion}</h4> 
           </div>
         </div>
       </div>

@@ -18,8 +18,8 @@ const AgenteInmobiliario = ({history}) => {
           </div>
           {/* parte derecha */}
           <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
-            <div className="row">
-              <div className="col">
+            <div className="row" >
+              <div className="col" >
                 <ButtonCard user={user} seccion={"Agenda"} link={'link-2'}/>
               </div>
               <div className="col">
