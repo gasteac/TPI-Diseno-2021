@@ -24,7 +24,7 @@ import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComerc
 import Citas from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas";
 import AgendaSec from "./layout/usuariosLayout/SecretariaComercializacion/views/AgendaSec";
 import Cajera from "./layout/usuariosLayout/Cajera";
-import PagoVenta from "./layout/usuariosLayout/Cajera/views/PagoVenta";
+import PagoVenta from "./layout/usuariosLayout/Cajera/views/PagoVenta/PagoVenta";
 import PagoAlquiler from "./layout/usuariosLayout/Cajera/views/PagoAlquiler";
 import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida";
 import Transacciones from "./layout/usuariosLayout/Cajera/views/Transacciones";

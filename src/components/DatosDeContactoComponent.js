@@ -7,6 +7,7 @@ const DatosDeContactoComponent = ({ DatosDeContacto }) => {
     nroCliente,
     tipoCliente,
     nombre,
+    apellido,
     telefono,
     email,
     direccion,
@@ -16,29 +17,29 @@ const DatosDeContactoComponent = ({ DatosDeContacto }) => {
       <Row>
         <Col>
           <Card.Title className="datosContacto">Nro. Cliente</Card.Title>
-          <Card.Text>{nroCliente}</Card.Text>
+          <Card.Text className="datos2">{nroCliente}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Nombre y Apellido</Card.Title>
-          <Card.Text>{nombre}</Card.Text>
+          <Card.Text  className="datos2">{nombre} {apellido}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Dirección</Card.Title>
-          <Card.Text>{direccion}</Card.Text>
+          <Card.Text className="datos2">{direccion}</Card.Text>
         </Col>
       </Row>
       <Row>
         <Col>
           <Card.Title className="datosContacto">Teléfono</Card.Title>
-          <Card.Text>{telefono}</Card.Text>
+          <Card.Text className="datos2">{telefono}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Tipo Cliente</Card.Title>
-          <Card.Text>{tipoCliente}</Card.Text>
+          <Card.Text className="datos2">{tipoCliente}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Email</Card.Title>
-          <Card.Text>{email}</Card.Text>
+          <Card.Text className="datos2">{email}</Card.Text>
         </Col>
       </Row>
     </>
