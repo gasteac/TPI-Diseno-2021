@@ -26,83 +26,83 @@ const DatosDelInmuebleComponent = ({ DatosDelInmueble }) => {
       <Row>
         <Col>
           <Card.Title className="datosContacto">Inmueble</Card.Title>
-          <Card.Text>{nroInmueble}</Card.Text>
+          <Card.Text className="datos">{nroInmueble}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Tipo</Card.Title>
-          <Card.Text>{tipo}</Card.Text>
+          <Card.Text className="datos">{tipo}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Contrato</Card.Title>
-          <Card.Text>{contrato}</Card.Text>
+          <Card.Text className="datos">{contrato}</Card.Text>
         </Col>
       </Row>
       <Row>
         <Col>
           <Card.Title className="datosContacto">País</Card.Title>
-          <Card.Text>{pais}</Card.Text>
+          <Card.Text className="datos">{pais}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Provincia</Card.Title>
-          <Card.Text>{provincia}</Card.Text>
+          <Card.Text className="datos">{provincia}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Localidad</Card.Title>
-          <Card.Text>{localidad}</Card.Text>
+          <Card.Text className="datos">{localidad}</Card.Text>
         </Col>
       </Row>
       <Row>
         <Col>
           <Card.Title className="datosContacto">CP</Card.Title>
-          <Card.Text>{CP}</Card.Text>
+          <Card.Text className="datos">{CP}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Barrio</Card.Title>
-          <Card.Text>{barrio}</Card.Text>
+          <Card.Text className="datos">{barrio}</Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Dirección</Card.Title>
-          <Card.Text>{direccion}</Card.Text>
+          <Card.Text className="datos">{direccion}</Card.Text>
         </Col>
       </Row>
       <Row>
         <Col>
-          <Card.Title className="datosContacto">Cant. Baños</Card.Title>
-          <Card.Text>{banios}</Card.Text>
+          <Card.Title className="datosContacto">Baños</Card.Title>
+          <Card.Text className="datos">{banios}</Card.Text>
         </Col>
         <Col>
-          <Card.Title className="datosContacto">Cant. Hab.</Card.Title>
-          <Card.Text>{habitaciones}</Card.Text>
+          <Card.Title className="datosContacto">Habitaciones</Card.Title>
+          <Card.Text className="datos">{habitaciones}</Card.Text>
         </Col>
-      </Row>
-      <Row>
+        <Col>
+          <Card.Title className="datosContacto">Espacios</Card.Title>
+          <Card.Text className="datos">{espacios}</Card.Text>
+        </Col>
         <Col>
           <Card.Title className="datosContacto">Suit</Card.Title>
-          <Card.Text>{suit}</Card.Text>
-        </Col>
-        <Col>
-          <Card.Title className="datosContacto">Cant. Espacios</Card.Title>
-          <Card.Text>{espacios}</Card.Text>
+          <Card.Text className="datos">{suit}</Card.Text>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col >
           <Card.Title className="datosContacto">Antiguedad</Card.Title>
-          <Card.Text>{antiguedad}</Card.Text>
+          <Card.Text className="datos">{antiguedad}</Card.Text>
+        </Col>
+        <Col xs={5}>
+          <Card.Title className="datosContacto">Servicios</Card.Title>
+          <Card.Text className="datos">
+            {servicios.map((servicio) => servicio + " ")}
+          </Card.Text>
         </Col>
         <Col>
           <Card.Title className="datosContacto">Amueblada</Card.Title>
-          <Card.Text>{amueblada}</Card.Text>
-        </Col>
-        <Col>
-          <Card.Title className="datosContacto">Servicios</Card.Title>
-          <Card.Text>{servicios}</Card.Text>
+          <Card.Text className="datos">{amueblada}</Card.Text>
         </Col>
       </Row>
       <Row>
         <Col>
           <Card.Title className="datosContacto">Estado</Card.Title>
-          <Card.Text>{estado}</Card.Text>
+          <Card.Text className="datos">{estado}</Card.Text>
         </Col>
       </Row>
     </>
