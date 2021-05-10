@@ -22,6 +22,8 @@ import Propiedad from "./components/Propiedad";
 import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComercializacion";
 import Citas from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas";
 import AgendaSec from "./layout/usuariosLayout/SecretariaComercializacion/views/AgendaSec";
+import Cajera from "./layout/usuariosLayout/Cajera";
+import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja";
 
 const App = () => {
   return (
@@ -89,7 +91,19 @@ const App = () => {
             component={AgendaSec}
           />
 
-          <Redirect to="/" />
+          {/* Cajera */}
+          <Route
+            exact
+            path="/cajera/inicio"
+            component={Cajera}
+          />
+          <Route
+            exact
+            path="/cajera/Cierre de caja"
+            component={CierreCaja}
+          />
+
+          {/* <Redirect to="/" /> */}
         </Switch>
       </Router>
     </GlobalState>

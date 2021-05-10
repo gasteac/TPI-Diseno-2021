@@ -31,6 +31,10 @@ const Login = ({ history }) => {
       history.push("/secretariacomercializacion/inicio");
       document.querySelector("body").style.background = "";
     }
+    if (login?.includes("cajera")) {
+      history.push("/cajera/inicio");
+      document.querySelector("body").style.background = "";
+    }
     localStorage.setItem("user", login);
     userLogin(login);
   };

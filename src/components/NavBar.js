@@ -12,6 +12,7 @@ const NavBar = ({ cliente }) => {
     cliente: ["Inicio", "Propiedades", "Programar Cita", "¿Quienes Somos?"],
     agenteinmobiliario: ["Inicio", "Clientes", "Agenda", "Propiedades"],
     secretariacomercializacion: ["Inicio", "Agenda", "Citas"],
+    cajera: ['Inicio', 'Entrada/Salida', 'Pago alquiler', 'Pago venta', 'Transacciones', 'Cierre de caja']
   };
 
   const handleClick = (i) => {
@@ -38,9 +39,7 @@ const NavBar = ({ cliente }) => {
                 <Nav.Link
                   as={Link}
                   to={`/${user}/${item
-                    .toLowerCase()
-                    .replace(" ", "")
-                    .replace("¿", "")}`}
+                    .toLowerCase()}`}
                   style={{
                     color: cliente ? "black" : "white",
                     textDecoration: "none",
