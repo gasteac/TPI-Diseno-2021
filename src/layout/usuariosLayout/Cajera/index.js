@@ -8,12 +8,12 @@ const Cajera = ({ history }) => {
   const user = useAuth(history);
   return (
     <Layout>
-      <Container>
-        <Card style={{borderRadiusTopLeft:'10px'}}>
-        <Card.Header as='h1' style={{background:'#50628C', color:'white'}}>
+      <Container style={{marginTop:'40px'}}>
+        <Card style={{borderRadiusTopLeft:'100px', border:'none'}}>
+        <Card.Header as='h3' style={{background:'#50628C', color:'white', borderTopLeftRadius:'12px', borderTopRightRadius:'12px'}}>
           Bienvenida Jett
         </Card.Header>
-        <Card.Body style={{background:'#B3BCE8'}}>
+        <Card.Body style={{background:'#B3BCE8', borderBottomLeftRadius:'12px', borderBottomRightRadius:'12px', border:'none'}}>
           <Row>
             <Col>
               <ButtonCard user={user} seccion="EntradaSalida" link={"link-1"} style={{background:"#50628C"}}/>
