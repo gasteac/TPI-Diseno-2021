@@ -10,35 +10,22 @@
     width:90%; 
     margin-top:20px;
 }
-
 .th-propio{
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     color:#000000;
-}
-table tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-}
-
-table tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
-}
-
-table tr:first-child th:first-child {
-    border-top-left-radius: 10px;
-}
-
-table tr:first-child th:last-child {
-    border-top-right-radius: 10px;
-
-}
-table tr:last-child td{
-    border: none;
 }
 table tr, td{
     border:black
 }
-table tr td:nth-child(2){
+table tr{
+    text-align: center;
+}
+table td{
+    height: 50px;
+}
+
+/* table tr td:nth-child(2){
     width: 10px;
 }
 table tr th:nth-child(2){
@@ -47,7 +34,6 @@ table tr th:nth-child(2){
 table tr th:nth-child(2) input{
     width: 10px;
 }
-
 table th:nth-child(1) input{
     width: 15px !important;
 }
@@ -68,7 +54,5 @@ table th:nth-child(7) input{
 }
 table th:nth-child(9) input{
     width: 110px !important;
-}
-table tr{
-    text-align: center;
-}
+} */
+

@@ -3,19 +3,22 @@ import useAuth from "../hooks/useAuth";
 import globalContext from "../context/globalContext";
 import React, { useContext } from "react";
 import "./AgendaSecretari.css";
-import BackButton from "./BackButton";
-
+import BackButton from "../components/BackButton";
+import moment from "moment";
+import "moment/locale/es";
 export default function AgendaSecretaria({ history }) {
   const GlobalContext = useContext(globalContext);
   const { setActiveNavbarLink } = GlobalContext;
 
+  moment.locale("es");
+  const hoy = "Fecha: " + moment().format("LL");
   return (
-    <div className="container-xl">
+    <div class="container-xl">
       <BackButton history={history} />
 
-      <caption>Mayo/2021</caption>
+      <p className="mt-3">{hoy}</p>
 
-      <table className="table-bordered w-100 h-100">
+      <table class="table-bordered w-100 h-100">
         <thead>
           <tr>
             <th>Lunes</th>
@@ -29,71 +32,80 @@ export default function AgendaSecretaria({ history }) {
         </thead>
         <tbody>
           <tr>
-          <td style={{display: "grid", width: "100%"}}>
-              <p className="align-top">1</p>
-              <div style={{display: "flex", justifyContent: "end", alignItems: "end"}}>
+            <td style={{
+                display: "grid",
+                width: "100%"
+                }}>
+              <p >1</p>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "end",
+                  alignItems: "end",
+                }}
+              >
                 <button type="button" className="btn btn-light align-bottom">
                   +
                 </button>
               </div>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               2<p>Cita con Juan Perez. 05:30.Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               3<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">4</td>
-            <td className="align-top">5</td>
-            <td className="align-top">
+            <td class="align-top">4</td>
+            <td class="align-top">5</td>
+            <td class="align-top">
               6<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">7</td>
+            <td class="align-top">7</td>
           </tr>
           <tr>
-            <td className="align-top">
+            <td class="align-top">
               1<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               2<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               3<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               4<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               5<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               6<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">7</td>
+            <td class="align-top">7</td>
           </tr>
           <tr>
-            <td className="align-top">1</td>
-            <td className="align-top">2</td>
-            <td className="align-top">3</td>
-            <td className="align-top">4</td>
-            <td className="align-top">
+            <td class="align-top">1</td>
+            <td class="align-top">2</td>
+            <td class="align-top">3</td>
+            <td class="align-top">4</td>
+            <td class="align-top">
               5<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">
+            <td class="align-top">
               6<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">7</td>
+            <td class="align-top">7</td>
           </tr>
           <tr>
-            <td className="align-top">1</td>
-            <td className="align-top">2</td>
-            <td className="align-top">3</td>
-            <td className="align-top">4</td>
-            <td className="align-top">5</td>
-            <td className="align-top">
+            <td class="align-top">1</td>
+            <td class="align-top">2</td>
+            <td class="align-top">3</td>
+            <td class="align-top">4</td>
+            <td class="align-top">5</td>
+            <td class="align-top">
               6<p>Cita con Juan Perez. 05:30. Agente: Maria Jose.</p>
             </td>
-            <td className="align-top">7</td>
+            <td class="align-top">7</td>
           </tr>
           <tr></tr>
         </tbody>

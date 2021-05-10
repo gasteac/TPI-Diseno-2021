@@ -83,7 +83,7 @@ export default function Table({ columnas, datos, rows=6, flag=true}) {
     <>
       <div style={{overflowX: "auto"}}>
         <table {...getTableProps()} className="table tabla-propia" >
-          <thead className="tabla-header-propio" >
+          <thead className="tabla-header-propio"  >
             {headerGroups.map((headerGroup, i) => (
               <tr {...headerGroup.getHeaderGroupProps()} key={i}>
                 {headerGroup.headers.map((column, i) => (
@@ -103,9 +103,9 @@ export default function Table({ columnas, datos, rows=6, flag=true}) {
                           : " "}
                       </span>
                     </div>
-                    <div>
+                    {/* <div>
                       {column.canFilter ? column.render("Filter") : null}
-                    </div>
+                    </div> */}
                   </th>
                 ))}
               </tr>

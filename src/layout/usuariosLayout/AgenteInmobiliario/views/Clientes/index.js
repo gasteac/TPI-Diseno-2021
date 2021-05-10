@@ -15,6 +15,9 @@ export default function ListaClientes({ history }) {
         >
             <BackButton history={history} />
             <Container fluid>
+            <div className='d-flex my-auto justify-content-center' >
+                <h2 className='titulosSecciones'>CLIENTES</h2>
+            </div>
                 <Table columnas={COLUMNS} datos={clients} />
             </Container>
         </Layout>
