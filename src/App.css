@@ -149,4 +149,11 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
         }
       }
 
-
+.titulosSecciones{
+border-bottom:1px solid black; 
+color:black; 
+text-Align:center;
+padding:5px;
+font-Family:'Open Sans', sans-serif;
+font-Weight:700
+}

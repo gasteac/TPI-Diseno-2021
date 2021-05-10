@@ -4,22 +4,22 @@ import globalContext from "../context/globalContext";
 import React, { useContext } from "react";
 import "./AgendaSecretari.css";
 import BackButton from "../components/BackButton";
-
+import moment from 'moment';
+import 'moment/locale/es';
 export default function AgendaSecretaria({ history }) {
 
     const GlobalContext = useContext(globalContext);
     const {setActiveNavbarLink } = GlobalContext;
 
-   
-
-
+    moment.locale('es');
+    const hoy = 'Fecha: ' + moment().format('LL');    
     return (
-        
+
             <div class="container-xl"> 
             
                 <BackButton history={history} />
                
-                <caption>Mayo/2021</caption>
+                <p className='mt-3'>{hoy}</p>
 
                 <table class="table-bordered w-100 h-100">
                     <thead>

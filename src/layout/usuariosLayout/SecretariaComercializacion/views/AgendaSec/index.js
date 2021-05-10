@@ -6,6 +6,7 @@ import AgendaSecretaria from "../../../../../components/AgendaSecretaria";
 export default function AgendaSec({ history }) {
     const user = useAuth(history);
     return (
+        
         <Layout
         usuario={user}
         >
