@@ -21,9 +21,6 @@ table tr, td{
 table tr{
     text-align: center;
 }
-table td{
-    height: 50px;
-}
 
 /* table tr td:nth-child(2){
     width: 10px;
