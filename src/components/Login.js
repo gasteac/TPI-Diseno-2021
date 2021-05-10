@@ -52,7 +52,7 @@ const Login = ({ history }) => {
       <Container
         fluid="xs"
         className="mx-auto mt-5"
-        style={{ maxWidth: "45%" }}
+        style={{ maxWidth: "60%" }}
       >
         <Jumbotron className="p-0">
           <Row>
