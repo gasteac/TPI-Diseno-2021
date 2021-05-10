@@ -11,7 +11,7 @@ import {
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos, rows=6 }) {
+export default function Table({ columnas, datos, rows=6, flag=true}) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -36,20 +36,22 @@ export default function Table({ columnas, datos, rows=6 }) {
     usePagination,
     useRowSelect,
     (hooks) => {
-      hooks.visibleColumns.push((columns) => {
-        return [
-          {
-            id: "selection",
-            Header: ({ getToggleAllRowsSelectedProps }) => (
-              <Checkbox {...getToggleAllRowsSelectedProps()} />
-            ),
-            Cell: ({ row }) => (
-              <Checkbox {...row.getToggleRowSelectedProps()} />
-            ),
-          },
-          ...columns,
-        ];
-      });
+      if (flag) {
+        hooks.visibleColumns.push((columns) => {
+          return [
+            {
+              id: "selection",
+              Header: ({ getToggleAllRowsSelectedProps }) => (
+                <Checkbox {...getToggleAllRowsSelectedProps()} />
+              ),
+              Cell: ({ row }) => (
+                <Checkbox {...row.getToggleRowSelectedProps()} />
+              ),
+            },
+            ...columns,
+          ];
+        });
+      }
     }
   );
 
@@ -65,7 +67,7 @@ export default function Table({ columnas, datos, rows=6 }) {
     canNextPage,
     canPreviousPage,
     pageOptions,
-    setPageSize,
+    setPageSize
   } = tableInstance;
   // eslint-disable-next-line
   const { globalFilter, pageIndex, pageSize } = state;
@@ -98,7 +100,7 @@ export default function Table({ columnas, datos, rows=6 }) {
                           ? column.isSortedDesc
                             ? " ↓"
                             : " ↑"
-                          : " -"}
+                          : " "}
                       </span>
                     </div>
                     <div>

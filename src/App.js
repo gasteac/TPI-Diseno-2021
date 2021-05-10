@@ -98,7 +98,6 @@ const App = () => {
           />
 
           {/* Cajera */}
-
           <Route
             exact
             path="/cajera/inicio"

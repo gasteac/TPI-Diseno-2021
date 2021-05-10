@@ -21,10 +21,10 @@ export default function SecretariaComercializacion({ history }) {
           <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
             <div className="row">
               <div className="col">
-                <ButtonCard user={user} seccion={"Agenda"} />
+                <ButtonCard user={user} seccion={"Agenda"} link={'link-1'}/>
               </div>
               <div className="col">
-                <ButtonCard user={user} seccion={"Citas"} />
+                <ButtonCard user={user} seccion={"Citas"} link={'link-2'}/>
               </div>
             </div>
           </div>
