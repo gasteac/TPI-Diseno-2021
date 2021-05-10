@@ -9,9 +9,9 @@ export default function BackButton({ history }) {
     const {setActiveNavbarLink } = GlobalContext;
 
     const volver = (i) => {
-        // setActiveNavbarLink(`link-0`);
-        history.goBack();
-        console.log(history);
+       setActiveNavbarLink(`link-0`);
+        // history.goBack();
+        // console.log(history);
       };
       
     const user = useAuth(history)
