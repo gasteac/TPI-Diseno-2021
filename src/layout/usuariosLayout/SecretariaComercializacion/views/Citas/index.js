@@ -16,14 +16,14 @@ export default function Citas({ history }) {
             
             <BackButton history={history} />
             <Container fluid>
-            <div className='d-flex my-auto' >
-            <h3 className='my-1 ml-4 mt-4' style={{background:'#50628C', color:'white', borderRadius:'10px', padding:'6px'}}>Citas confirmadas</h3>
+            <div className='d-flex my-auto justify-content-center' >
+                <h2 style={{color:'white', textAlign:'center', background:'rgb(80, 98, 140)', padding:'5px', borderRadius:'8px'}}>CITAS CONFIRMADAS</h2>
             </div>
                 <Table columnas={COLUMNS1} datos={columns1Data} rows={8}/>
             </Container>
             <Container fluid>
-            <div className='d-flex'>
-            <h3 className='my-1 ml-4' style={{background:'#50628C', color:'white', borderRadius:'10px', padding:'6px'}}>Citas sin agente designado</h3>
+            <div className='d-flex my-auto justify-content-center' >
+                <h2 style={{color:'white', textAlign:'center', background:'rgb(80, 98, 140)', padding:'5px', borderRadius:'8px'}}>CITAS SIN AGENTE DESIGNADO</h2>
             </div>
                 <Table columnas={COLUMNS2} datos={columns2Data} rows={8}/>
             </Container>

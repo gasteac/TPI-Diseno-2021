@@ -11,6 +11,9 @@ export default function Propiedades({history}) {
       usuario={user}
     >
       <BackButton history={history} />
+      <div className='d-flex my-auto justify-content-center' >
+                <h2 style={{color:'white', textAlign:'center', background:'rgb(80, 98, 140)', padding:'5px', borderRadius:'8px'}}>PROPIEDADES</h2>
+            </div>
       <ListaPropiedades propiedades={propiedades} history={history}/>
     </Layout>
   );

@@ -15,9 +15,8 @@ export default function Agenda({history}) {
     >
       <BackButton history={history} />
       <Container fluid>
-        <Table columnas={COLUMNS} datos={MOCK_DATA} />
-      </Container>
-      <Container fluid>
+        <div className='d-flex justify-content-center'>
+      <h2 style={{color:'white', textAlign:'center', background:'rgb(80, 98, 140)', padding:'5px', borderRadius:'8px'}}>AGENDA</h2></div>
         <Table columnas={COLUMNS} datos={MOCK_DATA} />
       </Container>
     </Layout>
