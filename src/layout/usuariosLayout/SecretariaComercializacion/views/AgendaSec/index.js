@@ -1,6 +1,7 @@
 import useAuth from "../../../../../hooks/useAuth";
 import Layout from "../../../../Layout";
 import BackButton from "../../../../../components/BackButton";
+import AgendaSecretaria from "../../../../../components/AgendaSecretaria";
 
 export default function AgendaSec({ history }) {
     const user = useAuth(history);
@@ -8,8 +9,7 @@ export default function AgendaSec({ history }) {
         <Layout
         usuario={user}
         >
-            <BackButton history={history} />
-            {/* ACA VA TU CODIGO VALENTINITA */}
+            <AgendaSecretaria />
         </Layout>
         )
 }
