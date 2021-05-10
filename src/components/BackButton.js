@@ -10,8 +10,8 @@ export default function BackButton({ history }) {
 
     const volver = () => {
         setActiveNavbarLink('link-0');
-        history.goBack();
-        console.log(history);
+        // history.goBack();
+        // console.log(history);
       };
       
     const user = useAuth(history)
