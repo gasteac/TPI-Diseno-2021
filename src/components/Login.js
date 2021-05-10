@@ -48,10 +48,11 @@ const Login = ({ history }) => {
   }, [])
   return (
     <>
+      <div className='centra2'>
       <Container
         fluid="xs"
-        className="mt-5 mx-auto"
-        style={{ maxWidth: "70%" }}
+        className="mx-auto mt-5"
+        style={{ maxWidth: "60%" }}
       >
         <Jumbotron className="p-0">
           <Row>
@@ -69,20 +70,20 @@ const Login = ({ history }) => {
               <h1 className="font-weight-bold">Ingresar a Dofus</h1>
               <Form onSubmit={(e) => handleSubmit(e)}>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
+                  <Form.Label>Ingrese su correo</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="Enter email"
+                    placeholder="example@example.com"
                     onChange={(e) => handleChange(e)}
                   />
                   <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
+                    Nunca compartiremos tu contraseña con nadie.
                   </Form.Text>
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="Contraseña" />
+                  <Form.Label>Ingrese su contraseña</Form.Label>
+                  <Form.Control type="password" placeholder="********" />
                 </Form.Group>
                 <Button variant="primary" type="submit" block style={{background:'#8E97C8', border:'none', borderRadius:'9px'}}>
                 Ingresar
@@ -100,12 +101,13 @@ const Login = ({ history }) => {
               }}
               className="justify-content-center"
             >
-              <Image src={Logo} style={{ minHeight: "80%" }} />
-              <h1 className="font-weight-bold">Dofus 2.0</h1>
+              <Image src={Logo} style={{ minHeight: "80%"}} />
+              <h1 className="font-weight-bold mt-2 ml-3"   style={{textShadow:'3px 3px grey', color:'white'}}>Dofus 2.0</h1>
             </Col>
           </Row>
         </Jumbotron>
       </Container>
+      </div>
     </>
   );
 };
