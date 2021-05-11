@@ -86,7 +86,7 @@ const Login = ({ history }) => {
                   <Form.Control type="password" placeholder="Contraseña" />
                 </Form.Group>
                 <hr/>
-                <Button variant="primary" type="submit" block style={{background:'#8E97C8', border:'none', borderRadius:'9px'}}>
+                <Button className='boton-inicio' variant="primary" type="submit" block style={{background:'#8E97C8', border:'none', borderRadius:'9px'}}>
                 Ingresar
                 </Button>
               </Form>

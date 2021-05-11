@@ -121,9 +121,19 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
 }
 .nav-pills .nav-link.active{
     background: #2B3860 !important;
+    border: 2px solid #ffffff;
+    padding: 6px !important;
 }
 .nav-link:hover{
-    background: #2b386050 !important;
+    transform-origin:center;
+    animation: scale 10ms ease-in forwards;
+    background: #2B3860 !important;
+
+  }
+  @keyframes scale {
+    to {
+      transform: scale(1.02);
+    }
 }
 
 
@@ -162,3 +172,15 @@ font-Weight:700
 table td{
    height: 50px;
 }
+
+.boton-inicio:hover{
+    transform-origin:center;
+    animation: scale 10ms ease-in forwards;
+    background: #24b383 !important;
+
+  }
+  @keyframes scale {
+    to {
+      transform: scale(1.02);
+    }
+  }
