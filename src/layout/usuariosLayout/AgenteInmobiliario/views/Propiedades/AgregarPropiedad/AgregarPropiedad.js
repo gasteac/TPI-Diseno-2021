@@ -11,7 +11,7 @@ import DatosDeLaPropiedadForm from "./components/DatosDeLaPropiedadForm";
 import DatosDelPropietario from "./components/DatosDelPropietario";
 import "./AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
-import BackButton from "../../../../../../components/BackButton";
+// import BackButton from "../../../../../../components/BackButton";
 
 const AgregarPropiedad = ({history}) => {
   // eslint-disable-next-line
@@ -30,7 +30,7 @@ const AgregarPropiedad = ({history}) => {
   return (
     <Layout>
       <Container fluid>
-      <BackButton history={history} />
+      {/* <BackButton history={history} /> */}
         <Row className="mt-3">
           <Col xs={8}>
             <Card>

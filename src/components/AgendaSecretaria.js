@@ -3,7 +3,7 @@ import useAuth from "../hooks/useAuth";
 import globalContext from "../context/globalContext";
 import React, { useContext } from "react";
 import "./AgendaSecretari.css";
-import BackButton from "../components/BackButton";
+// import BackButton from "../components/BackButton";
 import moment from "moment";
 import "moment/locale/es";
 export default function AgendaSecretaria({ history }) {
@@ -14,7 +14,7 @@ export default function AgendaSecretaria({ history }) {
   const hoy = "Fecha: " + moment().format("LL");
   return (
     <div class="container-xl">
-      <BackButton history={history} />
+      {/* <BackButton history={history} /> */}
 
       <p className="mt-3">{hoy}</p>
 

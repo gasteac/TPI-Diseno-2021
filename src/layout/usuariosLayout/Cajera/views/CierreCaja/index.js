@@ -1,7 +1,7 @@
 import Layout from "../../../../Layout";
 import Table from "../../../../../components/Table/";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
+// import BackButton from "../../../../../components/BackButton";
 import { columns } from "./assets/columns";
 import MOCK_DATA from "./assets/MOCK_DATA.json";
 import { Container } from "react-bootstrap";
@@ -13,7 +13,7 @@ export default function CierreCaja({ history }) {
     <Layout
       usuario={user}
     >
-      <BackButton history={history} />
+      {/* <BackButton history={history} /> */}
       <div className='d-flex'>
         <Container fluid>
             <Table columnas={columns} datos={MOCK_DATA} flag={false}/>
