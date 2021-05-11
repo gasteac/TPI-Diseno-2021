@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React, {useEffect, useReducer} from 'react';
 
 import globalContext from './globalContext';
 import globalReducer from './globalReducer';
@@ -6,6 +6,7 @@ import globalReducer from './globalReducer';
 import {
     ACTIVE_NAVAR_LINK,
     USER_LOGIN,
+    USER_LOGOUT,
     SET_NOMBRE,
     SET_PRECIOMAYOR,
     SET_PRECIOMENOR,
@@ -115,6 +116,12 @@ const GlobalState = props => {
         })
     }
 
+    const logOut = () => {
+        dispatch({
+            type: USER_LOGOUT,
+        })
+    }
+
     return (
         <globalContext.Provider
             value={{
@@ -124,6 +131,7 @@ const GlobalState = props => {
                 previousNavBarLink: state.previousNavBarLink,
                 setActiveNavbarLink,
                 userLogin,
+                logOut,
                 setNombre,
                 setPrecioMayor,
                 setPrecioMenor,

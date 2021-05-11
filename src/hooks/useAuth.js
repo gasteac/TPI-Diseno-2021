@@ -1,20 +1,22 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import globalContext from "../context/globalContext";
 
 const useAuth = (history) => {
-  const [usuarioAutenticado, setUsuarioAutenticado] = useState(null);
   const GlobalContext = useContext(globalContext);
-  const { user } = GlobalContext;
+  const { user, userLogin } = GlobalContext;
+
+
   useEffect(() => {
-    if (!user) {
-      history.push("/");
-      setUsuarioAutenticado(null)
+    const usuarioLocalStorage = localStorage.getItem('user')
+    if (usuarioLocalStorage) {
+      userLogin(usuarioLocalStorage)
     } else {
-        setUsuarioAutenticado(user)
+      history.push('/')
+      userLogin('')
     }
     // eslint-disable-next-line
   }, [user]);
-  return usuarioAutenticado;
+  return user;
 };
 
 export default useAuth;

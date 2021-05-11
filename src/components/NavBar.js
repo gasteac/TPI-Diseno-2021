@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import globalContext from "../context/globalContext";
@@ -18,6 +18,7 @@ const NavBar = ({ cliente }) => {
   const handleClick = (i) => {
     setActiveNavbarLink(`link-${i}`);
   };
+
   return (
     <Navbar style={{ backgroundColor: cliente ? "" : "#50628C" }} expand="lg">
       <Navbar.Brand>

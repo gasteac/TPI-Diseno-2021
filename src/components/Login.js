@@ -13,7 +13,7 @@ import Logo from "../static/images/inmoviliaria-1.svg";
 
 const Login = ({ history }) => {
   const GlobalContext = useContext(globalContext);
-  const { userLogin, setActiveNavbarLink } = GlobalContext;
+  const { userLogin, setActiveNavbarLink, logOut } = GlobalContext;
 
   document.querySelector("body").style.background = "#2B3860";
   const [login, setLogin] = useState(localStorage.setItem("user", ""));
@@ -45,6 +45,7 @@ const Login = ({ history }) => {
 
   useEffect(() => {
     setActiveNavbarLink('link-0')
+    logOut()
   }, [])
   return (
     <>

@@ -1,6 +1,7 @@
 import { 
     ACTIVE_NAVAR_LINK,
     USER_LOGIN,
+    USER_LOGOUT,
     SET_NOMBRE,
     SET_PRECIOMAYOR,
     SET_PRECIOMENOR,
@@ -25,6 +26,11 @@ export default (state, action) => {
             return {
                 ...state,
                 user: action.payload
+            }
+        case USER_LOGOUT:
+            return {
+                ...state,
+                user: ''
             }
         case SET_NOMBRE:
             return {

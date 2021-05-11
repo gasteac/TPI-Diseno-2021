@@ -36,9 +36,6 @@ const App = () => {
     <GlobalState>
       <Router>
         <Switch>
-        {/* <Route exact path="/">
-              <Redirect to="/home" />
-           </Route> */}
           <Route exact path="/" component={Login} />
           <Route
             exact
