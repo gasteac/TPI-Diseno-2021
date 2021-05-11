@@ -180,7 +180,7 @@ const FormCita = () => {
               value={fecha}
             />
           </Form.Group>
-          <Form.Group>
+          {/* <Form.Group>
             <Form.Label>Hora</Form.Label>
             <Form.Control
             required
@@ -189,10 +189,12 @@ const FormCita = () => {
               name="hora"
               value={hora}
             />
-          </Form.Group>
-          <Button variant="primary" type="submit" className="ml-auto">
+          </Form.Group> */}
+          <div style={{display:'flex', justifyContent:'center'}}>
+          <Button variant="primary" type="submit" style={{display:'flex'}}>
             Programar
           </Button>
+          </div>
         </Form>
       </Card.Body>
     </Card>

@@ -13,6 +13,7 @@ const Buscador = () => {
           <img src={Lupa} alt="buscador" className="icon" />
         </InputGroup.Prepend>
         <FormControl
+          style={{borderRadius:'10px'}}
           placeholder="Username"
           aria-label="Username"
           aria-describedby="basic-addon1"

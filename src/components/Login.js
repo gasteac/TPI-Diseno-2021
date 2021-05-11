@@ -52,7 +52,7 @@ const Login = ({ history }) => {
       <Container
         fluid="xs"
         className="mx-auto mt-5"
-        style={{ maxWidth: "60%" }}
+        style={{ maxWidth: "50%" }}
       >
         <Jumbotron className="p-0">
           <Row>
@@ -67,24 +67,25 @@ const Login = ({ history }) => {
                 borderBottomLeftRadius: ".3rem",
               }}
             >
-              <h1 className="font-weight-bold">Ingresar a Dofus</h1>
+              <h1 className="titulo-login">Ingresar a Dofus</h1>
               <Form onSubmit={(e) => handleSubmit(e)}>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Ingrese su correo</Form.Label>
+                  {/* <Form.Label>Ingrese su correo</Form.Label> */}
                   <Form.Control
                     type="email"
-                    placeholder="example@example.com"
+                    placeholder="Ingrese su correo electrónico"
                     onChange={(e) => handleChange(e)}
                   />
                   <Form.Text className="text-muted">
-                    Nunca compartiremos tu contraseña con nadie.
+                    {/* Nunca compartiremos tu contraseña con nadie. */}
                   </Form.Text>
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Ingrese su contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="********" />
+                  {/* <Form.Label>Ingrese su contraseña</Form.Label> */}
+                  <Form.Control type="password" placeholder="Contraseña" />
                 </Form.Group>
+                <hr/>
                 <Button variant="primary" type="submit" block style={{background:'#8E97C8', border:'none', borderRadius:'9px'}}>
                 Ingresar
                 </Button>
