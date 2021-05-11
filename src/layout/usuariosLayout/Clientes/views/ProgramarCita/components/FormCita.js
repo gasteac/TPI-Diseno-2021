@@ -75,7 +75,7 @@ const FormCita = () => {
       <Card.Body>
 
       <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
+            <Modal.Header>
               Cita guardada! 
             </Modal.Header >
             <Modal.Body>

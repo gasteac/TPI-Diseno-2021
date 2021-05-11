@@ -3,6 +3,9 @@ import { Container, Jumbotron, Row, Col, Card } from "react-bootstrap";
 import ButtonCard from "../../../components/ButtonCard";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
+import ButtonCardCaj from "./ButtonCardCaj";
+
+
 
 const Cajera = ({ history }) => {
   const user = useAuth(history);
@@ -10,17 +13,18 @@ const Cajera = ({ history }) => {
     <Layout>
       <Container style={{marginTop:'40px'}}>
         <Card style={{borderRadiusTopLeft:'100px', border:'none'}}>
-        <Card.Header as='h3' style={{background:'#50628C', color:'white', borderTopLeftRadius:'12px', borderTopRightRadius:'12px'}}>
-          Bienvenida Jett
+        <Card.Header as='h1' style={{background:'#50628C', color:'white', borderTopLeftRadius:'12px', borderTopRightRadius:'12px'}}>
+          Bienvenida, Jett.
+          <h5 style={{marginTop:'2px'}}>Que hacemos hoy? :)</h5>
         </Card.Header>
         <Card.Body style={{background:'#B3BCE8', borderBottomLeftRadius:'12px', borderBottomRightRadius:'12px', border:'none'}}>
           <Row>
             <Col>
-              <ButtonCard user={user} seccion="EntradaSalida" link={"link-1"} style={{background:"#50628C"}}/>
+              <ButtonCardCaj user={user} seccion="EntradaSalida" link={"link-1"} style={{background:"#50628C", marginTop:'10px'}}/>
             </Col>
             <Col>
               <Row>
-                <ButtonCard
+                <ButtonCardCaj
                   user={user}
                   seccion="PagoAlquiler"
                   link={"link-3"}
@@ -37,7 +41,7 @@ const Cajera = ({ history }) => {
                 />
               </Row>
               <Row>
-                <ButtonCard
+                <ButtonCardCaj
                   user={user}
                   seccion="PagoVenta"
                   link={"link-4"}
@@ -57,10 +61,10 @@ const Cajera = ({ history }) => {
           </Row>
           <Row>
             <Col>
-              <ButtonCard user={user} seccion="Transacciones" link={"link-2"} style={{background:"#50628C"}}/>
+              <ButtonCardCaj user={user} seccion="Transacciones" link={"link-2"} style={{background:"#50628C"}}/>
             </Col>
             <Col>
-              <ButtonCard
+              <ButtonCardCaj
               style={{background:"#50628C"}}
                 user={user}
                 seccion="CierreDeCaja"

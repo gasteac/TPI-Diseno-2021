@@ -4,17 +4,14 @@
     --violetaOscuro2: #50628C;
     --botoncitos: #2B3860;
 }
-
 h3, h4, h5, h6 {
     margin: 0;
 }
-
 .bg-botoncito{
     background: var(--botoncitos) !important;
     color: white !important;
     border: none !important;
 }
-
 .bg-botoncito:hover{
     color: white !important;
     cursor: pointer;
@@ -22,7 +19,6 @@ h3, h4, h5, h6 {
     border: none !important;
 
 }
-
 .bg-violetaOscuro-2 {
     background-color: var(--violetaOscuro2);
 }
@@ -35,7 +31,6 @@ h3, h4, h5, h6 {
 .text-white {
     color: white;
 }
-
 a { text-decoration: none; color: #fff; }
 a:visited { text-decoration: none; color: #fff; }
 a:hover { text-decoration: none; color: #fff; }
@@ -69,7 +64,6 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
 .textButtonsCard {
     text-align: center;
 }
-
 .buttonsCard {
     border-radius: 16px;
     min-height: 180px;
@@ -82,35 +76,27 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
     justify-content: center;
     margin: 1rem 1rem;
 }
-
-
 .container {
     display: flex;
     justify-content: center;
     margin-top: 5rem;
 }
-
-
 .input-icons img {
     position: absolute;
 }
-  
 .input-icons {
     width: 100%;
     margin-bottom: 10px;
-}
-  
+} 
 .icon {
     padding: 7px;
 }
-  
 .input-field {
     width: 100%;
     padding: 10px;
     text-align: center;
     min-height: 44px;
 }
-
 /*Sidebar*/
 .sidebar {
     position: fixed;
@@ -135,9 +121,6 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
       transform: scale(1.02);
     }
 }
-
-
-
 .btnxd:hover{
     background: #c6cdf3;
 }
@@ -152,7 +135,6 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
           transform: scale(1.06);
         }
       }
-
 .titulosSecciones{
 border-bottom:1px solid black; 
 color:black; 
@@ -168,37 +150,31 @@ font-Weight:700
     font-Family:'Open Sans', sans-serif;
     font-Weight:700
     }
-
 table td{
    height: 50px;
 }
-
 .boton-inicio:hover{
     transform-origin:center;
     animation: scale 10ms ease-in forwards;
     background: #2B3860 !important;
     border: none !important;
-
   }
   @keyframes scale {
     to {
       transform: scale(1.02);
     }
   }
-
   .boton-inicio:active{
     transform-origin:center;
     animation: scalepress 10ms ease-out forwards;
     background: rgb(142, 151, 200) !important;
     border: none !important;
-
   }
   @keyframes scalepress {
     to {
       transform: scale(1);
     }
   }
-
 .boton-inicio{
 text-align: center;
 cursor: pointer;
