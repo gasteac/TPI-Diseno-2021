@@ -48,11 +48,11 @@ const Login = ({ history }) => {
   }, [])
   return (
     <>
-      <div className='centra2'>
+      <div className=''>
       <Container
-        fluid="xs"
-        className="mx-auto mt-5"
-        style={{ maxWidth: "50%" }}
+        // fluid="xs"
+        // className="mx-auto mt-5"
+        // style={{ maxWidth: "50%" }}
       >
         <Jumbotron className="p-0">
           <Row>
@@ -62,9 +62,8 @@ const Login = ({ history }) => {
               style={{
                 display: "grid",
                 justifyContent: "center",
-                background: "",
-                borderTopLeftRadius: ".3rem",
-                borderBottomLeftRadius: ".3rem",
+                borderTopLeftRadius: ".4rem",
+                borderBottomLeftRadius: ".4rem",
               }}
             >
               <h1 className="titulo-login">Ingresar a Dofus</h1>

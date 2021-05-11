@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-import { Button, Card, Form } from "react-bootstrap";
+import { Button, Card, Form, Modal} from "react-bootstrap";
 import "./FormCita.css";
+import React, { useState } from "react";
+
+
 
 const FormCita = () => {
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
   const [datos, setDatos] = useState({
     nombre: "",
     apellido: "",
@@ -54,7 +59,8 @@ const FormCita = () => {
     });
   };
   return (
-
+    <>
+  
     <Card>
       <Card.Header as="h1">Programar Cita</Card.Header>
       <Card.Body>
@@ -191,13 +197,29 @@ const FormCita = () => {
             />
           </Form.Group> */}
           <div style={{display:'flex', justifyContent:'center'}}>
-          <Button variant="primary" type="submit" style={{display:'flex'}}>
-            Programar
-          </Button>
+          <Button onSubmit={handleShow, alert('ola')} onHide={handleClose} variant="primary" type="submit" style={{display:'flex'}}>Programar</Button>
           </div>
         </Form>
+        <Modal show={false}>
+            <Modal.Header closeButton>
+              Cita guardada! 
+            </Modal.Header >
+            <Modal.Body>
+              Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
+              Atte. Dofus.
+            </Modal.Body>
+            <Modal.Footer>
+              <Button type='primary' onClick={handleClose}>
+                Aceptar
+              </Button>
+            </Modal.Footer>
+          </Modal>
+
       </Card.Body>
     </Card>
+
+  
+    </>
   );
 };
 
