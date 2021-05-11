@@ -176,7 +176,8 @@ table td{
 .boton-inicio:hover{
     transform-origin:center;
     animation: scale 10ms ease-in forwards;
-    background: #24b383 !important;
+    background: #2B3860 !important;
+    border: none !important;
 
   }
   @keyframes scale {
@@ -184,3 +185,22 @@ table td{
       transform: scale(1.02);
     }
   }
+
+  .boton-inicio:active{
+    transform-origin:center;
+    animation: scalepress 10ms ease-out forwards;
+    background: rgb(142, 151, 200) !important;
+    border: none !important;
+
+  }
+  @keyframes scalepress {
+    to {
+      transform: scale(1);
+    }
+  }
+
+.boton-inicio{
+text-align: center;
+cursor: pointer;
+box-shadow: 2px 2px #999;
+}
