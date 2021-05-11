@@ -1,11 +1,18 @@
 import Layout from "../../../../Layout";
-import propiedades from "../../../../../assets/propiedades.json";
 import ListaPropiedades from "../../../../../components/ListaPropiedades/";
 import useAuth from "../../../../../hooks/useAuth";
+import { useContext } from "react";
+import propiedadesContext from "../../../../../context/contextPropiedades/propiedadesContext";
+
 // import BackButton from "../../../../../components/BackButton";
 
 export default function Propiedades({history}) {
+  
+  const PropiedadesContext = useContext(propiedadesContext)
+  const { propiedades } = PropiedadesContext;
+
   const user = useAuth(history)
+
   return (
     <Layout
       usuario={user}

@@ -16,15 +16,22 @@ import useAuth from "../../../hooks/useAuth";
 
 import "./Propiedad.css";
 import globalContext from "../../../context/globalContext";
+import propiedadesContext from "../../../context/contextPropiedades/propiedadesContext";
+
+
 
 export default function Propiedades({ history, propiedades }) {
   const GlobalContext = useContext(globalContext);
   const { setNombre } = GlobalContext;
 
+  const PropiedadesContext = useContext(propiedadesContext)
+  const { seleccionarPropiedad } = PropiedadesContext;
+
   const [show, setShow] = useState(false);
   const user = useAuth();
 
-  const handleClickPropiedad = () => {
+  const handleClickPropiedad = (id) => {
+    seleccionarPropiedad(id)
     history.push("/propiedades/propiedad");
   };
 
@@ -33,7 +40,7 @@ export default function Propiedades({ history, propiedades }) {
       className="shadow mb-3 mt-3 card-custom"
       style={{width:'350px', border:'none'}}
       key={propiedad._id}
-      onClick={handleClickPropiedad}
+      onClick={() => handleClickPropiedad(propiedad._id)}
     >
       <Card.Img variant="top" src={PropiedadImg} />
       <Card.Body>

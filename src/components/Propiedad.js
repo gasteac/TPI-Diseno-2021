@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Card, Col, Container, Row, Image, Button } from "react-bootstrap";
 import useAuth from "../hooks/useAuth";
 import Layout from "../layout/Layout";
@@ -6,15 +6,21 @@ import DatosDeContactoComponent from "./DatosDeContactoComponent";
 import propiedades from "../assets/propiedades.json";
 import PropiedadResize from "../static/images/Propiedad2.svg";
 import DatosDelInmuebleComponent from "./DatosDelInmuebleComponent";
+import propiedadesContext from "../context/contextPropiedades/propiedadesContext";
 // import BackButton from "./BackButton";
 
 
 const Propiedad = ({ history }) => {
   const user = useAuth(history);
-  const { DatosDeContacto, DatosDelInmueble } = propiedades[0];
+  
+  const PropiedadesContext = useContext(propiedadesContext)
+  const { propiedadSeleccionada } = PropiedadesContext;
+  
+  const { DatosDeContacto, DatosDelInmueble } = propiedadSeleccionada;
   const handleClickEditar = () => {
     history.push("/agenteinmobiliario/propiedades/editarpropiedad");
   };
+
   return (
     
     <Layout>

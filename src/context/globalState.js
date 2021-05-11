@@ -1,7 +1,8 @@
-import React, {useEffect, useReducer} from 'react';
+import React, {useReducer} from 'react';
 
 import globalContext from './globalContext';
 import globalReducer from './globalReducer';
+
 
 import {
     ACTIVE_NAVAR_LINK,
