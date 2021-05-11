@@ -1,13 +1,14 @@
 import { Button, Card, Form, Modal} from "react-bootstrap";
 import "./FormCita.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 
+
+// const user = useAuth(history)
 
 const FormCita = () => {
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false);
+
   const [datos, setDatos] = useState({
     nombre: "",
     apellido: "",
@@ -30,8 +31,10 @@ const FormCita = () => {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-    }
-
+    } else
+    handleShow();
+    event.preventDefault();
+    event.stopPropagation();
     setValidated(true);
   };
 
@@ -44,6 +47,7 @@ const FormCita = () => {
       [e.target.name + "Focus"]: true,
     });
   };
+
   const handleBlur = (e) => {
     if (!e.target.value) {
       setFocus({
@@ -58,12 +62,35 @@ const FormCita = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
   
     <Card>
       <Card.Header as="h1">Programar Cita</Card.Header>
       <Card.Body>
+
+      <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              Cita guardada! 
+            </Modal.Header >
+            <Modal.Body>
+              Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
+              Atte. Dofus.
+            </Modal.Body>
+            <Modal.Footer>
+            <Link to={`/cliente/inicio`}>
+              <Button type='primary' onClick={handleClose}>
+                Aceptar
+              </Button>
+              </Link>
+            </Modal.Footer>
+          </Modal>
+
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Card.Title>Datos Personales</Card.Title>
           <Form.Group className="form-group-2" controlId="validationName">
@@ -197,24 +224,9 @@ const FormCita = () => {
             />
           </Form.Group> */}
           <div style={{display:'flex', justifyContent:'center'}}>
-          <Button onSubmit={handleShow, alert('ola')} onHide={handleClose} variant="primary" type="submit" style={{display:'flex'}}>Programar</Button>
+          <Button variant="primary" type="submit" style={{display:'flex'}}>Programar</Button>
           </div>
         </Form>
-        <Modal show={false}>
-            <Modal.Header closeButton>
-              Cita guardada! 
-            </Modal.Header >
-            <Modal.Body>
-              Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
-              Atte. Dofus.
-            </Modal.Body>
-            <Modal.Footer>
-              <Button type='primary' onClick={handleClose}>
-                Aceptar
-              </Button>
-            </Modal.Footer>
-          </Modal>
-
       </Card.Body>
     </Card>
 

@@ -30,11 +30,15 @@ import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida";
 import Transacciones from "./layout/usuariosLayout/Cajera/views/Transacciones";
 import CierreDeCaja from "./layout/usuariosLayout/Cajera/views/CierreDeCaja";
 
+
 const App = () => {
   return (
     <GlobalState>
       <Router>
         <Switch>
+        {/* <Route exact path="/">
+              <Redirect to="/home" />
+           </Route> */}
           <Route exact path="/" component={Login} />
           <Route
             exact
