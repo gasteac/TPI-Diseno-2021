@@ -1,7 +1,8 @@
-import { Button, Card, Form, Modal} from "react-bootstrap";
+import { Button, Card, Container, Form, Modal} from "react-bootstrap";
 import "./FormCita.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import legoshi from "./legoshi.png";
 
 
 
@@ -69,27 +70,15 @@ const FormCita = () => {
 
   return (
     <>
-  
+    <Container>
+      <div>
+      <img style={{maxHeight:'400px', marginRight:'50px'}} src={legoshi} alt='legoshi'/>
+      <h2 style={{textAlign:'center'}}>Legoshi hermoso uwu</h2></div>
     <Card>
       <Card.Header as="h1">Programar Cita</Card.Header>
       <Card.Body>
 
-      <Modal show={show} onHide={handleClose}>
-            <Modal.Header>
-              Cita guardada! 
-            </Modal.Header >
-            <Modal.Body>
-              Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
-              Atte. Dofus.
-            </Modal.Body>
-            <Modal.Footer>
-            <Link to={`/cliente/inicio`}>
-              <Button type='primary' onClick={handleClose}>
-                Aceptar
-              </Button>
-              </Link>
-            </Modal.Footer>
-          </Modal>
+      
 
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Card.Title>Datos Personales</Card.Title>
@@ -202,7 +191,7 @@ const FormCita = () => {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Card.Title> Datos de la cita</Card.Title>
+          {/* <Card.Title> Datos de la cita</Card.Title>
           <Form.Group>
             <Form.Label>Fecha</Form.Label>
             <Form.Control
@@ -212,7 +201,7 @@ const FormCita = () => {
               name="fecha"
               value={fecha}
             />
-          </Form.Group>
+          </Form.Group> */}
           {/* <Form.Group>
             <Form.Label>Hora</Form.Label>
             <Form.Control
@@ -229,8 +218,24 @@ const FormCita = () => {
         </Form>
       </Card.Body>
     </Card>
+            </Container>
 
-  
+    <Modal show={show} onHide={handleClose}>
+            <Modal.Header>
+              Cita guardada! 
+            </Modal.Header >
+            <Modal.Body>
+              Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
+              Atte. Dofus.
+            </Modal.Body>
+            <Modal.Footer>
+            <Link to={`/cliente/inicio`}>
+              <Button type='primary' onClick={handleClose}>
+                Aceptar
+              </Button>
+              </Link>
+            </Modal.Footer>
+          </Modal>
     </>
   );
 };
