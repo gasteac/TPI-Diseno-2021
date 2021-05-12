@@ -7,6 +7,9 @@
     left: 0;
     top: 0;
     min-height: 3rem;
+    background: #ffffff;
+    border: 2px solid white;
+    color: white;
 }
 .form-label-2{
     position: absolute;
@@ -18,3 +21,21 @@
     position: absolute;
     top: 90%;
 }
+
+.botoncita{
+    transform-origin:center;
+    background:#2B3860 !important;
+    border:none !important
+  }
+
+.botoncita:hover{
+    transform-origin:center;
+    animation: botoncita 10ms ease-in forwards;
+    background:#2B3860 !important;
+    border: none !important;
+  }
+  @keyframes botoncita {
+    to {
+      transform: scale(1.1);
+    }}
+

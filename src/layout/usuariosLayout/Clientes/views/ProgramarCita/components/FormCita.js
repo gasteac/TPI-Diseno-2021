@@ -74,14 +74,14 @@ const FormCita = () => {
       <div>
       <img style={{maxHeight:'400px', marginRight:'50px'}} src={legoshi} alt='legoshi'/>
       <h2 style={{textAlign:'center'}}>Legoshi hermoso uwu</h2></div>
-    <Card>
-      <Card.Header as="h1">Programar Cita</Card.Header>
-      <Card.Body>
+    <Card style={{border:'none'}}>
+      <Card.Header as="h1" style={{textShadow:'2px 2px 5px black',background:'#2B3860', color:'white', borderTopRightRadius:'10px', borderTopLeftRadius:'10px'}}>Programar Cita</Card.Header>
+      <Card.Body style={{background:'#8E97C8', borderBottomLeftRadius:'10px', borderBottomRightRadius:'10px'}}>
 
       
 
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <Card.Title>Datos Personales</Card.Title>
+          <Card.Title  style={{color:'white', textShadow:'2px 2px 7px black'}}>Ingrese sus datos Personales</Card.Title>
           <Form.Group className="form-group-2" controlId="validationName">
             <Form.Label
               className="form-label-2"
@@ -99,8 +99,9 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="text"
-              name="nombre"
+              
               value={nombre}
+              color='white'
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
               
@@ -126,7 +127,6 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="text"
-              name="apellido"
               value={apellido}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
@@ -153,7 +153,6 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="email"
-              name="email"
               value={email}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
@@ -180,7 +179,6 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="tel"
-              name="telefono"
               value={telefono}
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
@@ -213,7 +211,7 @@ const FormCita = () => {
             />
           </Form.Group> */}
           <div style={{display:'flex', justifyContent:'center'}}>
-          <Button variant="primary" type="submit" style={{display:'flex'}}>Programar</Button>
+          <Button className='botoncita'>Programar</Button>
           </div>
         </Form>
       </Card.Body>

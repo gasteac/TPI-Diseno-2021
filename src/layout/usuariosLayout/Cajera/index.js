@@ -13,7 +13,7 @@ const Cajera = ({ history }) => {
     <Layout>
       <Container style={{marginTop:'40px'}}>
         <Card style={{borderRadiusTopLeft:'100px', border:'none'}}>
-        <Card.Header as='h1' style={{background:'#50628C', color:'white', borderTopLeftRadius:'12px', borderTopRightRadius:'12px'}}>
+        <Card.Header as='h1' style={{background:'#50628C', color:'white', borderTopLeftRadius:'12px', borderTopRightRadius:'12px', textShadow:'2px 2px 5px black'}}> 
           Bienvenida, Jett.
           <h5 style={{marginTop:'2px'}}>Que hacemos hoy? :)</h5>
         </Card.Header>

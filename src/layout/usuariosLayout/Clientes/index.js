@@ -2,7 +2,7 @@ import React  from "react";
 import Layout from "../../Layout";
 import Container from "./components/Container";
 import Buscador from "./components/Buscador";
-import Fondo from "../../../static/images/fondoClientes1.jpg";
+import Fondo from "../../../static/images/casita.jpg";
 import useAuth from "../../../hooks/useAuth";
 
 const Clientes = ({history}) => {

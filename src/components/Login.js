@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import globalContext from "../context/globalContext";
 import Logo from "../static/images/inmoviliaria-1.svg";
+import Fondo from '../static/images/casita.jpg'
 
 const Login = ({ history }) => {
   const GlobalContext = useContext(globalContext);
@@ -47,6 +48,9 @@ const Login = ({ history }) => {
     setActiveNavbarLink('link-0')
     logOut()
   }, [])
+
+  document.querySelector('body').style.background = `url(${Fondo})`
+  document.querySelector('body').style.backgroundSize = `cover`
   return (
     <>
 

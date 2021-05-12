@@ -106,14 +106,14 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
     z-index: 100;
 }
 .nav-pills .nav-link.active{
-    background: #2B3860 !important;
+    background: #7f87b3 !important;
     border: 2px solid #ffffff;
     padding: 6px !important;
 }
 .nav-link:hover{
     transform-origin:center;
     animation: scale 10ms ease-in forwards;
-    background: #2B3860 !important;
+    background: rgb(93, 114, 163)!important;
 
   }
   @keyframes scale {
@@ -136,8 +136,9 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
         }
       }
 .titulosSecciones{
-border-bottom:1px solid black; 
-color:black; 
+border-bottom:1px solid rgb(80, 98, 140); 
+color:rgb(80, 98, 140); 
+text-shadow: 2px 2px 8px #2b3860b0;
 text-Align:center;
 padding:5px;
 font-Family:'Open Sans', sans-serif;
@@ -180,3 +181,4 @@ text-align: center;
 cursor: pointer;
 box-shadow: 2px 2px #999;
 }
+
