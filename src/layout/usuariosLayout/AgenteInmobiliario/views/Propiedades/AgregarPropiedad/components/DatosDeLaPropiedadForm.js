@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 
 const DatosDeLaPropiedadForm = ({
-  validatedPropiedad,
-  handleSubmitPropiedad,
-  DatosDelInmueble,
+  DatosDelInmuebleEditar,
+  nuevaPropiedad,
+  setPropiedad,
+  forceUpdate
 }) => {
   const [formState, setFormState] = useState({
     tituloPropiedad: "",
@@ -55,26 +56,43 @@ const DatosDeLaPropiedadForm = ({
   } = formState;
 
   useEffect(() => {
-    if (DatosDelInmueble) {
-      setFormState(DatosDelInmueble);
+    if (DatosDelInmuebleEditar) {
+      setFormState(DatosDelInmuebleEditar);
     }
-  }, [DatosDelInmueble]);
+  }, [DatosDelInmuebleEditar]);
 
   const [servicio1, servicio2, servicio3] = servicios
 
   const handleChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
+    })
+    setPropiedad({
+      ...nuevaPropiedad,
+      DatosDelInmueble: {
+        ...nuevaPropiedad.DatosDelInmueble,
+        [e.target.name]: e.target.value,
+      }
     });
   };
 
+  const handleChangeMultipleSelect = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: [...formState.servicios ,e.target.value]
+    })
+    setPropiedad({
+      ...nuevaPropiedad,
+      DatosDelInmueble: {
+        ...nuevaPropiedad.DatosDelInmueble,
+        [e.target.name]: [...formState.servicios ,e.target.value],
+      }
+    });
+  }
+
   return (
-    <Form
-      noValidate
-      validated={validatedPropiedad}
-      onSubmit={handleSubmitPropiedad}
-    >
+    <>
       <Form.Row>
         <Form.Group as={Col}>
           <Form.Label>Título</Form.Label>
@@ -85,8 +103,7 @@ const DatosDeLaPropiedadForm = ({
             name="tituloPropiedad"
             value={tituloPropiedad}
             onChange={handleChange}
-            defaultValue={tituloPropiedad}
-          />
+            />
         </Form.Group>
         <Form.Group as={Col}>
           <Form.Label>Imagen de la propiedad</Form.Label>
@@ -125,9 +142,9 @@ const DatosDeLaPropiedadForm = ({
             as="select"
             name="pais"
             required
-            value={provincia}
+            value={pais}
             onChange={handleChange}
-          >
+            >
             <option hidden disabled value="">
               Seleccione un país
             </option>
@@ -147,7 +164,7 @@ const DatosDeLaPropiedadForm = ({
             required
             onChange={handleChange}
             value={provincia}
-          >
+            >
             <option hidden disabled value="">
               Seleccione una provincia
             </option>
@@ -182,7 +199,7 @@ const DatosDeLaPropiedadForm = ({
             required
             value={barrio}
             onChange={handleChange}
-          />
+            />
         </Form.Group>
         <Form.Group as={Col}>
           <Form.Label>Dirección</Form.Label>
@@ -193,7 +210,7 @@ const DatosDeLaPropiedadForm = ({
             required
             value={direccion}
             onChange={handleChange}
-          />
+            />
         </Form.Group>
       </Form.Row>
       <Form.Row>
@@ -204,24 +221,23 @@ const DatosDeLaPropiedadForm = ({
             placeholder="Codigo Postal"
             type="number"
             name="CP"
-            disabled
-            value={CP}
+            value={CP ? CP : null}
             onChange={handleChange}
-          />
+            />
           <Form.Control.Feedback type="invalid">
             Debería ser un número.
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col}>
-          <Form.Label>Antiguedad</Form.Label>
+          <Form.Label>Antigüedad</Form.Label>
           <Form.Control
             required
-            placeholder="Antiguedad"
+            placeholder="Antigüedad"
             type="number"
             name="antiguedad"
-            value={antiguedad}
+            value={antiguedad? antiguedad : null}
             onChange={handleChange}
-          />
+            />
           <Form.Control.Feedback type="invalid">
             Debería ser un número.
           </Form.Control.Feedback>
@@ -233,9 +249,9 @@ const DatosDeLaPropiedadForm = ({
             placeholder="Cant. Esp."
             type="number"
             name="espacios"
-            value={espacios}
+            value={espacios ? espacios: null}
             onChange={handleChange}
-          />
+            />
           <Form.Control.Feedback type="invalid">
             Debería ser un número.
           </Form.Control.Feedback>
@@ -247,9 +263,9 @@ const DatosDeLaPropiedadForm = ({
             placeholder="Habitaciones"
             type="number"
             name="habitaciones"
-            value={habitaciones}
+            value={habitaciones ? habitaciones : null}
             onChange={handleChange}
-          />
+            />
           <Form.Control.Feedback type="invalid">
             Debería ser un número.
           </Form.Control.Feedback>
@@ -261,7 +277,7 @@ const DatosDeLaPropiedadForm = ({
             placeholder="Cant. Baños"
             type="number"
             name="banios"
-            value={banios}
+            value={banios? banios : null}
             onChange={handleChange}
           />
           <Form.Control.Feedback type="invalid">
@@ -275,9 +291,9 @@ const DatosDeLaPropiedadForm = ({
             placeholder="Suit"
             type="number"
             name="suit"
-            value={suit}
+            value={suit? suit: null}
             onChange={handleChange}
-          />
+            />
           <Form.Control.Feedback type="invalid">
             Debería ser un número.
           </Form.Control.Feedback>
@@ -286,7 +302,7 @@ const DatosDeLaPropiedadForm = ({
       <Form.Row>
         <Form.Group as={Col}>
           <Form.Label>Servicios</Form.Label>
-          <Form.Control as="select" multiple required>
+          <Form.Control as="select" multiple required name="servicios" onChange={handleChangeMultipleSelect} value={servicios}>
             <option selected={servicio1 && servicio1}>Agua</option>
             <option selected={servicio2 && servicio2}>Luz</option>
             <option>Limpieza</option>
@@ -302,9 +318,9 @@ const DatosDeLaPropiedadForm = ({
                 placeholder="m2 Totales"
                 type="number"
                 name="metrosCuadrados"
-                value={metrosCuadrados}
+                value={metrosCuadrados? metrosCuadrados : null}
                 onChange={handleChange}
-              />
+                />
               <Form.Control.Feedback type="invalid">
                 Debería ser un número.
               </Form.Control.Feedback>
@@ -313,7 +329,7 @@ const DatosDeLaPropiedadForm = ({
           <Row>
             <Form.Group as={Col}>
               <Form.Label>Contrato</Form.Label>
-              <Form.Control as="select" required value={contrato} onChange={handleChange}>
+              <Form.Control as="select" required value={contrato} onChange={handleChange} name="contrato">
                 <option hidden disabled value="">
                   Seleccione un contrato
                 </option>
@@ -338,9 +354,9 @@ const DatosDeLaPropiedadForm = ({
             name="precio"
             type="number"
             required
-            value={precio}
+            value={precio? precio : null}
             onChange={handleChange}
-          />
+            />
           <Form.Control.Feedback type="invalid">
             Debería ser un número.
           </Form.Control.Feedback>
@@ -354,10 +370,10 @@ const DatosDeLaPropiedadForm = ({
             required
             value={estado}
             onChange={handleChange}
-          />
+            />
         </Form.Group>
       </Form.Row>
-    </Form>
+            </>
   );
 };
 

@@ -13,7 +13,7 @@ const EditarPropiedad = ({ history }) => {
   const user = useAuth(history);
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
 
-  const { DatosDeContacto, DatosDelInmueble } = propiedades[0];
+  const { DatosDeContacto, DatosDelInmueble: DatosDelInmuebleEditar } = propiedades[0];
 
   const handleSubmitPropiedad = (event) => {
     const form = event.currentTarget;
@@ -39,7 +39,7 @@ const EditarPropiedad = ({ history }) => {
                 <DatosDeLaPropiedadForm
                   validatedPropiedad={validatedPropiedad}
                   handleSubmitPropiedad={handleSubmitPropiedad}
-                  DatosDelInmueble={DatosDelInmueble}
+                  DatosDelInmuebleEditar={DatosDelInmuebleEditar}
                 />
               </Card.Body>
             </Card>

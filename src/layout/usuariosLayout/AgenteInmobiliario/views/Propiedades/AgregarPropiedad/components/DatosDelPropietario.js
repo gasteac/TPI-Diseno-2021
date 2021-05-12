@@ -18,7 +18,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
   const { nroCliente, tipoCliente, nombre, telefono, email, direccion } = formState;
   const [nombre2, apellido] = nombre.split(" ");
   return (
-    <Form>
+    <>
       <Form.Row>
         <Form.Group as={Col}>
           <Form.Label>Número de Cliente</Form.Label>
@@ -136,7 +136,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
           />
         </Form.Group>
       </Form.Row>
-    </Form>
+      </>
   );
 };
 
