@@ -20,7 +20,6 @@ import img9 from "./ListaPropiedades/components/propiedadesIMG/10.jpg";
 import img10 from "./ListaPropiedades/components/propiedadesIMG/11.jpg";
 import img11 from "./ListaPropiedades/components/propiedadesIMG/12.jpg";
 import img12 from "./ListaPropiedades/components/propiedadesIMG/13.jpg";
-import swal from 'sweetalert';
 
 
 // import BackButton from "./BackButton";
@@ -54,13 +53,7 @@ const Propiedad = ({ history }) => {
 
   const handleClickProgramarCita = () =>{
     history.push("/cliente/programarcita");
-    swal({
-      title: "Good job!",
-      text: "You clicked the button!",
-      icon: "success",
-      button: "Aww yiss!",
-    });
-
+ 
   };  
 
   return (
