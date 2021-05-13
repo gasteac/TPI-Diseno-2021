@@ -5,9 +5,9 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .tabla-propia{
-    width:90%; 
     margin-top:20px;
 }
 .th-propio{
@@ -15,12 +15,20 @@
     text-align: center;
     color:#000000;
 }
+
+
 table tr, td{
     border:black
 }
 table tr{
     text-align: center;
-}
+};
+table td{
+    width: 20px !important;
+};
+
+
+
 
 /* table tr td:nth-child(2){
     width: 10px;

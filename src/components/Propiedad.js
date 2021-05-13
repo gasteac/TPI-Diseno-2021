@@ -53,14 +53,14 @@ const Propiedad = ({ history }) => {
     
     <Layout>
       {/* <BackButton history={history} /> */}
-      <Container fluid style={{marginTop:'20px', marginBottom:'20px'}}>
+      <Container style={{marginTop:'20px', marginBottom:'20px'}}>
         <Row>
           <Col xs={7}>
-            <Row>
-              <Image src={theImages[DatosDelInmueble.nroInmueble]} height={350}  style={{marginBottom:'20px'}} />
+            <Row >
+              <Image src={theImages[DatosDelInmueble.nroInmueble]} className='img-thumbnail' style={{marginBottom:'20px', width:'700px'}} />
             </Row>
             <Row>
-              <Card className="m-auto">
+              <Card className="m-0 p-0" >
                 <Card.Header as="h2">Datos de Contacto</Card.Header>
                 <Card.Body>
                   <DatosDeContactoComponent DatosDeContacto={DatosDeContacto} />
