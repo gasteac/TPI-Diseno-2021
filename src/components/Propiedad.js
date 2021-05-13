@@ -57,7 +57,7 @@ const Propiedad = ({ history }) => {
         <Row>
           <Col xs={7}>
             <Row className='d-flex justify-content-center'>
-              <Image src={theImages[DatosDelInmueble.nroInmueble]} className='img-thumbnail' style={{marginBottom:'20px', width:'575px'}} />
+              <Image src={theImages[DatosDelInmueble.nroInmueble]} className='img-thumbnail' style={{marginBottom:'20px'}} />
             </Row>
             <Row>
               <Card className="m-0 p-0" >
