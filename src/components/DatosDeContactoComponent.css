@@ -1,7 +1,7 @@
 .datosContacto {
-  border-bottom: 2px solid #000;
+
   margin-bottom: 0 !important;
-  box-shadow: 20px;
+
 }
 
 .datos {
@@ -10,9 +10,12 @@
   border-right: 2px solid #b3bce8;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-color: #b3bce8;
   color: #2b3860;
   font-weight: 600;
+  padding: 2px;
 }
 
 .datos2 {
@@ -22,7 +25,10 @@
     border-right: 2px solid #73C9D0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: #73C9D0;
     color: #2b3860;
+    padding: 2px;
 }
 

@@ -53,15 +53,15 @@ const Propiedad = ({ history }) => {
     
     <Layout>
       {/* <BackButton history={history} /> */}
-      <Container fluid style={{marginTop:'20px', marginBottom:'20px'}}>
+      <Container style={{marginTop:'20px', marginBottom:'20px'}}>
         <Row>
           <Col xs={7}>
-            <Row>
-              <Image src={theImages[DatosDelInmueble.nroInmueble]} height={350}  style={{marginBottom:'20px'}} />
+            <Row className='d-flex justify-content-center'>
+              <Image src={theImages[DatosDelInmueble.nroInmueble]} className='img-thumbnail' style={{marginBottom:'20px'}} />
             </Row>
             <Row>
-              <Card className="m-auto">
-                <Card.Header as="h2">Datos de Contacto</Card.Header>
+              <Card className="m-0 p-0" >
+                <Card.Header as="h4">Datos de Contacto</Card.Header>
                 <Card.Body>
                   <DatosDeContactoComponent DatosDeContacto={DatosDeContacto} />
                 </Card.Body>
@@ -70,7 +70,7 @@ const Propiedad = ({ history }) => {
           </Col>
           <Col xs={5}>
             <Card>
-              <Card.Header as="h2">Datos del inmueble</Card.Header>
+              <Card.Header as="h4">Datos del inmueble</Card.Header>
               <Card.Body>
                 <DatosDelInmuebleComponent
                   DatosDelInmueble={DatosDelInmueble}

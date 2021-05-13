@@ -11,7 +11,7 @@ import {
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos, rows=6, flag=true}) {
+export default function Table({ columnas, datos, rows=8, flag=true}) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line

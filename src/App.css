@@ -106,7 +106,7 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
     z-index: 100;
 }
 .nav-pills .nav-link.active{
-    background: #7f87b3 !important;
+    background: rgb(92, 109, 148) !important;
     border: 2px solid #ffffff;
     padding: 6px !important;
 }
