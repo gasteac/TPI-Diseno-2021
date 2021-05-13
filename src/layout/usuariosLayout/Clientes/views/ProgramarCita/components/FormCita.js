@@ -8,6 +8,8 @@ import legoshi from "./legoshi.png";
 
 // const user = useAuth(history)
 
+
+
 const FormCita = () => {
 
   const [datos, setDatos] = useState({
@@ -33,9 +35,8 @@ const FormCita = () => {
       event.preventDefault();
       event.stopPropagation();
     } else
-    handleShow();
     event.preventDefault();
-    event.stopPropagation();
+    handleShow();
     setValidated(true);
   };
 
@@ -70,10 +71,7 @@ const FormCita = () => {
 
   return (
     <>
-    <Container>
-      <div>
-      <img style={{maxHeight:'400px', marginRight:'50px'}} src={legoshi} alt='legoshi'/>
-      <h2 style={{textAlign:'center'}}>Legoshi hermoso uwu</h2></div>
+    
     <Card style={{border:'none'}}>
       <Card.Header as="h1" style={{textShadow:'2px 2px 5px black',background:'#2B3860', color:'white', borderTopRightRadius:'10px', borderTopLeftRadius:'10px'}}>Programar Cita</Card.Header>
       <Card.Body style={{background:'#8E97C8', borderBottomLeftRadius:'10px', borderBottomRightRadius:'10px'}}>
@@ -90,7 +88,7 @@ const FormCita = () => {
                 fontSize: nombreFocus ? ".8rem" : "1rem",
               }}
             >
-              Nombre
+             
             </Form.Label>
             <Form.Control
               required
@@ -99,8 +97,9 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="text"
-              
+              name='nombre'
               value={nombre}
+              placeholder='Nombre'
               color='white'
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
@@ -118,7 +117,7 @@ const FormCita = () => {
                 fontSize: apellidoFocus ? ".8rem" : "1rem",
               }}
             >
-              Apellido
+              
             </Form.Label>
             <Form.Control
               required
@@ -127,7 +126,9 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="text"
+              name='apellido'
               value={apellido}
+              placeholder='Apellido'
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
               
@@ -144,7 +145,7 @@ const FormCita = () => {
                 fontSize: emailFocus ? ".8rem" : "1rem",
               }}
             >
-              Email
+              
             </Form.Label>
             <Form.Control
               required
@@ -153,7 +154,9 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="email"
+              name='email'
               value={email}
+              placeholder='Correo electrónico'
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
               
@@ -170,7 +173,7 @@ const FormCita = () => {
                 fontSize: telefonoFocus ? ".8rem" : "1rem",
               }}
             >
-              Número de celular
+              
             </Form.Label>
             <Form.Control
               required
@@ -179,7 +182,9 @@ const FormCita = () => {
               onBlur={(e) => handleBlur(e)}
               onChange={(e) => handleChange(e)}
               type="tel"
+              name='telefono'
               value={telefono}
+              placeholder='Telefono'
             />
             <Form.Control.Feedback className="feedbackCustom" type="invalid">
               
@@ -211,14 +216,14 @@ const FormCita = () => {
             />
           </Form.Group> */}
           <div style={{display:'flex', justifyContent:'center'}}>
-          <Button className='botoncita'>Programar</Button>
+          <Button type='submit' className='botoncita'>Programar</Button>
           </div>
         </Form>
       </Card.Body>
     </Card>
-            </Container>
+           
 
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} backdrop="static">
             <Modal.Header>
               Cita guardada! 
             </Modal.Header >
@@ -228,7 +233,7 @@ const FormCita = () => {
             </Modal.Body>
             <Modal.Footer>
             <Link to={`/cliente/inicio`}>
-              <Button type='primary' onClick={handleClose}>
+              <Button type='primary'>
                 Aceptar
               </Button>
               </Link>

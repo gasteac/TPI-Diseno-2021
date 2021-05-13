@@ -17,6 +17,39 @@ import useAuth from "../../../hooks/useAuth";
 import "./Propiedad.css";
 import globalContext from "../../../context/globalContext";
 import propiedadesContext from "../../../context/contextPropiedades/propiedadesContext";
+import img0 from "./propiedadesIMG/1.jpg";
+import img1 from "./propiedadesIMG/2.jpg";
+import img2 from "./propiedadesIMG/3.jpg";
+import img3 from "./propiedadesIMG/4.jpg";
+import img4 from "./propiedadesIMG/5.jpg";
+import img5 from "./propiedadesIMG/6.jpg";
+import img6 from "./propiedadesIMG/7.jpg";
+import img7 from "./propiedadesIMG/8.jpg";
+import img8 from "./propiedadesIMG/9.jpg";
+import img9 from "./propiedadesIMG/10.jpg";
+import img10 from "./propiedadesIMG/11.jpg";
+import img11 from "./propiedadesIMG/12.jpg";
+import img12 from "./propiedadesIMG/13.jpg";
+
+
+
+
+var theImages = new Array()
+theImages[46140] = img0;
+theImages[35894] = img1;
+theImages[11574] = img2;
+theImages[42017] = img3;
+theImages[18325] = img4;
+theImages[47777] = img5;
+theImages[16771] = img6;
+theImages[33979] = img7;
+theImages[40016] = img8;
+theImages[25984] = img9;
+theImages[26396] = img10;
+theImages[16398] = img11;
+theImages[14777] = img12;
+
+
 
 
 
@@ -42,7 +75,7 @@ export default function Propiedades({ history, propiedades }) {
       key={propiedad._id}
       onClick={() => handleClickPropiedad(propiedad._id)}
     >
-      <Card.Img variant="top" src={PropiedadImg} />
+      <Card.Img variant="top" src={theImages[propiedad.DatosDelInmueble.nroInmueble]}  />
       <Card.Body>
         <Card.Title>
           {propiedad.DatosDelInmueble.tituloPropiedad}, {propiedad.DatosDelInmueble.direccion}
@@ -93,7 +126,17 @@ export default function Propiedades({ history, propiedades }) {
     history.push("/agenteinmobiliario/propiedades/agregarpropiedad");
   };
 
+
+
+
+
+
+  
+
+
   return (
+
+    console.log(codPropiedades),
     <Container fluid>
       <Filter
         setNombre={() => {}}
@@ -127,7 +170,7 @@ export default function Propiedades({ history, propiedades }) {
         </InputGroup.Prepend>
         <FormControl
           style={{ maxWidth: "78%" }}
-          placeholder="Buscar"
+          placeholder="Buscar Propiedad"
           onChange={(e) => setNombre(e.target.value)}
         />
         {user != "cliente" ? (

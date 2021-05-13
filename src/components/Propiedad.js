@@ -7,7 +7,35 @@ import propiedades from "../assets/propiedades.json";
 import PropiedadResize from "../static/images/Propiedad2.svg";
 import DatosDelInmuebleComponent from "./DatosDelInmuebleComponent";
 import propiedadesContext from "../context/contextPropiedades/propiedadesContext";
+import img0 from "./ListaPropiedades/components/propiedadesIMG/1.jpg";
+import img1 from "./ListaPropiedades/components/propiedadesIMG/2.jpg";
+import img2 from "./ListaPropiedades/components/propiedadesIMG/3.jpg";
+import img3 from "./ListaPropiedades/components/propiedadesIMG/4.jpg";
+import img4 from "./ListaPropiedades/components/propiedadesIMG/5.jpg";
+import img5 from "./ListaPropiedades/components/propiedadesIMG/6.jpg";
+import img6 from "./ListaPropiedades/components/propiedadesIMG/7.jpg";
+import img7 from "./ListaPropiedades/components/propiedadesIMG/8.jpg";
+import img8 from "./ListaPropiedades/components/propiedadesIMG/9.jpg";
+import img9 from "./ListaPropiedades/components/propiedadesIMG/10.jpg";
+import img10 from "./ListaPropiedades/components/propiedadesIMG/11.jpg";
+import img11 from "./ListaPropiedades/components/propiedadesIMG/12.jpg";
+import img12 from "./ListaPropiedades/components/propiedadesIMG/13.jpg";
+
 // import BackButton from "./BackButton";
+var theImages = new Array()
+theImages[46140] = img0;
+theImages[35894] = img1;
+theImages[11574] = img2;
+theImages[42017] = img3;
+theImages[18325] = img4;
+theImages[47777] = img5;
+theImages[16771] = img6;
+theImages[33979] = img7;
+theImages[40016] = img8;
+theImages[25984] = img9;
+theImages[26396] = img10;
+theImages[16398] = img11;
+theImages[14777] = img12;
 
 
 const Propiedad = ({ history }) => {
@@ -29,7 +57,7 @@ const Propiedad = ({ history }) => {
         <Row>
           <Col xs={7}>
             <Row>
-              <Image src={PropiedadResize} height={350} style={{marginBottom:'20px'}} />
+              <Image src={theImages[DatosDelInmueble.nroInmueble]} height={350}  style={{marginBottom:'20px'}} />
             </Row>
             <Row>
               <Card className="m-auto">

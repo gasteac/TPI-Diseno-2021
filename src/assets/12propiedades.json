@@ -514,48 +514,5 @@
         "expensas": 4796,
         "precio": 58512
       }
-    },
-    {
-        "_id": "60986662ef8cb026666e0aff",
-        "DatosDeContacto": {
-          "nroCliente": 12169,
-          "tipoCliente": "Particular",
-          "nombre": "Huff",
-          "apellido": " Dejesus",
-          "telefono": "+54 (999) 460-2864",
-          "email": "huffdejesus@enaut.com",
-          "direccion": "782 Love Lane",
-          "pais": "Brasil",
-          "provincia": "Corrientes"
-        },
-        "DatosDelInmueble": {
-          "tituloPropiedad": "PH Mediano en Alquiler",
-          "nroInmueble": 43268,
-          "tipo": "Casa",
-          "con": "Cochera",
-          "contrato": "Venta",
-          "pais": "Brasil",
-          "CP": 5040,
-          "provincia": "Buenos Aires",
-          "localidad": "Barranqueras",
-          "barrio": "Salunga",
-          "direccion": "463 Battery Avenue",
-          "banios": 5,
-          "habitaciones": 8,
-          "suit": 3,
-          "espacios": 8,
-          "antiguedad": 64,
-          "amueblada": "Semi",
-          "servicios": [
-            "Luz",
-            "Agua",
-            "Internet"
-          ],
-          "estado": "Disponible",
-          "metrosCuadrados": 106,
-          "metrosCuadradosCubiertos": 58,
-          "expensas": 1068,
-          "precio": 318526
-        }
-      }
+    }
   ]

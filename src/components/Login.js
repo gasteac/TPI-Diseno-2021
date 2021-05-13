@@ -51,6 +51,8 @@ const Login = ({ history }) => {
 
   document.querySelector('body').style.background = `url(${Fondo})`
   document.querySelector('body').style.backgroundSize = `cover`
+  document.querySelector('body').style.backgroundPosition = `auto`
+  document.querySelector('body').style.backgroundSize = `no-repeat`
 
   return (
     <>
