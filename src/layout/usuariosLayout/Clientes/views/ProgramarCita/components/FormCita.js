@@ -1,8 +1,7 @@
-import { Button, Card, Container, Form, Modal} from "react-bootstrap";
+import { Button, Card, Container, Form, Modal } from "react-bootstrap";
 import "./FormCita.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import legoshi from "./legoshi.png";
 
 
 
@@ -35,7 +34,7 @@ const FormCita = () => {
       event.preventDefault();
       event.stopPropagation();
     } else
-    handleShow();
+      handleShow();
     setValidated(true);
     event.preventDefault();
     event.stopPropagation();
@@ -70,135 +69,135 @@ const FormCita = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
 
 
   return (
     <>
-    
-    <Card style={{border:'none', marginTop:'30px'}}>
-      <Card.Header as="h1" style={{textShadow:'2px 2px 10px black',background:'#639FA2', color:'white', borderTopRightRadius:'10px', borderTopLeftRadius:'10px'}}>Programar Cita</Card.Header>
-      <Card.Body style={{background:'#314E50', borderBottomLeftRadius:'10px', borderBottomRightRadius:'10px'}}>
 
-      
+      <Card style={{ border: 'none', marginTop: '30px' }}>
+        <Card.Header as="h1" style={{ textShadow: '2px 2px 10px black', background: '#639FA2', color: 'white', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}>Programar Cita</Card.Header>
+        <Card.Body style={{ background: '#314E50', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}>
 
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <Card.Title  style={{color:'white', textShadow:'2px 2px 20px black'}}>Ingrese sus datos Personales</Card.Title>
-          <Form.Group className="form-group-2" controlId="validationName">
-            <Form.Label
-              className="form-label-2"
-              style={{
-                top: nombreFocus ? "0" : "12px",
-                fontSize: nombreFocus ? ".8rem" : "1rem",
-              }}
-            >
-             
-            </Form.Label>
-            <Form.Control
-              required
-              className="form-control-2"
-              onFocus={(e) => handleFocus(e)}
-              onBlur={(e) => handleBlur(e)}
-              onChange={(e) => handleChange(e)}
-              type="text"
-              name='nombre'
-              value={nombre}
-              placeholder='Nombre'
-              color='white'
-            />
-            <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              
-            </Form.Control.Feedback>
-            <Form.Control.Feedback className="feedbackCustom">
-              
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="form-group-2" controlId="validationSurName">
-            <Form.Label
-              className="form-label-2"
-              style={{
-                top: apellidoFocus ? "0" : "12px",
-                fontSize: apellidoFocus ? ".8rem" : "1rem",
-              }}
-            >
-              
-            </Form.Label>
-            <Form.Control
-              required
-              className="form-control-2"
-              onFocus={(e) => handleFocus(e)}
-              onBlur={(e) => handleBlur(e)}
-              onChange={(e) => handleChange(e)}
-              type="text"
-              name='apellido'
-              value={apellido}
-              placeholder='Apellido'
-            />
-            <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              
-            </Form.Control.Feedback>
-            <Form.Control.Feedback className="feedbackCustom">
-              
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="form-group-2" controlId="validationEmail">
-            <Form.Label
-              className="form-label-2"
-              style={{
-                top: emailFocus ? "0" : "12px",
-                fontSize: emailFocus ? ".8rem" : "1rem",
-              }}
-            >
-              
-            </Form.Label>
-            <Form.Control
-              required
-              className="form-control-2"
-              onFocus={(e) => handleFocus(e)}
-              onBlur={(e) => handleBlur(e)}
-              onChange={(e) => handleChange(e)}
-              type="email"
-              name='email'
-              value={email}
-              placeholder='Correo electrónico'
-            />
-            <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              
-            </Form.Control.Feedback>
-            <Form.Control.Feedback className="feedbackCustom">
-              
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="form-group-2" controlId="validationTel">
-            <Form.Label
-              className="form-label-2"
-              style={{
-                top: telefonoFocus ? "0" : "12px",
-                fontSize: telefonoFocus ? ".8rem" : "1rem",
-              }}
-            >
-              
-            </Form.Label>
-            <Form.Control
-              required
-              className="form-control-2"
-              onFocus={(e) => handleFocus(e)}
-              onBlur={(e) => handleBlur(e)}
-              onChange={(e) => handleChange(e)}
-              type="tel"
-              name='telefono'
-              value={telefono}
-              placeholder='Telefono'
-            />
-            <Form.Control.Feedback className="feedbackCustom" type="invalid">
-              
-            </Form.Control.Feedback>
-            <Form.Control.Feedback className="feedbackCustom">
-              
-            </Form.Control.Feedback>
-          </Form.Group>
 
-          {/* <Card.Title> Datos de la cita</Card.Title>
+
+          <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <Card.Title style={{ color: 'white', textShadow: '2px 2px 20px black' }}>Ingrese sus datos Personales</Card.Title>
+            <Form.Group className="form-group-2" controlId="validationName">
+              <Form.Label
+                className="form-label-2"
+                style={{
+                  top: nombreFocus ? "0" : "12px",
+                  fontSize: nombreFocus ? ".8rem" : "1rem",
+                }}
+              >
+
+              </Form.Label>
+              <Form.Control
+                required
+                className="form-control-2"
+                onFocus={(e) => handleFocus(e)}
+                onBlur={(e) => handleBlur(e)}
+                onChange={(e) => handleChange(e)}
+                type="text"
+                name='nombre'
+                value={nombre}
+                placeholder='Nombre'
+                color='white'
+              />
+              <Form.Control.Feedback className="feedbackCustom" type="invalid">
+
+              </Form.Control.Feedback>
+              <Form.Control.Feedback className="feedbackCustom">
+
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="form-group-2" controlId="validationSurName">
+              <Form.Label
+                className="form-label-2"
+                style={{
+                  top: apellidoFocus ? "0" : "12px",
+                  fontSize: apellidoFocus ? ".8rem" : "1rem",
+                }}
+              >
+
+              </Form.Label>
+              <Form.Control
+                required
+                className="form-control-2"
+                onFocus={(e) => handleFocus(e)}
+                onBlur={(e) => handleBlur(e)}
+                onChange={(e) => handleChange(e)}
+                type="text"
+                name='apellido'
+                value={apellido}
+                placeholder='Apellido'
+              />
+              <Form.Control.Feedback className="feedbackCustom" type="invalid">
+
+              </Form.Control.Feedback>
+              <Form.Control.Feedback className="feedbackCustom">
+
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="form-group-2" controlId="validationEmail">
+              <Form.Label
+                className="form-label-2"
+                style={{
+                  top: emailFocus ? "0" : "12px",
+                  fontSize: emailFocus ? ".8rem" : "1rem",
+                }}
+              >
+
+              </Form.Label>
+              <Form.Control
+                required
+                className="form-control-2"
+                onFocus={(e) => handleFocus(e)}
+                onBlur={(e) => handleBlur(e)}
+                onChange={(e) => handleChange(e)}
+                type="email"
+                name='email'
+                value={email}
+                placeholder='Correo electrónico'
+              />
+              <Form.Control.Feedback className="feedbackCustom" type="invalid">
+
+              </Form.Control.Feedback>
+              <Form.Control.Feedback className="feedbackCustom">
+
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="form-group-2" controlId="validationTel">
+              <Form.Label
+                className="form-label-2"
+                style={{
+                  top: telefonoFocus ? "0" : "12px",
+                  fontSize: telefonoFocus ? ".8rem" : "1rem",
+                }}
+              >
+
+              </Form.Label>
+              <Form.Control
+                required
+                className="form-control-2"
+                onFocus={(e) => handleFocus(e)}
+                onBlur={(e) => handleBlur(e)}
+                onChange={(e) => handleChange(e)}
+                type="tel"
+                name='telefono'
+                value={telefono}
+                placeholder='Telefono'
+              />
+              <Form.Control.Feedback className="feedbackCustom" type="invalid">
+
+              </Form.Control.Feedback>
+              <Form.Control.Feedback className="feedbackCustom">
+
+              </Form.Control.Feedback>
+            </Form.Group>
+
+            {/* <Card.Title> Datos de la cita</Card.Title>
           <Form.Group>
             <Form.Label>Fecha</Form.Label>
             <Form.Control
@@ -209,7 +208,7 @@ const FormCita = () => {
               value={fecha}
             />
           </Form.Group> */}
-          {/* <Form.Group>
+            {/* <Form.Group>
             <Form.Label>Hora</Form.Label>
             <Form.Control
             required
@@ -219,30 +218,30 @@ const FormCita = () => {
               value={hora}
             />
           </Form.Group> */}
-          <div style={{display:'flex', justifyContent:'center'}}>
-          <Button type='submit' className='botoncita'>Programar</Button>
-          </div>
-        </Form>
-      </Card.Body>
-    </Card>
-           
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Button type='submit' className='botoncita'>Programar</Button>
+            </div>
+          </Form>
+        </Card.Body>
+      </Card>
 
-    <Modal show={show} onHide={handleClose} backdrop="static">
-            <Modal.Header>
-              Cita guardada! 
+
+      <Modal show={show} onHide={handleClose} backdrop="static">
+        <Modal.Header style={{background:'#27d85a', color:'#FAFAFA'}}>
+           Cita guardada!
             </Modal.Header >
-            <Modal.Body>
-              Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
+        <Modal.Body>
+          Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br />
               Atte. Domus.
             </Modal.Body>
-            <Modal.Footer>
-            <Link to={`/cliente/inicio`}>
-              <Button type='primary'>
-                Aceptar
+        <Modal.Footer>
+          <Link to={`/cliente/inicio`}>
+            <Button type='primary' className="btn btn-success">
+              Aceptar
               </Button>
-              </Link>
-            </Modal.Footer>
-          </Modal>
+          </Link>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };

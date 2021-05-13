@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Card, Col, Container, Row, Image, Button } from "react-bootstrap";
 import useAuth from "../hooks/useAuth";
 import Layout from "../layout/Layout";
@@ -20,6 +20,8 @@ import img9 from "./ListaPropiedades/components/propiedadesIMG/10.jpg";
 import img10 from "./ListaPropiedades/components/propiedadesIMG/11.jpg";
 import img11 from "./ListaPropiedades/components/propiedadesIMG/12.jpg";
 import img12 from "./ListaPropiedades/components/propiedadesIMG/13.jpg";
+import swal from 'sweetalert';
+
 
 // import BackButton from "./BackButton";
 var theImages = new Array()
@@ -40,24 +42,36 @@ theImages[14777] = img12;
 
 const Propiedad = ({ history }) => {
   const user = useAuth(history);
-  
+
   const PropiedadesContext = useContext(propiedadesContext)
   const { propiedadSeleccionada } = PropiedadesContext;
-  
+
   const { DatosDeContacto, DatosDelInmueble } = propiedadSeleccionada;
+  
   const handleClickEditar = () => {
     history.push("/agenteinmobiliario/propiedades/editarpropiedad");
   };
 
+  const handleClickProgramarCita = () =>{
+    history.push("/cliente/programarcita");
+    swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success",
+      button: "Aww yiss!",
+    });
+
+  };  
+
   return (
-    
+
     <Layout>
       {/* <BackButton history={history} /> */}
-      <Container style={{marginTop:'20px', marginBottom:'20px'}}>
+      <Container style={{ marginTop: '20px', marginBottom: '20px' }}>
         <Row>
           <Col xs={7}>
             <Row className='d-flex justify-content-center'>
-              <Image src={theImages[DatosDelInmueble.nroInmueble]} className='img-thumbnail' style={{marginBottom:'20px'}} />
+              <Image src={theImages[DatosDelInmueble.nroInmueble]} className='img-thumbnail' style={{ marginBottom: '20px' }} />
             </Row>
             <Row>
               <Card className="m-0 p-0" >
@@ -78,14 +92,20 @@ const Propiedad = ({ history }) => {
               </Card.Body>
             </Card>
             {user !== "cliente" ? (
-              <Button style={{marginTop:'20px'}}
+              <Button style={{ marginTop: '20px' }}
                 type="button"
                 variant="outline-secondary"
                 onClick={() => handleClickEditar()}
               >
                 Editar Propiedad
               </Button>
-            ) : null}
+            ) : <Button style={{ marginTop: '20px' }}
+              type="button"
+              variant="outline-secondary"
+              onClick={() => handleClickProgramarCita()}
+            >
+              Programar cita
+          </Button>}
           </Col>
         </Row>
       </Container>
