@@ -105,25 +105,28 @@ const AgregarPropiedad = ({ history }) => {
                 <Card.Body>
                   <DatosDelPropietario />
                 </Card.Body>
-              </Card>
-            </Form.Group>
-          </Form.Group>
-          <Form.Group as={Row} className="justify-content-center my-3">
-            <Form.Group as={Col} xs={3}>
-              <Button type="sumbit" variant="success" block>
+                <div style={{padding:'20px'}}>
+              <Button type="sumbit" variant="success" block >
                 Agregar Propiedad
               </Button>
+              </div>
+           
+              </Card>
+              
             </Form.Group>
+            
           </Form.Group>
+          
         </Form>
       </Container>
 
       <Modal show={show} onHide={handleClose} backdrop="static">
-        <Modal.Header style={{ background: '#27d85a', color: '#FAFAFA' }}>
-          Propiedad guardada!
+        <Modal.Header style={{ background: '#27d85a', color: '#FAFAFA', paddingBottom:'4px'}}>
+          <h4 style={{alignSelf:'flex-end'}}>Propiedad guardada!</h4>
         </Modal.Header >
         <Modal.Body>
-          Propiedad registrada correctamente, podra observarla en la lista de propiedades.
+          <h5>Propiedad registrada correctamente.</h5> 
+          <h6>Podra observarla en la lista de propiedades.</h6> 
         </Modal.Body>
         <Modal.Footer>
           <Link to={`/agenteinmobiliario/Propiedades`}>
