@@ -24,7 +24,7 @@ const NavBar = ({ cliente }) => {
       <Navbar.Brand>
         <Link to="/" className='d-flex align-items-center'>
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
-          <h3 className='mt-3 ml-3' style={{textShadow:'2px 2px grey'}}>Dofus 2.0</h3>
+          <h3 className='mt-3 ml-3' style={{textShadow:'2px 2px grey'}}>Domus</h3>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

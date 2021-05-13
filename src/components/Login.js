@@ -75,7 +75,7 @@ const Login = ({ history }) => {
                 borderBottomLeftRadius: ".4rem",
               }}
             >
-              <h1 className="titulo-login">Ingresar a Dofus</h1>
+              <h1 className="titulo-login">Ingresar a Domus</h1>
               <Form onSubmit={(e) => handleSubmit(e)}>
                 <Form.Group controlId="formBasicEmail">
                   {/* <Form.Label>Ingrese su correo</Form.Label> */}
@@ -111,7 +111,7 @@ const Login = ({ history }) => {
               className="justify-content-center"
             >
               <Image src={Logo} style={{ minHeight: "80%"}} />
-              <h1 className="font-weight-bold mt-2 ml-3"   style={{textShadow:'3px 3px grey', color:'white'}}>Dofus 2.0</h1>
+              <h1 className="font-weight-bold mt-2 ml-3"   style={{textShadow:'3px 3px grey', color:'white'}}>Domus</h1>
             </Col>
           </Row>
         </Jumbotron>

@@ -235,7 +235,7 @@ const FormCita = () => {
             </Modal.Header >
             <Modal.Body>
               Un agente se contactará pronto para informarle la hora de la cita programada, gracias por confiar en nosotros. <br/>
-              Atte. Dofus.
+              Atte. Domus.
             </Modal.Body>
             <Modal.Footer>
             <Link to={`/cliente/inicio`}>
