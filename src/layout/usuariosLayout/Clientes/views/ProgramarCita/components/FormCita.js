@@ -35,9 +35,11 @@ const FormCita = () => {
       event.preventDefault();
       event.stopPropagation();
     } else
-    event.preventDefault();
     handleShow();
     setValidated(true);
+    event.preventDefault();
+    event.stopPropagation();
+
   };
 
   const { nombre, apellido, email, telefono, fecha, hora } = datos;
@@ -68,6 +70,10 @@ const FormCita = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+
+
+
 
   return (
     <>
