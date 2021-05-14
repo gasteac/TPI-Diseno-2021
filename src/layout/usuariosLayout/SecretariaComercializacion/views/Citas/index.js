@@ -1,7 +1,7 @@
 import Layout from "../../../../Layout";
 import Table from "../../../../../components/Table/";
 import { Container } from "react-bootstrap";
-// import BackButton from "../../../../../components/BackButton";
+import BackButton from "../../../../../components/BackButton";
 import { COLUMNS1, COLUMNS2 } from './assets/columns.js';
 import columns1Data from './assets/columns1-data.json';
 import columns2Data from './assets/columns2-data.json';
@@ -14,7 +14,7 @@ export default function Citas({ history }) {
         usuario={user}
         >
             
-            {/* <BackButton history={history} /> */}
+            <BackButton history={history} />
             <Container fluid>
             <div className='d-flex my-auto justify-content-center' >
                 <h2 className='titulosSecciones'>Citas Confirmadas</h2>

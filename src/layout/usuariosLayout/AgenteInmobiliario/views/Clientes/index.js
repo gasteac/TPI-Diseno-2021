@@ -4,7 +4,7 @@ import useAuth from "../../../../../hooks/useAuth";
 import Layout from '../../../../Layout';
 import { Container } from 'react-bootstrap';
 import Table from '../../../../../components/Table';
-// import BackButton from "../../../../../components/BackButton";
+import BackButton from "../../../../../components/BackButton";
 
 export default function ListaClientes({ history }) {
     const user = useAuth(history);
@@ -13,7 +13,7 @@ export default function ListaClientes({ history }) {
         items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
         usuario={user}
         >
-            {/* <BackButton history={history} /> */}
+            <BackButton history={history} />
             <Container fluid>
             <div className='d-flex my-auto justify-content-center' >
                 <h2 className='titulosSecciones'>CLIENTES</h2>
