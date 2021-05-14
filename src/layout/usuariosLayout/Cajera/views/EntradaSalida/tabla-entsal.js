@@ -1,4 +1,4 @@
-export const tablitauwu = [
+export const tablaCajera = [
     {
         Header: 'Cliente',
         accessor: 'name',
