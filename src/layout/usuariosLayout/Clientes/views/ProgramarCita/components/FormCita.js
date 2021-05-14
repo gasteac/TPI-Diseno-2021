@@ -76,13 +76,13 @@ const FormCita = () => {
     <>
 
       <Card style={{ border: 'none', marginTop: '30px' }}>
-        <Card.Header as="h1" style={{ textShadow: '2px 2px 10px black', background: '#639FA2', color: 'white', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}>Programar Cita</Card.Header>
-        <Card.Body style={{ background: '#314E50', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}>
+        <Card.Header as="h1" style={{ textShadow: '2px 2px 10px black', background: '#50628C', color: 'white', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}>Programar Cita</Card.Header>
+        <Card.Body style={{ background: '#B3BCE8', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}>
 
 
 
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Card.Title style={{ color: 'white', textShadow: '2px 2px 20px black' }}>Ingrese sus datos Personales</Card.Title>
+            <Card.Title as='h5' style={{ color: '#50628C', fontWeight:'600' }}>Ingrese sus datos Personales</Card.Title>
             <Form.Group className="form-group-2" controlId="validationName">
               <Form.Label
                 className="form-label-2"

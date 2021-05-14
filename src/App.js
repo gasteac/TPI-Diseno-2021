@@ -26,11 +26,11 @@ import SecretariaComercializacion from "./layout/usuariosLayout/SecretariaComerc
 import Citas from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas";
 import AgendaSec from "./layout/usuariosLayout/SecretariaComercializacion/views/AgendaSec";
 import Cajera from "./layout/usuariosLayout/Cajera";
-import PagoVenta from "./layout/usuariosLayout/Cajera/views/PagoVenta/PagoVenta";
+import PagoVenta from "./layout/usuariosLayout/Cajera/views/PagoVenta/";
 import PagoAlquiler from "./layout/usuariosLayout/Cajera/views/PagoAlquiler";
-import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida/EntradaSalida";
+import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida";
 import Transacciones from "./layout/usuariosLayout/Cajera/views/Transacciones";
-import CierreDeCaja from "./layout/usuariosLayout/Cajera/views/CierreDeCaja";
+import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja/";
 
 const App = () => {
   return (
@@ -117,7 +117,7 @@ const App = () => {
               path="/cajera/transacciones"
               component={Transacciones}
             />
-            <Route exact path="/cajera/cierredecaja" component={CierreDeCaja} />
+            <Route exact path="/cajera/cierredecaja" component={CierreCaja} />
 
             {/* <Redirect to="/" /> */}
           </Switch>
