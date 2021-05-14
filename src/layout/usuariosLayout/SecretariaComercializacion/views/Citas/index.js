@@ -17,13 +17,13 @@ export default function Citas({ history }) {
             <BackButton history={history} />
             <Container fluid>
             <div className='d-flex my-auto justify-content-center' >
-                <h2 className='titulosSecciones'>Citas Confirmadas</h2>
+                <h2 className='titulosSecciones'>CITAS CONFIRMADAS</h2>
             </div>
-                <Table columnas={COLUMNS1} datos={columns1Data} rows={8}/>
+                <Table columnas={COLUMNS1} datos={columns1Data} rows={7}/>
             </Container>
             <Container fluid>
             <div className='d-flex my-auto justify-content-center' >
-                <h2 className='titulosSecciones'>CITAS SIN AGENTE DESIGNADO</h2>
+                <h2 className='titulosSecciones'>SOLICITUDES DE CITAS</h2>
             </div>
                 <Table columnas={COLUMNS2} datos={columns2Data} rows={8}/>
             </Container>

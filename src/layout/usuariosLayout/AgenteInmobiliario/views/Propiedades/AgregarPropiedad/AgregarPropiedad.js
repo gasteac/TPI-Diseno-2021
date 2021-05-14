@@ -105,15 +105,15 @@ const AgregarPropiedad = ({ history }) => {
                 <Card.Body>
                   <DatosDelPropietario />
                 </Card.Body>
-                <div style={{padding:'20px'}}>
+              </Card>
+            </Form.Group>
+            <Row className="justify-content-center">
+                <Col xs={4}>
               <Button type="sumbit" variant="success" block >
                 Agregar Propiedad
               </Button>
-              </div>
-           
-              </Card>
-              
-            </Form.Group>
+                </Col>
+            </Row>
             
           </Form.Group>
           

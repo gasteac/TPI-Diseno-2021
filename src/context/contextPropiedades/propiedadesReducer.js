@@ -1,7 +1,9 @@
 import {
     UPDATE_PROPIEDADES,
     PROPIEDAD_SELECCIONADA,
-    ADD_PROPIEDAD
+    ADD_PROPIEDAD,
+    SET_IMAGE,
+    API_CALL,
 } from '../types';
 
 // eslint-disable-next-line
@@ -21,6 +23,16 @@ export default (state, action) => {
             return {
                 ...state,
                 propiedades: [...state.propiedades, action.payload]
+            }
+        case SET_IMAGE:
+            return {
+                ...state,
+                idImagenPropiedad: action.payload
+            }
+        case API_CALL:
+            return {
+                ...state,
+                imagenesPropiedades: action.payload
             }
         default:
             return;

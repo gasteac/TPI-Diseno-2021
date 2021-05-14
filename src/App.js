@@ -109,8 +109,7 @@ const App = () => {
             <Route exact path="/cajera/pagoventa" component={PagoVenta} />
             <Route exact path="/cajera/pagoalquiler" component={PagoAlquiler} />
             <Route
-              exact
-              path="/cajera/entradasalida"
+              exact path="/cajera/EntradaSalida"
               component={EntradaSalida}
             />
             <Route
