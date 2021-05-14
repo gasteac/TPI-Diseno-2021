@@ -7,6 +7,7 @@ import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
 import propiedades from "../../../../../../assets/propiedades.json";
 import { Link } from "react-router-dom";
+
 // import BackButton from "../../../../../../components/BackButton";
 
 const EditarPropiedad = ({ history }) => {
@@ -116,7 +117,6 @@ const EditarPropiedad = ({ history }) => {
               Eliminar 
             </Button>
           </Link>     
-         
         </Modal.Footer>
       </Modal>
 

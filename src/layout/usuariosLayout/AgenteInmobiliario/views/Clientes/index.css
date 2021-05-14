@@ -1,0 +1,9 @@
+.dropdown-propio{
+    display:flex;
+    justify-content: flex-end;
+}   
+
+
+.color-propio{
+    color:rgb(80, 98, 140);
+}

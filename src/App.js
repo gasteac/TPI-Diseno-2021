@@ -31,6 +31,8 @@ import PagoAlquiler from "./layout/usuariosLayout/Cajera/views/PagoAlquiler";
 import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida/EntradaSalida";
 import Transacciones from "./layout/usuariosLayout/Cajera/views/TransaccionesRealizadas/TransaccionesRealizadas";
 import CierreDeCaja from "./layout/usuariosLayout/Cajera/views/CierreDeCaja";
+import AgregarClienteCorporativo from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/agregarCliente/AgregarClienteCorporativo";
+import AgregarClientePropietario from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/agregarCliente/AgregarClientePropietario";
 
 const App = () => {
   return (
@@ -59,6 +61,16 @@ const App = () => {
               exact
               path="/agenteinmobiliario/Clientes"
               component={ListaClientes}
+            />
+            <Route
+              exact
+              path="/agenteinmobiliario/Clientes/AgregarClienteCorporativo"
+              component={AgregarClienteCorporativo}
+            />
+            <Route
+              exact
+              path="/agenteinmobiliario/Clientes/AgregarClientePropietario"
+              component={AgregarClientePropietario}
             />
             <Route
               exact

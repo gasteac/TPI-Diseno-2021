@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 
 const DatosDeLaPropiedadForm = ({
-  DatosDelInmuebleEditar,
+DatosDelInmuebleEditar,
   nuevaPropiedad,
   setPropiedad,
   forceUpdate
