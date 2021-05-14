@@ -7,8 +7,8 @@ import x from "../static/images/equis.svg";
 export default function Filter({ show, handleShow }) { 
 
   return (
-    <div className="sidebar" style={{display: show ? '' : "none"}} onMouseLeave={() => handleShow(false)}>
-      <Card style={{ minWidth: "300px", overflowY:"scroll" }}>
+    <div className="sidebar" style={{display: show ? '' : "none", overflowY:"scroll" }} onMouseLeave={() => handleShow(false)}>
+      <Card style={{ minWidth: "300px"}}>
         <Card.Header>
           <Card.Title className="d-flex justify-content-between">
             <Image src={x} onClick={() => handleShow(false)} />

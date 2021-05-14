@@ -4,6 +4,7 @@ import {
     ADD_PROPIEDAD,
     SET_IMAGE,
     API_CALL,
+    GET_PROPIEDAD_NOMBRE
 } from '../types';
 
 // eslint-disable-next-line
@@ -33,6 +34,13 @@ export default (state, action) => {
             return {
                 ...state,
                 imagenesPropiedades: action.payload
+            }
+        case GET_PROPIEDAD_NOMBRE:
+            const regex = new RegExp(action.payload, "gi")
+            console.log(regex)
+            return {
+                ...state,
+                propiedadesFiltradas: state.propiedades.filter(propiedad => regex.test(propiedad.DatosDelInmueble.tituloPropiedad))
             }
         default:
             return;

@@ -6,6 +6,8 @@ import {
   Image,
   FormControl,
   InputGroup,
+  Form,
+  Spinner,
 } from "react-bootstrap";
 import GridPropiedadesGenerator from "../../GridGenerator";
 import Filter from "../../Filter";
@@ -20,13 +22,22 @@ import propiedadesContext from "../../../context/contextPropiedades/propiedadesC
 import CardPropiedades from "./CardPropiedades";
 import axios from "axios";
 
-
-export default function Propiedades({ history, propiedades }) {
+export default function Propiedades({
+  history,
+  propiedades,
+  setPropiedadesMostradas,
+}) {
   const GlobalContext = useContext(globalContext);
   const { setNombre } = GlobalContext;
 
   const PropiedadesContext = useContext(propiedadesContext);
-  const { seleccionarPropiedad, setImagenesPropiedades, setIdImagen } = PropiedadesContext;
+  const {
+    propiedadesFiltradas,
+    seleccionarPropiedad,
+    setImagenesPropiedades,
+    setIdImagen,
+    getPropiedadNombre,
+  } = PropiedadesContext;
 
   useEffect(() => {
     axios
@@ -35,6 +46,13 @@ export default function Propiedades({ history, propiedades }) {
       )
       .then((res) => setImagenesPropiedades(res.data.hits));
   }, []);
+
+  useEffect(() => {
+    if(propiedadesFiltradas) {
+      setPropiedadesMostradas(propiedadesFiltradas)
+
+    }
+  }, [propiedadesFiltradas])
 
   const [show, setShow] = useState(false);
   const user = useAuth();
@@ -49,6 +67,11 @@ export default function Propiedades({ history, propiedades }) {
   };
   const handleClick = () => {
     history.push("/agenteinmobiliario/propiedades/agregarpropiedad");
+  };
+
+  const handleChangeBusqueda = (e) => {
+    setNombre(e.target.value);
+    getPropiedadNombre(e.target.value);
   };
 
   return (
@@ -79,14 +102,13 @@ export default function Propiedades({ history, propiedades }) {
         >
           <Image src={configure} />
         </Button>
-
         <InputGroup.Prepend className="ml-5 mr-2">
           <Image src={search} />
         </InputGroup.Prepend>
         <FormControl
           style={{ maxWidth: "78%" }}
           placeholder="Buscar Propiedad"
-          onChange={(e) => setNombre(e.target.value)}
+          onChange={handleChangeBusqueda}
         />
         {user != "cliente" ? (
           <Button
@@ -104,16 +126,19 @@ export default function Propiedades({ history, propiedades }) {
         ) : null}
       </InputGroup>
       <GridPropiedadesGenerator cols={3}>
-        {propiedades.map((propiedad, i) => (
-          <CardPropiedades
-          key={propiedad._id}
-          i={i}
-            propiedad={propiedad}
-            handleClickPropiedad={handleClickPropiedad}
-            setIdImagen={setIdImagen}
-
-          />
-        ))}
+        {!propiedades ? (
+          <Spinner animation="border" role="status" />
+        ) : (
+          propiedades.map((propiedad, i) => (
+            <CardPropiedades
+              key={propiedad._id}
+              i={i}
+              propiedad={propiedad}
+              handleClickPropiedad={handleClickPropiedad}
+              setIdImagen={setIdImagen}
+            />
+          ))
+        )}
       </GridPropiedadesGenerator>
     </Container>
   );
