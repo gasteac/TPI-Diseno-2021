@@ -7,7 +7,7 @@ export default function ListaPropiedades({ history }) {
   const PropiedadesContext = useContext(propiedadesContext);
   const { propiedades } = PropiedadesContext;
 
-  const [propiedadesMostradas, setPropiedadesMostradas] = useState(propiedades)
+  const [propiedadesMostradas, setPropiedadesMostradas] = useState(null)
 
   const GlobalContext = useContext(globalContext);
   const { filter } = GlobalContext;
@@ -24,8 +24,10 @@ export default function ListaPropiedades({ history }) {
   } = filter;
 
   useEffect(() => {
-
-  }, [propiedadesMostradas])
+    if(propiedades) {
+      setPropiedadesMostradas(propiedades)
+    }
+  }, [propiedades])
 
 
   // let propiedadesFiltradas;
