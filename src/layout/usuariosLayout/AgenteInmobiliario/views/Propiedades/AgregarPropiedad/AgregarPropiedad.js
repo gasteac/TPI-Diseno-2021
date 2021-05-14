@@ -16,7 +16,7 @@ const AgregarPropiedad = ({ history }) => {
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
 
   const PropiedadesContext = useContext(propiedadesContext);
-  const { addPropiedad } = PropiedadesContext;
+  const { addPropiedad, propiedades, imagenesPropiedades } = PropiedadesContext;
 
   const [nuevaPropiedad, setPropiedad] = useState({
     _id: v4(),
@@ -54,6 +54,7 @@ const AgregarPropiedad = ({ history }) => {
       metrosCuadrados: 0,
       precio: 0,
     },
+    imagen: imagenesPropiedades[propiedades.length].largeImageURL
   });
 
 

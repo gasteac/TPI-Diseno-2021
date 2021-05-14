@@ -44,11 +44,10 @@ export default function Propiedades({
       .get(
         "https://pixabay.com/api/?key=20807034-598a329be1f2fd78a78a2cb26&q=house"
       )
-      .then((res) => setImagenesPropiedades(res.data.hits));
+      .then((res) => console.log(res.data.hits));
   }, []);
 
   useEffect(() => {
-    console.log(propiedadesFiltradas)
     if(propiedadesFiltradas) {
       setPropiedadesMostradas(propiedadesFiltradas)
 
@@ -137,7 +136,6 @@ export default function Propiedades({
               i={i}
               propiedad={propiedad}
               handleClickPropiedad={handleClickPropiedad}
-              setIdImagen={setIdImagen}
             />
           ))
         )}

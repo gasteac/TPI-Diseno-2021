@@ -4,19 +4,9 @@ import propiedadesContext from "../../../context/contextPropiedades/propiedadesC
 
 const CardPropiedades = ({
   propiedad,
-  handleClickPropiedad,
-  i,
-  setIdImagen,
+  handleClickPropiedad
 }) => {
-  const PropiedadesContext = useContext(propiedadesContext);
-  const { imagenesPropiedades } = PropiedadesContext;
-  const [image, setImage] = useState(null);
 
-  useEffect(() => {
-    if (imagenesPropiedades) {
-      setImage(imagenesPropiedades[i]);
-    }
-  }, [imagenesPropiedades]);
   return (
     <Card
       className="shadow mb-3 mt-3 card-custom"
@@ -24,19 +14,18 @@ const CardPropiedades = ({
       key={propiedad._id}
       onClick={() => {
         handleClickPropiedad(propiedad._id);
-        setIdImagen(imagenesPropiedades[i].id);
       }}
     >
-      {!image ? (
+      {!propiedad.imagen ? (
           <div style={{display: "flex", justifyContent: "center"}}>
               <Card.Img as={Spinner} animation="border" role="status" />
           </div>
       ) : (
-        <Card.Img variant="top" src={image.largeImageURL} style={{minHeight:'250px'}} />
+        <Card.Img variant="top" src={propiedad.imagen} style={{minHeight:'250px'}} />
       )}
       <Card.Body>
         <Card.Title>
-          {propiedad.DatosDelInmueble.tituloPropiedad},{" "}
+          {propiedad.DatosDelInmueble.tipo} {propiedad.DatosDelInmueble.tituloPropiedad},{" "}
           {propiedad.DatosDelInmueble.direccion}
         </Card.Title>
         <Card.Text className="d-flex justify-content-around">

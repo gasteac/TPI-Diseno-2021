@@ -1,6 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Accordion, Card, Button, Image } from "react-bootstrap";
+import {
+  Accordion,
+  Card,
+  Button,
+  Image,
+  Form,
+  Row,
+  InputGroup,
+  FormControl,
+  Col,
+} from "react-bootstrap";
 import InputRange from "react-input-range";
+import propiedadesContext from "../context/contextPropiedades/propiedadesContext";
 import globalContext from "../context/globalContext";
 import x from "../static/images/equis.svg";
 
@@ -17,6 +28,13 @@ const AccordionElement = ({ eventKey, nombre }) => {
     setM2TotalesMenor,
   } = GlobalContext;
 
+  const PropiedadesContext = useContext(propiedadesContext);
+  const { getPropiedadTipo, getPropiedadPrecio, getPropiedadUbicacion } =
+    PropiedadesContext;
+
+  const [max, setMax] = useState(500000);
+  const [min, setMin] = useState(50000);
+
   useEffect(() => {
     setPrecioMayor(valor.max);
     setPrecioMenor(valor.min);
@@ -25,112 +43,106 @@ const AccordionElement = ({ eventKey, nombre }) => {
     // eslint-disable-next-line
   }, []);
 
-  const [valor, setValor] = useState({ min: 50000, max: 500000 });
+  const [valor, setValor] = useState({ min, max });
   const [m2, setM2] = useState({ min: 10, max: 600 });
 
   const content = () => {
     switch (nombre) {
       case "Precio":
         return (
-          <InputRange
-            maxValue={500000}
-            minValue={50000}
-            value={valor}
-            onChange={(valor) => {
-              setValor(valor);
-              setPrecioMayor(valor.max);
-              setPrecioMenor(valor.min);
-            }}
-          />
+          <>
+            <div style={{ maxWidth: "256px", boxSizing: "border-box" }}>
+              <Row className="px-3">
+                <InputRange
+                  maxValue={500000}
+                  minValue={50000}
+                  value={valor}
+                  onChange={(valor) => {
+                    getPropiedadPrecio(valor);
+                  }}
+                />
+              </Row>
+              <Row className="mt-4">
+                <Col>
+                  <InputGroup>
+                    <FormControl
+                      type="number"
+                      placeholder="Mínimo"
+                      value={min}
+                      onChange={(e) => setMin(e.target.value)}
+                      onBlur={() => {
+                        setValor({ ...valor, min });
+                        getPropiedadPrecio({ ...valor, min });
+                      }}
+                    />
+                  </InputGroup>
+                </Col>
+                <Col>
+                  <InputGroup>
+                    <FormControl
+                      type="number"
+                      placeholder="Máximo"
+                      value={max}
+                      onChange={(e) => setMax(e.target.value)}
+                      onBlur={() => {
+                        setValor({ ...valor, max });
+                        getPropiedadPrecio({ ...valor, max });
+                      }}
+                    />
+                  </InputGroup>
+                </Col>
+              </Row>
+            </div>
+          </>
         );
       case "Tipo":
         return (
           <>
-            <input
-              type="radio"
-              name="tipo"
-              id="cabaña"
-              value="cabaña"
-              onClick={(e) => {
-                setTipo(e.target.value);
-              }}
-            />
-            <label htmlFor="cabaña">Cabaña</label>
-            <input
-              type="radio"
-              name="tipo"
-              id="casa-con-local"
-              value="casa-con-local"
-              onClick={(e) => {
-                setTipo(e.target.value);
-              }}
-            />
-            <label htmlFor="casa-con-local">Casa con local</label>
-            <input
-              type="radio"
-              name="tipo"
-              id="chalet"
-              value="chalet"
-              onClick={(e) => {
-                setTipo(e.target.value);
-              }}
-            />
-            <label htmlFor="chalet">Chalet</label>
-            <input
-              type="radio"
-              name="tipo"
-              id="cochera"
-              value="cochera"
-              onClick={(e) => {
-                setTipo(e.target.value);
-              }}
-            />
-            <label htmlFor="cochera">Cochera</label>
-            <input
-              type="radio"
-              name="tipo"
-              id="departamento"
-              value="departamento"
-              onClick={(e) => {
-                setTipo(e.target.value);
-              }}
-            />
-            <label htmlFor="departamento">Departamento</label>
-            <input
-              type="radio"
-              name="tipo"
-              id="local"
-              value="local"
-              onClick={(e) => {
-                setTipo(e.target.value);
-              }}
-            />
-            <label htmlFor="local">Local</label>
+            {["Casa", "Departamento", "PH", "Oficina"].map((tipo) => (
+              <Form.Check
+                type="radio"
+                id={`custom-${tipo}`}
+                label={tipo}
+                custom
+                name="tipo"
+                value={tipo}
+                onClick={(e) => getPropiedadTipo(e.target.value)}
+              />
+            ))}
           </>
         );
       case "Ubicación":
         return (
           <>
-            <input
-              type="text"
-              placeholder="Donde quieres mudarte?"
-              onChange={(e) => setUbicacion(e.target.value)}
-            />
+            <InputGroup>
+              <FormControl
+                placeholder="¿Dónde quieres mudarte?"
+                type="text"
+                onChange={(e) => getPropiedadUbicacion(e.target.value)}
+              />
+            </InputGroup>
           </>
         );
       case "Habitaciones":
         return (
           <>
-            <input
-              type="number"
-              onChange={(e) => setHabitaciones(e.target.value)}
-            />
+            <InputGroup>
+              <FormControl
+                placeholder="Habitaciones"
+                type="number"
+              />
+            </InputGroup>
           </>
         );
       case "Baños":
         return (
           <>
-            <input type="number" onChange={(e) => setBaños(e.target.value)} />
+            <InputGroup>
+              <FormControl
+                placeholder="Baños"
+                type="number"
+              />
+            </InputGroup>
           </>
         );
       case "m2 Totales":

@@ -23,11 +23,10 @@ const Propiedad = ({ history }) => {
   const user = useAuth(history);
 
   const PropiedadesContext = useContext(propiedadesContext);
-  const { propiedadSeleccionada, idImagenPropiedad } = PropiedadesContext;
+  const { propiedadSeleccionada } = PropiedadesContext;
 
-  const { DatosDeContacto, DatosDelInmueble } = propiedadSeleccionada;
+  const { DatosDeContacto, DatosDelInmueble, imagen } = propiedadSeleccionada;
 
-  const [image, setImage] = useState(null);
 
   const handleClickEditar = () => {
     history.push("/agenteinmobiliario/propiedades/editarpropiedad");
@@ -37,14 +36,6 @@ const Propiedad = ({ history }) => {
     history.push("/cliente/programarcita");
   };
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://pixabay.com/api/?key=20807034-598a329be1f2fd78a78a2cb26&id=${idImagenPropiedad}`
-      )
-      .then((res) => setImage(res.data.hits[0].largeImageURL));
-  }, [idImagenPropiedad]);
-
   return (
     <Layout>
      <BackButton history={history} />
@@ -52,17 +43,11 @@ const Propiedad = ({ history }) => {
         <Row>
           <Col xs={7}>
             <Row className="d-flex justify-content-center">
-              {!image ? (
-                <Spinner animation="border" role="status">
-                  <span className="sr-only">Loading...</span>
-                </Spinner>
-              ) : (
-                <Image
-                  src={image}
+            <Image
+                  src={imagen}
                   className="img-thumbnail"
                   style={{ marginBottom: "20px" }}
                 />
-              )}
             </Row>
             <Row>
               <Card className="m-0 p-0">
