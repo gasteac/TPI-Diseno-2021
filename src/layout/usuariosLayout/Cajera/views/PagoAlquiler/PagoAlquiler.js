@@ -15,7 +15,7 @@ import DatosDeContactoComponent from "../../../../../components/DatosDeContactoC
 import useAuth from "../../../../../hooks/useAuth";
 import BackButton from "../../../../../components/BackButton";
 
-const PagoVenta = ({history}) => {
+const PagoAlquiler = ({history}) => {
     useAuth(history)
   const { DatosDelInmueble, DatosDeContacto } = propiedades[0];
   const [formState, setFormState] = useState({
@@ -41,7 +41,7 @@ const PagoVenta = ({history}) => {
     setValidated(true);
   };
 
-  const handleClickSubmit = () => handleSubmit();
+//   const handleClickSubmit = () => handleSubmit();
 
   const hanldeChangeForm = (e) => {
     setFormState({
@@ -60,7 +60,7 @@ const PagoVenta = ({history}) => {
       <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
       <BackButton history={history} />
       
-      <h2 className='titulosSecciones'>Pago Ventas</h2>
+      <h2 className='titulosSecciones'>Pago Alquiler</h2>
       <div style={{marginLeft:'115px'}}></div>
       </Container> 
       <Container fluid>
@@ -211,4 +211,6 @@ const PagoVenta = ({history}) => {
   );
 };
 
-export default PagoVenta;
+export default PagoAlquiler
+
+

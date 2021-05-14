@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import propiedadesContext from "../../context/contextPropiedades/propiedadesContext";
 import globalContext from "../../context/globalContext";
 import Propiedades from "./components/Propiedades";
@@ -6,6 +6,8 @@ import Propiedades from "./components/Propiedades";
 export default function ListaPropiedades({ history }) {
   const PropiedadesContext = useContext(propiedadesContext);
   const { propiedades } = PropiedadesContext;
+
+  const [propiedadesMostradas, setPropiedadesMostradas] = useState(null)
 
   const GlobalContext = useContext(globalContext);
   const { filter } = GlobalContext;
@@ -20,6 +22,13 @@ export default function ListaPropiedades({ history }) {
     m2TotalesMayor,
     m2TotalesMenor,
   } = filter;
+
+  useEffect(() => {
+    if(propiedades) {
+      setPropiedadesMostradas(propiedades)
+    }
+  }, [propiedades])
+
 
   // let propiedadesFiltradas;
 
@@ -61,7 +70,7 @@ export default function ListaPropiedades({ history }) {
   // }, [propiedades]);
   return (
     <>
-      <Propiedades propiedades={propiedades} history={history} />
+      <Propiedades propiedades={propiedadesMostradas} history={history} setPropiedadesMostradas={setPropiedadesMostradas}/>
     </>
   );
 }

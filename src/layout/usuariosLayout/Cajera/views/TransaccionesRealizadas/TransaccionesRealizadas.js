@@ -13,17 +13,25 @@ import {
     FormControl,
     InputGroup,
   } from "react-bootstrap";
+import { Button } from 'react-bootstrap';
+import BackButton from '../../../../../components/BackButton'
 
 export default function TransaccionesRealizadas({ history }) {
     const user = useAuth(history);
     const GlobalContext = useContext(globalContext);
     const { setNombre } = GlobalContext;
     return (
-       
+        
         <Layout
+        
              usuario={user}>
+                 <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <BackButton history={history} />
+      
+      <h2 className='titulosSecciones'>Transacciones Realizadas</h2>
+      <div style={{marginLeft:'115px'}}></div>
+      </Container> 
             <Container fluid>
-            <h2 className='titulosSecciones'>TRANSACCIONES REALIZADAS</h2>
            <div style={{display:'flex', justifyContent:'center', alignItems:'center', margin:'10px', marginTop:'30px', marginRight:'75px'}}>
             <InputGroup.Prepend className="ml-5 mr-2">
           <Image src={search} />
@@ -35,10 +43,13 @@ export default function TransaccionesRealizadas({ history }) {
         />
         </div>
             <Table columnas={tablaCajera} datos={Transacciones} rows={7} />
-            
+            <div style={{display:'flex', justifyContent:'center'}}>
+            <Button className='botoncita mb-5' style={{padding:'8px 20px', borderRadius:'10px'}} >Imprimir reporte</Button></div>
             </Container>
         </Layout>
     )
 }
+
+
 
 

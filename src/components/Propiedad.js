@@ -16,6 +16,8 @@ import PropiedadResize from "../static/images/Propiedad2.svg";
 import DatosDelInmuebleComponent from "./DatosDelInmuebleComponent";
 import propiedadesContext from "../context/contextPropiedades/propiedadesContext";
 import axios from "axios";
+import BackButton from "./BackButton";
+
 
 const Propiedad = ({ history }) => {
   const user = useAuth(history);
@@ -45,7 +47,7 @@ const Propiedad = ({ history }) => {
 
   return (
     <Layout>
-      {/* <BackButton history={history} /> */}
+     <BackButton history={history} />
       <Container style={{ marginTop: "20px", marginBottom: "20px" }}>
         <Row>
           <Col xs={7}>

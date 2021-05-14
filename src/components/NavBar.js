@@ -46,9 +46,12 @@ const NavBar = ({ cliente }) => {
                   style={{
                     color: cliente ? "white" : "white",
                     background: cliente ? "#50628C85" : "",
-                    borderRadius:'8px',
-                    textDecoration: "none",
-                    marginLeft:'5px'
+                    borderRadius:'20px',
+                    marginLeft:'5px',
+                    marginRigth:'5px',
+                    marginTop:'5px',
+                    border: '2px solid white',
+                    padding: '6px 10px'
                   }}
                   eventKey={`link-${i}`}
                 >

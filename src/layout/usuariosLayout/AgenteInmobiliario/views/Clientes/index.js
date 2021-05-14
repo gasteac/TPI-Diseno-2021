@@ -6,7 +6,7 @@ import { Container,DropdownButton,Dropdown, } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './index.css'
 import Table from '../../../../../components/Table';
-// import BackButton from "../../../../../components/BackButton";
+import BackButton from "../../../../../components/BackButton";
 
 export default function ListaClientes({ history }) {
     const user = useAuth(history);
@@ -19,9 +19,11 @@ export default function ListaClientes({ history }) {
 
             {/* <BackButton history={history} /> */}
             <Container fluid>
-                <div className='d-flex my-auto justify-content-center' >
-                    <h2 className='titulosSecciones'>CLIENTES</h2>
-                </div>
+                <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+                    <BackButton history={history} />
+                    <h2 className='titulosSecciones'>Clientes</h2>
+                    <div style={{marginLeft:'115px'}}></div>
+                </Container> 
 
                 <div className='dropdown-propio'>
                     <DropdownButton id="dropdown-basic-button" title="Agregar cliente">

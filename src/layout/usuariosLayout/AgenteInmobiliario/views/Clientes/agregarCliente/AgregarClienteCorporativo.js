@@ -30,6 +30,7 @@ const AgregarClienteCorporativo = ({history}) =>{
 
   return(
       <Layout>
+    
         <Container fluid>
           <BackButton history={history} /> 
           <Form

@@ -32,7 +32,7 @@ const CardPropiedades = ({
               <Card.Img as={Spinner} animation="border" role="status" />
           </div>
       ) : (
-        <Card.Img variant="top" src={image.largeImageURL} />
+        <Card.Img variant="top" src={image.largeImageURL} style={{minHeight:'250px'}} />
       )}
       <Card.Body>
         <Card.Title>

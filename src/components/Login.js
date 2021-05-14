@@ -111,7 +111,7 @@ const Login = ({ history }) => {
               className="justify-content-center"
             >
               <Image src={Logo} style={{ minHeight: "80%"}} />
-              <h1 className="font-weight-bold mt-2 ml-3"   style={{textShadow:'3px 3px grey', color:'white'}}>Domus</h1>
+              <h1 className="font-weight-bold mt-3"   style={{textShadow:'3px 3px grey', color:'white', textAlign:'center'}}>Domus</h1>
             </Col>
           </Row>
         </Jumbotron>
