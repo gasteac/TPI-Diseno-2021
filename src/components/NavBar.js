@@ -12,7 +12,14 @@ const NavBar = ({ cliente }) => {
     cliente: ["Inicio", "Propiedades", "Programar Cita", "¿Quienes Somos?"],
     agenteinmobiliario: ["Inicio", "Clientes", "Agenda", "Propiedades"],
     secretariacomercializacion: ["Inicio", "Agenda", "Citas"],
-    cajera: ['Inicio', "Entrada/Salida", "Transacciones", "Pago alquiler", "Pago venta", "Cierre de caja"]
+    cajera: [
+      "Inicio",
+      "Entrada/Salida",
+      "Transacciones",
+      "Pago alquiler",
+      "Pago venta",
+      "Cierre de caja",
+    ],
   };
 
   const handleClick = (i) => {
@@ -22,14 +29,17 @@ const NavBar = ({ cliente }) => {
   return (
     <Navbar style={{ backgroundColor: cliente ? "" : "#50628C" }} expand="lg">
       <Navbar.Brand>
-        <Link to="/" className='d-flex align-items-center'>
+        <Link to={`/${user}/inicio`} className="d-flex align-items-center">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
-          <h3 className='mt-3 ml-3' style={{textShadow:'2px 2px grey'}}>Domus</h3>
+          <h3 className="mt-3 ml-3" style={{ textShadow: "2px 2px grey" }}>
+            Domus
+          </h3>
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto"
+        <Nav
+          className="ml-auto"
           variant="pills"
           defaultActiveKey={activeNavBarLink}
         >
@@ -42,16 +52,16 @@ const NavBar = ({ cliente }) => {
                     .toLowerCase()
                     .replaceAll(" ", "")
                     .replace("¿", "")
-                    .replace('/', '')}`}
+                    .replace("/", "")}`}
                   style={{
-                    color: cliente ? "white" : "white",
+                    color: "white",
                     background: cliente ? "#50628C85" : "",
-                    borderRadius:'20px',
-                    marginLeft:'5px',
-                    marginRigth:'5px',
-                    marginTop:'5px',
-                    border: '2px solid white',
-                    padding: '6px 10px'
+                    borderRadius: "20px",
+                    marginLeft: "5px",
+                    marginRigth: "5px",
+                    marginTop: "5px",
+                    border: "2px solid white",
+                    padding: "6px 10px",
                   }}
                   eventKey={`link-${i}`}
                 >
@@ -59,6 +69,20 @@ const NavBar = ({ cliente }) => {
                 </Nav.Link>
               </Nav.Item>
             ))}
+          <Nav.Item>
+            <Nav.Link as={Link} to="/" style={{
+                    color: "white",
+                    background: cliente ? "#50628C85" : "",
+                    borderRadius: "20px",
+                    marginLeft: "5px",
+                    marginRigth: "5px",
+                    marginTop: "5px",
+                    border: "2px solid white",
+                    padding: "6px 10px",
+                  }}>
+              Cerrar Sesion
+            </Nav.Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
