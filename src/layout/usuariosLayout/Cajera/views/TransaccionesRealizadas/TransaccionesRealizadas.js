@@ -13,6 +13,7 @@ import {
     FormControl,
     InputGroup,
   } from "react-bootstrap";
+import { Button } from 'react-bootstrap';
 
 export default function TransaccionesRealizadas({ history }) {
     const user = useAuth(history);
@@ -35,10 +36,13 @@ export default function TransaccionesRealizadas({ history }) {
         />
         </div>
             <Table columnas={tablaCajera} datos={Transacciones} rows={7} />
-            
+            <div style={{display:'flex', justifyContent:'center'}}>
+            <Button className='botoncita' >Imprimir reporte</Button></div>
             </Container>
         </Layout>
     )
 }
+
+
 
 

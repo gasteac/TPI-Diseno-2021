@@ -82,7 +82,7 @@ const FormCita = () => {
 
 
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Card.Title as='h5' style={{ color: '#50628C', fontWeight:'600' }}>Ingrese sus datos Personales</Card.Title>
+            <Card.Title as='h5' style={{ color: 'white', fontWeight:'600' }}>Ingrese sus datos Personales</Card.Title>
             <Form.Group className="form-group-2" controlId="validationName">
               <Form.Label
                 className="form-label-2"
