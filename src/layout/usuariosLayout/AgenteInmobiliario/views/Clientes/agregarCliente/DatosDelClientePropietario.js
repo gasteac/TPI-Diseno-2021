@@ -140,6 +140,16 @@ const DatosDelClientePropietario = () =>{
                     onChange={handleChange}
                 />
             </Form.Group>
+
+            <Form.Group as={Col}>
+                <Form.Label>Documentación</Form.Label>
+                <Form.Control id="formControlsFile"
+                    type="file"
+                    multiple
+                    label="File" 
+                />
+            
+            </Form.Group>
             
         </Form.Row>
 
