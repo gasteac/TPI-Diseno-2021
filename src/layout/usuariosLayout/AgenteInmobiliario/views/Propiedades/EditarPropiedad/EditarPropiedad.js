@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Col, Container, Row, Card, Button } from "react-bootstrap";
+import { Col, Container, Row, Card, Button, Modal } from "react-bootstrap";
 import Layout from "../../../../../Layout";
 import DatosDeLaPropiedadForm from "../AgregarPropiedad/components/DatosDeLaPropiedadForm";
 import DatosDelPropietario from "../AgregarPropiedad/components/DatosDelPropietario";
 import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
 import propiedades from "../../../../../../assets/propiedades.json";
+import { Link } from "react-router-dom";
 // import BackButton from "../../../../../../components/BackButton";
 
 const EditarPropiedad = ({ history }) => {
@@ -15,6 +16,14 @@ const EditarPropiedad = ({ history }) => {
 
   const { DatosDeContacto, DatosDelInmueble: DatosDelInmuebleEditar } = propiedades[0];
 
+  const [showEditar, setShowEditar] = useState(false);
+  const handleCloseEditar = () => setShowEditar(false);
+  const handleShowEditar = () => setShowEditar(true);
+
+  const [showEliminar, setShowEliminar] = useState(false);
+  const handleCloseEliminar = () => setShowEliminar(false);
+  const handleShowEliminar = () => setShowEliminar(true);
+
   const handleSubmitPropiedad = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -23,10 +32,16 @@ const EditarPropiedad = ({ history }) => {
     }
 
     setValidatedPropiedad(true);
+    handleShowEditar();
   };
 
 
-  const handleSubmitELiminar = () => {}
+  const handleSubmitELiminar = (event) => {
+    event.preventDefault();
+    handleShowEliminar();
+  }
+
+
   return (
     <Layout>
       {/* <BackButton history={history} /> */}
@@ -48,7 +63,7 @@ const EditarPropiedad = ({ history }) => {
             <Card>
               <Card.Header as="h2">Datos del Propietario</Card.Header>
               <Card.Body>
-                <DatosDelPropietario DatosDeContacto={DatosDeContacto}/>
+                <DatosDelPropietario DatosDeContacto={DatosDeContacto} />
               </Card.Body>
             </Card>
           </Col>
@@ -66,6 +81,45 @@ const EditarPropiedad = ({ history }) => {
           </Col>
         </Row>
       </Container>
+
+      <Modal show={showEditar} onHide={handleCloseEditar} backdrop="static">
+        <Modal.Header style={{ background: '#27d85a', color: '#FAFAFA' }}>
+          Propiedad editada!
+            </Modal.Header >
+        <Modal.Body>
+          Los datos de la propiedad estan actualizados.
+            </Modal.Body>
+        <Modal.Footer>
+          <Link onClick={() => history.goBack()}>
+            <Button type='primary' className="btn btn-success">
+              Aceptar
+              </Button>
+          </Link>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showEliminar} onHide={handleCloseEliminar} backdrop="static">
+        <Modal.Header style={{ background: '#e10016', color: '#FAFAFA' }}>
+          Advertencia
+        </Modal.Header >
+        <Modal.Body>
+          ¿Esta seguro de que quieres eliminar la propiedad?
+        </Modal.Body>
+        <Modal.Footer>
+          <Link onClick={() => handleCloseEliminar()}>
+              <Button  variant="outline-danger" block>
+                No eliminar
+              </Button>
+          </Link>
+          <Link to={'/agenteinmobiliario/Propiedades'}>
+            <Button variant="danger" block>
+              Eliminar 
+            </Button>
+          </Link>     
+         
+        </Modal.Footer>
+      </Modal>
+
     </Layout>
   );
 };

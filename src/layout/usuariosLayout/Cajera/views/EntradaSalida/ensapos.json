@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Ewing Gaines",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c8116e11cf4803d48",
+    "fecha": "2020-08-10",
+    "hora": "12:32",
+    "monto": "$50,866.58"
+  },
+  {
+    "name": "Deann Robbins",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cb73d1522144bbce1",
+    "fecha": "2016-06-22",
+    "hora": "04:11",
+    "monto": "$967,296.85"
+  },
+  {
+    "name": "Bruce Mathis",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c8289d6bcb09f1785",
+    "fecha": "2017-05-23",
+    "hora": "08:41",
+    "monto": "$175,232.37"
+  },
+  {
+    "name": "Montoya Hardy",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cb2c728d0f5d4c373",
+    "fecha": "2014-05-16",
+    "hora": "08:07",
+    "monto": "$500,918.27"
+  },
+  {
+    "name": "Mays Walton",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38ce84fa061f8f7b97e",
+    "fecha": "2020-03-01",
+    "hora": "10:11",
+    "monto": "$324,608.11"
+  },
+  {
+    "name": "Pena Aguirre",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cc2deb79f8e4ea4d8",
+    "fecha": "2016-04-20",
+    "hora": "01:03",
+    "monto": "$99,259.71"
+  },
+  {
+    "name": "Sharon Norman",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38ce6eba5ab10410ee0",
+    "fecha": "2020-10-27",
+    "hora": "11:31",
+    "monto": "$850,343.33"
+  },
+  {
+    "name": "Francisca Glover",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c93f4dac897e28c73",
+    "fecha": "2018-02-05",
+    "hora": "05:20",
+    "monto": "$638,309.27"
+  },
+  {
+    "name": "Gay Tran",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38ce15900adf96ffe2e",
+    "fecha": "2017-08-07",
+    "hora": "02:26",
+    "monto": "$33,210.92"
+  },
+  {
+    "name": "Eileen Hardin",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cb8f2c4181e92dcdd",
+    "fecha": "2018-10-28",
+    "hora": "04:41",
+    "monto": "$32,892.46"
+  },
+  {
+    "name": "Shaw Clayton",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c224e0809be8e3dd9",
+    "fecha": "2016-12-08",
+    "hora": "10:27",
+    "monto": "$270,701.21"
+  },
+  {
+    "name": "Mueller Rios",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38ceab66af72661105b",
+    "fecha": "2016-02-01",
+    "hora": "08:04",
+    "monto": "$274,140.12"
+  },
+  {
+    "name": "Gates Gregory",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c3d8b98d4582a6e4b",
+    "fecha": "2018-11-14",
+    "hora": "05:30",
+    "monto": "$339,103.49"
+  },
+  {
+    "name": "Blackwell Bell",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cf1b9312969a740d4",
+    "fecha": "2017-04-19",
+    "hora": "05:59",
+    "monto": "$78,434.87"
+  },
+  {
+    "name": "Garrison Wagner",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c37c4dc2654a891d0",
+    "fecha": "2016-08-24",
+    "hora": "07:52",
+    "monto": "$278,028.52"
+  },
+  {
+    "name": "Hampton Frost",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c111b0abf5335b522",
+    "fecha": "2016-07-22",
+    "hora": "09:49",
+    "monto": "$139,510.68"
+  },
+  {
+    "name": "Bernice Estrada",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cd5be5eb3ffb70e24",
+    "fecha": "2018-07-15",
+    "hora": "02:48",
+    "monto": "$915,998.52"
+  },
+  {
+    "name": "Lang Phillips",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cbce7e7e9574b1f26",
+    "fecha": "2014-07-08",
+    "hora": "02:22",
+    "monto": "$409,148.70"
+  },
+  {
+    "name": "Elma Christensen",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c6f6a05ca9c82233e",
+    "fecha": "2018-08-13",
+    "hora": "12:05",
+    "monto": "$533,133.12"
+  },
+  {
+    "name": "Conley Blevins",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c20ebffcb677a34ee",
+    "fecha": "2015-04-12",
+    "hora": "04:30",
+    "monto": "$932,218.67"
+  },
+  {
+    "name": "Talley Heath",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c2da5cc2032d82b82",
+    "fecha": "2018-04-14",
+    "hora": "06:57",
+    "monto": "$546,742.88"
+  },
+  {
+    "name": "Burgess Gill",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c22fcb258fcc0ff5a",
+    "fecha": "2019-08-22",
+    "hora": "10:56",
+    "monto": "$945,838.07"
+  },
+  {
+    "name": "Mckenzie Fields",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c76e938115edbf0f4",
+    "fecha": "2016-09-14",
+    "hora": "01:06",
+    "monto": "$275,980.21"
+  },
+  {
+    "name": "Brittney Chandler",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c8becb0a201f6be5b",
+    "fecha": "2016-03-22",
+    "hora": "12:45",
+    "monto": "$645,675.95"
+  },
+  {
+    "name": "Knox Head",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c22884e44884ed84b",
+    "fecha": "2019-12-05",
+    "hora": "06:37",
+    "monto": "$303,342.07"
+  },
+  {
+    "name": "Barker Lancaster",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cbbe5bb7732982e9f",
+    "fecha": "2015-01-29",
+    "hora": "08:24",
+    "monto": "$213,947.70"
+  },
+  {
+    "name": "Sarah Horton",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c7c7fa8b93e417d5f",
+    "fecha": "2018-05-22",
+    "hora": "02:33",
+    "monto": "$269,381.11"
+  },
+  {
+    "name": "Karla Pena",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cb423626930629c35",
+    "fecha": "2020-10-22",
+    "hora": "10:12",
+    "monto": "$894,588.09"
+  },
+  {
+    "name": "Marilyn Mcdonald",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cbe5ead8589c55164",
+    "fecha": "2014-11-10",
+    "hora": "01:13",
+    "monto": "$80,140.74"
+  },
+  {
+    "name": "Sanders Herman",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c9987546031f9d395",
+    "fecha": "2020-09-01",
+    "hora": "01:10",
+    "monto": "$576,409.21"
+  },
+  {
+    "name": "Williams Dixon",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cddaed1e153200e45",
+    "fecha": "2014-07-28",
+    "hora": "02:32",
+    "monto": "$392,982.01"
+  },
+  {
+    "name": "Carney Richards",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c99d5015db3fa2a5e",
+    "fecha": "2017-02-01",
+    "hora": "12:36",
+    "monto": "$278,823.85"
+  },
+  {
+    "name": "Rasmussen Chen",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c1e700da6bca0629c",
+    "fecha": "2018-11-13",
+    "hora": "09:05",
+    "monto": "$108,725.92"
+  },
+  {
+    "name": "Jaclyn Preston",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38ce43e953594057d44",
+    "fecha": "2021-02-02",
+    "hora": "12:11",
+    "monto": "$270,050.81"
+  },
+  {
+    "name": "Darla Melton",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cad492128334ace1b",
+    "fecha": "2018-11-28",
+    "hora": "02:57",
+    "monto": "$968,817.29"
+  },
+  {
+    "name": "Butler William",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cd071628379492885",
+    "fecha": "2017-12-23",
+    "hora": "03:23",
+    "monto": "$56,439.96"
+  },
+  {
+    "name": "Mcgowan Schwartz",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c757e2efca091826a",
+    "fecha": "2016-10-08",
+    "hora": "12:18",
+    "monto": "$900,252.86"
+  },
+  {
+    "name": "Luz Doyle",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c9dd476ba0a8e46ba",
+    "fecha": "2021-04-25",
+    "hora": "04:46",
+    "monto": "$101,685.59"
+  },
+  {
+    "name": "Dixie Hall",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c11c9705b8c86f342",
+    "fecha": "2014-12-28",
+    "hora": "12:18",
+    "monto": "$587,966.04"
+  },
+  {
+    "name": "English Mcintyre",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c57caaf422a988875",
+    "fecha": "2018-12-12",
+    "hora": "11:36",
+    "monto": "$352,622.90"
+  },
+  {
+    "name": "Silvia Fowler",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c14faa035404b68ca",
+    "fecha": "2015-05-26",
+    "hora": "01:30",
+    "monto": "$322,319.02"
+  },
+  {
+    "name": "Mann Rosario",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c1b55cfb0d2b0a24a",
+    "fecha": "2014-02-03",
+    "hora": "12:53",
+    "monto": "$223,894.36"
+  },
+  {
+    "name": "Flora Finch",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cb680cc91427abc28",
+    "fecha": "2018-01-08",
+    "hora": "06:03",
+    "monto": "$642,702.91"
+  },
+  {
+    "name": "Jeanette Henson",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c4d3795e90a0c6bb4",
+    "fecha": "2016-01-04",
+    "hora": "11:32",
+    "monto": "$205,003.47"
+  },
+  {
+    "name": "Tessa Trevino",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cbf54a7e21edf7da2",
+    "fecha": "2019-07-20",
+    "hora": "04:33",
+    "monto": "$265,118.50"
+  },
+  {
+    "name": "Freda Lindsey",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c576c500febe95e78",
+    "fecha": "2018-08-03",
+    "hora": "12:21",
+    "monto": "$579,624.17"
+  },
+  {
+    "name": "Finley Trujillo",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cf530b30dd3cfda7f",
+    "fecha": "2015-10-11",
+    "hora": "01:59",
+    "monto": "$141,391.92"
+  },
+  {
+    "name": "Hall Santos",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38ca517f7ac549d1124",
+    "fecha": "2019-02-10",
+    "hora": "04:57",
+    "monto": "$900,875.55"
+  },
+  {
+    "name": "Hawkins Conway",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38cd02de8e31e280c14",
+    "fecha": "2016-04-20",
+    "hora": "10:22",
+    "monto": "$48,903.54"
+  },
+  {
+    "name": "Beck Sanchez",
+    "concepto": "Pago de Alquiler",
+    "nroTrans": "609db38c4c9b32a8addc9ad5",
+    "fecha": "2015-12-09",
+    "hora": "09:30",
+    "monto": "$622,494.12"
+  }
+]
