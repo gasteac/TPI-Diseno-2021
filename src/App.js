@@ -117,7 +117,7 @@ const App = () => {
               path="/cajera/transacciones"
               component={Transacciones}
             />
-            <Route exact path="/cajera/cierredecaja" component={CierreDeCaja} />
+            <Route exact path="/cajera/cierredecaja" component={CierreCaja} />
 
             {/* <Redirect to="/" /> */}
           </Switch>

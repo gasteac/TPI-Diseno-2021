@@ -11,6 +11,7 @@ import {
     ADD_PROPIEDAD,
     SET_IMAGE,
     API_CALL,
+    GET_PROPIEDAD_NOMBRE
 } from '../types';
 
 const PropiedadesState = (props) => {
@@ -19,7 +20,8 @@ const PropiedadesState = (props) => {
         propiedades,
         propiedadSeleccionada: {},
         idImagenPropiedad: 0,
-        imagenesPropiedades: []
+        imagenesPropiedades: [],
+        propiedadesFiltradas: []
     }
 
     const [state, dispatch] = useReducer(propiedadesReducer, initialState);
@@ -52,6 +54,13 @@ const PropiedadesState = (props) => {
         })
     }
 
+    const getPropiedadNombre = nombre => {
+        dispatch({
+            type: GET_PROPIEDAD_NOMBRE,
+            payload: nombre
+        })
+    }
+
     return (
         <propiedadesContext.Provider
             value={{
@@ -59,10 +68,12 @@ const PropiedadesState = (props) => {
                 propiedadSeleccionada: state.propiedadSeleccionada,
                 imagenesPropiedades: state.imagenesPropiedades,
                 idImagenPropiedad: state.idImagenPropiedad,
+                propiedadesFiltradas: state.propiedadesFiltradas,
                 seleccionarPropiedad,
                 setImagenesPropiedades,
                 setIdImagen,
-                addPropiedad
+                addPropiedad,
+                getPropiedadNombre
             }}
         >
             {props.children}
