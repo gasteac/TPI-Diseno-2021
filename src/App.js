@@ -30,7 +30,7 @@ import PagoVenta from "./layout/usuariosLayout/Cajera/views/PagoVenta/PagoVenta"
 import PagoAlquiler from "./layout/usuariosLayout/Cajera/views/PagoAlquiler/PagoAlquiler";
 import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida/EntradaSalida";
 import Transacciones from "./layout/usuariosLayout/Cajera/views/TransaccionesRealizadas/TransaccionesRealizadas";
-import CierreDeCaja from "./layout/usuariosLayout/Cajera/views/CierreDeCaja";
+import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja/index.js";
 
 const App = () => {
   return (

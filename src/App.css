@@ -8,15 +8,20 @@ h3, h4, h5, h6 {
     margin: 0;
 }
 .bg-botoncito{
-    background: var(--botoncitos) !important;
-    color: white !important;
-    border: none !important;
+    background: rgb(255, 255, 255) !important;
+    color: #2B3860 !important;
+    border: 2px solid #2B3860 !important;
+    border-radius: 20px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    margin-top: 5px !important;
+    
 }
 .bg-botoncito:hover{
     color: white !important;
     cursor: pointer;
-    background: #50628C !important;
-    border: none !important;
+    background: #6f88c3 !important;
+
 
 }
 .bg-violetaOscuro-2 {
@@ -106,13 +111,14 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
     z-index: 100;
 }
 .nav-pills .nav-link.active{
-    background: rgb(92, 109, 148) !important;
+    background: #2B3860 !important;
     border: 2px solid #ffffff;
-    padding: 6px !important;
+    padding: 6px 10px !important;
+    
 }
 .nav-link:hover{
     transform-origin:center;
-    animation: scale 10ms ease-in forwards;
+    animation: scale 5ms ease-in forwards;
     background: rgb(93, 114, 163)!important;
 
   }
@@ -138,11 +144,12 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
 .titulosSecciones{
 border-bottom:1px solid rgb(80, 98, 140); 
 color:rgb(80, 98, 140); 
-text-shadow: 2px 2px 8px #2b3860b0;
+text-shadow: 2px 2px 15px #495d9bb0;
 text-Align:center;
 padding:5px;
 font-Family:'Open Sans', sans-serif;
-font-Weight:700
+font-Weight:700;
+Margin:10px
 }
 .titulo-login{
     color:black; 

@@ -7,7 +7,7 @@ import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
 import propiedades from "../../../../../../assets/propiedades.json";
 import { Link } from "react-router-dom";
-// import BackButton from "../../../../../../components/BackButton";
+import BackButton from "../../../../../../components/BackButton";
 
 const EditarPropiedad = ({ history }) => {
   // eslint-disable-next-line
@@ -44,7 +44,12 @@ const EditarPropiedad = ({ history }) => {
 
   return (
     <Layout>
-      {/* <BackButton history={history} /> */}
+      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <BackButton history={history} />
+      
+      <h2 className='titulosSecciones'>Editar propiedad</h2>
+      <div style={{marginLeft:'115px'}}></div>
+      </Container> 
       <Container fluid>
         <Row className="mt-3">
           <Col xs={8}>

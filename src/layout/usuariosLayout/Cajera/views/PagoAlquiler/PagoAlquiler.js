@@ -13,6 +13,7 @@ import propiedades from "../../../../../assets/propiedades.json";
 import DatosDelInmuebleComponent from "../../../../../components/DatosDelInmuebleComponent";
 import DatosDeContactoComponent from "../../../../../components/DatosDeContactoComponent";
 import useAuth from "../../../../../hooks/useAuth";
+import BackButton from "../../../../../components/BackButton";
 
 const PagoAlquiler = ({history}) => {
     useAuth(history)
@@ -56,6 +57,12 @@ const PagoAlquiler = ({history}) => {
 
   return (
     <Layout>
+      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <BackButton history={history} />
+      
+      <h2 className='titulosSecciones'>Pago Alquiler</h2>
+      <div style={{marginLeft:'115px'}}></div>
+      </Container> 
       <Container fluid>
         <Row className="my-5">
           <Col xs={5}>

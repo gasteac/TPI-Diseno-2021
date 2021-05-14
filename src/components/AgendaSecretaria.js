@@ -3,18 +3,18 @@ import useAuth from "../hooks/useAuth";
 import globalContext from "../context/globalContext";
 import React, { useContext } from "react";
 import "./AgendaSecretari.css";
-// import BackButton from "../components/BackButton";
+import BackButton from "../components/BackButton";
 import moment from "moment";
 import "moment/locale/es";
+import { Container } from "react-bootstrap";
 export default function AgendaSecretaria({ history }) {
   const GlobalContext = useContext(globalContext);
   const { setActiveNavbarLink } = GlobalContext;
-
   moment.locale("es");
   const hoy = "Fecha: " + moment().format("LL");
   return (
     <div class="container-xl">
-      {/* <BackButton history={history} /> */}
+     
 
       <p className="mt-3">{hoy}</p>
 

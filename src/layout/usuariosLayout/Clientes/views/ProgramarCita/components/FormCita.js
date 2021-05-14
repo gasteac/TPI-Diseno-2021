@@ -2,14 +2,16 @@ import { Button, Card, Container, Form, Modal } from "react-bootstrap";
 import "./FormCita.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import img from  "../../../../../../../src/static/images/caCITA.jpg"
+import BackButton from "../../../../../../components/BackButton";
+import useAuth from "../../../../../../hooks/useAuth";
 
 
 // const user = useAuth(history)
 
 
 
-const FormCita = () => {
+const FormCita = (history) => {
 
   const [datos, setDatos] = useState({
     nombre: "",
@@ -69,20 +71,24 @@ const FormCita = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  document.querySelector('body').style.background = `url(${img})`
 
-
-
+  const user = useAuth(history)
   return (
     <>
-
-      <Card style={{ border: 'none', marginTop: '30px' }}>
-        <Card.Header as="h1" style={{ textShadow: '2px 2px 10px black', background: '#50628C', color: 'white', borderTopRightRadius: '10px', borderTopLeftRadius: '10px' }}>Programar Cita</Card.Header>
-        <Card.Body style={{ background: '#B3BCE8', borderBottomLeftRadius: '10px', borderBottomRightRadius: '10px' }}>
+      
+      <Container style={{display:'flex', alignItems:'start', margin:'0px', marginTop:'15px', justifyContent:'flex-start'}}>
+      <BackButton className='color:red, background:#50628C01' history={history} /></Container>
+      <Container style={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'20px', margin:'0px', marginRight:'370px'}}>
+      
+      <Card style={{ border: 'none', marginTop: '30px', border:'none', background:'#50628C01'}}>
+        <Card.Header as="h1" style={{ textShadow: '1px 1px 10px black', background: '#50628C90', color: 'white', borderTopRightRadius: '20px', borderTopLeftRadius: '20px' }}>Programar Cita</Card.Header>
+        <Card.Body style={{ background: '#B3BCE880', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px', border:'none',  }}>
 
 
 
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Card.Title as='h5' style={{ color: 'white', fontWeight:'600' }}>Ingrese sus datos Personales</Card.Title>
+            <Card.Title as='h5' style={{ color: 'white', fontWeight:'500' }}>Ingrese sus datos Personales</Card.Title>
             <Form.Group className="form-group-2" controlId="validationName">
               <Form.Label
                 className="form-label-2"
@@ -224,7 +230,8 @@ const FormCita = () => {
           </Form>
         </Card.Body>
       </Card>
-
+      <div></div>
+      </Container>
 
       <Modal show={show} onHide={handleClose} backdrop="static">
         <Modal.Header style={{background:'#27d85a', color:'#FAFAFA'}}>

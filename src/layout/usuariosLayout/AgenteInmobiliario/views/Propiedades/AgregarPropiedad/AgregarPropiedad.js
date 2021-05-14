@@ -8,7 +8,7 @@ import useAuth from "../../../../../../hooks/useAuth";
 import propiedadesContext from "../../../../../../context/contextPropiedades/propiedadesContext";
 import { v4 } from "uuid";
 import { Link } from "react-router-dom";
-// import BackButton from "../../../../../../components/BackButton";
+import BackButton from "../../../../../../components/BackButton";
 
 const AgregarPropiedad = ({ history }) => {
   // eslint-disable-next-line
@@ -80,8 +80,14 @@ const AgregarPropiedad = ({ history }) => {
 
   return (
     <Layout>
+      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <BackButton history={history} />
+      
+      <h2 className='titulosSecciones'>Agregar propiedad</h2>
+      <div style={{marginLeft:'115px'}}></div>
+      </Container> 
       <Container fluid>
-        {/* <BackButton history={history} /> */}
+      
         <Form
           noValidate
           validated={validatedPropiedad}

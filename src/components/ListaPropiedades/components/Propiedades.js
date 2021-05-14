@@ -47,12 +47,12 @@ export default function Propiedades({
       .then((res) => setImagenesPropiedades(res.data.hits));
   }, []);
 
-  useEffect(() => {
-    if(propiedadesFiltradas) {
-      setPropiedadesMostradas(propiedadesFiltradas)
+  // useEffect(() => {
+  //   if(propiedadesFiltradas) {
+  //     setPropiedadesMostradas(propiedadesFiltradas)
 
-    }
-  }, [propiedadesFiltradas])
+  //   }
+  // }, [propiedadesFiltradas])
 
   const [show, setShow] = useState(false);
   const user = useAuth();
@@ -93,6 +93,7 @@ export default function Propiedades({
         <Button
           variant="outline-primary"
           style={{
+            marginLeft:'40px',
             borderRadius: "9px",
             border: "none",
             width: "120px",

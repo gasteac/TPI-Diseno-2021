@@ -13,11 +13,13 @@ export default function ListaClientes({ history }) {
         items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
         usuario={user}
         >
-            <BackButton history={history} />
+            <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <BackButton history={history} />
+      
+      <h2 className='titulosSecciones'>Clientes</h2>
+      <div style={{marginLeft:'115px'}}></div>
+      </Container> 
             <Container fluid>
-            <div className='d-flex my-auto justify-content-center' >
-                <h2 className='titulosSecciones'>CLIENTES</h2>
-            </div>
                 <Table columnas={COLUMNS} datos={clients} />
             </Container>
         </Layout>

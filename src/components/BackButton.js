@@ -18,7 +18,7 @@ export default function BackButton({ history }) {
 
     return (
         <Link to={`/${user}/inicio`}>
-            <div className='bg-botoncito btn mt-3 ml-3' type="button" onClick={volver}>Volver</div>
+            <div className='bg-botoncito btn mt-3 ml-3' onClick={volver}>← Volver</div>
         </Link>
         
  

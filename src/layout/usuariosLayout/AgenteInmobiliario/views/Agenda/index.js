@@ -13,10 +13,15 @@ export default function Agenda({history}) {
     <Layout
       usuario={user}
     >
+      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
       <BackButton history={history} />
+      
+      <h2 className='titulosSecciones'>Agenda</h2>
+      <div style={{marginLeft:'115px'}}></div>
+      </Container>
+      
       <Container fluid>
-        <div className='d-flex justify-content-center'>
-      <h2 className='titulosSecciones'>AGENDA</h2></div>
+        
 
         <Table columnas={COLUMNS} datos={MOCK_DATA} />
       </Container>
