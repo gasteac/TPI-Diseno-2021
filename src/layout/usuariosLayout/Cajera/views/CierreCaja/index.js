@@ -5,6 +5,7 @@ import BackButton from "../../../../../components/BackButton";
 import { columns } from "./assets/columns";
 import MOCK_DATA from "./assets/MOCK_DATA.json";
 import { Container } from "react-bootstrap";
+import Totales from "./components/Totales";
 
 export default function CierreCaja({ history }) {
     const user = useAuth(history);
@@ -24,14 +25,17 @@ export default function CierreCaja({ history }) {
         <Container fluid>
         <h3 className='titulosSecciones' style={{border:'none', margin:'0px'}}>Entrada / Salida</h3>
             <Table columnas={columns} datos={MOCK_DATA} flag={false}/>
+            <Totales datos={MOCK_DATA}/>
         </Container>
         <Container fluid>
         <h3 className='titulosSecciones' style={{border:'none', margin:'0px'}}>Caja de alquileres</h3>
             <Table columnas={columns} datos={MOCK_DATA} flag={false} />
+            <Totales datos={MOCK_DATA}/>
         </Container>
         <Container fluid>
         <h3 className='titulosSecciones' style={{border:'none', margin:'0px'}}>Caja Ventas</h3>
             <Table columnas={columns} datos={MOCK_DATA} flag={false} />
+            <Totales datos={MOCK_DATA}/>
         </Container>
       </div>
     </Layout>
