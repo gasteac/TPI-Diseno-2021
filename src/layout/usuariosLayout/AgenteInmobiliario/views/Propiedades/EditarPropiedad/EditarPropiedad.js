@@ -13,7 +13,6 @@ import DatosDeLaPropiedadForm from "../AgregarPropiedad/components/DatosDeLaProp
 import DatosDelPropietario from "../AgregarPropiedad/components/DatosDelPropietario";
 import "../AgregarPropiedad/AgregarPropiedad.css";
 import useAuth from "../../../../../../hooks/useAuth";
-import propiedades from "../../../../../../assets/propiedades.json";
 import { Link } from "react-router-dom";
 import BackButton from "../../../../../../components/BackButton";
 import propiedadesContext from "../../../../../../context/contextPropiedades/propiedadesContext";
@@ -24,7 +23,7 @@ const EditarPropiedad = ({ history }) => {
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
 
   const PropiedadesContext = useContext(propiedadesContext);
-  const { propiedadSeleccionada, updatePropiedades } = PropiedadesContext;
+  const { propiedadSeleccionada, updatePropiedades, deletePropiedad } = PropiedadesContext;
 
   const { DatosDeContacto, DatosDelInmueble: DatosDelInmuebleEditar } =
   propiedadSeleccionada;
@@ -57,9 +56,10 @@ const EditarPropiedad = ({ history }) => {
     setValidatedPropiedad(true);
   };
 
-  const handleSubmitELiminar = (event) => {
-    event.preventDefault();
+  const handleSubmitELiminar = () => {
     handleShowEliminar();
+    deletePropiedad(propiedadSeleccionada);
+    history.push('/agenteinmobiliario/propiedades')
   };
 
   return (
@@ -116,9 +116,8 @@ const EditarPropiedad = ({ history }) => {
             </Col>
             <Col xs={2}>
               <Button
-                type="sumbit"
                 variant="outline-danger"
-                onClick={handleSubmitELiminar}
+                onClick={handleShowEliminar}
                 block
               >
                 Eliminar Propiedad
@@ -150,16 +149,12 @@ const EditarPropiedad = ({ history }) => {
           ¿Esta seguro de que quieres eliminar la propiedad?
         </Modal.Body>
         <Modal.Footer>
-          <Link onClick={() => handleCloseEliminar()}>
-            <Button variant="outline-danger" block>
+            <Button variant="outline-danger"  onClick={handleCloseEliminar}>
               No eliminar
             </Button>
-          </Link>
-          <Link to={"/agenteinmobiliario/Propiedades"}>
-            <Button variant="danger" block>
+            <Button variant="danger"  onClick={handleSubmitELiminar}>
               Eliminar
             </Button>
-          </Link>
         </Modal.Footer>
       </Modal>
     </Layout>

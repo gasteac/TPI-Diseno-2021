@@ -3,6 +3,7 @@ import {
   UPDATE_PROPIEDADES,
   PROPIEDAD_SELECCIONADA,
   ADD_PROPIEDAD,
+  DELETE_PROPIEDAD,
   SET_IMAGE,
   API_CALL,
   GET_PROPIEDAD_NOMBRE,
@@ -45,6 +46,11 @@ export default (state, action) => {
         ...state,
         propiedades: [...state.propiedades, action.payload],
       };
+    case DELETE_PROPIEDAD:
+        return {
+            ...state,
+            propiedades: state.propiedades.filter(propiedad => propiedad._id !== action.payload._id)
+        }
     case SET_IMAGE:
       return {
         ...state,
