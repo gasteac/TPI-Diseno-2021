@@ -1,0 +1,12 @@
+[
+  {
+    "_id": "6098666289e878c94ca29d9a",
+    "DatosAlquiler": {
+      "NomInquilino": "Elon Musk",
+      "PrecioAlq": "$3333.33",
+      "NomPropietario": "Manuel TraSable",
+      "FechaPago": "21/11/1995",
+      "NroInmueble": "256325",
+      "NroTrans": "6329545"
+}}
+]

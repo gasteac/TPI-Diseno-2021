@@ -9,25 +9,27 @@ import {
   Form,
 } from "react-bootstrap";
 import Layout from "../../../../Layout";
-import propiedades from "../../../../../assets/propiedades.json";
-import DatosDelInmuebleComponent from "../../../../../components/DatosDelInmuebleComponent";
-import DatosDeContactoComponent from "../../../../../components/DatosDeContactoComponent";
+import InquilinoPropietario from "./Inquilino-Propietario.json";
+import DatosAlquiler from "./DatosAlquiler";
 import useAuth from "../../../../../hooks/useAuth";
 import BackButton from "../../../../../components/BackButton";
+import Alquiler from "./DatosAlquiler";
+
 
 const PagoAlquiler = ({history}) => {
     useAuth(history)
-  const { DatosDelInmueble, DatosDeContacto } = propiedades[0];
+  const {DatosAlquiler} = InquilinoPropietario[0];
+
   const [formState, setFormState] = useState({
-    tipo: "",
-    comision: 0,
-    formaDePago: "",
-    precio: 0,
-    moneda: "",
-    dni: 0,
+    mes: "",
+    año: 0,
+    intereses: "",
+    precio: "",
+    totalapagar: 0,
+    formapago: "",
   });
 
-  const { tipo, comision, formaDePago, precio, moneda, dni } = formState;
+  const { mes, año, intereses, precio, totalapagar, formapago } = formState;
 
   const [validated, setValidated] = useState(false);
 
@@ -57,11 +59,11 @@ const PagoAlquiler = ({history}) => {
 
   return (
     <Layout>
-      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <Container style={{display:'flex', justifyContent:'start', marginTop:'12px'}}>
       <BackButton history={history} />
       
-      <h2 className='titulosSecciones'>Pago Alquiler</h2>
-      <div style={{marginLeft:'115px'}}></div>
+      <h2 className='titulosSecciones ml-5'>Pago Alquiler</h2>
+      
       </Container> 
       <Container fluid>
         <Row className="my-5">
@@ -69,143 +71,13 @@ const PagoAlquiler = ({history}) => {
             <Card>
               <Card.Header as="h2">Datos del inmueble</Card.Header>
               <Card.Body>
-                <DatosDelInmuebleComponent
-                  DatosDelInmueble={DatosDelInmueble}
+                <Alquiler
+                  DatosAlquiler={DatosAlquiler}
                 />
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={7}>
-            <Card>
-              <Card.Header as="h2">Datos de Contacto</Card.Header>
-              <Card.Body>
-                <DatosDeContactoComponent DatosDeContacto={DatosDeContacto} />
-              </Card.Body>
-            </Card>
-            <Button
-              variant="success"
-              block
-              className="mt-5"
-              onClick={handleShow}
-            >
-              Registrar Ventas
-            </Button>
-          </Col>
         </Row>
-
-        <Modal show={show} onHide={handleClose} centered size="lg">
-          <Modal.Header closeButton>
-            <Modal.Title>Registrar pago por venta</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Card>
-              <Card.Header>Datos del pago</Card.Header>
-              <Card.Body>
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                  <Row>
-                    <Col>
-                      <Card.Title className="datosContacto">
-                        Tipo de venta
-                      </Card.Title>
-                      <Form.Control
-                        className="mt-2"
-                        name="tipo"
-                        placeholder="Tipo de venta"
-                        value={tipo}
-                        onChange={hanldeChangeForm}
-                        type="text"
-                        required
-                      />
-                    </Col>
-                    <Col>
-                      <Card.Title className="datosContacto">Precio</Card.Title>
-                      <Form.Control
-                        className="mt-2"
-                        name="precio"
-                        placeholder="Precio"
-                        value={precio}
-                        onChange={hanldeChangeForm}
-                        type="number"
-                        required
-                      />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <Card.Title className="datosContacto">
-                        Porcentaje de comisión
-                      </Card.Title>
-                      <Form.Control
-                        className="mt-2"
-                        name="comision"
-                        placeholder="Comisión"
-                        value={comision}
-                        onChange={hanldeChangeForm}
-                        type="number"
-                        required
-                      />
-                    </Col>
-                    <Col>
-                      <Card.Title className="datosContacto">Moneda</Card.Title>
-                      <Form.Control
-                        className="mt-2"
-                        name="moneda"
-                        placeholder="Moneda"
-                        value={moneda}
-                        onChange={hanldeChangeForm}
-                        type="text"
-                        required
-                      />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <Card.Title className="datosContacto">
-                        Forma de pago
-                      </Card.Title>
-                      <Form.Control
-                        className="mt-2"
-                        name="formaDePago"
-                        placeholder="Forma de Pago"
-                        value={formaDePago}
-                        onChange={hanldeChangeForm}
-                        type="text"
-                        required
-                      />
-                    </Col>
-                    <Col>
-                      <Card.Title className="datosContacto">
-                        D.N.I Cliente
-                      </Card.Title>
-                      <Form.Control
-                        className="mt-2"
-                        nmae="dni"
-                        placeholder="D.N.I Cliente"
-                        value={dni}
-                        onChange={hanldeChangeForm}
-                        type="number"
-                        required
-                      />
-                    </Col>
-                  </Row>
-                  <Button
-                    variant="outline-success"
-                    type="submit"
-                    block
-                    className="mt-3"
-                  >
-                    Confirmar
-                  </Button>
-                </Form>
-              </Card.Body>
-            </Card>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="outline-danger" onClick={handleClose}>
-              Cancelar
-            </Button>
-          </Modal.Footer>
-        </Modal>
       </Container>
     </Layout>
   );

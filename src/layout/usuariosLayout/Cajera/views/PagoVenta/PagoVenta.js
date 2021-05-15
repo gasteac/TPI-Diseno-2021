@@ -57,11 +57,11 @@ const PagoVenta = ({history}) => {
 
   return (
     <Layout>
-      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
+      <Container style={{display:'flex', justifyContent:'start', marginTop:'12px'}}>
       <BackButton history={history} />
       
-      <h2 className='titulosSecciones'>Pago Ventas</h2>
-      <div style={{marginLeft:'115px'}}></div>
+      <h2 className='titulosSecciones ml-5'>Pago Ventas</h2>
+      
       </Container> 
       <Container fluid>
         <Row className="my-5">
