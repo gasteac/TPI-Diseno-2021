@@ -92,11 +92,10 @@ export default function Propiedades({
           handleShow={handleShow}
         />
         <InputGroup className="mt-3">
-          <Col xs={2}>
+          <Col md={2}>
             <Button
               variant="outline-primary"
               style={{
-                marginLeft: "40px",
                 borderRadius: "9px",
                 border: "none",
                 width: "120px",
@@ -107,7 +106,7 @@ export default function Propiedades({
               <Image src={configure} />
             </Button>
           </Col>
-          <Col className="d-flex justify-content-center" xs={7}>
+          <Col className="d-flex justify-content-center align-items-center" md={8}>
             <InputGroup.Prepend className="mr-3">
               <Image src={search} />
             </InputGroup.Prepend>
@@ -126,6 +125,7 @@ export default function Propiedades({
                   border: "none",
                   color: "white",
                   background: "#50628C",
+                  padding: "10px"
                 }}
                 onClick={handleClick}
               >

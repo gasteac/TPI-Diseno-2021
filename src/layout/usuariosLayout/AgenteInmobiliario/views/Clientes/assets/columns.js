@@ -11,22 +11,22 @@ export const COLUMNS = [
         Header: 'Apellido',
         accessor: 'last_name',
     },
-    // {
-    //     Header: 'E-mail',
-    //     accessor: 'email',
-    // },
+    {
+        Header: 'E-mail',
+        accessor: 'email',
+    },
     {
         Header: 'Celular',
         accessor: 'phone',
     },
-    {
+/*     {
         Header: 'País',
         accessor: 'country',
     },
     {
         Header: 'Estado',
         accessor: 'state',
-    },
+    }, */
     {
         Header: 'Dirección',
         accessor: 'address',

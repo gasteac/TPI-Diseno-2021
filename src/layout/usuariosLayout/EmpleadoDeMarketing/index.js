@@ -1,5 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import ButtonCard from "../../../components/ButtonCard";
+import Notificaciones from "../../../components/Notificaciones";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 
@@ -8,7 +10,14 @@ const EmpleadoDeMarketing = ({ history }) => {
   return (
     <Layout usuario={user}>
       <Container className="mt-3 flex-column ">
-        ola
+        <Row>
+          <Col>
+            <Notificaciones nombreDeUsuario="Pepita" />
+          </Col>
+          <Col className="d-flex justify-content-center align-items-center">
+            <ButtonCard user={user} seccion={"Propiedades"} link={"link-1"} />
+          </Col>
+        </Row>
       </Container>
     </Layout>
   );
