@@ -5,7 +5,6 @@ const DatosDeLaPropiedadForm = ({
 DatosDelInmuebleEditar,
   nuevaPropiedad,
   setPropiedad,
-  forceUpdate
 }) => {
   const [formState, setFormState] = useState({
     tituloPropiedad: "",

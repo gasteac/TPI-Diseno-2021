@@ -36,6 +36,13 @@ const PropiedadesState = (props) => {
     });
   };
 
+  const updatePropiedades = propiedad => {
+    dispatch({
+      type: UPDATE_PROPIEDADES,
+      payload: propiedad
+    })
+  }
+
 
 
   const seleccionarPropiedad = (id) => {
@@ -115,6 +122,7 @@ const PropiedadesState = (props) => {
         idImagenPropiedad: state.idImagenPropiedad,
         propiedadesFiltradas: state.propiedadesFiltradas,
         seleccionarPropiedad,
+        updatePropiedades,
         setImagenesPropiedades,
         setIdImagen,
         addPropiedad,

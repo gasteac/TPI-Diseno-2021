@@ -25,7 +25,13 @@ export default (state, action) => {
     case UPDATE_PROPIEDADES:
       return {
         ...state,
-        propiedades: action.payload,
+        propiedades: state.propiedades.map(propiedad => {
+          if(propiedad._id === action.payload._id) {
+            return action.payload
+          } else {
+            return propiedad
+          }
+        }),
       };
     case PROPIEDAD_SELECCIONADA:
       return {
