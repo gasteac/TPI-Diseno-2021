@@ -36,6 +36,10 @@ const Login = ({ history }) => {
       history.push('/cajera/inicio')
       document.querySelector("body").style.background = "";
     }
+    if(login?.includes("marketing")) {
+      history.push('/marketing/inicio')
+      document.querySelector("body").style.background = "";
+    }
     localStorage.setItem("user", login);
     userLogin(login);
   };

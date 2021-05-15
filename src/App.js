@@ -33,6 +33,11 @@ import Transacciones from "./layout/usuariosLayout/Cajera/views/TransaccionesRea
 import AgregarClienteCorporativo from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/agregarCliente/AgregarClienteCorporativo";
 import AgregarClientePropietario from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/agregarCliente/AgregarClientePropietario";
 import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja/index.js";
+import EmpleadoDeMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/";
+import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/views/Propiedades";
+
+
+
 const App = () => {
   return(
     <GlobalState>
@@ -130,7 +135,12 @@ const App = () => {
             />
             <Route exact path="/cajera/cierredecaja" component={CierreCaja} />
 
-            {/* <Redirect to="/" /> */}
+            {/* Empleado de Marketing */}
+
+            <Route exact path="/marketing/inicio" component={EmpleadoDeMarketing} />
+            <Route exact path="/marketing/propiedades" component={PropiedadesMarketing} />
+
+            <Redirect to="/" />
           </Switch>
         </Router>
       </PropiedadesState>
