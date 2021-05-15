@@ -3,7 +3,7 @@ import "./FormCita.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from  "../../../../../../../src/static/images/caCITA.jpg"
-import BackButton from "../../../../../../components/BackButton";
+import BackButton from "../../../../../../components/BackButtonClientesPC";
 import useAuth from "../../../../../../hooks/useAuth";
 
 
@@ -72,13 +72,14 @@ const FormCita = (history) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   document.querySelector('body').style.background = `url(${img})`
+  document.querySelector('body').style.backgroundSize = `cover`
 
   const user = useAuth(history)
   return (
     <>
       
       <Container style={{display:'flex', alignItems:'start', margin:'0px', marginTop:'15px', justifyContent:'flex-start'}}>
-      <BackButton className='color:red, background:#50628C01' history={history} /></Container>
+      <BackButton className='' history={history} /></Container>
       <Container style={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'20px', margin:'0px', marginRight:'370px'}}>
       
       <Card style={{ border: 'none', marginTop: '30px', border:'none', background:'#50628C01'}}>

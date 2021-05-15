@@ -39,3 +39,21 @@
       transform: scale(1.05);
     }}
 
+    .bg-botoncitoPC{
+      background: rgba(255, 255, 255, 0) ;
+      color: #ffffff ;
+      border: 2px solid #ffffff ;
+      border-radius: 20px ;
+      margin-left: 5px ;
+      margin-right: 5px ;
+      margin-top: 5px ;
+      padding: 6px 12px;
+      
+  }
+  .bg-botoncitoPC:hover{
+      color: white ;
+      cursor: pointer;
+      background: #546da8 ;
+  }
+  
+

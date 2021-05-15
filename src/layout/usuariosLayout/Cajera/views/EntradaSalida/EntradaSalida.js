@@ -21,7 +21,7 @@ export default function EntradaSalida({ history }) {
     const user = useAuth(history);
     const GlobalContext = useContext(globalContext);
     const { setNombre } = GlobalContext;
-
+    document.querySelector('body').style.background = ''
 
     return (
         <Layout

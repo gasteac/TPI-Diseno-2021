@@ -4,20 +4,23 @@ import ButtonCard from "../../../components/ButtonCard";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import ButtonCardCaj from "./ButtonCardCaj";
+import img from  "../../../../src/static/images/caCITA.jpg"
 
 
 
 const Cajera = ({ history }) => {
   const user = useAuth(history);
+  document.querySelector('body').style.background = `url(${img})`
+document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout>
       <Container style={{marginTop:'40px'}}>
-        <Card style={{borderRadiusTopLeft:'100px', border:'none'}}>
-        <Card.Header as='h1' style={{background:'#50628C', color:'white', borderTopLeftRadius:'12px', borderTopRightRadius:'12px', textShadow:'2px 2px 5px black'}}> 
+        <Card style={{borderRadiusTopLeft:'100px', marginTop:'20px', border:'none', background:'#50628C99', borderTopLeftRadius:'30px', borderTopRightRadius:'30px' }}>
+        <Card.Header as='h1' style={{background:'#50628C01', border:'none', color:'white', borderTopLeftRadius:'80px', borderTopRightRadius:'80px', textShadow:'2px 2px 5px black'}}> 
           Bienvenida, Jett.
           <h5 style={{marginTop:'2px'}}>Que hacemos hoy? :)</h5>
         </Card.Header>
-        <Card.Body style={{background:'#B3BCE8', borderBottomLeftRadius:'12px', borderBottomRightRadius:'12px', border:'none'}}>
+        <Card.Body style={{background:'#B3BCE855', borderBottomLeftRadius:'12px', borderBottomRightRadius:'12px', border:'none'}}>
           <Row>
             <Col>
               <ButtonCardCaj user={user} seccion="EntradaSalida" link={"link-1"} style={{background:"#50628C", marginTop:'10px'}}/>

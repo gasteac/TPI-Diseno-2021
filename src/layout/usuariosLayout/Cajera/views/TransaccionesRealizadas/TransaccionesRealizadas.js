@@ -20,8 +20,9 @@ export default function TransaccionesRealizadas({ history }) {
     const user = useAuth(history);
     const GlobalContext = useContext(globalContext);
     const { setNombre } = GlobalContext;
+    document.querySelector('body').style.background = ''
     return (
-        
+   
         <Layout
         
              usuario={user}>
