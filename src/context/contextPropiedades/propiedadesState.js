@@ -11,6 +11,7 @@ import {
   UPDATE_PROPIEDADES,
   PROPIEDAD_SELECCIONADA,
   ADD_PROPIEDAD,
+  DELETE_PROPIEDAD,
   SET_IMAGE,
   API_CALL,
   GET_PROPIEDAD_NOMBRE,
@@ -36,6 +37,13 @@ const PropiedadesState = (props) => {
     });
   };
 
+  const updatePropiedades = propiedad => {
+    dispatch({
+      type: UPDATE_PROPIEDADES,
+      payload: propiedad
+    })
+  }
+
 
 
   const seleccionarPropiedad = (id) => {
@@ -51,6 +59,13 @@ const PropiedadesState = (props) => {
       payload: propiedad,
     });
   };
+
+  const deletePropiedad = (propiedad) => {
+    dispatch({
+      type: DELETE_PROPIEDAD,
+      payload: propiedad
+    })
+  }
 
   const setIdImagen = (id) => {
     dispatch({
@@ -115,9 +130,11 @@ const PropiedadesState = (props) => {
         idImagenPropiedad: state.idImagenPropiedad,
         propiedadesFiltradas: state.propiedadesFiltradas,
         seleccionarPropiedad,
+        updatePropiedades,
         setImagenesPropiedades,
         setIdImagen,
         addPropiedad,
+        deletePropiedad,
         getPropiedadNombre,
         getPropiedadTipo,
         getPropiedadPrecio,

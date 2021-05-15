@@ -3,24 +3,26 @@ import ListaPropiedades from "../../../../../components/ListaPropiedades/";
 import useAuth from "../../../../../hooks/useAuth";
 
 import BackButton from "../../../../../components/BackButton";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
-export default function Propiedades({history}) {
-
-  const user = useAuth(history)
-  document.querySelector('body').style.background = ''
+export default function Propiedades({ history }) {
+  const user = useAuth(history);
+  document.querySelector("body").style.background = "";
   return (
-    <Layout
-      usuario={user}
-    >
-      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
-      <BackButton history={history} />
-      
-      <h2 className='titulosSecciones'>Propiedades</h2>
-      <div style={{marginLeft:'115px'}}></div>
-      </Container> 
-
-      <ListaPropiedades history={history}/>
+    <Layout usuario={user}>
+      <Container className="mt-3 flex-column ">
+        <Row>
+          <Col xs={4}>
+            <BackButton history={history} />
+          </Col>
+          <Col xs={4}>
+              <h2 className="titulosSecciones m-auto">Propiedades</h2>
+          </Col>
+        </Row>
+        <Row>
+          <ListaPropiedades history={history} />
+        </Row>
+      </Container>
     </Layout>
   );
 }

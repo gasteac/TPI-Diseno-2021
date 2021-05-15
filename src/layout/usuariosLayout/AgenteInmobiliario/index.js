@@ -13,7 +13,7 @@ const AgenteInmobiliario = ({history}) => {
 
   return (
     <Layout
-      usuario={user}
+      usuario={user} cliente={true}
     >
       <div className="container-fluid ">
         {/* parte izquierda */}
