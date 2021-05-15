@@ -3,40 +3,37 @@ import Layout from "../../Layout";
 import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
 import useAuth from "../../../hooks/useAuth";
-import img from  "../../../../src/static/images/caCITA.jpg"
+import img from "../../../../src/static/images/caCITA.jpg";
+import { Col, Container, Row } from "react-bootstrap";
 
-const AgenteInmobiliario = ({history}) => {
-  const user = useAuth(history)
+const AgenteInmobiliario = ({ history }) => {
+  const user = useAuth(history);
 
-  document.querySelector('body').style.background = `url(${img})`
-  document.querySelector('body').style.backgroundSize = `cover`
+  document.querySelector("body").style.background = `url(${img})`;
+  document.querySelector("body").style.backgroundSize = `cover`;
 
   return (
-    <Layout
-      usuario={user} cliente={true}
-    >
-      <div className="container-fluid ">
-        {/* parte izquierda */}
-        <div className="row ">
-          <div className="col-5 mt-5 ">
-            <Notificaciones nombreDeUsuario='Chifflets'  />
-          </div>
-          {/* parte derecha */}
-          <div className="col-7 sm-12 my-auto mt-5 d-flex justify-content-around">
-            <div className="row" >
-              <div className="col" >
-                <ButtonCard user={user} seccion={"Agenda"} link={'link-2'}/>
-              </div>
-              <div className="col">
-                <ButtonCard user={user} seccion={"Propiedades"} link={'link-3'} />
-              </div>
-              <div className="col">
-                <ButtonCard user={user} seccion={"Clientes"} link={'link-1'} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <Layout usuario={user} cliente={true}>
+      <Container fluid>
+        <Row>
+          <Col xs={12} md={5}>
+            <Notificaciones nombreDeUsuario="Chifflets" />
+          </Col>
+          <Col className="d-flex align-items-center">
+            <Row>
+              <Col>
+                <ButtonCard user={user} seccion={"Clientes"} link={"link-1"} />
+              </Col>
+              <Col>
+                <ButtonCard user={user} seccion={"Agenda"} link={"link-2"} />
+              </Col>
+              <Col>
+                <ButtonCard user={user}  seccion={"Propiedades"} link={"link-3"} />
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   );
 };
