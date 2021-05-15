@@ -22,10 +22,8 @@ export default function ListaClientes({ history }) {
                 <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
                     <BackButton history={history} />
                     <h2 className='titulosSecciones'>Clientes</h2>
-                    <div style={{marginLeft:'115px'}}></div>
-                </Container> 
-
-                <div className='dropdown-propio'>
+                   
+                    <div className='dropdown-propio d-flex align-items-center'>
                     <DropdownButton id="dropdown-basic-button" title="Agregar cliente">
 
                         <Dropdown.Item >
@@ -38,6 +36,9 @@ export default function ListaClientes({ history }) {
                         
                     </DropdownButton>
                 </div>
+                </Container> 
+
+                
            
                 <Table columnas={COLUMNS} datos={clients} />
             </Container>
