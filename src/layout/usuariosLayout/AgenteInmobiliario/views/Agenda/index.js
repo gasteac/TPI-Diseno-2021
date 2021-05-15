@@ -8,7 +8,7 @@ import BackButton from "../../../../../components/BackButton";
 
 export default function Agenda({history}) {
     const user = useAuth(history)
-
+    document.querySelector('body').style.background = ''
   return (
     <Layout
       usuario={user}

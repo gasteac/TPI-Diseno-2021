@@ -9,6 +9,7 @@ import useAuth from "../../../../../hooks/useAuth";
 
 export default function Citas({ history }) {
     const user = useAuth(history);
+    
     return (
         <Layout
         usuario={user}
@@ -20,7 +21,7 @@ export default function Citas({ history }) {
       <div style={{marginLeft:'115px'}}></div>
       </Container> 
             
-            <Container fluid>
+            <Container fluid >
            
                 <Table columnas={COLUMNS1} datos={columns1Data} rows={7}/>
             </Container>

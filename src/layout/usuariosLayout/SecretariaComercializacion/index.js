@@ -2,11 +2,12 @@ import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
-
+import img from  "../../../../src/static/images/caCITA.jpg"
 export default function SecretariaComercializacion({ history }) {
 
     const user = useAuth(history);
-
+    document.querySelector('body').style.background = `url(${img})`
+    document.querySelector('body').style.backgroundSize = `cover`
     return (
         <Layout
       usuario={user}

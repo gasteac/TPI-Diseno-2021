@@ -42,9 +42,7 @@ a:hover { text-decoration: none; color: #fff; }
 a:focus { text-decoration: none; color: #fff; }
 a:hover, .a:active { text-decoration: none !important; color: #fff; }
 
-.siimple-card-body {
-    border-top: 0;
-}
+
 
 #border-cero div {
     border: 0px;
@@ -61,10 +59,6 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
     height: 163px;
 } */
 
-.siimple-card-header {
-    border-top-right-radius: 16px!important;
-    border-top-left-radius: 16px!important;
-}
 
 .textButtonsCard {
     text-align: center;
@@ -80,6 +74,7 @@ a:hover, .a:active { text-decoration: none !important; color: #fff; }
     flex-direction: column;
     justify-content: center;
     margin: 1rem 1rem;
+    background:#83798395 !important;
 }
 .container {
     display: flex;
@@ -187,5 +182,9 @@ table td{
 text-align: center;
 cursor: pointer;
 box-shadow: 2px 2px #999;
+}
+
+.bordermax{
+border-radius: 100px !important;
 }
 

@@ -9,7 +9,7 @@ import propiedadesContext from "../../../../../../context/contextPropiedades/pro
 import { v4 } from "uuid";
 import { Link } from "react-router-dom";
 import BackButton from "../../../../../../components/BackButton";
-
+document.querySelector('body').style.background = ''
 const AgregarPropiedad = ({ history }) => {
   // eslint-disable-next-line
   const user = useAuth(history);
