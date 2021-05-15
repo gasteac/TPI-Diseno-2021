@@ -82,9 +82,9 @@ const FormCita = (history) => {
       <BackButton className='' history={history} /></Container>
       <Container style={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'20px', margin:'0px', marginRight:'370px'}}>
       
-      <Card style={{ border: 'none', marginTop: '30px', border:'none', background:'#50628C01'}}>
-        <Card.Header as="h1" style={{ textShadow: '1px 1px 10px black', background: '#50628C90', color: 'white', borderTopRightRadius: '20px', borderTopLeftRadius: '20px' }}>Programar Cita</Card.Header>
-        <Card.Body style={{ background: '#B3BCE880', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px', border:'none',  }}>
+      <Card style={{ border: 'none', marginTop: '30px', border:'none', background:'#a79ba790', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px' }}>
+        <Card.Header as="h1" style={{ textShadow: '1px 1px 10px black', background: '#50628C01', color: 'white', borderTopRightRadius: '20px', borderTopLeftRadius: '20px' }}>Programar Cita</Card.Header>
+        <Card.Body style={{ background: '#B3BCE855', borderBottomLeftRadius: '30px', borderBottomRightRadius: '30px', border:'none',  }}>
 
 
 

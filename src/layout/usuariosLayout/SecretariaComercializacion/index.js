@@ -10,7 +10,7 @@ export default function SecretariaComercializacion({ history }) {
     document.querySelector('body').style.backgroundSize = `cover`
     return (
         <Layout
-      usuario={user}
+      cliente={true}
     >
       <div className="container-fluid">
         {/* parte izquierda */}
