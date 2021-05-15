@@ -13,7 +13,8 @@ const Cajera = ({ history }) => {
 document.querySelector('body').style.background = `url(${img})`
 document.querySelector('body').style.backgroundSize = `cover`
   return (
-    <Layout>
+    <Layout cliente={true}> 
+      
       <Container style={{marginTop:'0px'}}>
         <Card style={{ marginTop:'20px', border:'none', background:'#a79ba790', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px' }}>
         <Card.Header as='h1' style={{background:'#50628C01', border:'none', color:'white', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', textShadow:'2px 2px 5px black'}}> 
