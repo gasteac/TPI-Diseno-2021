@@ -1,11 +1,26 @@
 export default function Totales({ datos }) {
 
-    const totalEgreso = datos.amount.reduce((prev, current) => {if (datos.type == 'egreso') prev + current})
+    const montoEgreso = datos.map(dato => {
+      if (dato.type == 'egreso') {
+        return Number(dato.amount.substring(1,dato.amount.lenght))
+      } else {
+        return 0
+      }
+    })
 
-    const totalIngreso = datos.amount.reduce((prev, current) => {if (datos.type == 'ingreso') prev + current})
+    const montoIngreso = datos.map(dato => {
+      if (dato.type == 'ingreso') {
+        return Number(dato.amount.substring(1,dato.amount.lenght))
+      } else {
+        return 0
+      }
+    })
 
-    const total = totalEgreso + totalIngreso;
+    const totalEgreso = (montoEgreso.reduce((prev, current) => prev + current)).toFixed(2)
 
+    const totalIngreso = (montoIngreso.reduce((prev, current) => prev + current)).toFixed(2)
+
+    const total = Number(totalEgreso) + Number(totalIngreso);
 
     return (
         <>
