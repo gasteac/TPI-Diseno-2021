@@ -20,6 +20,7 @@ const NavBar = ({ cliente }) => {
       "Pago venta",
       "Cierre de caja",
     ],
+    marketing: ["Inicio", "Propiedades"]
   };
 
   const handleClick = (i) => {

@@ -8,6 +8,8 @@ import {
   InputGroup,
   Form,
   Spinner,
+  Row,
+  Col,
 } from "react-bootstrap";
 import GridPropiedadesGenerator from "../../GridGenerator";
 import Filter from "../../Filter";
@@ -48,11 +50,10 @@ export default function Propiedades({
   }, []);
 
   useEffect(() => {
-    if(propiedadesFiltradas) {
-      setPropiedadesMostradas(propiedadesFiltradas)
-
+    if (propiedadesFiltradas) {
+      setPropiedadesMostradas(propiedadesFiltradas);
     }
-  }, [propiedadesFiltradas])
+  }, [propiedadesFiltradas]);
 
   const [show, setShow] = useState(false);
   const user = useAuth();
@@ -75,71 +76,81 @@ export default function Propiedades({
   };
 
   return (
-    <Container fluid>
-      <Filter
-        setNombre={() => {}}
-        setPrecioMayor={() => {}}
-        setPrecioMenor={() => {}}
-        setTipo={() => {}}
-        setUbicacion={() => {}}
-        setHabitaciones={() => {}}
-        setBaños={() => {}}
-        setM2TotalesMayor={() => {}}
-        setM2TotalesMenor={() => {}}
-        show={show}
-        handleShow={handleShow}
-      />
-      <InputGroup className="mt-3">
-        <Button
-          variant="outline-primary"
-          style={{
-            marginLeft:'40px',
-            borderRadius: "9px",
-            border: "none",
-            width: "120px",
-            background: "#50628C",
-          }}
-          onClick={() => handleShow(true)}
-        >
-          <Image src={configure} />
-        </Button>
-        <InputGroup.Prepend className="ml-5 mr-2">
-          <Image src={search} />
-        </InputGroup.Prepend>
-        <FormControl
-          style={{ maxWidth: "78%" }}
-          placeholder="Buscar Propiedad"
-          onChange={handleChangeBusqueda}
+    <>
+      <Row>
+        <Filter
+          setNombre={() => {}}
+          setPrecioMayor={() => {}}
+          setPrecioMenor={() => {}}
+          setTipo={() => {}}
+          setUbicacion={() => {}}
+          setHabitaciones={() => {}}
+          setBaños={() => {}}
+          setM2TotalesMayor={() => {}}
+          setM2TotalesMenor={() => {}}
+          show={show}
+          handleShow={handleShow}
         />
-        {user != "cliente" ? (
-          <Button
-            variant="outline-primary ml-5"
-            style={{
-              borderRadius: "9px",
-              border: "none",
-              color: "white",
-              background: "#50628C",
-            }}
-            onClick={handleClick}
-          >
-            Agregar Propiedad
-          </Button>
-        ) : null}
-      </InputGroup>
-      <GridPropiedadesGenerator cols={3}>
-        {!propiedades ? (
-          <Spinner animation="border" role="status" />
-        ) : (
-          propiedades.map((propiedad, i) => (
-            <CardPropiedades
-              key={propiedad._id}
-              i={i}
-              propiedad={propiedad}
-              handleClickPropiedad={handleClickPropiedad}
+        <InputGroup className="mt-3">
+          <Col xs={2}>
+            <Button
+              variant="outline-primary"
+              style={{
+                marginLeft: "40px",
+                borderRadius: "9px",
+                border: "none",
+                width: "120px",
+                background: "#50628C",
+              }}
+              onClick={() => handleShow(true)}
+            >
+              <Image src={configure} />
+            </Button>
+          </Col>
+          <Col className="d-flex justify-content-center" xs={7}>
+            <InputGroup.Prepend className="mr-3">
+              <Image src={search} />
+            </InputGroup.Prepend>
+            <FormControl
+              style={{ maxWidth: "78%" }}
+              placeholder="Buscar Propiedad"
+              onChange={handleChangeBusqueda}
             />
-          ))
-        )}
-      </GridPropiedadesGenerator>
-    </Container>
+          </Col>
+          {user === "agenteinmobiliario" ? (
+            <Col className="d-flex justify-content-center">
+              <Button
+                variant="outline-primary"
+                style={{
+                  borderRadius: "9px",
+                  border: "none",
+                  color: "white",
+                  background: "#50628C",
+                }}
+                onClick={handleClick}
+              >
+                Agregar Propiedad
+              </Button>
+            </Col>
+          ) : null}
+        </InputGroup>
+      </Row>
+      <Row>
+        <GridPropiedadesGenerator cols={3}>
+          {!propiedades ? (
+            <Spinner animation="border" role="status" />
+          ) : (
+            propiedades.map((propiedad, i) => (
+              <CardPropiedades
+                key={propiedad._id}
+                i={i}
+                propiedad={propiedad}
+                handleClickPropiedad={handleClickPropiedad}
+              />
+            ))
+          )}
+        </GridPropiedadesGenerator>
+      </Row>
+    </>
   );
 }
