@@ -36,6 +36,7 @@ import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja/index.js
 import EmpleadoDeMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/";
 import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/views/Propiedades";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EditarImagenes from "./layout/usuariosLayout/EmpleadoDeMarketing/views/EditarImagenes";
 
 
 
@@ -140,6 +141,7 @@ const App = () => {
 
             <Route exact path="/marketing/inicio" component={EmpleadoDeMarketing} />
             <Route exact path="/marketing/propiedades" component={PropiedadesMarketing} />
+            <Route exact path="/marketing/editarpropiedad" component={EditarImagenes} />
 
             <Redirect to="/" />
           </Switch>

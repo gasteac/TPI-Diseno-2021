@@ -34,7 +34,7 @@ const Propiedad = ({ history }) => {
   };
 
   const handleClickEditarImagenes = () => {
-    console.log("object");
+    history.push('/marketing/editarpropiedad')
   };
 
   return (
