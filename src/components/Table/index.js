@@ -10,8 +10,15 @@ import {
 } from "react-table";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
+import { Row } from "react-bootstrap";
 
-export default function Table({ columnas, datos, rows=8, flag=true, setList=(() => {})}) {
+export default function Table({
+  columnas,
+  datos,
+  rows = 8,
+  flag = true,
+  setList = () => {},
+}) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -68,7 +75,7 @@ export default function Table({ columnas, datos, rows=8, flag=true, setList=(() 
     canPreviousPage,
     pageOptions,
     setPageSize,
-    selectedFlatRows
+    selectedFlatRows,
   } = tableInstance;
   // eslint-disable-next-line
   const { globalFilter, pageIndex, pageSize } = state;
@@ -76,31 +83,37 @@ export default function Table({ columnas, datos, rows=8, flag=true, setList=(() 
   useEffect(() => {
     setPageSize(rows);
     // eslint-disable-next-line
-  }, [])
+  }, []);
 
   useEffect(() => {
-      setList(selectedFlatRows)
-  }, [selectedFlatRows])
-  
-  
+    setList(selectedFlatRows);
+  }, [selectedFlatRows]);
+
   // eslint-disable-next-line
 
   return (
     <>
-      <div style={{overflowX: "auto"}}>
-        <table {...getTableProps()} className="table tabla-propia" >
-          <thead className="tabla-header-propio"  >
+      <Row>
+        <table {...getTableProps()} className="table tabla-propia">
+          <thead className="tabla-header-propio">
             {headerGroups.map((headerGroup, i) => (
               <tr {...headerGroup.getHeaderGroupProps()} key={i}>
                 {headerGroup.headers.map((column, i) => (
                   <th
                     key={i}
                     scope="col"
-                    className="th-propio" style={{background:'#50628C', borderTop:'none', color:'white'}}
+                    className="th-propio"
+                    style={{
+                      background: "#50628C",
+                      borderTop: "none",
+                      color: "white",
+                    }}
                   >
-                    <div {...column.getHeaderProps(column.getSortByToggleProps())}>
+                    <div
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                    >
                       {" "}
-                      {column.render("Header") }
+                      {column.render("Header")}
                       <span>
                         {column.isSorted
                           ? column.isSortedDesc
@@ -117,14 +130,19 @@ export default function Table({ columnas, datos, rows=8, flag=true, setList=(() 
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()} >
+          <tbody {...getTableBodyProps()}>
             {page.map((row, i) => {
               prepareRow(row);
               return (
-                <tr className="table" style={{background:'#F5F5F5'}} {...row.getRowProps()} key={i}>
+                <tr
+                  className="table"
+                  style={{ background: "#F5F5F5" }}
+                  {...row.getRowProps()}
+                  key={i}
+                >
                   {row.cells.map((cell) => {
                     return (
-                      <td {...cell.getCellProps()} >{cell.render("Cell")}</td>
+                      <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
                     );
                   })}
                 </tr>
@@ -132,44 +150,47 @@ export default function Table({ columnas, datos, rows=8, flag=true, setList=(() 
             })}
           </tbody>
         </table>
-      </div>
+      </Row>
+      <Row className="justify-content-center">
+        <nav
+          aria-label="Page navigation example"
+          className="d-flex justify-content-end mr-3"
+        >
+          <ul className="pagination">
+            <li className="page-item">
+              <button
+                className="page-link"
+                onClick={() => previousPage()}
+                disabled={!canPreviousPage}
+              >
+                Previous
+              </button>
+            </li>
+            <li className="page-item">
+              <span className="page-link">
+                Page{" "}
+                <strong>
+                  {pageIndex + 1} of {pageOptions.length}
+                </strong>{" "}
+              </span>
+            </li>
 
-      <nav aria-label="Page navigation example" className='d-flex justify-content-end mr-3'>
-        <ul className="pagination">
-          <li className="page-item">
-            <button
-              className="page-link"
-              onClick={() => previousPage()}
-              disabled={!canPreviousPage}
-            >
-              Previous
-            </button>
-          </li>
-          <li className="page-item">
-            <span className="page-link">
-              Page{" "}
-              <strong>
-                {pageIndex + 1} of {pageOptions.length}
-              </strong>{" "}
-            </span>
-          </li>
-
-          <li className="page-item">
-            <button
-              className="page-link"
-              onClick={() => nextPage()}
-              disabled={!canNextPage}
-            >
-              Next
-            </button>
-          </li>
-        </ul>
-      </nav>
-      
+            <li className="page-item">
+              <button
+                className="page-link"
+                onClick={() => nextPage()}
+                disabled={!canNextPage}
+              >
+                Next
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </Row>
       {/* <pre>
                 <code>
-                    {JSON.stringify(
-                        {
+                {JSON.stringify(
+                  {
                             selectedFlatRows: selectedFlatRows.map((row) => row.original),
                         },
                         null,
