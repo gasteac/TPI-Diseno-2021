@@ -37,8 +37,7 @@ const PagoAlquiler = ({ history }) => {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-    } else
-    handleShow();
+    } else handleShow();
     setValidated(true);
     event.preventDefault();
     event.stopPropagation();
@@ -59,13 +58,11 @@ const PagoAlquiler = ({ history }) => {
   return (
     <Layout>
       <Container
-        style={{ display: "flex", justifyContent: "start", marginTop: "12px" }}
+        fluid
       >
-        <BackButton history={history} />
-
-        <h2 className="titulosSecciones ml-5">Pago Alquiler</h2>
-      </Container>
-      <Container style={{ marginTop: "40px" }}>
+        <Row className="justify-content-center">
+          <h2 className="titulosSecciones ml-5">Pago Alquiler</h2>
+        </Row>
         <Row>
           <Col xs={5}>
             <Card>
@@ -125,15 +122,18 @@ const PagoAlquiler = ({ history }) => {
                       type="number"
                       required
                     />
-                   
+
                     <Form.Control
                       className="mt-2"
                       as="select"
                       name="formapago"
                       required
                       value={formapago}
-                      onChange={hanldeChangeForm}>
-                      <option hidden disabled value="">Seleccione un metodo de pago</option>
+                      onChange={hanldeChangeForm}
+                    >
+                      <option hidden disabled value="">
+                        Seleccione un metodo de pago
+                      </option>
                       <option>MercadoPago</option>
                       <option>Tarjeta de Credito</option>
                     </Form.Control>
@@ -143,7 +143,6 @@ const PagoAlquiler = ({ history }) => {
                     type="submit"
                     block
                     className="mt-3"
-                    
                   >
                     Confirmar
                   </Button>
@@ -166,7 +165,6 @@ const PagoAlquiler = ({ history }) => {
                           Aceptar
                         </Button>
                       </Link>
-                   
                     </Modal.Footer>
                   </Modal>
                 </Form>

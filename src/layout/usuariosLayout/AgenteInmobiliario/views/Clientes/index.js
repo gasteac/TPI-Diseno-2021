@@ -1,51 +1,50 @@
-import clients from './assets/clients.json';
-import { COLUMNS } from './assets/columns';
+import clients from "./assets/clients.json";
+import { COLUMNS } from "./assets/columns";
 import useAuth from "../../../../../hooks/useAuth";
-import Layout from '../../../../Layout';
-import { Container,DropdownButton,Dropdown, } from 'react-bootstrap';
+import Layout from "../../../../Layout";
+import { Container, DropdownButton, Dropdown, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import './index.css'
-import Table from '../../../../../components/Table';
+import "./index.css";
+import Table from "../../../../../components/Table";
 import BackButton from "../../../../../components/BackButton";
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ListaClientes({ history }) {
-    const [clientes, setClientes] = useState([]);
-    console.log(clientes)
-    const user = useAuth(history);
-    document.querySelector('body').style.background = ''
-    return (
-        <Layout
-            items={["Inicio", "Clientes", "Agenda", "Propiedades"]}
-            usuario={user}
-        >
- 
-
-            {/* <BackButton history={history} /> */}
-            <Container fluid>
-                <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
-                    <BackButton history={history} />
-                    <h2 className='titulosSecciones'>Clientes</h2>
-                   
-                    <div className='dropdown-propio d-flex align-items-center'>
-                    <DropdownButton id="dropdown-basic-button" title="Agregar cliente">
-
-                        <Dropdown.Item >
-                            <Link className="link-propio" to={'/agenteinmobiliario/Clientes/AgregarClientePropietario'}><p className="color-propio">Propietario</p></Link>
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            <Link className="link-propio" to={'/agenteinmobiliario/Clientes/AgregarClienteCorporativo'}><p className="color-propio">Corporativo</p></Link>
-                        </Dropdown.Item>
-                       
-                        
-                    </DropdownButton>
-                </div>
-                </Container> 
-
-                
-           
-                <Table columnas={COLUMNS} datos={clients} setList={setClientes}/>
-            </Container>
-        </Layout>
-    );
+  const [clientes, setClientes] = useState([]);
+  console.log(clientes);
+  const user = useAuth(history);
+  document.querySelector("body").style.background = "";
+  return (
+    <Layout>
+      <Container fluid>
+        <Row>
+          <Col xs={7} className="d-flex justify-content-end">
+            <h2 className="titulosSecciones">Clientes</h2>
+          </Col>
+          <Col className="d-flex align-items-center justify-content-end" xs={5}>
+              <DropdownButton
+                id="dropdown-basic-button"
+                title="Agregar cliente"
+              >
+                <Dropdown.Item
+                  as={Link}
+                  to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
+                >
+                  Propietario
+                </Dropdown.Item>
+                <Dropdown.Item
+                  as={Link}
+                  to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
+                >
+                  Corporativo
+                </Dropdown.Item>
+              </DropdownButton>
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Table columnas={COLUMNS} datos={clients} setList={setClientes} />
+        </Row>
+      </Container>
+    </Layout>
+  );
 }

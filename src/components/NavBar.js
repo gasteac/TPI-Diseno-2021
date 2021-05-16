@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import globalContext from "../context/globalContext";
 import Logo from "../static/images/inmoviliaria-1.svg";
@@ -21,7 +21,13 @@ const NavBar = ({ cliente }) => {
       "Cierre de caja",
     ],
     marketing: ["Inicio", "Propiedades"],
-    jefacomercializacion: ['Inicio', 'Reportes', 'Propiedades', 'Agenda', 'Clientes']
+    jefacomercializacion: [
+      "Inicio",
+      "Reportes",
+      "Propiedades",
+      "Agenda",
+      "Clientes",
+    ],
   };
 
   const handleClick = (i) => {
@@ -29,11 +35,11 @@ const NavBar = ({ cliente }) => {
   };
 
   return (
-    <Navbar style={{ backgroundColor: cliente ? "#50628C01" : "black" }} expand="lg">
+    <Navbar className={cliente ? "navbar-clear" : "navbar-color"} expand="lg">
       <Navbar.Brand>
         <Link to={`/${user}/inicio`} className="d-flex align-items-center">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
-          <h3 className="mt-3 ml-3" style={{ fontWeight:'700' }}>
+          <h3 className="mt-3 ml-3" style={{ fontWeight: "700" }}>
             Domus
           </h3>
         </Link>
@@ -52,40 +58,23 @@ const NavBar = ({ cliente }) => {
                   as={Link}
                   to={`/${user}/${item
                     .toLowerCase()
-                    .replaceAll(" ", "")
+                    .replace(" ", "")
+                    .replace(" ", "")
                     .replace("¿", "")
                     .replace("/", "")}`}
-                  style={{
-                    color: "white",
-                    background: cliente ? "#50628C40" : "",
-                    borderRadius: "20px",
-                    marginLeft: "5px",
-                    marginRigth: "5px",
-                    marginTop: "5px",
-                    border: "2px solid white",
-                    padding: "6px 10px",
-                  }}
                   eventKey={`link-${i}`}
                 >
                   {item}
                 </Nav.Link>
               </Nav.Item>
             ))}
-          <Nav.Item>
-            <Nav.Link as={Link} to="/" style={{
-                    color: "white",
-                    background: cliente ? "#A11210" : "#A11210",
-                    borderRadius: "20px",
-                    marginLeft: "5px",
-                    marginRigth: "5px",
-                    marginTop: "5px",
-                    border: "2px solid white",
-                    padding: "6px 10px",
-                  
-                  }}>
-              Cerrar Sesion
-            </Nav.Link>
-          </Nav.Item>
+          <NavDropdown title="Mi Perfil" id="nav-dropdown" alignRight>
+              <NavDropdown.Item eventKey="4.1">Mi perfil</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} eventKey="4.2" to="/">
+                Cerrar Sesión
+              </NavDropdown.Item>
+          </NavDropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
