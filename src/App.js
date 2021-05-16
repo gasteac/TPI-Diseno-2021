@@ -35,6 +35,7 @@ import AgregarClientePropietario from "./layout/usuariosLayout/AgenteInmobiliari
 import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja/index.js";
 import EmpleadoDeMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/";
 import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/views/Propiedades";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

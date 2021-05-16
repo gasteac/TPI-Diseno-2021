@@ -24,6 +24,7 @@ import propiedadesContext from "../../../context/contextPropiedades/propiedadesC
 import CardPropiedades from "./CardPropiedades";
 import axios from "axios";
 
+
 export default function Propiedades({
   history,
   propiedades,
@@ -77,7 +78,6 @@ export default function Propiedades({
 
   return (
     <>
-      <Row>
         <Filter
           setNombre={() => {}}
           setPrecioMayor={() => {}}
@@ -134,8 +134,6 @@ export default function Propiedades({
             </Col>
           ) : null}
         </InputGroup>
-      </Row>
-      <Row>
         <GridPropiedadesGenerator cols={3}>
           {!propiedades ? (
             <Spinner animation="border" role="status" />
@@ -150,7 +148,6 @@ export default function Propiedades({
             ))
           )}
         </GridPropiedadesGenerator>
-      </Row>
     </>
   );
 }
