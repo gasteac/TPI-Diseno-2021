@@ -11,7 +11,7 @@ import {
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
-export default function Table({ columnas, datos, rows=8, flag=true}) {
+export default function Table({ columnas, datos, rows=8, flag=true, setList=(() => {})}) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
@@ -67,7 +67,8 @@ export default function Table({ columnas, datos, rows=8, flag=true}) {
     canNextPage,
     canPreviousPage,
     pageOptions,
-    setPageSize
+    setPageSize,
+    selectedFlatRows
   } = tableInstance;
   // eslint-disable-next-line
   const { globalFilter, pageIndex, pageSize } = state;
@@ -76,6 +77,11 @@ export default function Table({ columnas, datos, rows=8, flag=true}) {
     setPageSize(rows);
     // eslint-disable-next-line
   }, [])
+
+  useEffect(() => {
+      setList(selectedFlatRows)
+  }, [selectedFlatRows])
+  
   
   // eslint-disable-next-line
 
@@ -103,9 +109,9 @@ export default function Table({ columnas, datos, rows=8, flag=true}) {
                           : " "}
                       </span>
                     </div>
-                    {/* <div>
+                    <div>
                       {column.canFilter ? column.render("Filter") : null}
-                    </div> */}
+                    </div>
                   </th>
                 ))}
               </tr>
@@ -159,7 +165,7 @@ export default function Table({ columnas, datos, rows=8, flag=true}) {
           </li>
         </ul>
       </nav>
-
+      
       {/* <pre>
                 <code>
                     {JSON.stringify(

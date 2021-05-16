@@ -7,8 +7,11 @@ import { Link } from "react-router-dom";
 import './index.css'
 import Table from '../../../../../components/Table';
 import BackButton from "../../../../../components/BackButton";
+import { useState } from 'react';
 
 export default function ListaClientes({ history }) {
+    const [clientes, setClientes] = useState([]);
+    console.log(clientes)
     const user = useAuth(history);
     document.querySelector('body').style.background = ''
     return (
@@ -41,7 +44,7 @@ export default function ListaClientes({ history }) {
 
                 
            
-                <Table columnas={COLUMNS} datos={clients} />
+                <Table columnas={COLUMNS} datos={clients} setList={setClientes}/>
             </Container>
         </Layout>
     );
