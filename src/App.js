@@ -37,6 +37,7 @@ import EmpleadoDeMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/";
 import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/views/Propiedades";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EditarImagenes from "./layout/usuariosLayout/EmpleadoDeMarketing/views/EditarImagenes";
+import JefaComercializacion from "./layout/usuariosLayout/JefaComercializacion";
 
 
 
@@ -142,6 +143,30 @@ const App = () => {
             <Route exact path="/marketing/inicio" component={EmpleadoDeMarketing} />
             <Route exact path="/marketing/propiedades" component={PropiedadesMarketing} />
             <Route exact path="/marketing/editarpropiedad" component={EditarImagenes} />
+
+            {/* Jefa comercialización */}
+            <Route exact path="/jefacomercializacion/inicio" component={JefaComercializacion} />
+            <Route
+              exact
+              path="/jefacomercializacion/Clientes"
+              component={ListaClientes}
+            />
+            <Route
+              exact
+              path="/jefacomercializacion/Clientes/AgregarClienteCorporativo"
+              component={AgregarClienteCorporativo}
+            />
+            <Route
+              exact
+              path="/jefacomercializacion/Clientes/AgregarClientePropietario"
+              component={AgregarClientePropietario}
+            />
+            <Route exact path="/jefacomercializacion/agenda" component={AgendaSec} />
+            <Route
+              exact
+              path="/jefacomercializacion/Propiedades"
+              component={Propiedades}
+            />
 
             <Redirect to="/" />
           </Switch>

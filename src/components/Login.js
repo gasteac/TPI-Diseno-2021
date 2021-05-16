@@ -40,6 +40,10 @@ const Login = ({ history }) => {
       history.push('/marketing/inicio')
       document.querySelector("body").style.background = "";
     }
+    if(login?.includes("jefacomercializacion")) {
+      history.push('/jefacomercializacion/inicio')
+      document.querySelector("body").style.background = "";
+    }
     localStorage.setItem("user", login);
     userLogin(login);
   };
