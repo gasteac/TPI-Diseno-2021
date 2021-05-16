@@ -32,6 +32,7 @@ import EntradaSalida from "./layout/usuariosLayout/Cajera/views/EntradaSalida/En
 import Transacciones from "./layout/usuariosLayout/Cajera/views/TransaccionesRealizadas/TransaccionesRealizadas";
 import AgregarClienteCorporativo from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/agregarCliente/AgregarClienteCorporativo";
 import AgregarClientePropietario from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/agregarCliente/AgregarClientePropietario";
+import EditarCliente from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/editarCliente/EditarCliente";
 import CierreCaja from "./layout/usuariosLayout/Cajera/views/CierreCaja/index.js";
 import EmpleadoDeMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/";
 import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/views/Propiedades";
@@ -77,6 +78,11 @@ const App = () => {
               exact
               path="/agenteinmobiliario/Clientes/AgregarClientePropietario"
               component={AgregarClientePropietario}
+            />
+            <Route
+              exact
+              path="/agenteinmobiliario/Clientes/EditarCliente"
+              component={EditarCliente}
             />
             <Route
               exact

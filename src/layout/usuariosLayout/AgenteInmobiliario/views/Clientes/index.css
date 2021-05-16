@@ -7,3 +7,22 @@
 .color-propio{
     color:rgb(80, 98, 140);
 }
+
+.text-boton-danger{
+    color:red !important;
+}
+
+.text-boton-danger:hover{
+    color: #fafafa !important;
+}
+
+.text-boton-succes:hover{
+    color: #fafafa !important;
+}
+
+.text-boton-success{
+    color:green !important;
+}
+.text-boton-success:hover{
+    color:#fafafa !important;
+}
