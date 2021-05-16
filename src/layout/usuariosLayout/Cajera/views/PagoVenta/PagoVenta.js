@@ -192,17 +192,17 @@ const PagoVenta = ({history}) => {
                   </Row>
                 
                   <div style={{display:'flex', justifyContent:'flex-end'}}>
-                  <Button variant="outline-danger" className="mt-3" onClick={handleClose}>
-              Cancelar
-            </Button>
-    
-                  <Button
-                    variant="outline-success"
-                    type="submit"
-                    className="mt-3 ml-5"
-                  >
-                    Confirmar
-                  </Button>
+                    <Button variant="outline-danger" className="mt-3" onClick={handleClose}>
+                        Cancelar
+                    </Button>
+
+                    <Button variant="outline-success" className="mt-3 ml-1" onClick={handleClose}>
+                        Imprimir comprobante
+                    </Button>
+      
+                    <Button variant="outline-success" type="submit" className="mt-3 ml-1">
+                      Confirmar
+                    </Button>
                   </div>
                  
 

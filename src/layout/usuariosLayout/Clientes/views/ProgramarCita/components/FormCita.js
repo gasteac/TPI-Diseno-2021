@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import img from  "../../../../../../../src/static/images/caCITA.jpg"
 import BackButton from "../../../../../../components/BackButtonClientesPC";
 import useAuth from "../../../../../../hooks/useAuth";
+import Layout from "../../../../../Layout";
 
 
 // const user = useAuth(history)
@@ -77,7 +78,6 @@ const FormCita = (history) => {
   const user = useAuth(history)
   return (
     <>
-      
       <Container style={{display:'flex', alignItems:'start', margin:'0px', marginTop:'15px', justifyContent:'flex-start'}}>
       <BackButton className='' history={history} /></Container>
       <Container style={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:'20px', margin:'0px', marginRight:'370px'}}>

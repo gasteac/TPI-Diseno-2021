@@ -24,19 +24,19 @@
 
 .botoncita{
     transform-origin:center;
-    background:#50628C !important;
+    background:#6b646b90 !important;
     border:none !important
   }
 
 .botoncita:hover{
     transform-origin:center;
     animation: botoncita 10ms ease-in forwards;
-    background:#2DC5CF !important;
+    background:#c7c0c790 !important;
     border: none !important;
   }
   @keyframes botoncita {
     to {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }}
 
     .bg-botoncitoPC{

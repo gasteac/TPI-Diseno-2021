@@ -156,10 +156,17 @@ const PagoAlquiler = ({ history }) => {
 
                     <Modal.Footer>
                       <Link to={`/cajera/inicio`}>
+                        <Button type="primary" variant="outline-success">
+                          Imprimir comprobante
+                        </Button>
+                      </Link>
+
+                      <Link to={`/cajera/inicio`}>
                         <Button type="primary" className="btn btn-success">
                           Aceptar
                         </Button>
                       </Link>
+                   
                     </Modal.Footer>
                   </Modal>
                 </Form>

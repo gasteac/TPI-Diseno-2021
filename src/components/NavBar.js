@@ -28,7 +28,7 @@ const NavBar = ({ cliente }) => {
   };
 
   return (
-    <Navbar style={{ backgroundColor: cliente ? "#50628C01" : "#50628C" }} expand="lg">
+    <Navbar style={{ backgroundColor: cliente ? "#50628C01" : "black" }} expand="lg">
       <Navbar.Brand>
         <Link to={`/${user}/inicio`} className="d-flex align-items-center">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
@@ -56,7 +56,7 @@ const NavBar = ({ cliente }) => {
                     .replace("/", "")}`}
                   style={{
                     color: "white",
-                    background: cliente ? "#50628C85" : "",
+                    background: cliente ? "#50628C40" : "",
                     borderRadius: "20px",
                     marginLeft: "5px",
                     marginRigth: "5px",
@@ -73,7 +73,7 @@ const NavBar = ({ cliente }) => {
           <Nav.Item>
             <Nav.Link as={Link} to="/" style={{
                     color: "white",
-                    background: cliente ? "#A11220" : "#A11220",
+                    background: cliente ? "#A11210" : "#A11210",
                     borderRadius: "20px",
                     marginLeft: "5px",
                     marginRigth: "5px",
