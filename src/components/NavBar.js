@@ -21,7 +21,9 @@ const NavBar = ({ cliente }) => {
       "Cierre de caja",
     ],
     marketing: ["Inicio", "Propiedades"],
-    jefacomercializacion: ['Inicio', 'Reportes', 'Propiedades', 'Agenda', 'Clientes']
+    jefacomercializacion: ['Inicio', 'Reportes', 'Propiedades', 'Agenda', 'Clientes'],
+    jefaadministracion: ['Inicio', 'Reportes', 'Caja', 'Clientes'],
+    gerentegeneral: ['Inicio', 'Reportes']
   };
 
   const handleClick = (i) => {

@@ -38,6 +38,8 @@ import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/vi
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EditarImagenes from "./layout/usuariosLayout/EmpleadoDeMarketing/views/EditarImagenes";
 import JefaComercializacion from "./layout/usuariosLayout/JefaComercializacion";
+import JefaAdministracion from "./layout/usuariosLayout/JefaAdministracion";
+import GerenteGeneral from "./layout/usuariosLayout/GerenteGeneral";
 
 
 
@@ -167,6 +169,17 @@ const App = () => {
               path="/jefacomercializacion/Propiedades"
               component={Propiedades}
             />
+
+            {/* Jefa administracion */}
+            <Route exact path="/jefaadministracion/inicio" component={JefaAdministracion} />
+            <Route
+              exact
+              path="/jefaadministracion/Clientes"
+              component={ListaClientes}
+            />
+
+            {/* Gerente general */}
+            <Route exact path="/gerentegeneral/inicio" component={GerenteGeneral} />
 
             <Redirect to="/" />
           </Switch>
