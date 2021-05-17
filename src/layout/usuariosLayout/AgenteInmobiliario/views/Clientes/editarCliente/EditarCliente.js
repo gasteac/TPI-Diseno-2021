@@ -47,16 +47,16 @@ const EditarCliente = ({history}) =>{
                   </Card.Body>
                 </Form.Group>
               </Form.Group>
-
-                <Row className="justify-content-center">
-                  <Col xs={4}>
-                    <Button type="sumbit" variant="success" block >
-                        Guardar
-                    </Button>
+            </Form.Group>
+            
+            <Row className="justify-content-center my-3">
+                <Col xs={4}>
+                  <Button type="sumbit" variant="success" block >
+                      Guardar
+                  </Button>
                 </Col>
               </Row>
               
-            </Form.Group>
           </Form>
       </Container>
 
