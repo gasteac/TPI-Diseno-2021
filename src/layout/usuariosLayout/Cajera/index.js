@@ -15,16 +15,49 @@ document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout cliente={true}> 
       
-      <Container style={{marginTop:'0px'}}>
+      <Container style={{alignItems:'center'}}>
         <Card style={{ marginTop:'20px', border:'none', background:'#a79ba790', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px' }}>
         <Card.Header as='h1' style={{background:'#50628C01', border:'none', color:'white', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', textShadow:'2px 2px 5px black'}}> 
           Bienvenida, Jett.
           <h5 style={{marginTop:'2px'}}>Que hacemos hoy? :)</h5>
         </Card.Header>
-        <Card.Body style={{background:'#B3BCE855', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px', border:'none'}}>
-          <Row>
+        <Card.Body  style={{background:'#B3BCE855', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px', border:'none'}}>
+          <Row className='d-flex, justify-content-space-around'>
+            <Col >
+              <ButtonCardCaj 
+              user={user} 
+              seccion="EntradaSalida" 
+              link={"link-1"} 
+              style={{
+                background:"#50628C",
+                marginTop:'10px',
+                minWidth: "200px",
+                minHeight: "180px",
+                }}
+                />
+            </Col>
             <Col>
-              <ButtonCardCaj user={user} seccion="EntradaSalida" link={"link-1"} style={{background:"#50628C", marginTop:'10px'}}/>
+              <ButtonCardCaj user={user} seccion="Transacciones" link={"link-2"} 
+              style={{
+                background:"#50628C",
+                marginTop:'10px',
+                minWidth: "200px",
+                minHeight: "180px",
+                }}
+              />
+            </Col>
+            <Col>
+              <ButtonCardCaj
+                user={user}
+                seccion="CierreDeCaja"
+                link={"link-5"}
+                style={{
+                  background:"#50628C",
+                  marginTop:'10px',
+                  minWidth: "200px",
+                  minHeight: "180px",
+                  }}
+              />
             </Col>
             <Col>
               <Row>
@@ -33,13 +66,10 @@ document.querySelector('body').style.backgroundSize = `cover`
                   seccion="PagoAlquiler"
                   link={"link-3"}
                   style={{
-                    minWidth: "90px",
-                    minHeight: "80px",
-                    marginBottom: "10px",
+                    minHeight: "71px",
                     display: "flex",
                     flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-evenly",
+                    justifyContent: "center",
                     background:"#50628C"
                   }}
                 />
@@ -50,13 +80,11 @@ document.querySelector('body').style.backgroundSize = `cover`
                   seccion="PagoVenta"
                   link={"link-4"}
                   style={{
-                    minWidth: "90px",
-                    minHeight: "80px",
-                    marginTop: "10px",
+                    minHeight: "71px",
                     display: "flex",
                     flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-evenly",
+                    alignContent:'center',
+                    justifyContent: "center",
                     background:"#50628C"
                   }}
                 />
@@ -64,17 +92,8 @@ document.querySelector('body').style.backgroundSize = `cover`
             </Col>
           </Row>
           <Row>
-            <Col>
-              <ButtonCardCaj user={user} seccion="Transacciones" link={"link-2"} style={{background:"#50628C"}}/>
-            </Col>
-            <Col>
-              <ButtonCardCaj
-              style={{background:"#50628C"}}
-                user={user}
-                seccion="CierreDeCaja"
-                link={"link-5"}
-              />
-            </Col>
+            
+           
           </Row>
           </Card.Body>
           </Card>

@@ -10,7 +10,7 @@ import {
 } from "react-table";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
-import { Row } from "react-bootstrap";
+
 
 export default function Table({
   columnas,

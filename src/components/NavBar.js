@@ -36,7 +36,7 @@ const NavBar = ({ cliente }) => {
       <Navbar.Brand>
         <Link to={`/${user}/inicio`} className="d-flex align-items-center">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
-          <h3 className="mt-3 ml-3" style={{ fontWeight: "700" }}>
+          <h3 className="mt-3 ml-3" style={{ fontWeight: "700", color:'white' }}>
             Domus
           </h3>
         </Link>
