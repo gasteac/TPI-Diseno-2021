@@ -33,29 +33,54 @@ export default function ListaClientes({ history }) {
           <Col xs={7} className="d-flex justify-content-end">
             <h2 className="titulosSecciones">Clientes</h2>
           </Col>
-          {user==='agenteinmobiliario' && <Col className="d-flex align-items-center justify-content-end" xs={5}>
-              <Button onClick={handleShowEliminar} variant="primary" className="mr-2">Eliminar cliente</Button>
-              <Button as={Link} to={'/agenteinmobiliario/Clientes/EditarCliente'} variant="primary" className="mr-2">Editar cliente</Button>
+          {user === "agenteinmobiliario" && (
+            <Col
+              className="d-flex align-items-center justify-content-end"
+              xs={5}
+            >
+              <Button
+                onClick={handleShowEliminar}
+                variant="primary"
+                className="mr-2"
+              >
+                Eliminar cliente
+              </Button>
+              <Button
+                as={Link}
+                to={"/agenteinmobiliario/Clientes/EditarCliente"}
+                variant="primary"
+                className="mr-2"
+              >
+                Editar cliente
+              </Button>
 
-            <DropdownButton id="dropdown-basic-button" title="Agregar cliente">
-              <Dropdown.Item
-                as={Link}
-                to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
+              <DropdownButton
+                id="dropdown-basic-button"
+                title="Agregar cliente"
               >
-                Propietario
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
-              >
-                Corporativo
-              </Dropdown.Item>
-            </DropdownButton>
-          </Col>
+                <Dropdown.Item
+                  as={Link}
+                  to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
+                >
+                  Propietario
+                </Dropdown.Item>
+                <Dropdown.Item
+                  as={Link}
+                  to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
+                >
+                  Corporativo
+                </Dropdown.Item>
+              </DropdownButton>
+            </Col>
+          )}
         </Row>
         <Row className="justify-content-center">
           <Col>
-            <Table columnas={COLUMNS} datos={clientes} setClientesSeleccionados={setClientesSeleccionados} />
+            <Table
+              columnas={COLUMNS}
+              datos={clientes}
+              setClientesSeleccionados={setClientesSeleccionados}
+            />
           </Col>
         </Row>
         {user.includes("gerentegeneral") ? (
