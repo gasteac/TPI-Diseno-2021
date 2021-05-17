@@ -69,8 +69,14 @@ document.querySelector('body').style.backgroundSize = `cover`
                     minHeight: "71px",
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "center",
-                    background:"#50628C"
+                    alignItems:'center',
+                    background:"#50628C",
+                    alignItems: 'center',
+    alignSelf: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+    justifyItems: 'center',
+    justifySelf: 'center'
                   }}
                 />
               </Row>
@@ -83,8 +89,6 @@ document.querySelector('body').style.backgroundSize = `cover`
                     minHeight: "71px",
                     display: "flex",
                     flexDirection: "row",
-                    alignContent:'center',
-                    justifyContent: "center",
                     background:"#50628C"
                   }}
                 />
