@@ -1,26 +1,19 @@
-import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import globalContext from "../context/globalContext";
 import React, { useContext } from "react";
+import { Button } from "react-bootstrap";
 
 export default function BackButton({ history }) {
 
-    const GlobalContext = useContext(globalContext);
-    const {setActiveNavbarLink } = GlobalContext;
+  const volver = () => {
+    history.goBack();
+  };
 
-    const volver = () => {
-        setActiveNavbarLink('link-0');
-        // history.goBack();
-        // console.log(history);
-      };
-      
-    const user = useAuth(history)
+  const user = useAuth(history);
 
-    return (
-        <Link to={`/${user}/inicio`}>
-            <div className='bg-botoncito btn mt-3 ml-3' onClick={volver}>← Volver</div>
-        </Link>
-        
- 
-    );
+  return (
+    <Button className="bg-botoncito" onClick={volver}>
+      ← Volver
+    </Button>
+  );
 }

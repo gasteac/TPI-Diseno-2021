@@ -1,0 +1,502 @@
+[
+  {
+    "_idInmueble": 7,
+    "_idCliente": 4,
+    "tipo": "Local",
+    "PrecioInmueble": "$3,657.87",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 8,
+    "_idCliente": 5,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,519.16",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 9,
+    "_idCliente": 6,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,448.47",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Peso",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 10,
+    "_idCliente": 7,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$1,669.76",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Dolar",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 11,
+    "_idCliente": 8,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,256.05",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 12,
+    "_idCliente": 9,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$1,928.01",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 13,
+    "_idCliente": 10,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,687.57",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 14,
+    "_idCliente": 11,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,631.67",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 15,
+    "_idCliente": 12,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,250.63",
+    "tipoVenta": "Financiada",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 16,
+    "_idCliente": 13,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,612.84",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 17,
+    "_idCliente": 14,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,856.54",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 18,
+    "_idCliente": 15,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$2,676.37",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 19,
+    "_idCliente": 16,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,136.18",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 20,
+    "_idCliente": 17,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,408.16",
+    "tipoVenta": "Financiada",
+    "interes": "13%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 21,
+    "_idCliente": 18,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,805.35",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 22,
+    "_idCliente": 19,
+    "tipo": "Casa",
+    "PrecioInmueble": "$1,478.52",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 23,
+    "_idCliente": 20,
+    "tipo": "Casa",
+    "PrecioInmueble": "$1,491.14",
+    "tipoVenta": "Financiada",
+    "interes": "10%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 24,
+    "_idCliente": 21,
+    "tipo": "Local",
+    "PrecioInmueble": "$3,198.13",
+    "tipoVenta": "Financiada",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 25,
+    "_idCliente": 22,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,325.75",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 26,
+    "_idCliente": 23,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,632.63",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Dolar",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 27,
+    "_idCliente": 24,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,896.55",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 28,
+    "_idCliente": 25,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$1,398.60",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 29,
+    "_idCliente": 26,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,777.85",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 30,
+    "_idCliente": 27,
+    "tipo": "Casa",
+    "PrecioInmueble": "$3,512.32",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 31,
+    "_idCliente": 28,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,642.96",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 32,
+    "_idCliente": 29,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,877.69",
+    "tipoVenta": "Financiada",
+    "interes": "13%",
+    "moneda": "Real",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 33,
+    "_idCliente": 30,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,325.05",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 34,
+    "_idCliente": 31,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,239.81",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 35,
+    "_idCliente": 32,
+    "tipo": "Casa",
+    "PrecioInmueble": "$3,299.26",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 36,
+    "_idCliente": 33,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$2,341.56",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 37,
+    "_idCliente": 34,
+    "tipo": "Local",
+    "PrecioInmueble": "$3,481.99",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Dolar",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 38,
+    "_idCliente": 35,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$2,809.41",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 39,
+    "_idCliente": 36,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$2,093.43",
+    "tipoVenta": "Financiada",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 40,
+    "_idCliente": 37,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,656.52",
+    "tipoVenta": "Financiada",
+    "interes": "13%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 41,
+    "_idCliente": 38,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,457.10",
+    "tipoVenta": "Financiada",
+    "interes": "13%",
+    "moneda": "Peso",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 42,
+    "_idCliente": 39,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$2,732.25",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 43,
+    "_idCliente": 40,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$1,089.93",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 44,
+    "_idCliente": 41,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,440.18",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 45,
+    "_idCliente": 42,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,495.87",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 46,
+    "_idCliente": 43,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,492.40",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Real",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 47,
+    "_idCliente": 44,
+    "tipo": "Local",
+    "PrecioInmueble": "$2,180.71",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 48,
+    "_idCliente": 45,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,638.44",
+    "tipoVenta": "Total",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 49,
+    "_idCliente": 46,
+    "tipo": "Local",
+    "PrecioInmueble": "$3,058.01",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 50,
+    "_idCliente": 47,
+    "tipo": "Casa",
+    "PrecioInmueble": "$2,490.07",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 51,
+    "_idCliente": 48,
+    "tipo": "Local",
+    "PrecioInmueble": "$3,747.19",
+    "tipoVenta": "Total",
+    "interes": "10%",
+    "moneda": "Real",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 52,
+    "_idCliente": 49,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,963.05",
+    "tipoVenta": "Financiada",
+    "interes": "10%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 53,
+    "_idCliente": 50,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$3,387.73",
+    "tipoVenta": "Financiada",
+    "interes": "15%",
+    "moneda": "Peso",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 54,
+    "_idCliente": 51,
+    "tipo": "Dpto",
+    "PrecioInmueble": "$1,301.62",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Peso",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 55,
+    "_idCliente": 52,
+    "tipo": "Local",
+    "PrecioInmueble": "$3,128.47",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 56,
+    "_idCliente": 53,
+    "tipo": "Local",
+    "PrecioInmueble": "$1,902.38",
+    "tipoVenta": "Total",
+    "interes": "13%",
+    "moneda": "Dolar",
+    "formaPago": "Efectivo"
+  }
+]

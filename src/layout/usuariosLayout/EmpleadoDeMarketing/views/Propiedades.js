@@ -10,13 +10,8 @@ const PropiedadesMarketing = ({history}) => {
     return (
         <Layout usuario={user}>
         <Container className="mt-3 flex-column ">
-          <Row>
-            <Col xs={4}>
-              <BackButton history={history} />
-            </Col>
-            <Col xs={4}>
+          <Row className="justify-content-center">
               <h2 className="titulosSecciones m-auto">Propiedades</h2>
-            </Col>
           </Row>
           <Row>
             <ListaPropiedades history={history} />

@@ -1,0 +1,20 @@
+.pestania {
+  background: #727BB0;
+  display: inline-block;
+  padding: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
+.form-custom {
+    background: #50628C;
+    border: 1px solid #50628C;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+} 
+
+body {
+    background: #B3BCE8;
+}

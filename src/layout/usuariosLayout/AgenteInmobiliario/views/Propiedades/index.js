@@ -11,10 +11,7 @@ export default function Propiedades({ history }) {
   return (
     <Layout usuario={user}>
       <Container className="mt-3 flex-column ">
-        <Row>
-          <Col xs={4}>
-            <BackButton history={history} />
-          </Col>
+        <Row className="justify-content-center">
           <Col xs={4}>
               <h2 className="titulosSecciones m-auto">Propiedades</h2>
           </Col>

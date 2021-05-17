@@ -5,21 +5,16 @@ import useAuth from "../../../../../hooks/useAuth";
 import BackButton from "../../../../../components/BackButton";
 import { Container, Row, Col } from "react-bootstrap";
 
-const PropiedadesClientes = ({history}) => {
+const PropiedadesClientes = ({ history }) => {
   // eslint-disable-next-line
-  const user = useAuth(history)
+  const user = useAuth(history);
 
   document.querySelector("body").style.background = "";
   return (
     <Layout>
       <Container className="mt-3 flex-column ">
-        <Row>
-          <Col xs={4}>
-            <BackButton history={history} />
-          </Col>
-          <Col xs={4}>
-              <h2 className="titulosSecciones m-auto">Propiedades</h2>
-          </Col>
+        <Row className="justify-content-center">
+          <h2 className="titulosSecciones m-auto">Propiedades</h2>
         </Row>
         <Row>
           <ListaPropiedades history={history} />

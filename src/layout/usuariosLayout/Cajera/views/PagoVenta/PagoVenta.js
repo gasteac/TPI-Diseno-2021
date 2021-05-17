@@ -15,8 +15,8 @@ import DatosDeContactoComponent from "../../../../../components/DatosDeContactoC
 import useAuth from "../../../../../hooks/useAuth";
 import BackButton from "../../../../../components/BackButton";
 
-const PagoVenta = ({history}) => {
-    useAuth(history)
+const PagoVenta = ({ history }) => {
+  useAuth(history);
   const { DatosDelInmueble, DatosDeContacto } = propiedades[0];
   const [formState, setFormState] = useState({
     tipo: "",
@@ -30,7 +30,7 @@ const PagoVenta = ({history}) => {
   const { tipo, comision, formaDePago, precio, moneda, dni } = formState;
 
   const [validated, setValidated] = useState(false);
-  document.querySelector('body').style.background = ''
+  document.querySelector("body").style.background = "";
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -57,14 +57,12 @@ const PagoVenta = ({history}) => {
 
   return (
     <Layout>
-      <Container style={{display:'flex', justifyContent:'start', marginTop:'12px'}}>
-      <BackButton history={history} />
-      
-      <h2 className='titulosSecciones ml-5'>Pago Ventas</h2>
-      
-      </Container> 
-      <Container style={{marginTop:'40px'}}>
-        <Row>
+      <Container fluid>
+        <Row className="justify-content-center">
+          <h2 className="titulosSecciones ml-5">Pago Ventas</h2>
+        </Row>
+
+        <Row className="mb-3">
           <Col xs={5}>
             <Card>
               <Card.Header as="h2">Datos del inmueble</Card.Header>
@@ -82,15 +80,15 @@ const PagoVenta = ({history}) => {
                 <DatosDeContactoComponent DatosDeContacto={DatosDeContacto} />
               </Card.Body>
             </Card>
-            <div style={{display:'flex', justifyContent:'center'}}>
-            <Button
-              variant="success"
-              size="lg"
-              className="mt-3"
-              onClick={handleShow}
-            >
-              Registrar Ventas
-            </Button>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button
+                variant="success"
+                size="lg"
+                className="mt-3"
+                onClick={handleShow}
+              >
+                Registrar Ventas
+              </Button>
             </div>
           </Col>
         </Row>
@@ -190,31 +188,38 @@ const PagoVenta = ({history}) => {
                       />
                     </Col>
                   </Row>
-                
-                  <div style={{display:'flex', justifyContent:'flex-end'}}>
-                    <Button variant="outline-danger" className="mt-3" onClick={handleClose}>
-                        Cancelar
+
+                  <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                    <Button
+                      variant="outline-danger"
+                      className="mt-3"
+                      onClick={handleClose}
+                    >
+                      Cancelar
                     </Button>
 
-                    <Button variant="outline-success" className="mt-3 ml-1" onClick={handleClose}>
-                        Imprimir comprobante
+                    <Button
+                      variant="outline-success"
+                      className="mt-3 ml-1"
+                      onClick={handleClose}
+                    >
+                      Imprimir comprobante
                     </Button>
-      
-                    <Button variant="outline-success" type="submit" className="mt-3 ml-1">
+
+                    <Button
+                      variant="outline-success"
+                      type="submit"
+                      className="mt-3 ml-1"
+                    >
                       Confirmar
                     </Button>
                   </div>
-                 
-
-
                 </Form>
               </Card.Body>
             </Card>
           </Modal.Body>
-          <Modal.Footer>
-          </Modal.Footer>
+          <Modal.Footer></Modal.Footer>
         </Modal>
-        
       </Container>
     </Layout>
   );

@@ -16,10 +16,6 @@ const QuienesSomos = ({history}) => {
     <Layout
       cliente={user}
     >
-      <div style={{marginBottom:'20px', marginLeft:'70px'}}>
-      <BackButton history={history} />
-      </div>
- 
       <Container fluid="md">
         <Row>
           <Col>

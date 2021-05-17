@@ -14,8 +14,6 @@ export default function AgendaSecretaria({ history }) {
   const hoy = "Fecha: " + moment().format("LL");
   return (
     <div class="container-xl">
-     
-
       <p className="mt-3">{hoy}</p>
 
       <table class="table-bordered w-100 h-100">
@@ -32,22 +30,11 @@ export default function AgendaSecretaria({ history }) {
         </thead>
         <tbody>
           <tr>
-            <td style={{
-                display: "grid",
-                width: "100%"
-                }}>
-              <p >1</p>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "end",
-                  alignItems: "end",
-                }}
-              >
-                <button type="button" className="btn btn-light align-bottom">
+            <td>
+                <p>1</p>
+                <button type="button" className="btn btn-light">
                   +
                 </button>
-              </div>
             </td>
             <td class="align-top">
               2<p>Cita con Juan Perez. 05:30.Agente: Maria Jose.</p>

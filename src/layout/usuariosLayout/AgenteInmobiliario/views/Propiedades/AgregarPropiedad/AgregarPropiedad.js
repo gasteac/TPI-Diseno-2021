@@ -1,5 +1,13 @@
 import React, { useState, useContext } from "react";
-import { Col, Container, Row, Card, Button, Form, Modal } from "react-bootstrap";
+import {
+  Col,
+  Container,
+  Row,
+  Card,
+  Button,
+  Form,
+  Modal,
+} from "react-bootstrap";
 import Layout from "../../../../../Layout";
 import DatosDeLaPropiedadForm from "./components/DatosDeLaPropiedadForm";
 import DatosDelPropietario from "./components/DatosDelPropietario";
@@ -9,7 +17,7 @@ import propiedadesContext from "../../../../../../context/contextPropiedades/pro
 import { v4 } from "uuid";
 import { Link } from "react-router-dom";
 import BackButton from "../../../../../../components/BackButton";
-document.querySelector('body').style.background = ''
+document.querySelector("body").style.background = "";
 const AgregarPropiedad = ({ history }) => {
   // eslint-disable-next-line
   const user = useAuth(history);
@@ -54,9 +62,8 @@ const AgregarPropiedad = ({ history }) => {
       metrosCuadrados: 0,
       precio: 0,
     },
-    imagen: imagenesPropiedades[propiedades.length].largeImageURL
+    imagen: imagenesPropiedades[propiedades.length].largeImageURL,
   });
-
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -74,29 +81,31 @@ const AgregarPropiedad = ({ history }) => {
       event.stopPropagation();
     }
     setValidatedPropiedad(true);
-  
   };
-
-   
 
   return (
     <Layout>
-      <Container style={{display:'flex', justifyContent:'space-between', marginTop:'12px'}}>
-      <BackButton history={history} />
-      
-      <h2 className='titulosSecciones'>Agregar propiedad</h2>
-      <div style={{marginLeft:'115px'}}></div>
-      </Container> 
+      <Container
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "12px",
+        }}
+      >
+        <BackButton history={history} />
+
+        <h2 className="titulosSecciones">Agregar propiedad</h2>
+        <div style={{ marginLeft: "115px" }}></div>
+      </Container>
       <Container fluid>
-      
         <Form
           noValidate
           validated={validatedPropiedad}
           onSubmit={handleSubmitPropiedad}
         >
-          <Form.Group as={Row} className="mt-3">
-            <Form.Group as={Col} xs={8}>
-              <Form.Group as={Card}>
+          <Row className="mt-3 mb-0">
+            <Col xs={8}>
+              <Card>
                 <Card.Header as="h2">Datos de la propiedad</Card.Header>
                 <Card.Body>
                   <DatosDeLaPropiedadForm
@@ -104,42 +113,46 @@ const AgregarPropiedad = ({ history }) => {
                     nuevaPropiedad={nuevaPropiedad}
                   />
                 </Card.Body>
-              </Form.Group>
-            </Form.Group>
-            <Form.Group as={Col} xs={4}>
+              </Card>
+            </Col>
+            <Col xs={4}>
               <Card>
                 <Card.Header as="h2">Datos del Propietario</Card.Header>
                 <Card.Body>
                   <DatosDelPropietario />
                 </Card.Body>
               </Card>
-            </Form.Group>
-            <Row className="justify-content-center">
-                <Col xs={4}>
-              <Button type="sumbit" variant="success" block >
+            </Col>
+          </Row>
+          <Row className="justify-content-center my-3">
+            <Col xs={4}>
+              <Button type="sumbit" variant="success" block>
                 Agregar Propiedad
               </Button>
-                </Col>
-            </Row>
-            
-          </Form.Group>
-          
+            </Col>
+          </Row>
         </Form>
       </Container>
 
       <Modal show={show} onHide={handleClose} backdrop="static">
-        <Modal.Header style={{ background: '#27d85a', color: '#FAFAFA', paddingBottom:'4px'}}>
-          <h4 style={{alignSelf:'flex-end'}}>Propiedad guardada!</h4>
-        </Modal.Header >
+        <Modal.Header
+          style={{
+            background: "#27d85a",
+            color: "#FAFAFA",
+            paddingBottom: "4px",
+          }}
+        >
+          <h4 style={{ alignSelf: "flex-end" }}>Propiedad guardada!</h4>
+        </Modal.Header>
         <Modal.Body>
-          <h5>Propiedad registrada correctamente.</h5> 
-          <h6>Podra observarla en la lista de propiedades.</h6> 
+          <h5>Propiedad registrada correctamente.</h5>
+          <h6>Podra observarla en la lista de propiedades.</h6>
         </Modal.Body>
         <Modal.Footer>
           <Link to={`/agenteinmobiliario/Propiedades`}>
-            <Button type='primary' className="btn btn-success">
+            <Button type="primary" className="btn btn-success">
               Aceptar
-              </Button>
+            </Button>
           </Link>
         </Modal.Footer>
       </Modal>
