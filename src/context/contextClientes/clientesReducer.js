@@ -10,6 +10,7 @@ export default (state, action) => {
             prev.filter((cliente) => cliente.id !== next.values.id),
           state.clientes
         ),
+        clientesSeleccionados: []
       };
     case CLIENTES_SELECCIONADOS:
       return {

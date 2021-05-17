@@ -46,10 +46,10 @@ export default function ListaClientes({ history }) {
             >
               <Button
                 onClick={handleShowEliminar}
-                variant="primary"
+                variant="danger"
                 className="mr-2"
               >
-                Eliminar cliente
+                Eliminar seleccionados
               </Button>
               <Button
                 as={Link}
@@ -62,6 +62,7 @@ export default function ListaClientes({ history }) {
 
               <DropdownButton
                 id="dropdown-basic-button"
+                variant="success"
                 title="Agregar cliente"
               >
                 <Dropdown.Item
