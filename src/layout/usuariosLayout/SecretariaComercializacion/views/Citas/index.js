@@ -22,9 +22,9 @@ export default function Citas({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col xs={4}>
+        
             <h2 className="titulosSecciones">Solicitudes de citas</h2>
-          </Col>
+          
           <Col xs={12}>
             <Table columnas={COLUMNS2} datos={columns2Data} rows={8} />
           </Col>
