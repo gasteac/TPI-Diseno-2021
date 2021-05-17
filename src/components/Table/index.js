@@ -17,7 +17,7 @@ export default function Table({
   datos,
   rows = 8,
   flag = true,
-  setList = () => {},
+  setClientesSeleccionados = () => {},
 }) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
@@ -86,7 +86,7 @@ export default function Table({
   }, []);
 
   useEffect(() => {
-    setList(selectedFlatRows);
+    setClientesSeleccionados(selectedFlatRows);
   }, [selectedFlatRows]);
 
   // eslint-disable-next-line

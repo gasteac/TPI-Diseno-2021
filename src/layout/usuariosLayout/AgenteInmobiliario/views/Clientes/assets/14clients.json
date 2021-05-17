@@ -1,0 +1,142 @@
+[
+  {
+    "id": 0,
+    "first_name": "Patrica",
+    "last_name": "Perez",
+    "email": "patricaperez@collaire.com",
+    "phone": "+54 (992) 528-3214",
+    "country": "Lebanon",
+    "state": "Vermont",
+    "address": "Burnett Street, 7685"
+  },
+  {
+    "id": 1,
+    "first_name": "Lesa",
+    "last_name": "Fitzpatrick",
+    "email": "lesafitzpatrick@collaire.com",
+    "phone": "+54 (803) 442-3460",
+    "country": "Turkmenistan",
+    "state": "California",
+    "address": "Senator Street, 4884"
+  },
+  {
+    "id": 2,
+    "first_name": "Reid",
+    "last_name": "Wolfe",
+    "email": "reidwolfe@collaire.com",
+    "phone": "+54 (912) 476-3874",
+    "country": "Libya",
+    "state": "Washington",
+    "address": "Village Court, 1865"
+  },
+  {
+    "id": 3,
+    "first_name": "Aurelia",
+    "last_name": "Kline",
+    "email": "aureliakline@collaire.com",
+    "phone": "+54 (958) 523-2620",
+    "country": "Antigua and Barbuda",
+    "state": "Kansas",
+    "address": "Blake Avenue, 8074"
+  },
+  {
+    "id": 4,
+    "first_name": "Bobbie",
+    "last_name": "Holt",
+    "email": "bobbieholt@collaire.com",
+    "phone": "+54 (934) 474-2858",
+    "country": "Liberia",
+    "state": "New York",
+    "address": "Mersereau Court, 5461"
+  },
+  {
+    "id": 5,
+    "first_name": "Marci",
+    "last_name": "Rosario",
+    "email": "marcirosario@collaire.com",
+    "phone": "+54 (849) 547-3668",
+    "country": "Bangladesh",
+    "state": "Maine",
+    "address": "Lloyd Court, 2865"
+  },
+  {
+    "id": 6,
+    "first_name": "Winnie",
+    "last_name": "Moore",
+    "email": "winniemoore@collaire.com",
+    "phone": "+54 (839) 423-3057",
+    "country": "Netherlands",
+    "state": "West Virginia",
+    "address": "Lawrence Street, 6849"
+  },
+  {
+    "id": 7,
+    "first_name": "Tia",
+    "last_name": "Mcmahon",
+    "email": "tiamcmahon@collaire.com",
+    "phone": "+54 (864) 423-3678",
+    "country": "Turkey",
+    "state": "Louisiana",
+    "address": "Fleet Walk, 797"
+  },
+  {
+    "id": 8,
+    "first_name": "Wise",
+    "last_name": "Faulkner",
+    "email": "wisefaulkner@collaire.com",
+    "phone": "+54 (912) 591-2035",
+    "country": "Indonesia",
+    "state": "Oregon",
+    "address": "Caton Avenue, 5741"
+  },
+  {
+    "id": 9,
+    "first_name": "Elisa",
+    "last_name": "Stevenson",
+    "email": "elisastevenson@collaire.com",
+    "phone": "+54 (811) 416-2317",
+    "country": "Afghanistan",
+    "state": "Arizona",
+    "address": "Wythe Place, 6626"
+  },
+  {
+    "id": 10,
+    "first_name": "Pitts",
+    "last_name": "Rivas",
+    "email": "pittsrivas@collaire.com",
+    "phone": "+54 (982) 461-2259",
+    "country": "Qatar",
+    "state": "Federated States Of Micronesia",
+    "address": "Glenmore Avenue, 7956"
+  },
+  {
+    "id": 11,
+    "first_name": "Robbie",
+    "last_name": "Joseph",
+    "email": "robbiejoseph@collaire.com",
+    "phone": "+54 (839) 414-2174",
+    "country": "Anguilla",
+    "state": "American Samoa",
+    "address": "Doone Court, 6766"
+  },
+  {
+    "id": 12,
+    "first_name": "Charlotte",
+    "last_name": "Puckett",
+    "email": "charlottepuckett@collaire.com",
+    "phone": "+54 (977) 513-2281",
+    "country": "Kuwait",
+    "state": "Connecticut",
+    "address": "Myrtle Avenue, 8310"
+  },
+  {
+    "id": 13,
+    "first_name": "Bailey",
+    "last_name": "Lamb",
+    "email": "baileylamb@collaire.com",
+    "phone": "+54 (801) 582-3894",
+    "country": "Jamaica",
+    "state": "Missouri",
+    "address": "Cleveland Street, 3494"
+  }
+]

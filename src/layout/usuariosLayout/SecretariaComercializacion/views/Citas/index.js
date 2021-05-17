@@ -14,9 +14,9 @@ export default function Citas({ history }) {
     <Layout usuario={user}>
       <Container fluid>
         <Row className="justify-content-center">
-          <Col xs={4}>
-            <h2 className="titulosSecciones">Citas Confirmadas</h2>
-          </Col>
+          <h2 className="titulosSecciones">Citas Confirmadas</h2>
+        </Row>
+        <Row className="justify-content-center">
           <Col>
             <Table columnas={COLUMNS1} datos={columns1Data} rows={7} />
           </Col>
