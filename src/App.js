@@ -218,6 +218,7 @@ const App = () => {
 
               {/* ADMIN */}
               <Route exact path="/admin/inicio" component={Admin} />
+              <Route exact path="/admin/nuevoUsuario" component={FormNuevoUsuario} />
 
               {/* Jefa administracion */}
               <Route
