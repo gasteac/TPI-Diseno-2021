@@ -46,6 +46,8 @@ import TransaccionesRealizadas from "./layout/usuariosLayout/Cajera/views/Transa
 import Alquileres from "./components/Reportes/Ventas";
 import ReportePropiedades from "./components/Reportes/Propiedades";
 import Ventas from "./components/Reportes/Ventas";
+import FormNuevoUsuario from "./layout/usuariosLayout/Admin/components/FormNuevoUsuario";
+import FormEditarUsuario from "./layout/usuariosLayout/Admin/components/FormEditarUsuario";
 
 
 
@@ -186,6 +188,16 @@ const App = () => {
               exact
               path="/admin/inicio"
               component={Admin}
+            />
+            <Route
+              exact
+              path="/admin/nuevoUsuario"
+              component={FormNuevoUsuario}
+            />
+            <Route
+              exact
+              path="/admin/editarUsuario"
+              component={FormEditarUsuario}
             />
         
             {/* Jefa administracion */}

@@ -13,6 +13,7 @@ export default function ListaClientes({ history }) {
     const [clientes, setClientes] = useState([]);
     console.log(clientes)
     const user = useAuth(history);
+    console.log(user)
     document.querySelector('body').style.background = ''
 
 
@@ -27,7 +28,7 @@ export default function ListaClientes({ history }) {
           <Col xs={7} className="d-flex justify-content-end">
             <h2 className="titulosSecciones">Clientes</h2>
           </Col>
-          <Col className="d-flex align-items-center justify-content-end" xs={5}>
+          {user==='agenteinmobiliario' && <Col className="d-flex align-items-center justify-content-end" xs={5}>
               <Button onClick={handleShowEliminar} variant="primary" className="mr-2">Eliminar cliente</Button>
               <Button as={Link} to={'/agenteinmobiliario/Clientes/EditarCliente'} variant="primary" className="mr-2">Editar cliente</Button>
 
@@ -48,7 +49,7 @@ export default function ListaClientes({ history }) {
                   Corporativo
                 </Dropdown.Item>
               </DropdownButton>
-          </Col>
+          </Col>}
         </Row>
         <Row className="justify-content-center">
           <Table columnas={COLUMNS} datos={clients} setList={setClientes} />

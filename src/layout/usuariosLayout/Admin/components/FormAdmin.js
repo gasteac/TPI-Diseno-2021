@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./FormAdmin.css";
 
 const FormAdmin = ({usuario}) => {
@@ -19,9 +20,12 @@ const FormAdmin = ({usuario}) => {
         </Form.Group>
         <Form.Group as={Row} className="justify-content-center">
           <Col xs={10} className="d-flex justify-content-between">
-            <Button variant="outline-success" type="button">
-              Nuevo Usuario
-            </Button>
+            <Link to={'/admin/nuevoUsuario'}>
+              <Button variant="outline-success" type="button">
+                Nuevo Usuario
+              </Button>
+            </Link>
+
             <Button variant="outline-info" type="button">
               Ver Todos
             </Button>
