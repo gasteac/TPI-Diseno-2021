@@ -44,6 +44,10 @@ const Login = ({ history }) => {
       history.push('/jefacomercializacion/inicio')
       document.querySelector("body").style.background = "";
     }
+    if(login?.includes("admin")) {
+      history.push('/admin/inicio')
+      document.querySelector("body").style.background = "";
+    }
     localStorage.setItem("user", login);
     userLogin(login);
   };

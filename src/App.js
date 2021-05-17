@@ -38,6 +38,7 @@ import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/vi
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EditarImagenes from "./layout/usuariosLayout/EmpleadoDeMarketing/views/EditarImagenes";
 import JefaComercializacion from "./layout/usuariosLayout/JefaComercializacion";
+import Admin from "./layout/usuariosLayout/Admin";
 
 
 
@@ -168,6 +169,13 @@ const App = () => {
               component={Propiedades}
             />
 
+            {/* ADMIN */}
+            <Route
+              exact
+              path="/admin/inicio"
+              component={Admin}
+            />
+        
             <Redirect to="/" />
           </Switch>
         </Router>

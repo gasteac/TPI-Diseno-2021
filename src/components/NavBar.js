@@ -28,6 +28,7 @@ const NavBar = ({ cliente }) => {
       "Agenda",
       "Clientes",
     ],
+    admin: []
   };
 
   const handleClick = (i) => {
