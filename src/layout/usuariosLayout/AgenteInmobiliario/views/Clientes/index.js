@@ -22,27 +22,26 @@ export default function ListaClientes({ history }) {
             <h2 className="titulosSecciones">Clientes</h2>
           </Col>
           <Col className="d-flex align-items-center justify-content-end" xs={5}>
-              <DropdownButton
-                id="dropdown-basic-button"
-                title="Agregar cliente"
+            <DropdownButton id="dropdown-basic-button" title="Agregar cliente">
+              <Dropdown.Item
+                as={Link}
+                to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
               >
-                <Dropdown.Item
-                  as={Link}
-                  to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
-                >
-                  Propietario
-                </Dropdown.Item>
-                <Dropdown.Item
-                  as={Link}
-                  to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
-                >
-                  Corporativo
-                </Dropdown.Item>
-              </DropdownButton>
+                Propietario
+              </Dropdown.Item>
+              <Dropdown.Item
+                as={Link}
+                to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
+              >
+                Corporativo
+              </Dropdown.Item>
+            </DropdownButton>
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Table columnas={COLUMNS} datos={clients} setList={setClientes} />
+          <Col>
+            <Table columnas={COLUMNS} datos={clients} setList={setClientes} />
+          </Col>
         </Row>
       </Container>
     </Layout>

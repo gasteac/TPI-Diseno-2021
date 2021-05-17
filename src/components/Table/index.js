@@ -93,7 +93,6 @@ export default function Table({
 
   return (
     <>
-      <Row>
         <table {...getTableProps()} className="table tabla-propia">
           <thead className="tabla-header-propio">
             {headerGroups.map((headerGroup, i) => (
@@ -150,8 +149,6 @@ export default function Table({
             })}
           </tbody>
         </table>
-      </Row>
-      <Row className="justify-content-center">
         <nav
           aria-label="Page navigation example"
           className="d-flex justify-content-end mr-3"
@@ -186,7 +183,6 @@ export default function Table({
             </li>
           </ul>
         </nav>
-      </Row>
       {/* <pre>
                 <code>
                 {JSON.stringify(

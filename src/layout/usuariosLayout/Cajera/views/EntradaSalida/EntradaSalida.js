@@ -144,7 +144,9 @@ export default function EntradaSalida({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Table columnas={tablaCajera} datos={EnSaPos} rows={7} />
+          <Col>
+            <Table columnas={tablaCajera} datos={EnSaPos} rows={7} />
+          </Col>
         </Row>
       </Container>
 
@@ -207,7 +209,9 @@ export default function EntradaSalida({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Table columnas={tablaCajera} datos={EnSaNeg} rows={7} />
+          <Col>
+            <Table columnas={tablaCajera} datos={EnSaNeg} rows={7} />
+          </Col>
         </Row>
       </Container>
     </Layout>

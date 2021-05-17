@@ -62,53 +62,55 @@ export default function TransaccionesRealizadas({ history }) {
         </Row>
 
         <Row>
-            <Form
-              noValidate
-              validated={validatedFechas}
-              onSubmit={handleSubmitFechas}
-              className="ml-5"
-            >
-              <Card>
-                <Card.Header as="h5">Filtrar por fecha</Card.Header>
-                <Card.Body>
-                  <Form.Row>
-                    <Form.Group>
-                      <Form.Label>Desde</Form.Label>
-                      <Form.Control
-                        required
-                        onChange={(e) => handleChange(e)}
-                        type="date"
-                        name="fechaDesde"
-                        value={fechaDesde}
-                      />
-                    </Form.Group>
-                    <Form.Group>
-                      <Form.Label>Hasta</Form.Label>
-                      <Form.Control
-                        required
-                        onChange={(e) => handleChange(e)}
-                        type="date"
-                        name="fechaHasta"
-                        value={fechaHasta}
-                      />
-                    </Form.Group>
+          <Form
+            noValidate
+            validated={validatedFechas}
+            onSubmit={handleSubmitFechas}
+            className="ml-5"
+          >
+            <Card>
+              <Card.Header as="h5">Filtrar por fecha</Card.Header>
+              <Card.Body>
+                <Form.Row>
+                  <Form.Group>
+                    <Form.Label>Desde</Form.Label>
+                    <Form.Control
+                      required
+                      onChange={(e) => handleChange(e)}
+                      type="date"
+                      name="fechaDesde"
+                      value={fechaDesde}
+                    />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Hasta</Form.Label>
+                    <Form.Control
+                      required
+                      onChange={(e) => handleChange(e)}
+                      type="date"
+                      name="fechaHasta"
+                      value={fechaHasta}
+                    />
+                  </Form.Group>
 
-                    <Form.Group>
-                      <Button
-                        type="sumbit"
-                        variant="success"
-                        style={{ marginTop: "32px", marginLeft: "10px" }}
-                      >
-                        Filtrar
-                      </Button>
-                    </Form.Group>
-                  </Form.Row>
-                </Card.Body>
-              </Card>
-            </Form>
+                  <Form.Group>
+                    <Button
+                      type="sumbit"
+                      variant="success"
+                      style={{ marginTop: "32px", marginLeft: "10px" }}
+                    >
+                      Filtrar
+                    </Button>
+                  </Form.Group>
+                </Form.Row>
+              </Card.Body>
+            </Card>
+          </Form>
         </Row>
         <Row className="justify-content-center">
-          <Table columnas={tablaCajera} datos={Transacciones} rows={7} />
+          <Col>
+            <Table columnas={tablaCajera} datos={Transacciones} rows={7} />
+          </Col>
         </Row>
         <Row className="justify-content-center">
           <Button className="mb-5" variant="primary">
