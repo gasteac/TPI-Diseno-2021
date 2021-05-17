@@ -41,6 +41,10 @@ import JefaComercializacion from "./layout/usuariosLayout/JefaComercializacion";
 import Admin from "./layout/usuariosLayout/Admin";
 import JefaAdministracion from "./layout/usuariosLayout/JefaAdministracion";
 import GerenteGeneral from "./layout/usuariosLayout/GerenteGeneral";
+import TransaccionesRealizadas from "./layout/usuariosLayout/Cajera/views/TransaccionesRealizadas/TransaccionesRealizadas";
+import Alquileres from "./components/Reportes/Ventas";
+import ReportePropiedades from "./components/Reportes/Propiedades";
+import Ventas from "./components/Reportes/Ventas";
 
 
 
@@ -188,8 +192,14 @@ const App = () => {
 
             {/* Gerente general */}
             <Route exact path="/gerentegeneral/inicio" component={GerenteGeneral} />
+            <Route exact path="/gerentegeneral/clientes" component={ListaClientes} />
+            <Route exact path="/gerentegeneral/transacciones" component={TransaccionesRealizadas} />
+            <Route exact path="/gerentegeneral/entradassalidas" component={EntradaSalida} />
+            <Route exact path="/gerentegeneral/alquileres" component={Alquileres} />
+            <Route exact path="/gerentegeneral/propiedades" component={ReportePropiedades} />
+            <Route exact path="/gerentegeneral/ventas" component={Ventas} />
 
-            <Redirect to="/" />
+            {/* <Redirect to="/" /> */}
           </Switch>
         </Router>
       </PropiedadesState>

@@ -2,7 +2,7 @@ import clients from "./assets/clients.json";
 import { COLUMNS } from "./assets/columns";
 import useAuth from "../../../../../hooks/useAuth";
 import Layout from "../../../../Layout";
-import { Container, DropdownButton, Dropdown, Row, Col } from "react-bootstrap";
+import { Button, Container, DropdownButton, Dropdown, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./index.css";
 import Table from "../../../../../components/Table";
@@ -43,6 +43,17 @@ export default function ListaClientes({ history }) {
             <Table columnas={COLUMNS} datos={clients} setList={setClientes} />
           </Col>
         </Row>
+        { 
+          (user.includes('gerentegeneral')) ? (
+            <Button
+              style={{ marginTop: "20px" }}
+              type="button"
+              variant="info"
+            >
+              Imprimir reporte
+            </Button>
+          ) : null
+        }
       </Container>
     </Layout>
   );

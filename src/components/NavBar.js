@@ -24,7 +24,7 @@ const NavBar = ({ cliente }) => {
     admin: [],
     jefacomercializacion: ['Inicio', 'Reportes', 'Propiedades', 'Agenda', 'Clientes'],
     jefaadministracion: ['Inicio', 'Reportes', 'Caja', 'Clientes'],
-    gerentegeneral: ['Inicio', 'Reportes']
+    gerentegeneral: ['Inicio', 'Clientes', 'Alquileres', 'Entradas/Salidas', 'Propiedades', 'Transacciones', 'Ventas',]
   };
 
   const handleClick = (i) => {

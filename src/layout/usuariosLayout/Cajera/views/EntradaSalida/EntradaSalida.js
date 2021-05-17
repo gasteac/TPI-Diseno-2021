@@ -148,6 +148,17 @@ export default function EntradaSalida({ history }) {
             <Table columnas={tablaCajera} datos={EnSaPos} rows={7} />
           </Col>
         </Row>
+        { 
+          (user.includes('gerentegeneral')) ? (
+            <Button
+              style={{ marginTop: "20px" }}
+              type="button"
+              variant="info"
+            >
+              Imprimir reporte
+            </Button>
+          ) : null
+        }
       </Container>
 
       <Container fluid>
@@ -213,6 +224,17 @@ export default function EntradaSalida({ history }) {
             <Table columnas={tablaCajera} datos={EnSaNeg} rows={7} />
           </Col>
         </Row>
+        { 
+          (user.includes('gerentegeneral')) ? (
+            <Button
+              style={{ marginTop: "20px" }}
+              type="button"
+              variant="info"
+            >
+              Imprimir reporte
+            </Button>
+          ) : null
+        }
       </Container>
     </Layout>
   );

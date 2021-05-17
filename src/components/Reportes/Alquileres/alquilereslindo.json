@@ -1,0 +1,47 @@
+[
+  {
+    "_idInmueble": 0,
+    "_idCliente": 0,
+    "fechaPago": "2019-05-27",
+    "PrecioAlquiler": "$3,716.67",
+    "interes": "10%",
+    "mesanio": "2017-01",
+    "formaPago": "Efectivo"
+  },
+  {
+    "_idInmueble": 1,
+    "_idCliente": 1,
+    "fechaPago": "2017-04-13",
+    "PrecioAlquiler": "$3,574.11",
+    "interes": "10%",
+    "mesanio": "2014-03",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 2,
+    "_idCliente": 2,
+    "fechaPago": "2019-12-20",
+    "PrecioAlquiler": "$3,091.96",
+    "interes": "13%",
+    "mesanio": "2021-03",
+    "formaPago": "Pago al contado"
+  },
+  {
+    "_idInmueble": 3,
+    "_idCliente": 3,
+    "fechaPago": "2019-07-10",
+    "PrecioAlquiler": "$3,850.86",
+    "interes": "15%",
+    "mesanio": "2016-09",
+    "formaPago": "Pago aplazado"
+  },
+  {
+    "_idInmueble": 4,
+    "_idCliente": 4,
+    "fechaPago": "2019-11-05",
+    "PrecioAlquiler": "$2,437.40",
+    "interes": "15%",
+    "mesanio": "2021-02",
+    "formaPago": "Pago al contado"
+  }
+]
