@@ -44,6 +44,9 @@ const Login = ({ history }) => {
       history.push('/jefacomercializacion/inicio')
       document.querySelector("body").style.background = "";
     }
+    if(login?.includes("admin")) {
+      history.push('/admin/inicio')
+    }
     if(login?.includes("jefaadministracion")) {
       history.push('/jefaadministracion/inicio')
       document.querySelector("body").style.background = "";

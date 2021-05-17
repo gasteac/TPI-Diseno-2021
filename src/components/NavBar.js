@@ -21,6 +21,7 @@ const NavBar = ({ cliente }) => {
       "Cierre de caja",
     ],
     marketing: ["Inicio", "Propiedades"],
+    admin: [],
     jefacomercializacion: ['Inicio', 'Reportes', 'Propiedades', 'Agenda', 'Clientes'],
     jefaadministracion: ['Inicio', 'Reportes', 'Caja', 'Clientes'],
     gerentegeneral: ['Inicio', 'Clientes', 'Alquileres', 'Entradas/Salidas', 'Propiedades', 'Transacciones', 'Ventas',]

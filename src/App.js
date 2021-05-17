@@ -38,6 +38,7 @@ import PropiedadesMarketing from "./layout/usuariosLayout/EmpleadoDeMarketing/vi
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EditarImagenes from "./layout/usuariosLayout/EmpleadoDeMarketing/views/EditarImagenes";
 import JefaComercializacion from "./layout/usuariosLayout/JefaComercializacion";
+import Admin from "./layout/usuariosLayout/Admin";
 import JefaAdministracion from "./layout/usuariosLayout/JefaAdministracion";
 import GerenteGeneral from "./layout/usuariosLayout/GerenteGeneral";
 import TransaccionesRealizadas from "./layout/usuariosLayout/Cajera/views/TransaccionesRealizadas/TransaccionesRealizadas";
@@ -174,6 +175,13 @@ const App = () => {
               component={Propiedades}
             />
 
+            {/* ADMIN */}
+            <Route
+              exact
+              path="/admin/inicio"
+              component={Admin}
+            />
+        
             {/* Jefa administracion */}
             <Route exact path="/jefaadministracion/inicio" component={JefaAdministracion} />
             <Route
