@@ -22,7 +22,7 @@ export default function Table({
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
   // eslint-disable-next-line
-  const data = useMemo(() => datos, []);
+  const data = useMemo(() => datos, [datos]);
 
   const defaultColumn = useMemo(() => {
     return {

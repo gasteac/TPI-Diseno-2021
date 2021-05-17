@@ -13,18 +13,24 @@ import {
 import { Link } from "react-router-dom";
 import "./index.css";
 import Table from "../../../../../components/Table";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import clientesContext from "../../../../../context/contextClientes/clientesContext";
 
 export default function ListaClientes({ history }) {
   const user = useAuth(history);
 
   const ClientesContext = useContext(clientesContext);
-  const { clientes, setClientesSeleccionados } = ClientesContext;
+  const { clientes, setClientesSeleccionados, eliminarCliente } = ClientesContext;
 
   const [showEliminar, setShowEliminar] = useState(false);
   const handleCloseEliminar = () => setShowEliminar(false);
   const handleShowEliminar = () => setShowEliminar(true);
+
+  const confirmarEliminar = () => {
+    eliminarCliente();
+    setShowEliminar(false)
+  }
+
 
   return (
     <Layout>
@@ -100,7 +106,7 @@ export default function ListaClientes({ history }) {
           <Button variant="outline-danger" onClick={handleCloseEliminar}>
             No eliminar
           </Button>
-          <Button variant="danger" onClick={handleCloseEliminar}>
+          <Button variant="danger" onClick={confirmarEliminar}>
             Eliminar
           </Button>
         </Modal.Footer>
