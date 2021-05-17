@@ -2,7 +2,7 @@ import clients from "./assets/clients.json";
 import { COLUMNS } from "./assets/columns";
 import useAuth from "../../../../../hooks/useAuth";
 import Layout from "../../../../Layout";
-import { Button, Container, DropdownButton, Dropdown, Row, Col } from "react-bootstrap";
+import { Button, Container, DropdownButton, Dropdown, Row, Col, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./index.css";
 import Table from "../../../../../components/Table";
@@ -10,10 +10,16 @@ import BackButton from "../../../../../components/BackButton";
 import { useState } from "react";
 
 export default function ListaClientes({ history }) {
-  const [clientes, setClientes] = useState([]);
-  console.log(clientes);
-  const user = useAuth(history);
-  document.querySelector("body").style.background = "";
+    const [clientes, setClientes] = useState([]);
+    console.log(clientes)
+    const user = useAuth(history);
+    document.querySelector('body').style.background = ''
+
+
+    const [showEliminar, setShowEliminar] = useState(false);
+    const handleCloseEliminar = () => setShowEliminar(false);
+    const handleShowEliminar = () => setShowEliminar(true);
+
   return (
     <Layout>
       <Container fluid>
@@ -22,26 +28,30 @@ export default function ListaClientes({ history }) {
             <h2 className="titulosSecciones">Clientes</h2>
           </Col>
           <Col className="d-flex align-items-center justify-content-end" xs={5}>
-            <DropdownButton id="dropdown-basic-button" title="Agregar cliente">
-              <Dropdown.Item
-                as={Link}
-                to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
+              <Button onClick={handleShowEliminar} variant="outline-danger" className="mr-2">Eliminar cliente</Button>
+              <Button as={Link} to={'/agenteinmobiliario/Clientes/EditarCliente'} variant="outline-success" className="mr-2 text-boton-success">Editar cliente</Button>
+
+              <DropdownButton
+                id="dropdown-basic-button"
+                title="Agregar cliente"
               >
-                Propietario
-              </Dropdown.Item>
-              <Dropdown.Item
-                as={Link}
-                to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
-              >
-                Corporativo
-              </Dropdown.Item>
-            </DropdownButton>
+                <Dropdown.Item
+                  as={Link}
+                  to={"/agenteinmobiliario/Clientes/AgregarClientePropietario"}
+                >
+                  Propietario
+                </Dropdown.Item>
+                <Dropdown.Item
+                  as={Link}
+                  to={"/agenteinmobiliario/Clientes/AgregarClienteCorporativo"}
+                >
+                  Corporativo
+                </Dropdown.Item>
+              </DropdownButton>
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col>
-            <Table columnas={COLUMNS} datos={clients} setList={setClientes} />
-          </Col>
+          <Table columnas={COLUMNS} datos={clients} setList={setClientes} />
         </Row>
         { 
           (user.includes('gerentegeneral')) ? (
@@ -55,6 +65,22 @@ export default function ListaClientes({ history }) {
           ) : null
         }
       </Container>
+      <Modal show={showEliminar} onHide={handleCloseEliminar} backdrop="static">
+                <Modal.Header style={{ background: "#e10016", color: "#FAFAFA" }}>
+                    Advertencia
+                </Modal.Header>
+                <Modal.Body>
+                    ¿Esta seguro de que quieres eliminar la propiedad?
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="outline-danger" onClick={handleCloseEliminar}>
+                        No eliminar
+                    </Button>
+                    <Button variant="danger" onClick={handleCloseEliminar}>
+                        Eliminar
+                    </Button>
+                </Modal.Footer>
+            </Modal>
     </Layout>
   );
 }
