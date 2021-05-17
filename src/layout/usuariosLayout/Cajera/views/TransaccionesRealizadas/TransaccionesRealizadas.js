@@ -111,9 +111,17 @@ export default function TransaccionesRealizadas({ history }) {
           <Table columnas={tablaCajera} datos={Transacciones} rows={7} />
         </Row>
         <Row className="justify-content-center">
-          <Button className="mb-5" variant="primary">
-            Imprimir reporte
-          </Button>
+        { 
+          (user.includes('gerentegeneral')) ? (
+            <Button
+              style={{ marginTop: "20px" }}
+              type="button"
+              variant="info"
+            >
+              Imprimir reporte
+            </Button>
+          ) : null
+        }
         </Row>
       </Container>
     </Layout>

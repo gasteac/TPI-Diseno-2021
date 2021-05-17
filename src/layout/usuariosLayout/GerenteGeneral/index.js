@@ -15,9 +15,17 @@ export default function GerenteGeneral({ history }) {
             </Col>
             <Col className="d-flex align-items-center">
                 <Row>
-                <Col>
-                    <ButtonCard user={user} seccion={"Reportes"} link={"link-1"} />
-                </Col>
+                  <h3>Reportes</h3>
+                  <Col>
+                    <ButtonCard user={user} seccion={"Clientes"} link={"link-1"} />
+                    <ButtonCard user={user} seccion={"Alquileres"} link={"link-2"} />
+                    <ButtonCard user={user} seccion={"Entradas/Salidas"} link={"link-3"} />
+                  </Col>
+                  <Col>
+                    <ButtonCard user={user} seccion={"Propiedades"} link={"link-4"} />
+                    <ButtonCard user={user} seccion={"Transacciones"} link={"link-5"} />
+                    <ButtonCard user={user} seccion={"Ventas"} link={"link-6"} />
+                  </Col>
                 </Row>
             </Col>
           </Row>

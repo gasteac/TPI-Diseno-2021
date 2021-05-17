@@ -9,7 +9,13 @@ const ButtonCard = ({ user, seccion, link, style }) => {
   const GlobalContext = useContext(globalContext);
   const { setActiveNavbarLink } = GlobalContext;
   return (
-    <Link to={`/${user}/${seccion}`} onClick={() => setActiveNavbarLink(link)}>
+    <Link to={`/${user}/${seccion
+      .toLowerCase()
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace("¿", "")
+      .replace("/", "")}`}
+    onClick={() => setActiveNavbarLink(link)}>
       <div className='btnsuper'>
         <div className="buttonsCard bg-rosa1 btnxd" style={style}>
           <div>
