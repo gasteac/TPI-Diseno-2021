@@ -10,19 +10,40 @@ export default function SecretariaComercializacion({ history }) {
   document.querySelector("body").style.backgroundSize = `cover`;
   return (
     <Layout cliente={true}>
-      <Container fluid>
+      <Container
+        fluid
+        className="d-flex justify-content-center"
+        style={{ marginTop: "40px" }}
+      >
         <Row>
-          <Col xs={12} md={5}>
+          <Col xs={8} className="justify-content-center">
             <Notificaciones nombreDeUsuario="Maria" />
           </Col>
-          <Col className="d-flex align-items-center justify-content-center ">
-            <Row>
-              <Col>
-                <ButtonCard user={user} seccion={"Agenda"} link={"link-1"} />
-              </Col>
-              <Col>
-                <ButtonCard user={user} seccion={"Citas"} link={"link-2"} />
-              </Col>
+          <Col xs={4} className="d-flex align-content-center align-items-center">
+            <Row  className="d-flex justify-content-center align-items-center">
+              
+                <ButtonCard
+                  user={user}
+                  seccion={"Agenda"}
+                  link={"link-1"}
+                  style={{
+                    background: "#50628C",
+                    marginTop: "10px",
+                    minWidth: "200px",
+                    minHeight: "190px",
+                  }}/>
+   
+                <ButtonCard
+                  user={user}
+                  seccion={"Citas"}
+                  link={"link-2"}
+                  style={{
+                    background: "#50628C",
+                    marginTop: "10px",
+                    minWidth: "200px",
+                    minHeight: "190px",
+                  }}/>
+             
             </Row>
           </Col>
         </Row>

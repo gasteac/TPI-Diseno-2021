@@ -19,6 +19,7 @@ import globalContext from "../../../../../context/globalContext";
 import { useContext, useState } from "react";
 import { Image, FormControl, InputGroup } from "react-bootstrap";
 import BackButton from "../../../../../components/BackButton";
+import { divide } from "lodash-es";
 
 export default function EntradaSalida({ history }) {
   const user = useAuth(history);
@@ -89,20 +90,22 @@ export default function EntradaSalida({ history }) {
         <Row className="justify-content-center">
           <h2 className="titulosSecciones">Entradas</h2>
         </Row>
-        <Row className="justify-content-around">
-          <Col xs={5}>
+        <Row className="justify-content-center">
+          <Col xs={6}>
             <Form
+              className="d-flex justify-content-center"
               noValidate
               validated={validatedFechasEntradas}
               onSubmit={handleSubmitFechasEntradas}
             >
-              <Card>
-                <Card.Header as="h5">Filtrar por fecha</Card.Header>
+              <Card style={{maxWidth:'500px'}} >
+                <Card.Header className='d-flex justify-content-center' as="h5">Filtrar por fecha</Card.Header>
                 <Card.Body>
-                  <Form.Row>
-                    <Form.Group>
-                      <Form.Label>Desde</Form.Label>
+                  <Form.Row  className="d-flex justify-content-center">
+                    <Form.Group style={{ marginRight: "20px" }}  >
+                      <Form.Label >Desde</Form.Label>
                       <Form.Control
+                      
                         required
                         onChange={(e) => handleChangeEntradas(e)}
                         type="date"
@@ -110,7 +113,7 @@ export default function EntradaSalida({ history }) {
                         value={fechaDesdeEntradas}
                       />
                     </Form.Group>
-                    <Form.Group>
+                    <Form.Group style={{ marginRight: "20px" }}>
                       <Form.Label>Hasta</Form.Label>
                       <Form.Control
                         required
@@ -120,28 +123,24 @@ export default function EntradaSalida({ history }) {
                         value={fechaHastaEntradas}
                       />
                     </Form.Group>
-                    <Form.Group>
+                    <Form.Group className='d-flex justify-content-center'>
                       <Button
                         type="sumbit"
                         variant="success"
-                        style={{ marginTop: "32px", marginLeft: "10px" }}
+                        style={{ marginTop: "10px", marginRight:'10px'  }}
                       >
                         Filtrar
                       </Button>
+                      <Button variant="primary" type="button" style={{ marginTop: "10px" }}>
+              Agregar entrada
+            </Button>
                     </Form.Group>
                   </Form.Row>
                 </Card.Body>
               </Card>
             </Form>
           </Col>
-          <Col
-            className="d-flex align-content-center flex-column justify-content-center"
-            xs={3}
-          >
-            <Button variant="primary" type="button">
-              Agregar entrada
-            </Button>
-          </Col>
+          
         </Row>
         <Row className="justify-content-center">
           <Col>
@@ -165,59 +164,57 @@ export default function EntradaSalida({ history }) {
         <Row className="justify-content-center">
           <h2 className="titulosSecciones">Salidas</h2>
         </Row>
-        <Row className="justify-content-around">
-          <Col xs={5}>
+        <Row className="justify-content-center">
+          <Col xs={6}>
             <Form
+              className="d-flex justify-content-center"
               noValidate
-              validated={validatedFechasSalidas}
-              onSubmit={handleSubmitFechasSalidas}
+              validated={validatedFechasEntradas}
+              onSubmit={handleSubmitFechasEntradas}
             >
-              <Card>
-                <Card.Header as="h5">Filtrar por fecha</Card.Header>
+              <Card style={{maxWidth:'500px'}} >
+                <Card.Header className='d-flex justify-content-center' as="h5">Filtrar por fecha</Card.Header>
                 <Card.Body>
-                  <Form.Row>
-                    <Form.Group>
-                      <Form.Label>Desde</Form.Label>
+                  <Form.Row  className="d-flex justify-content-center">
+                    <Form.Group style={{ marginRight: "20px" }}  >
+                      <Form.Label >Desde</Form.Label>
                       <Form.Control
+                      
                         required
-                        onChange={(e) => handleChangeSalidas(e)}
+                        onChange={(e) => handleChangeEntradas(e)}
                         type="date"
-                        name="fechaDesdeSalidas"
-                        value={fechaDesdeSalidas}
+                        name="fechaDesdeEntradas"
+                        value={fechaDesdeEntradas}
                       />
                     </Form.Group>
-                    <Form.Group>
+                    <Form.Group style={{ marginRight: "20px" }}>
                       <Form.Label>Hasta</Form.Label>
                       <Form.Control
                         required
-                        onChange={(e) => handleChangeSalidas(e)}
+                        onChange={(e) => handleChangeEntradas(e)}
                         type="date"
-                        name="fechaHastaSalidas"
-                        value={fechaHastaSalidas}
+                        name="fechaHastaEntradas"
+                        value={fechaHastaEntradas}
                       />
                     </Form.Group>
-                    <Form.Group>
+                    <Form.Group className='d-flex justify-content-center'>
                       <Button
                         type="sumbit"
                         variant="success"
-                        style={{ marginTop: "32px", marginLeft: "10px" }}
+                        style={{ marginTop: "10px", marginRight:'10px'  }}
                       >
                         Filtrar
                       </Button>
+                      <Button variant="primary" type="button" style={{ marginTop: "10px" }}>
+              Agregar salida
+            </Button>
                     </Form.Group>
                   </Form.Row>
                 </Card.Body>
               </Card>
             </Form>
           </Col>
-          <Col
-            className="d-flex align-content-center flex-column justify-content-center"
-            xs={3}
-          >
-            <Button variant="primary" type="button">
-              Agregar salida
-            </Button>
-          </Col>
+          
         </Row>
         <Row className="justify-content-center">
           <Col>

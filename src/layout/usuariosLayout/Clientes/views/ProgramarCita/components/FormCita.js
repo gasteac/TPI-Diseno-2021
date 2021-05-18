@@ -88,8 +88,9 @@ const FormCita = (history) => {
           as="h1"
           style={{
             textShadow: "1px 1px 10px black",
-            background: "#50628C01",
+            background: "#50628C",
             color: "white",
+            border:'none',
             borderTopRightRadius: "20px",
             borderTopLeftRadius: "20px",
           }}
@@ -98,7 +99,7 @@ const FormCita = (history) => {
         </Card.Header>
         <Card.Body
           style={{
-            background: "#B3BCE855",
+            background: "#8E97C860",
             borderBottomLeftRadius: "30px",
             borderBottomRightRadius: "30px",
             border: "none",

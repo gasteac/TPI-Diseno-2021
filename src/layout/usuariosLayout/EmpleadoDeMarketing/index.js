@@ -12,14 +12,20 @@ import Notificaciones from "../../../components/Notificaciones";
 import propiedadesContext from "../../../context/contextPropiedades/propiedadesContext";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
+import img from  "../../../../src/static/images/caCITA.jpg"
+
+
+
+document.querySelector('body').style.background = `url(${img})`
+document.querySelector('body').style.backgroundSize = `cover`
 
 const EmpleadoDeMarketing = ({ history }) => {
   const user = useAuth(history);
   const asdsa = useContext(propiedadesContext);
   const { propiedades } = asdsa;
   return (
-    <Layout usuario={user}>
-      <Container className="mt-3 flex-column ">
+    <Layout usuario={user} cliente={true}>
+      <Container className="flex-column" style={{marginTop:'40px'}}>
         <Row>
           <Col>
             <Notificaciones nombreDeUsuario="Pepita" />

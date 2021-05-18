@@ -22,6 +22,7 @@ export default function Citas({ history }) {
     }
   };
 
+  document.querySelector("body").style.background = "";
   return (
     <Layout usuario={user}>
       <Container fluid>

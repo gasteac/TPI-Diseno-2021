@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Layout from "../../../../Layout";
-import Fondo from '../../../../../static/images/casita.jpg'
+import Fondo from '../../../../../static/images/casitaQUIENES.jpg'
 import Descripcion from "./components/Descripcion";
 import LogoJumbotron from "./components/Logo";
 import useAuth from "../../../../../hooks/useAuth";

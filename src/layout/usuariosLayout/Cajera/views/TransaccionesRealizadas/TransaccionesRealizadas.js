@@ -61,7 +61,7 @@ export default function TransaccionesRealizadas({ history }) {
           <h2 className="titulosSecciones">Transacciones Realizadas</h2>
         </Row>
 
-        <Row>
+        <Row className="justify-content-center">
           <Form
             noValidate
             validated={validatedFechas}
@@ -72,7 +72,7 @@ export default function TransaccionesRealizadas({ history }) {
               <Card.Header as="h5">Filtrar por fecha</Card.Header>
               <Card.Body>
                 <Form.Row>
-                  <Form.Group>
+                  <Form.Group style={{ marginRight: "20px" }}>
                     <Form.Label>Desde</Form.Label>
                     <Form.Control
                       required

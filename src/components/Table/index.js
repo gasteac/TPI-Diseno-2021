@@ -11,6 +11,7 @@ import {
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
 
+
 export default function Table({
   columnas,
   datos,
