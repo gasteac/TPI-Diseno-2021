@@ -19,15 +19,15 @@ const FormAdmin = ({usuario}) => {
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="justify-content-center">
-          <Col xs={10} className="d-flex justify-content-between">
+          <Col xs={10} className="d-flex justify-content-start">
             <Link to={'/admin/nuevoUsuario'}>
-              <Button variant="success" type="button">
+              <Button variant="success" type="button" >
                 Nuevo Usuario
               </Button>
             </Link>
 
             <Link to={'/admin/listadoDeUsuarios'}>
-              <Button variant="info" type="button">
+              <Button variant="info" type="button" className="ml-4">
                 Ver Todos
               </Button>  
             </Link>

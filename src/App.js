@@ -4,15 +4,12 @@ import AgenteInmobiliario from "./layout/usuariosLayout/AgenteInmobiliario/";
 import Agenda from "./layout/usuariosLayout/AgenteInmobiliario/views/Agenda";
 import Propiedades from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades";
 import ListaClientes from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/";
-
 import GlobalState from "./context/globalState";
 import PropiedadesState from "./context/contextPropiedades/propiedadesState";
 import ClientesState from "./context/contextClientes/clientesState";
-
 import Clientes from "./layout/usuariosLayout/Clientes/";
 import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos/";
 import PropiedadesClientes from "./layout/usuariosLayout/Clientes/views/Propiedades/PropiedadesClientes";
-
 import {
   BrowserRouter as Router,
   Redirect,
@@ -240,10 +237,10 @@ const App = () => {
                   path="/jefacomercializacion/Propiedades"
                   component={Propiedades}
                 />
-                <Route exact path="/jefacomercializacion/rventas" component={Ventas} />
-                <Route exact path="/jefacomercializacion/ralquileres" component={Alquileres} />
-                <Route exact path="/jefacomercializacion/rclientes" component={ListaClientes} />
-                <Route exact path="/jefacomercializacion/rpropiedades" component={ReportePropiedades} />
+                <Route exact path="/jefacomercializacion/ventas" component={Ventas} />
+                <Route exact path="/jefacomercializacion/alquileres" component={Alquileres} />
+                <Route exact path="/jefacomercializacion/clientes" component={ListaClientes} />
+                <Route exact path="/jefacomercializacion/propiedades" component={ReportePropiedades} />
 
                 {/* ADMIN */}
                 <Route 
@@ -261,6 +258,7 @@ const App = () => {
                   path="/admin/editarUsuario"
                   component={FormEditarUsuario}
                 />
+                
                 <Route
                   exact
                   path="/admin/listadoDeUsuarios"
@@ -280,7 +278,7 @@ const App = () => {
                 />
                 <Route
                   exact
-                  path="/jefaadministracion/rtransacciones"
+                  path="/jefaadministracion/transacciones"
                   component={TransaccionesRealizadas}
                 />
 
@@ -292,30 +290,30 @@ const App = () => {
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/rclientes"
+                  path="/gerentegeneral/clientes"
                   component={ListaClientes}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/rtransacciones"
+                  path="/gerentegeneral/transacciones"
                   component={TransaccionesRealizadas}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/rentradassalidas"
+                  path="/gerentegeneral/entradassalidas"
                   component={EntradaSalida}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/ralquileres"
+                  path="/gerentegeneral/alquileres"
                   component={Alquileres}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/rpropiedades"
+                  path="/gerentegeneral/propiedades"
                   component={ReportePropiedades}
                 />
-                <Route exact path="/gerentegeneral/rventas" component={Ventas} />
+                <Route exact path="/gerentegeneral/ventas" component={Ventas} />
 
                 <Redirect to="/" />
               </Switch>
