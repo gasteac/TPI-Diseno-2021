@@ -20,10 +20,6 @@ const AccordionElement = ({ eventKey, nombre }) => {
   const {
     setPrecioMayor,
     setPrecioMenor,
-    setTipo,
-    setUbicacion,
-    setHabitaciones,
-    setBaños,
     setM2TotalesMayor,
     setM2TotalesMenor,
   } = GlobalContext;
