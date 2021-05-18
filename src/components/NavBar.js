@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import globalContext from "../context/globalContext";
@@ -22,9 +22,25 @@ const NavBar = ({ cliente }) => {
     ],
     marketing: ["Inicio", "Propiedades"],
     admin: [],
-    jefacomercializacion: ['Inicio', 'Alquileres', 'Clientes', 'Propiedades', 'Propiedades', 'Agenda', 'Clientes'],
-    jefaadministracion: ['Inicio', 'Transacciones', 'Clientes'],
-    gerentegeneral: ['Inicio', 'Clientes', 'Alquileres', 'Entradas/Salidas', 'Propiedades', 'Transacciones', 'Ventas',]
+    jefacomercializacion: [
+      "Inicio",
+      "R.Alquileres",
+      "R.Clientes",
+      "R.Propiedades",
+      "Propiedades",
+      "Agenda",
+      "Clientes",
+    ],
+    jefaadministracion: ["Inicio", "R.Transacciones", "Clientes"],
+    gerentegeneral: [
+      "Inicio",
+      "R.Clientes",
+      "R.Alquileres",
+      "R.Entradas/Salidas",
+      "R.Propiedades",
+      "R.Transacciones",
+      "R.Ventas",
+    ],
   };
 
   const handleClick = (i) => {
@@ -36,7 +52,10 @@ const NavBar = ({ cliente }) => {
       <Navbar.Brand>
         <Link to={`/${user}/inicio`} className="d-flex align-items-center">
           <img src={Logo} alt="logo" style={{ maxHeight: "60px" }} />
-          <h3 className="mt-3 ml-3" style={{ fontWeight: "700", color:'white' }}>
+          <h3
+            className="mt-3 ml-3"
+            style={{ fontWeight: "700", color: "white" }}
+          >
             Domus
           </h3>
         </Link>
@@ -58,7 +77,8 @@ const NavBar = ({ cliente }) => {
                     .replace(" ", "")
                     .replace(" ", "")
                     .replace("¿", "")
-                    .replace("/", "")}`}
+                    .replace("/", "")
+                    .replace(".", "")}`}
                   eventKey={`link-${i}`}
                 >
                   {item}
@@ -66,11 +86,11 @@ const NavBar = ({ cliente }) => {
               </Nav.Item>
             ))}
           <NavDropdown title="Mi Perfil" id="nav-dropdown" alignRight>
-              <NavDropdown.Item eventKey="4.1">Mi perfil</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} eventKey="4.2" to="/">
-                Cerrar Sesión
-              </NavDropdown.Item>
+            <NavDropdown.Item eventKey="4.1">Mi perfil</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item as={Link} eventKey="4.2" to="/">
+              Cerrar Sesión
+            </NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
