@@ -2,7 +2,7 @@ import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
-import img from "../../../../src/static/images/caCITA.jpg";
+import img from "../../../../src/static/images/casita.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 export default function SecretariaComercializacion({ history }) {
   const user = useAuth(history);

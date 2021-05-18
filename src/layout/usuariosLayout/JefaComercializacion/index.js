@@ -3,7 +3,7 @@ import ButtonCard from "../../../components/ButtonCard";
 import Notificaciones from "../../../components/Notificaciones";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
-import img from  "../../../../src/static/images/caCITA.jpg"
+import img from "../../../../src/static/images/casita.jpg";
 
 export default function JefaComercializacion({ history }) {
     const user = useAuth(history);
