@@ -44,7 +44,7 @@ import Admin from "./layout/usuariosLayout/Admin";
 import JefaAdministracion from "./layout/usuariosLayout/JefaAdministracion";
 import GerenteGeneral from "./layout/usuariosLayout/GerenteGeneral";
 import TransaccionesRealizadas from "./layout/usuariosLayout/Cajera/views/TransaccionesRealizadas/TransaccionesRealizadas";
-import Alquileres from "./components/Reportes/Ventas";
+import Alquileres from "./components/Reportes/Alquileres";
 import ReportePropiedades from "./components/Reportes/Propiedades";
 import Ventas from "./components/Reportes/Ventas";
 import FormNuevoUsuario from "./layout/usuariosLayout/Admin/Usuarios/AgregarUsuario/FormNuevoUsuario";
@@ -240,6 +240,10 @@ const App = () => {
                   path="/jefacomercializacion/Propiedades"
                   component={Propiedades}
                 />
+                <Route exact path="/jefacomercializacion/r.ventas" component={Ventas} />
+                <Route exact path="/jefacomercializacion/r.alquileres" component={Alquileres} />
+                <Route exact path="/jefacomercializacion/r.clientes" component={ListaClientes} />
+                <Route exact path="/jefacomercializacion/r.propiedades" component={ReportePropiedades} />
 
                 {/* ADMIN */}
                 <Route 
@@ -274,6 +278,11 @@ const App = () => {
                   path="/jefaadministracion/Clientes"
                   component={ListaClientes}
                 />
+                <Route
+                  exact
+                  path="/jefaadministracion/r.transacciones"
+                  component={TransaccionesRealizadas}
+                />
 
                 {/* Gerente general */}
                 <Route
@@ -283,30 +292,30 @@ const App = () => {
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/clientes"
+                  path="/gerentegeneral/r.clientes"
                   component={ListaClientes}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/transacciones"
+                  path="/gerentegeneral/r.transacciones"
                   component={TransaccionesRealizadas}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/entradassalidas"
+                  path="/gerentegeneral/r.entradassalidas"
                   component={EntradaSalida}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/alquileres"
+                  path="/gerentegeneral/r.alquileres"
                   component={Alquileres}
                 />
                 <Route
                   exact
-                  path="/gerentegeneral/propiedades"
+                  path="/gerentegeneral/r.propiedades"
                   component={ReportePropiedades}
                 />
-                <Route exact path="/gerentegeneral/ventas" component={Ventas} />
+                <Route exact path="/gerentegeneral/r.ventas" component={Ventas} />
 
                 {/* <Redirect to="/" /> */}
               </Switch>

@@ -32,6 +32,8 @@ export default function ListaClientes({ history }) {
   };
   document.querySelector("body").style.background = "";
 
+  const userBolean = user.includes('jefaadministracion') || user.includes("gerentegeneral") || user.includes('jefacomercializacion')
+
   return (
     <Layout>
       <Container fluid>
@@ -90,7 +92,7 @@ export default function ListaClientes({ history }) {
             />
           </Col>
         </Row>
-        {user.includes("gerentegeneral") ? (
+        {userBolean ? (
           <Button style={{ marginTop: "20px" }} type="button" variant="info">
             Imprimir reporte
           </Button>

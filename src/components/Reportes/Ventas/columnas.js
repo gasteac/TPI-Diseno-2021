@@ -8,12 +8,8 @@ export const COLUMNS = [
         accessor: '_idCliente',
     },
     {
-        Header: 'Tipo',
-        accessor: 'tipo',
-    },
-    {
         Header: 'Precio del inmueble',
-        accessor: 'precioInmueble',
+        accessor: 'PrecioInmueble',
     },
     {
         Header: 'Tipo de venta',
@@ -21,7 +17,7 @@ export const COLUMNS = [
     },
     {
         Header: '% de comisión',
-        accessor: 'comision',
+        accessor: 'interes',
     },
     {
         Header: 'Moneda',
