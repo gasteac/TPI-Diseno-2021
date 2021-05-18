@@ -9,11 +9,12 @@ const Clientes = ({history}) => {
   // eslint-disable-next-line
   const user = useAuth(history)
   document.querySelector("body").style.background = `url(${Fondo})`;
+  document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout
       cliente={true}
     >
-      <Container>
+      <Container style={{display:'flex', alignItems:'center'}}>
         <Buscador />
       </Container>
     </Layout>

@@ -31,7 +31,7 @@ export default function ListaClientes({ history }) {
     setShowEliminar(false)
   }
 
-
+  document.querySelector("body").style.background = ``;
   return (
     <Layout>
       <Container fluid>

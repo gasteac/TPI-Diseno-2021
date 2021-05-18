@@ -18,11 +18,11 @@ const ButtonCard = ({ user, seccion, link, style }) => {
     onClick={() => setActiveNavbarLink(link)}>
       <div className='btnsuper'>
         <div className="buttonsCard bg-rosa1 btnxd" style={style}>
-          <div >
-            <img src={imagenes[seccion]} alt="agenda logo"  />
+          <div>
+            <img src={imagenes[seccion]} alt="agenda logo" className='mb-1' />
           </div>
-          <div className="">
-              <h4 style={{color:'white'}}>{seccion}</h4> 
+          <div className="d-flex my-0" style={{alignContent:'flex-end'}}>
+              <h4 style={{color:'white', marginTop:'6px'}}>{seccion}</h4> 
           </div>
         </div>
       </div>

@@ -16,12 +16,12 @@ document.querySelector('body').style.backgroundSize = `cover`
     <Layout cliente={true}> 
       
       <Container style={{alignItems:'center'}}>
-        <Card style={{ marginTop:'20px', border:'none', background:'#a79ba790', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px' }}>
-        <Card.Header as='h1' style={{background:'#50628C01', border:'none', color:'white', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', textShadow:'2px 2px 5px black'}}> 
-          Bienvenida, Jett.
+        <Card style={{ marginTop:'20px', border:'none', background:'#8E97C860', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px' }}>
+        <Card.Header as='h1' style={{background:'#50628C', border:'none', color:'white', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', textShadow:'2px 2px 10px black'}}> 
+          Bienvenid@, Jett.
           <h5 style={{marginTop:'2px'}}>Que hacemos hoy? :)</h5>
         </Card.Header>
-        <Card.Body  style={{background:'#B3BCE855', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px', border:'none'}}>
+        <Card.Body  style={{background:'#8E97C860', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px', border:'none'}}>
           <Row className='d-flex, justify-content-space-around'>
             <Col >
               <ButtonCardCaj 
@@ -29,20 +29,19 @@ document.querySelector('body').style.backgroundSize = `cover`
               seccion="EntradaSalida" 
               link={"link-1"} 
               style={{
-                background:"#50628C",
+                background:"#50628C95",
                 marginTop:'10px',
                 minWidth: "200px",
-                minHeight: "180px",
+                minHeight: "190px",
                 }}
                 />
             </Col>
             <Col>
               <ButtonCardCaj user={user} seccion="Transacciones" link={"link-2"} 
               style={{
-                background:"#50628C",
                 marginTop:'10px',
                 minWidth: "200px",
-                minHeight: "180px",
+                minHeight: "190px",
                 }}
               />
             </Col>
@@ -52,10 +51,9 @@ document.querySelector('body').style.backgroundSize = `cover`
                 seccion="CierreDeCaja"
                 link={"link-5"}
                 style={{
-                  background:"#50628C",
                   marginTop:'10px',
                   minWidth: "200px",
-                  minHeight: "180px",
+                  minHeight: "190px",
                   }}
               />
             </Col>
@@ -66,17 +64,9 @@ document.querySelector('body').style.backgroundSize = `cover`
                   seccion="PagoAlquiler"
                   link={"link-3"}
                   style={{
-                    minHeight: "71px",
-                    display: "flex",
+                    minWidth: "185px",
+                    minHeight: "76px",
                     flexDirection: "row",
-                    alignItems:'center',
-                    background:"#50628C",
-                    alignItems: 'center',
-    alignSelf: 'center',
-    alignContent: 'center',
-    justifyContent: 'center',
-    justifyItems: 'center',
-    justifySelf: 'center'
                   }}
                 />
               </Row>
@@ -86,10 +76,9 @@ document.querySelector('body').style.backgroundSize = `cover`
                   seccion="PagoVenta"
                   link={"link-4"}
                   style={{
-                    minHeight: "71px",
-                    display: "flex",
+                    minWidth: "185px",
+                    minHeight: "76px",
                     flexDirection: "row",
-                    background:"#50628C"
                   }}
                 />
               </Row>

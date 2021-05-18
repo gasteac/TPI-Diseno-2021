@@ -75,7 +75,7 @@ a:hover,
 }
 .buttonsCard {
   border-radius: 12px;
-  min-height: 180px;
+  min-height: 200px;
   min-width: 180px;
   max-width: 180px;
   max-height: 180px;
@@ -86,7 +86,7 @@ a:hover,
   flex-direction: column;
   justify-content: center;
   margin: 1rem 1rem;
-  background: #83798395 !important;
+  background: #50628C95 !important;
 }
 .container {
   display: flex;
@@ -138,7 +138,7 @@ a:hover,
   }
 }
 .btnxd:hover {
-  background: #c6cdf3;
+  background: #50628C65 !important;
 }
 
 .btnsuper:hover {

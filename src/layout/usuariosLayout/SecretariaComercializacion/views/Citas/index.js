@@ -9,7 +9,7 @@ import useAuth from "../../../../../hooks/useAuth";
 
 export default function Citas({ history }) {
   const user = useAuth(history);
-
+  document.querySelector("body").style.background = "";
   return (
     <Layout usuario={user}>
       <Container fluid>
