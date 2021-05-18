@@ -5,11 +5,12 @@ import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import img from "../../../../src/static/images/casita.jpg";
 
-document.querySelector("body").style.background = `url(${img})`;
-document.querySelector("body").style.backgroundSize = `cover`;
+
 
 export default function GerenteGeneral({ history }) {
   const user = useAuth(history);
+document.querySelector("body").style.background = `url(${img})`;
+document.querySelector("body").style.backgroundSize = `cover`;
   return (
     <Layout usuario={user} cliente={true}>
       <Container 
