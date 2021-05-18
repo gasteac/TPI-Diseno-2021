@@ -16,7 +16,6 @@ const Login = ({ history }) => {
   const GlobalContext = useContext(globalContext);
   const { userLogin, setActiveNavbarLink, logOut } = GlobalContext;
 
-  document.querySelector("body").style.background = "#2B3860";
   const [login, setLogin] = useState(localStorage.setItem("user", ""));
   const handleSubmit = (e) => {
     e.preventDefault();
