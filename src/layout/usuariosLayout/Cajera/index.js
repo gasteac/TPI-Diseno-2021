@@ -4,7 +4,7 @@ import ButtonCard from "../../../components/ButtonCard";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import ButtonCardCaj from "./ButtonCardCaj";
-import img from  "../../../../src/static/images/caCITA.jpg"
+import img from "../../../../src/static/images/casita.jpg";
 
 
 

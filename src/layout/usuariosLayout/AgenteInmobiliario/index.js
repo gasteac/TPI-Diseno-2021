@@ -3,7 +3,7 @@ import Layout from "../../Layout";
 import Notificaciones from "../../../components/Notificaciones";
 import ButtonCard from "../../../components/ButtonCard";
 import useAuth from "../../../hooks/useAuth";
-import img from "../../../../src/static/images/caCITA.jpg";
+import img from "../../../../src/static/images/casita.jpg";
 import { Col, Container, Row } from "react-bootstrap";
 
 const AgenteInmobiliario = ({ history }) => {

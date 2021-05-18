@@ -12,7 +12,7 @@ import Notificaciones from "../../../components/Notificaciones";
 import propiedadesContext from "../../../context/contextPropiedades/propiedadesContext";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
-import img from  "../../../../src/static/images/caCITA.jpg"
+import img from "../../../../src/static/images/casita.jpg";
 
 
 
