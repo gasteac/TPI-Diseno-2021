@@ -4,14 +4,14 @@ document.querySelector('body').style.background = ""
 const DatosDelUsuarioEditar = () =>{
 
     const [formState, setFormState] = useState({
-        nombre: "",
-        apellido: "",
-        dni: 0,
-        telefono: 0,
-        telefonoAlternativo: 0,
-        correoElectronico: "",
-        nombreUsuario:"",
-        contraseña:""
+        nombre: "Lucas  Emanuel",
+        apellido: "Nuñez",
+        dni: 39315821,
+        telefono: 3624638927,
+        telefonoAlternativo: 4573100,
+        correoElectronico: "lucasema21@gmail.com",
+        nombreUsuario:"Lucas",
+        contraseña:"********"
     
     });
 

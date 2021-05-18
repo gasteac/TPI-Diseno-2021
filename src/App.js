@@ -4,15 +4,12 @@ import AgenteInmobiliario from "./layout/usuariosLayout/AgenteInmobiliario/";
 import Agenda from "./layout/usuariosLayout/AgenteInmobiliario/views/Agenda";
 import Propiedades from "./layout/usuariosLayout/AgenteInmobiliario/views/Propiedades";
 import ListaClientes from "./layout/usuariosLayout/AgenteInmobiliario/views/Clientes/";
-
 import GlobalState from "./context/globalState";
 import PropiedadesState from "./context/contextPropiedades/propiedadesState";
 import ClientesState from "./context/contextClientes/clientesState";
-
 import Clientes from "./layout/usuariosLayout/Clientes/";
 import QuienesSomos from "./layout/usuariosLayout/Clientes/views/QuienesSomos/";
 import PropiedadesClientes from "./layout/usuariosLayout/Clientes/views/Propiedades/PropiedadesClientes";
-
 import {
   BrowserRouter as Router,
   Redirect,
@@ -257,6 +254,7 @@ const App = () => {
                   path="/admin/editarUsuario"
                   component={FormEditarUsuario}
                 />
+                
                 <Route
                   exact
                   path="/admin/listadoDeUsuarios"

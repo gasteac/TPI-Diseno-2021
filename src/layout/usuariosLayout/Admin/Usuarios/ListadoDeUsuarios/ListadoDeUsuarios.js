@@ -17,6 +17,7 @@ import clientesContext from "../../../../../context/contextClientes/clientesCont
 import BackButton from "../../../../../components/BackButton";
 
 export default function ListadoDeUsuarios({ history }) {
+    
   const user = useAuth(history);
 
   const ClientesContext = useContext(clientesContext);
@@ -53,18 +54,19 @@ export default function ListadoDeUsuarios({ history }) {
                     variant="danger"
                     className="mr-2"
                 >
-                    Eliminar seleccionados
+                    Eliminar seleccionado
                 </Button>
+
+                <Link to={"/admin/editarUsuario"}>
+                    <Button
+
+                        variant="primary"
+                        className="mr-2"
+                        >
+                        Editar usuario
+                    </Button>
+                </Link>        
                     
-                <Button
-                    as={Link}
-                    to={"/agenteinmobiliario/Clientes/EditarCliente"}
-                    variant="primary"
-                    className="mr-2"
-                    >
-                    Editar cliente
-                </Button>
-                
             </Col>
 
         </Row>
@@ -77,18 +79,14 @@ export default function ListadoDeUsuarios({ history }) {
             />
           </Col>
         </Row>
-        {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info">
-            Imprimir reporte
-          </Button>
-        ) : null}
+
       </Container>
       <Modal show={showEliminar} onHide={handleCloseEliminar} backdrop="static">
         <Modal.Header style={{ background: "#e10016", color: "#FAFAFA" }}>
           Advertencia
         </Modal.Header>
         <Modal.Body>
-          ¿Esta seguro de que quieres eliminar la propiedad?
+          ¿Esta seguro de que quieres eliminar el usuario?
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline-danger" onClick={handleCloseEliminar}>
