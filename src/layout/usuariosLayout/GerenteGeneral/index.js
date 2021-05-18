@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import ButtonCard from "../../../components/ButtonCard";
 import Notificaciones from "../../../components/Notificaciones";
 import useAuth from "../../../hooks/useAuth";
@@ -23,9 +23,11 @@ document.querySelector("body").style.backgroundSize = `cover`;
             <Notificaciones nombreDeUsuario="Puppy" />
           </Col> 
           <Col >
-          <div style={{display:'flex', marginLeft:'20px', fontWeight:'900'}}>
+          <Card.Header  style={{display:'flex', justifyContent:'center', fontWeight:'900', background:'#50628C90', border:'none', borderRadius:'30px'}}>
+          <div>
           <h2 style={{fontWeight:'900', color:'white', textShadow:'2px 2px 10px black'}}>Reportes</h2>
           </div>
+          </Card.Header>
           <Row>
           <Col className="d-flex justify-content-center align-items-center">
             
