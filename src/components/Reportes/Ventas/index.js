@@ -7,6 +7,7 @@ import ventas from './ventasEsteSI.json';
 
 export default function Ventas({ history }) {
     const user = useAuth(history);
+    document.querySelector('body').style.background = ""
   return (
     <Layout
       usuario={user}
