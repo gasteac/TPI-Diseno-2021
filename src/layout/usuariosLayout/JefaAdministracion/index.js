@@ -19,14 +19,10 @@ document.querySelector('body').style.backgroundSize = `cover`
             <Col className="d-flex align-items-center">
                 <Row>
                 <Col>
-                    <h2>Reportes</h2>
                     <ButtonCard user={user} seccion={"R.Transacciones"} link={"link-1"} />
                 </Col>
                 <Col>
                     <ButtonCard user={user} seccion={"Clientes"} link={"link-2"} />
-                </Col>
-                <Col>
-                    <ButtonCard user={user}  seccion={"Caja"} link={"link-3"} />
                 </Col>
                 </Row>
             </Col>

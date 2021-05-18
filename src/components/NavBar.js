@@ -23,7 +23,7 @@ const NavBar = ({ cliente }) => {
     marketing: ["Inicio", "Propiedades"],
     admin: [],
     jefacomercializacion: ['Inicio', 'R.Alquileres', 'R.Clientes', 'R.Propiedades', 'Propiedades', 'Agenda', 'Clientes'],
-    jefaadministracion: ['Inicio', 'R.Transacciones', 'Caja', 'Clientes'],
+    jefaadministracion: ['Inicio', 'R.Transacciones', 'Clientes'],
     gerentegeneral: ['Inicio', 'R.Clientes', 'R.Alquileres', 'R.Entradas/Salidas', 'R.Propiedades', 'R.Transacciones', 'R.Ventas',]
   };
 
