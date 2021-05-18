@@ -16,13 +16,14 @@ import img from  "../../../../src/static/images/caCITA.jpg"
 
 
 
-document.querySelector('body').style.background = `url(${img})`
-document.querySelector('body').style.backgroundSize = `cover`
+
 
 const EmpleadoDeMarketing = ({ history }) => {
   const user = useAuth(history);
   const asdsa = useContext(propiedadesContext);
   const { propiedades } = asdsa;
+  document.querySelector('body').style.background = `url(${img})`
+document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout usuario={user} cliente={true}>
       <Container className="flex-column" style={{marginTop:'40px'}}>

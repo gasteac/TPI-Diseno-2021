@@ -61,69 +61,96 @@ export default function TransaccionesRealizadas({ history }) {
           <h2 className="titulosSecciones">Transacciones Realizadas</h2>
         </Row>
 
-        <Row className="justify-content-center">
-          <Form
-            noValidate
-            validated={validatedFechas}
-            onSubmit={handleSubmitFechas}
-            className="ml-5"
-          >
-            <Card>
-              <Card.Header as="h5">Filtrar por fecha</Card.Header>
-              <Card.Body>
-                <Form.Row>
-                  <Form.Group style={{ marginRight: "20px" }}>
-                    <Form.Label>Desde</Form.Label>
-                    <Form.Control
-                      required
-                      onChange={(e) => handleChange(e)}
-                      type="date"
-                      name="fechaDesde"
-                      value={fechaDesde}
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label>Hasta</Form.Label>
-                    <Form.Control
-                      required
-                      onChange={(e) => handleChange(e)}
-                      type="date"
-                      name="fechaHasta"
-                      value={fechaHasta}
-                    />
-                  </Form.Group>
+        <Container
+          fluid
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Row className="justify-content-flex-start">
+            <Col className="d-flex justify-content-center">
+              <Form
+                noValidate
+                validated={validatedFechas}
+                onSubmit={handleSubmitFechas}
+              >
+                <Card
+                  style={{
+                    background: "#FAFAFA01",
+                    border: "none",
+                    display: "flex",
+                    alignItems: "end",
+                    alignContent: "end",
+                  }}
+                >
+                  <Card.Header
+                    className="d-flex justify-content-flex-start"
+                    as="h5"
+                    style={{
+                      background: "#FAFAFA01",
+                      border: "none",
+                      fontWeight: "800",
+                      textDecorationLine: "underline wavy",
+                    }}
+                  >
+                    Filtrar por fecha:
+                  </Card.Header>
+                  <Card.Body>
+                    <Form.Row className="d-flex justify-content-center">
+                      <Form.Group style={{ marginRight: "20px" }}>
+                        <Form.Label style={{ fontWeight: "800" }}>
+                          Desde
+                        </Form.Label>
+                        <Form.Control
+                          required
+                          onChange={(e) => handleChange(e)}
+                          type="date"
+                          name="fechaDesde"
+                          value={fechaDesde}
+                        />
+                      </Form.Group>
+                      <Form.Group style={{ marginRight: "20px" }}>
+                        <Form.Label style={{ fontWeight: "800" }}>
+                          Hasta
+                        </Form.Label>
+                        <Form.Control
+                          required
+                          onChange={(e) => handleChange(e)}
+                          type="date"
+                          name="fechaHasta"
+                          value={fechaHasta}
+                        />
+                      </Form.Group>
 
-                  <Form.Group>
-                    <Button
-                      type="sumbit"
-                      variant="success"
-                      style={{ marginTop: "32px", marginLeft: "10px" }}
-                    >
-                      Filtrar
-                    </Button>
-                  </Form.Group>
-                </Form.Row>
-              </Card.Body>
-            </Card>
-          </Form>
-        </Row>
+                      <Form.Group className="d-flex align-content-end align-items-end">
+                        <Button
+                          type="sumbit"
+                          variant="success"
+                          style={{ marginRight: "10px" }}
+                        >
+                          Filtrar
+                        </Button>
+                      </Form.Group>
+                    </Form.Row>
+                  </Card.Body>
+                </Card>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
         <Row className="justify-content-center">
           <Col>
             <Table columnas={tablaCajera} datos={Transacciones} rows={7} />
           </Col>
         </Row>
         <Row className="justify-content-center">
-        { 
-          (user.includes('gerentegeneral')) ? (
-            <Button
-              style={{ marginTop: "20px" }}
-              type="button"
-              variant="info"
-            >
+          {user.includes("gerentegeneral") ? (
+            <Button style={{ marginTop: "20px" }} type="button" variant="info">
               Imprimir reporte
             </Button>
-          ) : null
-        }
+          ) : null}
         </Row>
       </Container>
     </Layout>
