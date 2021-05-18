@@ -20,7 +20,7 @@ document.querySelector("body").style.backgroundSize = `cover`;
       >
         <Row className="d-flex align-content-center align-items-center">
           <Col md={5}>
-            <Notificaciones nombreDeUsuario="Chifflets" />
+            <Notificaciones nombreDeUsuario="Puppy" />
           </Col> 
           <Col >
           <Row>
