@@ -13,7 +13,7 @@ export default function Ventas({ history }) {
     >
        <Row className="justify-content-center">
           <Col xs={4} className="d-flex justify-content-center">
-            <h2 className="titulosSecciones">Ventas / Alquileres</h2>
+            <h2 className="titulosSecciones">Ventas</h2>
             
           </Col>
         </Row>

@@ -1,6 +1,5 @@
 import useAuth from "../../../../../hooks/useAuth";
 import Layout from "../../../../Layout";
-import BackButton from "../../../../../components/BackButton";
 import AgendaSecretaria from "../../../../../components/AgendaSecretaria";
 import { Container, Row } from "react-bootstrap";
 

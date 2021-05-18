@@ -1,7 +1,7 @@
 export const COLUMNS = [
     {
         Header: 'Nro. cliente',
-        accessor: 'id',
+        accessor: '_id',
     },
     {
         Header: 'Ubicacion',
@@ -18,10 +18,6 @@ export const COLUMNS = [
     {
         Header: 'Opciones de contrato',
         accessor: 'DatosDelInmueble.contrato',
-    },
-    {
-        Header: 'Servicios adheridos',
-        accessor: 'DatosDelInmueble.servicios',
     },
     {
         Header: 'Precio del inmueble',
