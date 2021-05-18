@@ -4,7 +4,7 @@ import BackButton from '../../../../components/BackButton';
 import ListaPropiedades from '../../../../components/ListaPropiedades';
 import useAuth from '../../../../hooks/useAuth';
 import Layout from '../../../Layout';
-
+document.querySelector("body").style.background = "";
 const PropiedadesMarketing = ({history}) => {
     const user = useAuth(history);
     return (

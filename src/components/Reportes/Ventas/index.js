@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../../layout/Layout";
 import Table from "../../Table";
@@ -11,15 +11,29 @@ export default function Ventas({ history }) {
     <Layout
       usuario={user}
     >
-        <h2>Ventas</h2>
+       <Row className="justify-content-center">
+          <Col xs={4} className="d-flex justify-content-center">
+            <h2 className="titulosSecciones">Ventas / Alquileres</h2>
+            
+          </Col>
+        </Row>
+       
+
+        <Row >
+          <Col>
         <Table columnas={COLUMNS} datos={ventas} rows={6}/>
+       
+        </Col>
+        </Row>
+       <div className='d-flex justify-content-center align-items-center align-content-center'>
         <Button
-              style={{ marginTop: "20px" }}
+              style={{ }}
               type="button"
               variant="info"
             >
               Imprimir reporte
         </Button>
+        </div>
     </Layout>
   )
 }

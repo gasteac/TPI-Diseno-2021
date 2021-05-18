@@ -14,25 +14,33 @@ const AgenteInmobiliario = ({ history }) => {
 
   return (
     <Layout usuario={user} cliente={true}>
-      <Container fluid className='d-sm-flex justify-content-center' style={{marginTop:'40px'}}>
-        <Row>
+      <Container
+        fluid
+        className="d-sm-flex justify-content-center"
+        style={{ marginTop: "40px" }}
+      >
+        <Row className="d-flex align-content-center align-items-center">
           <Col>
             <Notificaciones nombreDeUsuario="Chifflets" />
           </Col>
-          <Col className='d-flex align-content-center align-items-center'>
+          <Col className="d-flex align-content-center align-items-center">
             <Row xs={3}>
-                 <Col className='d-flex justify-content-center align-items-center'>
+              <Col className="d-flex justify-content-center align-items-center">
                 <ButtonCard user={user} seccion={"Clientes"} link={"link-1"} />
-                </Col>
-                <Col className='d-flex justify-content-center align-items-center'>
+              </Col>
+              <Col className="d-flex justify-content-center align-items-center">
                 <ButtonCard user={user} seccion={"Agenda"} link={"link-2"} />
-                </Col>
-                <Col className='d-flex justify-content-center align-items-center'>
-                <ButtonCard user={user}  seccion={"Propiedades"} link={"link-3"} />
-                </Col>
+              </Col>
+              <Col className="d-flex justify-content-center align-items-center">
+                <ButtonCard
+                  user={user}
+                  seccion={"Propiedades"}
+                  link={"link-3"}
+                />
+              </Col>
             </Row>
           </Col>
-          </Row>
+        </Row>
       </Container>
     </Layout>
   );

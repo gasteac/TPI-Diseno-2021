@@ -9,6 +9,10 @@ import PagoAlquiler from './images/pago_alquiler.svg'
 import PagoVenta from './images/pago_alquiler.svg'
 import Transacciones from './images/transacciones.svg'
 import CierreDeCaja from './images/cierre.svg'
+import Alquileres from './images/Alquileres.svg'
+import Ventas from './images/ventas.svg'
+import Reportes from './images/reportes.svg'
+import Caja from './images/caja.svg'
 
 // eslint-disable-next-line
 export default {
@@ -22,5 +26,9 @@ export default {
     PagoAlquiler,
     PagoVenta,
     Transacciones,
-    CierreDeCaja
+    CierreDeCaja,
+    Alquileres,
+    Ventas,
+    Reportes,
+    Caja
 }

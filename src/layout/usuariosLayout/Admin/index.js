@@ -34,7 +34,7 @@ const Admin = ({ history }) => {
             <FormAdmin usuario={"Jefa de Comercialización"} />
           </Col>
         </Row>
-        <Row className="justify-content-center mt-3">
+        <Row className="justify-content-center mt-3 mb-5">
           <Col xs={8}>
             <FormAdmin usuario={"Secretaria de Comercialización"} />
           </Col>

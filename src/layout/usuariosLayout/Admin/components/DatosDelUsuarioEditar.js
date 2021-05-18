@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
-
+document.querySelector('body').style.background = ""
 const DatosDelUsuarioEditar = () =>{
 
     const [formState, setFormState] = useState({

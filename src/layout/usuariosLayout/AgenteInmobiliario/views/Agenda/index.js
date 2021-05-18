@@ -13,9 +13,9 @@ export default function Agenda({ history }) {
     <Layout usuario={user}>
       <Container fluid>
         <Row className="justify-content-center">
-          <Col xs={2}>
+          <Col xs={2} className="d-flex justify-content-center">
             <h2 className="titulosSecciones">Agenda</h2>
-            <div style={{ marginLeft: "115px" }}></div>
+            
           </Col>
         </Row>
         <Row className="justify-content-center">

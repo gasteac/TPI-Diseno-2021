@@ -24,14 +24,14 @@
 
 .botoncita{
     transform-origin:center;
-    background:#6b646b90 !important;
+    background:#50628C !important;
     border:none !important
   }
 
 .botoncita:hover{
     transform-origin:center;
     animation: botoncita 10ms ease-in forwards;
-    background:#c7c0c790 !important;
+    background:#50628C80 !important;
     border: none !important;
   }
   @keyframes botoncita {

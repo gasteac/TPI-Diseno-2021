@@ -12,6 +12,7 @@ import Layout from "../../../Layout";
 import { Link } from "react-router-dom";
 import DatosDelUsuarioRegistrar from "./DatosDelUsuarioRegistrar";
 import BackButton from "../../../../components/BackButton";
+document.querySelector('body').style.background = ""
 const FormNuevoUsuario = ({ history }) => {
   const [validatedUsuario, setValidatedUsuario] =
     useState(false);
@@ -37,7 +38,9 @@ const FormNuevoUsuario = ({ history }) => {
   return (
     <Layout>
       <Container fluid>
+        <div className='mt-3' >
         <BackButton history={history} />
+        </div>
         <Form
           noValidate
           validated={validatedUsuario}

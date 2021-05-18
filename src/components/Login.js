@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import globalContext from "../context/globalContext";
 import Logo from "../static/images/inmoviliaria-1.svg";
-import Fondo from '../static/images/casitablur.jpg'
+import Fondo from '../static/images/interiores.jpg'
 
 const Login = ({ history }) => {
   const GlobalContext = useContext(globalContext);

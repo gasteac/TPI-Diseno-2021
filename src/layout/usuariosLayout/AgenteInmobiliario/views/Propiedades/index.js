@@ -12,7 +12,7 @@ export default function Propiedades({ history }) {
     <Layout usuario={user}>
       <Container className="mt-3 flex-column ">
         <Row className="justify-content-center">
-          <Col xs={4}>
+          <Col xs={4} className="d-flex justify-content-center">
               <h2 className="titulosSecciones m-auto">Propiedades</h2>
           </Col>
         </Row>
