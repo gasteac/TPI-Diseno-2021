@@ -33,7 +33,7 @@ export default function Citas({ history }) {
           </Col>
           <Col xs={12} className="d-flex justify-content-center">
             <Button variant="success" type="submit" onClick={handleNuevaCita}>
-                Agregar cita
+                Agregar Cita
             </Button>
           </Col>
         </Row>
