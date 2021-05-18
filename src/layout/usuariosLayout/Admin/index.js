@@ -3,9 +3,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import FormAdmin from "./components/FormAdmin";
+import Fondo from "../../../../src/static/images/casitablur.jpg";
 
 const Admin = ({ history }) => {
   const user = useAuth(history);
+  document.querySelector('body').style.background = `url(${Fondo})`
+  document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout>
       <Container fluid>

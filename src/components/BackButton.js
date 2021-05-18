@@ -3,7 +3,7 @@ import globalContext from "../context/globalContext";
 import React, { useContext } from "react";
 import { Button } from "react-bootstrap";
 
-export default function BackButton({ history }) {
+export default function BackButton({ history, otraRuta }) {
 
   const volver = () => {
     history.goBack();

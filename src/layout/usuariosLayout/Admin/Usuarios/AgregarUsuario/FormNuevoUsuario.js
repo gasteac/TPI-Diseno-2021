@@ -8,10 +8,10 @@ import {
   Form,
   Modal
 } from "react-bootstrap";
-import Layout from "../../../Layout";
+import Layout from "../../../../Layout";
 import { Link } from "react-router-dom";
 import DatosDelUsuarioRegistrar from "./DatosDelUsuarioRegistrar";
-import BackButton from "../../../../components/BackButton";
+import BackButton from "../../../../../components/BackButton";
 document.querySelector('body').style.background = ""
 const FormNuevoUsuario = ({ history }) => {
   const [validatedUsuario, setValidatedUsuario] =
@@ -34,7 +34,7 @@ const FormNuevoUsuario = ({ history }) => {
 
     setValidatedUsuario(true);
   };
- 
+  document.querySelector("body").style.background = "";
   return (
     <Layout>
       <Container fluid>

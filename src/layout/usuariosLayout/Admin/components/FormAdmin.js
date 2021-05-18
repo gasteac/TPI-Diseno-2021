@@ -26,12 +26,12 @@ const FormAdmin = ({usuario}) => {
               </Button>
             </Link>
 
-            <Button variant="info" type="button">
-              Ver Todos
-            </Button>
-            <Button variant="warning" type="button">
-              Editar Permisos
-            </Button>
+            <Link to={'/admin/listadoDeUsuarios'}>
+              <Button variant="info" type="button">
+                Ver Todos
+              </Button>  
+            </Link>
+            
           </Col>
         </Form.Group>
       </Form>

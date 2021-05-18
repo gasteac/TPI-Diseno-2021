@@ -8,10 +8,10 @@ import {
   Form,
   Modal
 } from "react-bootstrap";
-import Layout from "../../../Layout";
+import Layout from "../../../../Layout";
 import { Link } from "react-router-dom";
 import DatosDelUsuarioEditar from "./DatosDelUsuarioEditar";
-import BackButton from "../../../../components/BackButton";
+import BackButton from "../../../../../components/BackButton";
 document.querySelector('body').style.background = ""
 const FormEditarUsuario = ({ history }) => {
   const [validatedUsuario, setValidatedUsuario] = useState(false);

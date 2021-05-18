@@ -47,11 +47,13 @@ import TransaccionesRealizadas from "./layout/usuariosLayout/Cajera/views/Transa
 import Alquileres from "./components/Reportes/Alquileres";
 import ReportePropiedades from "./components/Reportes/Propiedades";
 import Ventas from "./components/Reportes/Ventas";
-import FormNuevoUsuario from "./layout/usuariosLayout/Admin/components/FormNuevoUsuario";
-import FormEditarUsuario from "./layout/usuariosLayout/Admin/components/FormEditarUsuario";
+import FormNuevoUsuario from "./layout/usuariosLayout/Admin/Usuarios/AgregarUsuario/FormNuevoUsuario";
+import FormEditarUsuario from "./layout/usuariosLayout/Admin/Usuarios/EditarUsuario/FormEditarUsuario";
+import ListadoDeUsuarios from "./layout/usuariosLayout/Admin/Usuarios/ListadoDeUsuarios/ListadoDeUsuarios";
 import CitasState from "./context/citasContext/citasState";
 import AsignarAgente from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/AsignarAgente";
 import NuevaCita from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/NuevaCita";
+import PropiedadesCita from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/PropiedadesCita";
 
 const App = () => {
   return (
@@ -156,6 +158,11 @@ const App = () => {
                 />
                 <Route
                   exact
+                  path="/secretariacomercializacion/citas/propiedadesCita"
+                  component={PropiedadesCita}
+                />
+                <Route
+                  exact
                   path="/secretariacomercializacion/agenda"
                   component={AgendaSec}
                 />
@@ -239,11 +246,25 @@ const App = () => {
                 <Route exact path="/jefacomercializacion/r.propiedades" component={ReportePropiedades} />
 
                 {/* ADMIN */}
-                <Route exact path="/admin/inicio" component={Admin} />
+                <Route 
+                  exact 
+                  path="/admin/inicio" 
+                  component={Admin} 
+                />
                 <Route
                   exact
                   path="/admin/nuevoUsuario"
                   component={FormNuevoUsuario}
+                />
+                <Route
+                  exact
+                  path="/admin/editarUsuario"
+                  component={FormEditarUsuario}
+                />
+                <Route
+                  exact
+                  path="/admin/listadoDeUsuarios"
+                  component={ListadoDeUsuarios}
                 />
 
                 {/* Jefa administracion */}
