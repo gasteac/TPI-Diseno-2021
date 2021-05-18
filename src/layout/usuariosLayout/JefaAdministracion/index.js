@@ -20,7 +20,7 @@ document.querySelector('body').style.backgroundSize = `cover`
                 <Row>
                 <Col>
                     <h2>Reportes</h2>
-                    <ButtonCard user={user} seccion={"Transacciones"} link={"link-1"} />
+                    <ButtonCard user={user} seccion={"R.Transacciones"} link={"link-1"} />
                 </Col>
                 <Col>
                     <ButtonCard user={user} seccion={"Clientes"} link={"link-2"} />
