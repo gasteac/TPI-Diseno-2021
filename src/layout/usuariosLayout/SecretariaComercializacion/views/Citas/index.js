@@ -31,7 +31,7 @@ export default function Citas({ history }) {
           <Col xs={12} className="d-flex justify-content-center">
             <h2 className="titulosSecciones">Citas Confirmadas</h2>
           </Col>
-          <Col xs={12} className="d-flex justify-content-start">
+          <Col xs={12} className="d-flex justify-content-center">
             <Button variant="success" type="submit" onClick={handleNuevaCita}>
                 Agregar cita
             </Button>
