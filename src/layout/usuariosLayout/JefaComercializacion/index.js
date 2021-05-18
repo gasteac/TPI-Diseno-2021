@@ -30,10 +30,11 @@ document.querySelector('body').style.backgroundSize = `cover`
                         <ButtonCard user={user}  seccion={"Clientes"} link={"link-3"} />
                     </Col>
                     <Col>
-                        <ButtonCard user={user}  seccion={"R.Ventas"} link={"link-4"} />
-                        <ButtonCard user={user}  seccion={"R.Alquileres"} link={"link-5"} />
-                        <ButtonCard user={user}  seccion={"R.Clientes"} link={"link-6"} />
-                        <ButtonCard user={user}  seccion={"R.Propiedades"} link={"link-7"} />
+                    <h2>Reportes</h2>
+                        <ButtonCard user={user}  seccion={"Ventas"} link={"link-4"} />
+                        <ButtonCard user={user}  seccion={"Alquileres"} link={"link-5"} />
+                        <ButtonCard user={user}  seccion={"Clientes"} link={"link-6"} />
+                        <ButtonCard user={user}  seccion={"Propiedades"} link={"link-7"} />
                     </Col>
                 </Row>
             </Col>

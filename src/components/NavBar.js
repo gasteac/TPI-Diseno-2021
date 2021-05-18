@@ -22,9 +22,9 @@ const NavBar = ({ cliente }) => {
     ],
     marketing: ["Inicio", "Propiedades"],
     admin: [],
-    jefacomercializacion: ['Inicio', 'R.Alquileres', 'R.Clientes', 'R.Propiedades', 'Propiedades', 'Agenda', 'Clientes'],
-    jefaadministracion: ['Inicio', 'R.Transacciones', 'Clientes'],
-    gerentegeneral: ['Inicio', 'R.Clientes', 'R.Alquileres', 'R.Entradas/Salidas', 'R.Propiedades', 'R.Transacciones', 'R.Ventas',]
+    jefacomercializacion: ['Inicio', 'Alquileres', 'Clientes', 'Propiedades', 'Propiedades', 'Agenda', 'Clientes'],
+    jefaadministracion: ['Inicio', 'Transacciones', 'Clientes'],
+    gerentegeneral: ['Inicio', 'Clientes', 'Alquileres', 'Entradas/Salidas', 'Propiedades', 'Transacciones', 'Ventas',]
   };
 
   const handleClick = (i) => {
@@ -58,8 +58,7 @@ const NavBar = ({ cliente }) => {
                     .replace(" ", "")
                     .replace(" ", "")
                     .replace("¿", "")
-                    .replace("/", "")
-                    .replace(".", "")}`}
+                    .replace("/", "")}`}
                   eventKey={`link-${i}`}
                 >
                   {item}
