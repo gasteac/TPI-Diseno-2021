@@ -28,7 +28,7 @@ document.querySelector("body").style.backgroundSize = `cover`;
             <ButtonCard user={user} seccion={"Clientes"} link={"link-1"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
-            <ButtonCard user={user} seccion={"EntradaSalida"} link={"link-3"} />
+            <ButtonCard user={user} seccion={"EntradasSalidas"} link={"link-3"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
             <ButtonCard user={user} seccion={"Transacciones"} link={"link-5"} />

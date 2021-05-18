@@ -1,8 +1,9 @@
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import { COLUMNS } from './columnas';
 import Table from "../../Table";
 import alquileres from './alquilereslindo.json';
 import useAuth from "../../../hooks/useAuth";
+import Layout from "../../../layout/Layout";
 
 
 export default function Alquileres({ history }) {
@@ -11,15 +12,22 @@ export default function Alquileres({ history }) {
     <Layout
       usuario={user}
     >
-        <h2>Alquileres</h2>
+      <Row className="justify-content-center">
+          <Col xs={4} className="d-flex justify-content-center">
+            <h2 className="titulosSecciones">Alquileres</h2>
+            
+          </Col>
+        </Row>
         <Table columnas={COLUMNS} datos={alquileres} rows={7}/>
+        <div className='d-flex justify-content-center align-items-center align-content-center'>
         <Button
-              style={{ marginTop: "20px" }}
+              style={{ }}
               type="button"
               variant="info"
             >
               Imprimir reporte
         </Button>
+        </div>
     </Layout>
   )
 }

@@ -54,6 +54,8 @@ export default function TransaccionesRealizadas({ history }) {
     });
   };
 
+  const userBolean = user.includes('jefaadministracion') || user.includes("gerentegeneral") || user.includes('jefacomercializacion')
+
   return (
     <Layout usuario={user}>
       <Container fluid>
@@ -146,7 +148,8 @@ export default function TransaccionesRealizadas({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          {user.includes("gerentegeneral") ? (
+          {console.log(user)}
+          {userBolean ? (
             <Button style={{ marginTop: "20px" }} type="button" variant="info">
               Imprimir reporte
             </Button>
