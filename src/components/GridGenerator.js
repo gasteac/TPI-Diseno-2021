@@ -9,7 +9,7 @@ const GridPropiedadesGenerator = ({ cols, children }) => {
       {rows.map((cols) => (
         <Row className="p-3 justify-content-md-around">
           {cols.map((col) => (
-            <Col md={6} lg={4} xs={12} className="d-flex justify-content-center">
+            <Col xs={12} md={4} className="d-flex justify-content-center">
                 {col}
             </Col>
           ))}

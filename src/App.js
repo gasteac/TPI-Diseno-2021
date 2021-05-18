@@ -51,6 +51,7 @@ import FormNuevoUsuario from "./layout/usuariosLayout/Admin/components/FormNuevo
 import FormEditarUsuario from "./layout/usuariosLayout/Admin/components/FormEditarUsuario";
 import CitasState from "./context/citasContext/citasState";
 import AsignarAgente from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/AsignarAgente";
+import NuevaCita from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/NuevaCita";
 
 const App = () => {
   return (
@@ -147,6 +148,11 @@ const App = () => {
                   exact
                   path="/secretariacomercializacion/citas/asignaragente"
                   component={AsignarAgente}
+                />
+                <Route
+                  exact
+                  path="/secretariacomercializacion/citas/nuevacita"
+                  component={NuevaCita}
                 />
                 <Route
                   exact

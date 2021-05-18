@@ -16,9 +16,7 @@ export default function Propiedades({ history }) {
               <h2 className="titulosSecciones m-auto">Propiedades</h2>
           </Col>
         </Row>
-        <Row>
           <ListaPropiedades history={history} />
-        </Row>
       </Container>
     </Layout>
   );

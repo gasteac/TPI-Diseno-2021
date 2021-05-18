@@ -16,9 +16,7 @@ const PropiedadesClientes = ({ history }) => {
         <Row className="justify-content-center">
           <h2 className="titulosSecciones m-auto">Propiedades</h2>
         </Row>
-        <Row>
           <ListaPropiedades history={history} />
-        </Row>
       </Container>
     </Layout>
   );
