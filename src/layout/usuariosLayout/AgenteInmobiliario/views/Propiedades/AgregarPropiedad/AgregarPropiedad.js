@@ -85,53 +85,53 @@ const AgregarPropiedad = ({ history }) => {
 
   return (
     <Layout>
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "12px",
-        }}
-      >
-        <BackButton history={history} />
-
-        <h2 className="titulosSecciones">Agregar propiedad</h2>
-        <div style={{ marginLeft: "115px" }}></div>
-      </Container>
       <Container fluid>
-        <Form
-          noValidate
-          validated={validatedPropiedad}
-          onSubmit={handleSubmitPropiedad}
-        >
-          <Row className="mt-3 mb-0">
-            <Col xs={8}>
-              <Card>
-                <Card.Header as="h2">Datos de la propiedad</Card.Header>
-                <Card.Body>
-                  <DatosDeLaPropiedadForm
-                    setPropiedad={setPropiedad}
-                    nuevaPropiedad={nuevaPropiedad}
-                  />
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={4}>
-              <Card>
-                <Card.Header as="h2">Datos del Propietario</Card.Header>
-                <Card.Body>
-                  <DatosDelPropietario />
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <Row className="justify-content-center my-3">
-            <Col xs={4}>
-              <Button type="sumbit" variant="success" block>
-                Agregar Propiedad
-              </Button>
-            </Col>
-          </Row>
-        </Form>
+        <Row>
+          <BackButton history={history} />
+        </Row>
+        <Row className="justify-content-center">
+          <Col xs={4}>
+          <h2 className="titulosSecciones">Agregar propiedad</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form
+              noValidate
+              validated={validatedPropiedad}
+              onSubmit={handleSubmitPropiedad}
+            >
+              <Row className="mt-3 mb-0">
+                <Col xs={8}>
+                  <Card>
+                    <Card.Header as="h2">Datos de la propiedad</Card.Header>
+                    <Card.Body>
+                      <DatosDeLaPropiedadForm
+                        setPropiedad={setPropiedad}
+                        nuevaPropiedad={nuevaPropiedad}
+                      />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col xs={4}>
+                  <Card>
+                    <Card.Header as="h2">Datos del Propietario</Card.Header>
+                    <Card.Body>
+                      <DatosDelPropietario />
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row className="justify-content-center my-3">
+                <Col xs={4}>
+                  <Button type="sumbit" variant="success" block>
+                    Agregar Propiedad
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
+          </Col>
+        </Row>
       </Container>
 
       <Modal show={show} onHide={handleClose} backdrop="static">

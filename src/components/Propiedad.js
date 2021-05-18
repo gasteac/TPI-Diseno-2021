@@ -11,8 +11,8 @@ import {
 import useAuth from "../hooks/useAuth";
 import Layout from "../layout/Layout";
 import DatosDeContactoComponent from "./DatosDeContactoComponent";
-import imagen2 from './ListaPropiedades/components/propiedadesIMG/1.jpg'
-import imagen3 from './ListaPropiedades/components/propiedadesIMG/2.jpg'
+import imagen2 from "./ListaPropiedades/components/propiedadesIMG/1.jpg";
+import imagen3 from "./ListaPropiedades/components/propiedadesIMG/2.jpg";
 import DatosDelInmuebleComponent from "./DatosDelInmuebleComponent";
 import propiedadesContext from "../context/contextPropiedades/propiedadesContext";
 import BackButton from "./BackButton";
@@ -34,8 +34,12 @@ const Propiedad = ({ history }) => {
   };
 
   const handleClickEditarImagenes = () => {
-    history.push('/marketing/editarpropiedad')
+    history.push("/marketing/editarpropiedad");
   };
+
+  const handleClickSiguiente = () => {
+    history.push('/secretariacomercializacion/citas/asignaragente')
+  }
 
   return (
     <Layout>
@@ -43,7 +47,7 @@ const Propiedad = ({ history }) => {
       <Container style={{ marginTop: "20px", marginBottom: "20px" }}>
         <Row>
           <Col xs={7}>
-            <Row >
+            <Row>
               <Carousel>
                 <Carousel.Item>
                   <Image
@@ -53,7 +57,9 @@ const Propiedad = ({ history }) => {
                     alt="First slide"
                   />
                   <Carousel.Caption>
-                    <h3>{DatosDelInmueble.tipo} {DatosDelInmueble.tituloPropiedad}</h3>
+                    <h3>
+                      {DatosDelInmueble.tipo} {DatosDelInmueble.tituloPropiedad}
+                    </h3>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -64,7 +70,9 @@ const Propiedad = ({ history }) => {
                     alt="Second slide"
                   />
                   <Carousel.Caption>
-                    <h3>{DatosDelInmueble.tipo} {DatosDelInmueble.tituloPropiedad}</h3>
+                    <h3>
+                      {DatosDelInmueble.tipo} {DatosDelInmueble.tituloPropiedad}
+                    </h3>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -75,7 +83,9 @@ const Propiedad = ({ history }) => {
                     alt="Third slide"
                   />
                   <Carousel.Caption>
-                    <h3>{DatosDelInmueble.tipo} {DatosDelInmueble.tituloPropiedad}</h3>
+                    <h3>
+                      {DatosDelInmueble.tipo} {DatosDelInmueble.tituloPropiedad}
+                    </h3>
                   </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
@@ -122,7 +132,7 @@ const Propiedad = ({ history }) => {
                   >
                     Programar cita
                   </Button>
-                ) : (
+                ) : user === "marketing" ? (
                   <Button
                     style={{ marginTop: "20px" }}
                     type="button"
@@ -130,6 +140,15 @@ const Propiedad = ({ history }) => {
                     onClick={handleClickEditarImagenes}
                   >
                     Editar Imágenes
+                  </Button>
+                ) : (
+                  <Button
+                    style={{ marginTop: "20px" }}
+                    type="button"
+                    variant="secondary"
+                    onClick={handleClickSiguiente}
+                  >
+                    Siguiente
                   </Button>
                 )}
               </Col>
