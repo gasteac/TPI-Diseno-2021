@@ -58,7 +58,7 @@ export default function Citas({ history }) {
             </Button>
           </Col>
           <Col xs={2}>
-            <Button variant="secondary" type="button">
+            <Button variant="dark" type="button">
               Editar Citas
             </Button>
           </Col>
