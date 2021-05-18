@@ -23,17 +23,18 @@ const EditarPropiedad = ({ history }) => {
   const [validatedPropiedad, setValidatedPropiedad] = useState(false);
 
   const PropiedadesContext = useContext(propiedadesContext);
-  const { propiedadSeleccionada, updatePropiedades, deletePropiedad } = PropiedadesContext;
+  const { propiedadSeleccionada, updatePropiedades, deletePropiedad } =
+    PropiedadesContext;
 
   const { DatosDeContacto, DatosDelInmueble: DatosDelInmuebleEditar } =
-  propiedadSeleccionada;
+    propiedadSeleccionada;
 
   const [nuevaPropiedad, setPropiedad] = useState(propiedadSeleccionada);
 
   const [showEditar, setShowEditar] = useState(false);
   const handleCloseEditar = () => {
-    setShowEditar(false)
-    history.push('/agenteinmobiliario/propiedades')
+    setShowEditar(false);
+    history.push("/agenteinmobiliario/propiedades");
   };
   const handleShowEditar = () => setShowEditar(true);
 
@@ -47,7 +48,7 @@ const EditarPropiedad = ({ history }) => {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      updatePropiedades(nuevaPropiedad)
+      updatePropiedades(nuevaPropiedad);
       handleShowEditar();
       event.preventDefault();
       event.stopPropagation();
@@ -59,72 +60,70 @@ const EditarPropiedad = ({ history }) => {
   const handleSubmitELiminar = () => {
     handleShowEliminar();
     deletePropiedad(propiedadSeleccionada);
-    history.push('/agenteinmobiliario/propiedades')
+    history.push("/agenteinmobiliario/propiedades");
   };
 
   return (
     <Layout>
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "12px",
-        }}
-      >
-        <BackButton history={history} />
-
-        <h2 className="titulosSecciones">Editar propiedad</h2>
-        <div style={{ marginLeft: "115px" }}></div>
-      </Container>
       <Container fluid>
-        <Form
-          noValidate
-          validated={validatedPropiedad}
-          onSubmit={handleSubmitPropiedad}
-        >
-          <Row className="mt-3">
-            <Col xs={8}>
-              <Card>
-                <Card.Header as="h2">Datos de la propiedad</Card.Header>
-                <Card.Body>
-                  <DatosDeLaPropiedadForm
-                    DatosDelInmuebleEditar={DatosDelInmuebleEditar}
-                    nuevaPropiedad={nuevaPropiedad}
-                    setPropiedad={setPropiedad}
-                  />
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={4}>
-              <Card>
-                <Card.Header as="h2">Datos del Propietario</Card.Header>
-                <Card.Body>
-                  <DatosDelPropietario DatosDeContacto={DatosDeContacto} />
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <Row className="justify-content-center my-3">
-            <Col xs={3}>
-              <Button
-                type="sumbit"
-                variant="success"
-                block
-              >
-                Editar Propiedad
-              </Button>
-            </Col>
-            <Col xs={2}>
-              <Button
-                variant="outline-danger"
-                onClick={handleShowEliminar}
-                block
-              >
-                Eliminar Propiedad
-              </Button>
-            </Col>
-          </Row>
-        </Form>
+        <Row>
+          <Col>
+            <BackButton history={history} />
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col xs={4}>
+            <h2 className="titulosSecciones">Editar propiedad</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form
+              noValidate
+              validated={validatedPropiedad}
+              onSubmit={handleSubmitPropiedad}
+            >
+              <Row className="mt-3">
+                <Col xs={8}>
+                  <Card>
+                    <Card.Header as="h2">Datos de la propiedad</Card.Header>
+                    <Card.Body>
+                      <DatosDeLaPropiedadForm
+                        DatosDelInmuebleEditar={DatosDelInmuebleEditar}
+                        nuevaPropiedad={nuevaPropiedad}
+                        setPropiedad={setPropiedad}
+                      />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col xs={4}>
+                  <Card>
+                    <Card.Header as="h2">Datos del Propietario</Card.Header>
+                    <Card.Body>
+                      <DatosDelPropietario DatosDeContacto={DatosDeContacto} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row className="justify-content-center my-3">
+                <Col xs={3}>
+                  <Button type="sumbit" variant="success" block>
+                    Editar Propiedad
+                  </Button>
+                </Col>
+                <Col xs={2}>
+                  <Button
+                    variant="outline-danger"
+                    onClick={handleShowEliminar}
+                    block
+                  >
+                    Eliminar Propiedad
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
+          </Col>
+        </Row>
       </Container>
 
       <Modal show={showEditar} onHide={handleCloseEditar} backdrop="static">
@@ -149,12 +148,12 @@ const EditarPropiedad = ({ history }) => {
           ¿Esta seguro de que quieres eliminar la propiedad?
         </Modal.Body>
         <Modal.Footer>
-            <Button variant="outline-danger"  onClick={handleCloseEliminar}>
-              No eliminar
-            </Button>
-            <Button variant="danger"  onClick={handleSubmitELiminar}>
-              Eliminar
-            </Button>
+          <Button variant="outline-danger" onClick={handleCloseEliminar}>
+            No eliminar
+          </Button>
+          <Button variant="danger" onClick={handleSubmitELiminar}>
+            Eliminar
+          </Button>
         </Modal.Footer>
       </Modal>
     </Layout>
