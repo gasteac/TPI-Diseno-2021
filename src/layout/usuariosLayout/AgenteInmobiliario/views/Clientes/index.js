@@ -11,16 +11,16 @@ import {
   Modal,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "./index.css";
 import Table from "../../../../../components/Table";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import clientesContext from "../../../../../context/contextClientes/clientesContext";
 
 export default function ListaClientes({ history }) {
   const user = useAuth(history);
 
   const ClientesContext = useContext(clientesContext);
-  const { clientes, setClientesSeleccionados, eliminarCliente } = ClientesContext;
+  const { clientes, setClientesSeleccionados, eliminarCliente } =
+    ClientesContext;
 
   const [showEliminar, setShowEliminar] = useState(false);
   const handleCloseEliminar = () => setShowEliminar(false);
@@ -28,9 +28,9 @@ export default function ListaClientes({ history }) {
 
   const confirmarEliminar = () => {
     eliminarCliente();
-    setShowEliminar(false)
-  }
-
+    setShowEliminar(false);
+  };
+  document.querySelector("body").style.background = "";
 
   return (
     <Layout>

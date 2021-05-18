@@ -1,14 +1,26 @@
 import Layout from "../../../../Layout";
 import Table from "../../../../../components/Table/";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import BackButton from "../../../../../components/BackButton";
 import { COLUMNS1, COLUMNS2 } from "./assets/columns.js";
 import columns1Data from "./assets/columns1-data.json";
 import columns2Data from "./assets/columns2-data.json";
 import useAuth from "../../../../../hooks/useAuth";
+import { useContext } from "react";
+import citasContext from "../../../../../context/citasContext/citasContext";
 
 export default function Citas({ history }) {
   const user = useAuth(history);
+
+  const CitasContext = useContext(citasContext);
+  const { solicitudes, citasSeleccionadas, setCitasSeleccionadas } =
+    CitasContext;
+
+  const handleAsignarAgente = () => {
+    if (citasSeleccionadas.length !== 0) {
+      history.push("/secretariacomercializacion/citas/asignaragente");
+    }
+  };
 
   return (
     <Layout usuario={user}>
@@ -22,11 +34,25 @@ export default function Citas({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Col xs={4}>
+          <Col xs={8} className="d-flex justify-content-end">
             <h2 className="titulosSecciones">Solicitudes de citas</h2>
           </Col>
+          <Col className="d-flex align-items-center justify-content-center">
+            <Button
+              variant="primary"
+              type="button"
+              onClick={handleAsignarAgente}
+            >
+              Asignar agentes
+            </Button>
+          </Col>
           <Col xs={12}>
-            <Table columnas={COLUMNS2} datos={columns2Data} rows={8} />
+            <Table
+              columnas={COLUMNS2}
+              datos={solicitudes}
+              rows={8}
+              setCitasSeleccionadas={setCitasSeleccionadas}
+            />
           </Col>
         </Row>
       </Container>

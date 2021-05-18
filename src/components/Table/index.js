@@ -10,7 +10,6 @@ import {
 } from "react-table";
 import ColumnFilter from "./components/ColumnFilter";
 import { Checkbox } from "./components/Checkbox";
-import { Row } from "react-bootstrap";
 
 export default function Table({
   columnas,
@@ -18,6 +17,7 @@ export default function Table({
   rows = 8,
   flag = true,
   setClientesSeleccionados = () => {},
+  setCitasSeleccionadas = () => {}
 }) {
   // eslint-disable-next-line
   const columns = useMemo(() => columnas, []);
@@ -86,6 +86,7 @@ export default function Table({
   }, []);
 
   useEffect(() => {
+    setCitasSeleccionadas(selectedFlatRows)
     setClientesSeleccionados(selectedFlatRows);
   }, [selectedFlatRows]);
 

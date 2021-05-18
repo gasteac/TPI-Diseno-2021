@@ -49,225 +49,242 @@ import ReportePropiedades from "./components/Reportes/Propiedades";
 import Ventas from "./components/Reportes/Ventas";
 import FormNuevoUsuario from "./layout/usuariosLayout/Admin/components/FormNuevoUsuario";
 import FormEditarUsuario from "./layout/usuariosLayout/Admin/components/FormEditarUsuario";
+import CitasState from "./context/citasContext/citasState";
+import AsignarAgente from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/AsignarAgente";
 
 const App = () => {
   return (
     <GlobalState>
       <PropiedadesState>
         <ClientesState>
-          <Router>
-            <Switch>
-              <Route exact path="/" component={Login} />
-              <Route
-                exact
-                path="/agenteinmobiliario/inicio"
-                component={AgenteInmobiliario}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/Agenda"
-                component={Agenda}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/Propiedades"
-                component={Propiedades}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/propiedades/agregarpropiedad"
-                component={AgregarPropiedad}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/Clientes"
-                component={ListaClientes}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/Clientes/AgregarClienteCorporativo"
-                component={AgregarClienteCorporativo}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/Clientes/AgregarClientePropietario"
-                component={AgregarClientePropietario}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/Clientes/EditarCliente"
-                component={EditarCliente}
-              />
-              <Route
-                exact
-                path="/agenteinmobiliario/propiedades/editarpropiedad"
-                component={EditarPropiedad}
-              />
+          <CitasState>
+            <Router>
+              <Switch>
+                <Route exact path="/" component={Login} />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/inicio"
+                  component={AgenteInmobiliario}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/Agenda"
+                  component={Agenda}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/Propiedades"
+                  component={Propiedades}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/propiedades/agregarpropiedad"
+                  component={AgregarPropiedad}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/Clientes"
+                  component={ListaClientes}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/Clientes/AgregarClienteCorporativo"
+                  component={AgregarClienteCorporativo}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/Clientes/AgregarClientePropietario"
+                  component={AgregarClientePropietario}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/Clientes/EditarCliente"
+                  component={EditarCliente}
+                />
+                <Route
+                  exact
+                  path="/agenteinmobiliario/propiedades/editarpropiedad"
+                  component={EditarPropiedad}
+                />
 
-              {/* CLiente-Agente */}
-              <Route
-                exact
-                path="/propiedades/propiedad"
-                component={Propiedad}
-              />
+                {/* CLiente-Agente */}
+                <Route
+                  exact
+                  path="/propiedades/propiedad"
+                  component={Propiedad}
+                />
 
-              {/* Clientes */}
-              <Route exact path="/cliente/inicio" component={Clientes} />
-              <Route
-                exact
-                path="/cliente/propiedades"
-                component={PropiedadesClientes}
-              />
-              <Route
-                exact
-                path="/cliente/programarcita"
-                component={ProgramarCitaCliente}
-              />
-              <Route
-                exact
-                path="/cliente/quienessomos"
-                component={QuienesSomos}
-              />
+                {/* Clientes */}
+                <Route exact path="/cliente/inicio" component={Clientes} />
+                <Route
+                  exact
+                  path="/cliente/propiedades"
+                  component={PropiedadesClientes}
+                />
+                <Route
+                  exact
+                  path="/cliente/programarcita"
+                  component={ProgramarCitaCliente}
+                />
+                <Route
+                  exact
+                  path="/cliente/quienessomos"
+                  component={QuienesSomos}
+                />
 
-              {/* SecretariaComercializacion */}
-              <Route
-                exact
-                path="/secretariacomercializacion/inicio"
-                component={SecretariaComercializacion}
-              />
-              <Route
-                exact
-                path="/secretariacomercializacion/citas"
-                component={Citas}
-              />
-              <Route
-                exact
-                path="/secretariacomercializacion/agenda"
-                component={AgendaSec}
-              />
+                {/* SecretariaComercializacion */}
+                <Route
+                  exact
+                  path="/secretariacomercializacion/inicio"
+                  component={SecretariaComercializacion}
+                />
+                <Route
+                  exact
+                  path="/secretariacomercializacion/citas"
+                  component={Citas}
+                />
+                <Route
+                  exact
+                  path="/secretariacomercializacion/citas/asignaragente"
+                  component={AsignarAgente}
+                />
+                <Route
+                  exact
+                  path="/secretariacomercializacion/agenda"
+                  component={AgendaSec}
+                />
 
-              {/* Cajera */}
-              <Route exact path="/cajera/inicio" component={Cajera} />
-              <Route exact path="/cajera/pagoventa" component={PagoVenta} />
-              <Route
-                exact
-                path="/cajera/pagoalquiler"
-                component={PagoAlquiler}
-              />
-              <Route
-                exact
-                path="/cajera/EntradaSalida"
-                component={EntradaSalida}
-              />
-              <Route
-                exact
-                path="/cajera/transacciones"
-                component={Transacciones}
-              />
-              <Route exact path="/cajera/cierredecaja" component={CierreCaja} />
+                {/* Cajera */}
+                <Route exact path="/cajera/inicio" component={Cajera} />
+                <Route exact path="/cajera/pagoventa" component={PagoVenta} />
+                <Route
+                  exact
+                  path="/cajera/pagoalquiler"
+                  component={PagoAlquiler}
+                />
+                <Route
+                  exact
+                  path="/cajera/EntradaSalida"
+                  component={EntradaSalida}
+                />
+                <Route
+                  exact
+                  path="/cajera/transacciones"
+                  component={Transacciones}
+                />
+                <Route
+                  exact
+                  path="/cajera/cierredecaja"
+                  component={CierreCaja}
+                />
 
-              {/* Empleado de Marketing */}
+                {/* Empleado de Marketing */}
 
-              <Route
-                exact
-                path="/marketing/inicio"
-                component={EmpleadoDeMarketing}
-              />
-              <Route
-                exact
-                path="/marketing/propiedades"
-                component={PropiedadesMarketing}
-              />
-              <Route
-                exact
-                path="/marketing/editarpropiedad"
-                component={EditarImagenes}
-              />
+                <Route
+                  exact
+                  path="/marketing/inicio"
+                  component={EmpleadoDeMarketing}
+                />
+                <Route
+                  exact
+                  path="/marketing/propiedades"
+                  component={PropiedadesMarketing}
+                />
+                <Route
+                  exact
+                  path="/marketing/editarpropiedad"
+                  component={EditarImagenes}
+                />
 
-              {/* Jefa comercialización */}
-              <Route
-                exact
-                path="/jefacomercializacion/inicio"
-                component={JefaComercializacion}
-              />
-              <Route
-                exact
-                path="/jefacomercializacion/Clientes"
-                component={ListaClientes}
-              />
-              <Route
-                exact
-                path="/jefacomercializacion/Clientes/AgregarClienteCorporativo"
-                component={AgregarClienteCorporativo}
-              />
-              <Route
-                exact
-                path="/jefacomercializacion/Clientes/AgregarClientePropietario"
-                component={AgregarClientePropietario}
-              />
-              <Route
-                exact
-                path="/jefacomercializacion/agenda"
-                component={AgendaSec}
-              />
-              <Route
-                exact
-                path="/jefacomercializacion/Propiedades"
-                component={Propiedades}
-              />
+                {/* Jefa comercialización */}
+                <Route
+                  exact
+                  path="/jefacomercializacion/inicio"
+                  component={JefaComercializacion}
+                />
+                <Route
+                  exact
+                  path="/jefacomercializacion/Clientes"
+                  component={ListaClientes}
+                />
+                <Route
+                  exact
+                  path="/jefacomercializacion/Clientes/AgregarClienteCorporativo"
+                  component={AgregarClienteCorporativo}
+                />
+                <Route
+                  exact
+                  path="/jefacomercializacion/Clientes/AgregarClientePropietario"
+                  component={AgregarClientePropietario}
+                />
+                <Route
+                  exact
+                  path="/jefacomercializacion/agenda"
+                  component={AgendaSec}
+                />
+                <Route
+                  exact
+                  path="/jefacomercializacion/Propiedades"
+                  component={Propiedades}
+                />
 
-              {/* ADMIN */}
-              <Route exact path="/admin/inicio" component={Admin} />
-              <Route exact path="/admin/nuevoUsuario" component={FormNuevoUsuario} />
+                {/* ADMIN */}
+                <Route exact path="/admin/inicio" component={Admin} />
+                <Route
+                  exact
+                  path="/admin/nuevoUsuario"
+                  component={FormNuevoUsuario}
+                />
 
-              {/* Jefa administracion */}
-              <Route
-                exact
-                path="/jefaadministracion/inicio"
-                component={JefaAdministracion}
-              />
-              <Route
-                exact
-                path="/jefaadministracion/Clientes"
-                component={ListaClientes}
-              />
+                {/* Jefa administracion */}
+                <Route
+                  exact
+                  path="/jefaadministracion/inicio"
+                  component={JefaAdministracion}
+                />
+                <Route
+                  exact
+                  path="/jefaadministracion/Clientes"
+                  component={ListaClientes}
+                />
 
-              {/* Gerente general */}
-              <Route
-                exact
-                path="/gerentegeneral/inicio"
-                component={GerenteGeneral}
-              />
-              <Route
-                exact
-                path="/gerentegeneral/clientes"
-                component={ListaClientes}
-              />
-              <Route
-                exact
-                path="/gerentegeneral/transacciones"
-                component={TransaccionesRealizadas}
-              />
-              <Route
-                exact
-                path="/gerentegeneral/entradassalidas"
-                component={EntradaSalida}
-              />
-              <Route
-                exact
-                path="/gerentegeneral/alquileres"
-                component={Alquileres}
-              />
-              <Route
-                exact
-                path="/gerentegeneral/propiedades"
-                component={ReportePropiedades}
-              />
-              <Route exact path="/gerentegeneral/ventas" component={Ventas} />
+                {/* Gerente general */}
+                <Route
+                  exact
+                  path="/gerentegeneral/inicio"
+                  component={GerenteGeneral}
+                />
+                <Route
+                  exact
+                  path="/gerentegeneral/clientes"
+                  component={ListaClientes}
+                />
+                <Route
+                  exact
+                  path="/gerentegeneral/transacciones"
+                  component={TransaccionesRealizadas}
+                />
+                <Route
+                  exact
+                  path="/gerentegeneral/entradassalidas"
+                  component={EntradaSalida}
+                />
+                <Route
+                  exact
+                  path="/gerentegeneral/alquileres"
+                  component={Alquileres}
+                />
+                <Route
+                  exact
+                  path="/gerentegeneral/propiedades"
+                  component={ReportePropiedades}
+                />
+                <Route exact path="/gerentegeneral/ventas" component={Ventas} />
 
-              {/* <Redirect to="/" /> */}
-            </Switch>
-          </Router>
+                {/* <Redirect to="/" /> */}
+              </Switch>
+            </Router>
+          </CitasState>
         </ClientesState>
       </PropiedadesState>
     </GlobalState>
