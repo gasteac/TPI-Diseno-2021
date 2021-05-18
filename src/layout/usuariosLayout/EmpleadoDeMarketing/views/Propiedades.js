@@ -1,6 +1,6 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
-import BackButton from '../../../../components/BackButton';
+import { Container, Row } from 'react-bootstrap';
+
 import ListaPropiedades from '../../../../components/ListaPropiedades';
 import useAuth from '../../../../hooks/useAuth';
 import Layout from '../../../Layout';

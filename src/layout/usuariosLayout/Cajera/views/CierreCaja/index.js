@@ -1,7 +1,6 @@
 import Layout from "../../../../Layout";
 import Table from "../../../../../components/Table/";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
 import { columns } from "./assets/columns";
 import MOCK_DATA from "./assets/MOCK_DATA.json";
 import { Col, Container, Row } from "react-bootstrap";

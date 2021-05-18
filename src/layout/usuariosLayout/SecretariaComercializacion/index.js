@@ -9,7 +9,7 @@ export default function SecretariaComercializacion({ history }) {
   document.querySelector("body").style.background = `url(${img})`;
   document.querySelector("body").style.backgroundSize = `cover`;
   return (
-    <Layout cliente={true}>
+    <Layout cliente={true} user={user}>
       <Container
         fluid
         className="d-flex justify-content-center"

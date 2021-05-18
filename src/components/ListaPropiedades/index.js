@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import propiedadesContext from "../../context/contextPropiedades/propiedadesContext";
-import globalContext from "../../context/globalContext";
 import Propiedades from "./components/Propiedades";
 
 export default function ListaPropiedades({ history }) {
@@ -9,19 +8,19 @@ export default function ListaPropiedades({ history }) {
 
   const [propiedadesMostradas, setPropiedadesMostradas] = useState(null)
 
-  const GlobalContext = useContext(globalContext);
-  const { filter } = GlobalContext;
-  const {
-    nombre,
-    precioMayor,
-    precioMenor,
-    tipo,
-    ubicacion,
-    habitaciones,
-    baños,
-    m2TotalesMayor,
-    m2TotalesMenor,
-  } = filter;
+  // const GlobalContext = useContext(globalContext);
+  // const { filter } = GlobalContext;
+  // const {
+  //   nombre,
+  //   precioMayor,
+  //   precioMenor,
+  //   tipo,
+  //   ubicacion,
+  //   habitaciones,
+  //   baños,
+  //   m2TotalesMayor,
+  //   m2TotalesMenor,
+  // } = filter;
 
   useEffect(() => {
     if(propiedades) {

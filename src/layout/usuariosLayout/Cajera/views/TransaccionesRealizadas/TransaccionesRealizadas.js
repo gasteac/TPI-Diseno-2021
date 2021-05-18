@@ -6,23 +6,16 @@ import {
   Card,
   Button,
   Form,
-  Modal,
 } from "react-bootstrap";
 import Layout from "../../../../Layout";
 import Transacciones from "./transacciones.json";
 import { tablaCajera } from "./tabla-TransReal";
 import Table from "../../../../../components/Table";
 import useAuth from "../../../../../hooks/useAuth";
-import search from "../../../../../static/images/Search.svg";
-import globalContext from "../../../../../context/globalContext";
-import { useContext, useState } from "react";
-import { Image, FormControl, InputGroup } from "react-bootstrap";
-import BackButton from "../../../../../components/BackButton";
+import { useState } from "react";
 
 export default function TransaccionesRealizadas({ history }) {
   const user = useAuth(history);
-  const GlobalContext = useContext(globalContext);
-  const { setNombre } = GlobalContext;
   document.querySelector("body").style.background = "";
 
   const [validatedFechas, setValidatedFechas] = useState(false);
@@ -57,7 +50,7 @@ export default function TransaccionesRealizadas({ history }) {
   const userBolean = user.includes('jefaadministracion') || user.includes("gerentegeneral") || user.includes('jefacomercializacion')
 
   return (
-    <Layout usuario={user}>
+    <Layout>
       <Container fluid>
         <Row className="justify-content-center">
           <h2 className="titulosSecciones">Transacciones Realizadas</h2>

@@ -9,7 +9,7 @@ const ProgramarCitaCliente = ({history}) => {
   const user = useAuth(history)
   document.querySelector('body').style.background = ''
   return (
-    <Layout
+    <Layout user={user}
     >
       <Container className='mt-4 mb-5'>
         <FormCita />

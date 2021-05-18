@@ -2,8 +2,7 @@ import React from "react";
 import Layout from "../../../../Layout";
 import ListaPropiedades from "../../../../../components/ListaPropiedades/";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row} from "react-bootstrap";
 
 const PropiedadesClientes = ({ history }) => {
   // eslint-disable-next-line

@@ -38,7 +38,7 @@ export default (state, action) => {
       return {
         ...state,
         propiedadSeleccionada: state.propiedades.filter(
-          (propiedad) => propiedad._id == action.payload
+          (propiedad) => propiedad._id === action.payload
         )[0],
       };
     case ADD_PROPIEDAD:

@@ -43,8 +43,9 @@ const NuevaCita = ({ history }) => {
 
     setValidated(true);
   };
+  document.querySelector("body").style.background = "";
   return (
-    <Layout>
+    <Layout user={user}>
       <Container fluid>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row>

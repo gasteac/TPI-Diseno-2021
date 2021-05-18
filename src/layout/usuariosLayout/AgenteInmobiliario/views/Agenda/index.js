@@ -4,7 +4,6 @@ import MOCK_DATA from "./assets/MOCK_DATA.json";
 import { COLUMNS } from "./assets/columns";
 import { Container, Row, Col } from "react-bootstrap";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
 
 export default function Agenda({ history }) {
   const user = useAuth(history);

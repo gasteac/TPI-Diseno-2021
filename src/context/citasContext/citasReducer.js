@@ -1,5 +1,4 @@
 import { 
-    OBTENER_CITAS,
     CITAS_SELECCIONADAS
  } from "../types";
 

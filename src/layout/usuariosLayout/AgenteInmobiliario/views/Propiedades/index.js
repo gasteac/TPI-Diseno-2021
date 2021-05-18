@@ -1,8 +1,6 @@
 import Layout from "../../../../Layout";
 import ListaPropiedades from "../../../../../components/ListaPropiedades/";
 import useAuth from "../../../../../hooks/useAuth";
-
-import BackButton from "../../../../../components/BackButton";
 import { Col, Container, Row } from "react-bootstrap";
 
 export default function Propiedades({ history }) {

@@ -1,6 +1,5 @@
 import React from "react";
 import { Jumbotron } from "react-bootstrap";
-import BackButton from "../../../../../../components/BackButton";
 
 const Descripcion = () => {
   

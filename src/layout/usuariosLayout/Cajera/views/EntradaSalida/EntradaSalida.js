@@ -6,7 +6,6 @@ import {
   Card,
   Button,
   Form,
-  Modal,
 } from "react-bootstrap";
 import Layout from "../../../../Layout";
 import EnSaPos from "./ensapos.json";
@@ -14,17 +13,15 @@ import EnSaNeg from "./ensaneg.json";
 import { tablaCajera } from "./tabla-entsal";
 import Table from "../../../../../components/Table";
 import useAuth from "../../../../../hooks/useAuth";
-import search from "../../../../../static/images/Search.svg";
-import globalContext from "../../../../../context/globalContext";
-import { useContext, useState } from "react";
-import { Image, FormControl, InputGroup } from "react-bootstrap";
-import BackButton from "../../../../../components/BackButton";
-import { divide } from "lodash-es";
+// import globalContext from "../../../../../context/globalContext";
+import { useState } from "react";
+
+
 
 export default function EntradaSalida({ history }) {
   const user = useAuth(history);
-  const GlobalContext = useContext(globalContext);
-  const { setNombre } = GlobalContext;
+  // const GlobalContext = useContext(globalContext);
+  // const { setNombre } = GlobalContext;
   document.querySelector("body").style.background = "";
 
   const [validatedFechasEntradas, setValidatedFechasEntradas] = useState(false);
@@ -215,8 +212,8 @@ export default function EntradaSalida({ history }) {
             <Col className="d-flex justify-content-center">
               <Form
                 noValidate
-                validated={validatedFechasEntradas}
-                onSubmit={handleSubmitFechasEntradas}
+                validated={validatedFechasSalidas}
+                onSubmit={handleSubmitFechasSalidas}
               >
                 <Card
                   style={{
@@ -247,10 +244,10 @@ export default function EntradaSalida({ history }) {
                         </Form.Label>
                         <Form.Control
                           required
-                          onChange={(e) => handleChangeEntradas(e)}
+                          onChange={(e) => handleChangeSalidas(e)}
                           type="date"
-                          name="fechaDesdeEntradas"
-                          value={fechaDesdeEntradas}
+                          name="fechaDesdeSalidas"
+                          value={fechaDesdeSalidas}
                         />
                       </Form.Group>
                       <Form.Group style={{ marginRight: "20px" }}>
@@ -259,10 +256,10 @@ export default function EntradaSalida({ history }) {
                         </Form.Label>
                         <Form.Control
                           required
-                          onChange={(e) => handleChangeEntradas(e)}
+                          onChange={(e) => handleChangeSalidas(e)}
                           type="date"
-                          name="fechaHastaEntradas"
-                          value={fechaHastaEntradas}
+                          name="fechaHastaSalidas"
+                          value={fechaHastaSalidas}
                         />
                       </Form.Group>
 
