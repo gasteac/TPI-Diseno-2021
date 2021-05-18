@@ -23,8 +23,12 @@ document.querySelector("body").style.backgroundSize = `cover`;
             <Notificaciones nombreDeUsuario="Puppy" />
           </Col> 
           <Col >
+          <div style={{display:'flex', marginLeft:'20px', fontWeight:'900'}}>
+          <h2 style={{fontWeight:'900', color:'white', textShadow:'2px 2px 10px black'}}>Reportes</h2>
+          </div>
           <Row>
           <Col className="d-flex justify-content-center align-items-center">
+            
             <ButtonCard user={user} seccion={"Clientes"} link={"link-1"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
