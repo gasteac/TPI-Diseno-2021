@@ -13,7 +13,7 @@ document.querySelector('body').style.backgroundSize = `cover`
       <Layout usuario={user} cliente={true}>
         <Container style={{marginTop:'40px'}}>
           <Row>
-            <Col xs={12} md={5}>
+            <Col xs={12} md={6}>
                 <Notificaciones nombreDeUsuario="Chifflets" />
             </Col>
             <Col className="d-flex align-items-center">
