@@ -58,7 +58,8 @@ const NavBar = ({ cliente }) => {
                     .replace(" ", "")
                     .replace(" ", "")
                     .replace("¿", "")
-                    .replace("/", "")}`}
+                    .replace("/", "")
+                    .replace(".", "")}`}
                   eventKey={`link-${i}`}
                 >
                   {item}
