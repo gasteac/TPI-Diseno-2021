@@ -52,7 +52,7 @@ const AsignarAgente = ({ history }) => {
   const { hora, fecha, agente } = formSate;
   const user = useAuth(history);
   const {
-    values: { first_name, last_name, email, estado, date },
+    values: { first_name, last_name },
   } = cliente;
 
   const handleChange = (e) => {
@@ -92,7 +92,7 @@ const AsignarAgente = ({ history }) => {
                   <Row>
                     <Col>
                       <Form.Group>
-                        <Form.Label>Seleccine fecha</Form.Label>
+                        <Form.Label>Seleccione fecha</Form.Label>
                         <Form.Control
                           placeholder=""
                           type="date"

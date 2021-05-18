@@ -52,6 +52,7 @@ import FormEditarUsuario from "./layout/usuariosLayout/Admin/components/FormEdit
 import CitasState from "./context/citasContext/citasState";
 import AsignarAgente from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/AsignarAgente";
 import NuevaCita from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/NuevaCita";
+import PropiedadesCita from "./layout/usuariosLayout/SecretariaComercializacion/views/Citas/views/PropiedadesCita";
 
 const App = () => {
   return (
@@ -153,6 +154,11 @@ const App = () => {
                   exact
                   path="/secretariacomercializacion/citas/nuevacita"
                   component={NuevaCita}
+                />
+                <Route
+                  exact
+                  path="/secretariacomercializacion/citas/propiedadesCita"
+                  component={PropiedadesCita}
                 />
                 <Route
                   exact
