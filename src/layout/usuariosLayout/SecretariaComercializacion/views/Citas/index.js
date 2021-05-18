@@ -1,10 +1,8 @@
 import Layout from "../../../../Layout";
 import Table from "../../../../../components/Table/";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import BackButton from "../../../../../components/BackButton";
 import { COLUMNS1, COLUMNS2 } from "./assets/columns.js";
 import columns1Data from "./assets/columns1-data.json";
-import columns2Data from "./assets/columns2-data.json";
 import useAuth from "../../../../../hooks/useAuth";
 import { useContext } from "react";
 import citasContext from "../../../../../context/citasContext/citasContext";
@@ -33,9 +31,9 @@ export default function Citas({ history }) {
           <Col xs={12} className="d-flex justify-content-center">
             <h2 className="titulosSecciones">Citas Confirmadas</h2>
           </Col>
-          <Col xs={12} className="d-flex justify-content-start">
+          <Col xs={12} className="d-flex justify-content-center">
             <Button variant="success" type="submit" onClick={handleNuevaCita}>
-                Agregar cita
+                Agregar Cita
             </Button>
           </Col>
         </Row>

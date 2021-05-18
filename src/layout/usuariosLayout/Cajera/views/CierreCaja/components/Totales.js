@@ -1,7 +1,7 @@
 export default function Totales({ datos }) {
 
     const montoEgreso = datos.map(dato => {
-      if (dato.type == 'egreso') {
+      if (dato.type === 'egreso') {
         return Number(dato.amount.substring(1,dato.amount.lenght))
       } else {
         return 0
@@ -9,7 +9,7 @@ export default function Totales({ datos }) {
     })
 
     const montoIngreso = datos.map(dato => {
-      if (dato.type == 'ingreso') {
+      if (dato.type === 'ingreso') {
         return Number(dato.amount.substring(1,dato.amount.lenght))
       } else {
         return 0

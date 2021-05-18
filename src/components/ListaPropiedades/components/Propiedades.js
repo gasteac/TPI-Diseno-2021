@@ -1,14 +1,9 @@
-import PropiedadImg from "../../../static/images/Propiedad.svg";
 import {
-  Card,
-  Container,
   Button,
   Image,
   FormControl,
   InputGroup,
-  Form,
   Spinner,
-  Row,
   Col,
 } from "react-bootstrap";
 import GridPropiedadesGenerator from "../../GridGenerator";
@@ -37,8 +32,6 @@ export default function Propiedades({
   const {
     propiedadesFiltradas,
     seleccionarPropiedad,
-    setImagenesPropiedades,
-    setIdImagen,
     getPropiedadNombre,
   } = PropiedadesContext;
 

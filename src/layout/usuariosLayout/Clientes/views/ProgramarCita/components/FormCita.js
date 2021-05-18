@@ -1,11 +1,10 @@
-import { Button, Card, Container, Form, Modal } from "react-bootstrap";
+import { Button, Card, Form, Modal } from "react-bootstrap";
 import "./FormCita.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../../../../../../src/static/images/caCITA.jpg";
-import BackButton from "../../../../../../components/BackButtonClientesPC";
 import useAuth from "../../../../../../hooks/useAuth";
-import Layout from "../../../../../Layout";
+
 
 // const user = useAuth(history)
 
@@ -38,7 +37,7 @@ const FormCita = (history) => {
     event.stopPropagation();
   };
 
-  const { nombre, apellido, email, telefono, fecha, hora } = datos;
+  const { nombre, apellido, email, telefono} = datos;
   const { nombreFocus, apellidoFocus, emailFocus, telefonoFocus } = focus;
 
   const handleFocus = (e) => {
@@ -71,12 +70,13 @@ const FormCita = (history) => {
 
   const user = useAuth(history);
   return (
-    <>
+
+    <> 
+    
       <Card
         style={{
           border: "none",
           marginTop: "30px",
-          border: "none",
           background: "#a79ba790",
           borderTopLeftRadius: "30px",
           borderTopRightRadius: "30px",

@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
 import { Card, Spinner } from "react-bootstrap";
-import propiedadesContext from "../../../context/contextPropiedades/propiedadesContext";
 
 const CardPropiedades = ({
   propiedad,

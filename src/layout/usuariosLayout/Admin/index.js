@@ -10,7 +10,7 @@ const Admin = ({ history }) => {
   document.querySelector('body').style.background = `url(${Fondo})`
   document.querySelector('body').style.backgroundSize = `cover`
   return (
-    <Layout>
+    <Layout user={user}>
       <Container fluid>
         <Row className="justify-content-center mt-3">
           <Col xs={8}>

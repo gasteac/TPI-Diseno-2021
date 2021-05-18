@@ -5,6 +5,7 @@ import useAuth from "../../../../../../hooks/useAuth";
 import Layout from "../../../../../Layout";
 const PropiedadesCita = ({ history }) => {
   const user = useAuth(history);
+  document.querySelector("body").style.background = "";
   return (
     <Layout usuario={user}>
       <Container className="mt-3 flex-column ">
