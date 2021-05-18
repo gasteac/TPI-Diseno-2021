@@ -3,7 +3,7 @@ import ButtonCard from "../../../components/ButtonCard";
 import Notificaciones from "../../../components/Notificaciones";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
-import img from "../../../../src/static/images/caCITA.jpg";
+import img from "../../../../src/static/images/casita.jpg";
 
 document.querySelector("body").style.background = `url(${img})`;
 document.querySelector("body").style.backgroundSize = `cover`;
