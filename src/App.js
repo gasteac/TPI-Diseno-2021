@@ -106,14 +106,12 @@ const App = () => {
                   path="/agenteinmobiliario/propiedades/editarpropiedad"
                   component={EditarPropiedad}
                 />
-
                 {/* CLiente-Agente */}
                 <Route
                   exact
                   path="/propiedades/propiedad"
                   component={Propiedad}
                 />
-
                 {/* Clientes */}
                 <Route exact path="/cliente/inicio" component={Clientes} />
                 <Route
