@@ -190,7 +190,7 @@ export default function EntradaSalida({ history }) {
           </Col>
         </Row>
         {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal}>
+          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal} target="_blank" rel="noopener noreferrer">
             Imprimir reporte
           </Button>
         ) : null}
@@ -302,7 +302,7 @@ export default function EntradaSalida({ history }) {
         </Row>
       
         {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal}>
+          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal} target="_blank" rel="noopener noreferrer">
             Imprimir reporte
           </Button>
         ) : null}

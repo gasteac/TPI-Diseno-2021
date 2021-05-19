@@ -14,7 +14,7 @@ export default function Alquileres({ history }) {
       <Container fluid>
         <Row className="justify-content-center">
           <Col xs={4} className="d-flex justify-content-center">
-            <h2 className="titulosSecciones">Alquileres</h2>
+            <h2 className="titulosSecciones">Reportes Alquileres</h2>
           </Col>
         </Row>
         <Row>
@@ -23,7 +23,7 @@ export default function Alquileres({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-            <Button type="button" variant="info" href={Ralquileres}>
+            <Button type="button" variant="info" href={Ralquileres} target="_blank" rel="noopener noreferrer">
               Imprimir reporte
             </Button>
         </Row>

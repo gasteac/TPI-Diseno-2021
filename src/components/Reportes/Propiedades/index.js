@@ -18,7 +18,7 @@ export default function ReportePropiedades({ history }) {
       <Container fluid>
         <Row className="justify-content-center">
           <Col xs={4} className="d-flex justify-content-center">
-            <h2 className="titulosSecciones">Propiedades</h2>
+            <h2 className="titulosSecciones">Reportes Propiedades</h2>
           </Col>
         </Row>
         <Row>
@@ -27,7 +27,7 @@ export default function ReportePropiedades({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Button  type="button" variant="info" href={Rpropiedades}>
+          <Button  type="button" variant="info" href={Rpropiedades} target="_blank" rel="noopener noreferrer">
             Imprimir reporte
           </Button>
         </Row>

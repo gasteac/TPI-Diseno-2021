@@ -95,7 +95,7 @@ export default function ListaClientes({ history }) {
         </Row>
         <Row className="justify-content-center mb-5">
         {userBolean ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rclientes}>
+          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rclientes} target="_blank" rel="noopener noreferrer">
             Imprimir reporte
           </Button>
         ) : null}

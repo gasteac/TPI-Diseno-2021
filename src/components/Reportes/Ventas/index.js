@@ -14,7 +14,7 @@ export default function Ventas({ history }) {
       <Container fluid>
         <Row className="justify-content-center">
           <Col xs={4} className="d-flex justify-content-center">
-            <h2 className="titulosSecciones">Ventas</h2>
+            <h2 className="titulosSecciones">Reportes Ventas</h2>
           </Col>
         </Row>
 
@@ -24,7 +24,7 @@ export default function Ventas({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          <Button type="button" variant="info" href={Rventas}>
+          <Button type="button" variant="info" href={Rventas} target="_blank" rel="noopener noreferrer">
             Imprimir reporte
           </Button>
         </Row>

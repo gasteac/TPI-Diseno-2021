@@ -205,7 +205,7 @@ const PagoVenta = ({ history }) => {
                       variant="outline-success"
                       className="mt-3 ml-1"
                       onClick={handleClose}
-                      href={Comprobante}
+                      href={Comprobante} target="_blank" rel="noopener noreferrer"
                       disabled={!validated}
                     >
                       Imprimir comprobante

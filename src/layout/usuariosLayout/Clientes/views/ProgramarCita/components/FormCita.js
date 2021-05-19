@@ -231,7 +231,7 @@ const FormCita = (history) => {
           Atte. Domus.
         </Modal.Body>
         <Modal.Footer>
-        <Button variant="info" href={Comprobante} className="btn btn-success">
+        <Button variant="info" href={Comprobante} className="btn btn-success" target="_blank" rel="noopener noreferrer">
               Imprimir comprobante
             </Button>
           <Link to={`/cliente/inicio`}>

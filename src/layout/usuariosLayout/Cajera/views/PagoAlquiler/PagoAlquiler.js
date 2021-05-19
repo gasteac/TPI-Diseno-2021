@@ -155,7 +155,7 @@ const PagoAlquiler = ({ history }) => {
 
                     <Modal.Footer>
                     
-                        <Button type="primary" href={Comprobante} variant="outline-success">
+                        <Button type="primary" href={Comprobante} variant="outline-success" target="_blank" rel="noopener noreferrer">
                           Imprimir comprobante
                         </Button>
                  

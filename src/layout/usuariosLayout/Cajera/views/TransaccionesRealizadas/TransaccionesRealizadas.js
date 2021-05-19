@@ -144,7 +144,7 @@ export default function TransaccionesRealizadas({ history }) {
         <Row className="justify-content-center">
           {console.log(user)}
           {userBolean ? (
-            <Button style={{ marginTop: "20px", marginBottom:'20px' }} type="button" variant="info" href={Rtrans}>
+            <Button style={{ marginTop: "20px", marginBottom:'20px' }} type="button" variant="info" href={Rtrans} target="_blank" rel="noopener noreferrer">
               Imprimir reporte
             </Button>
           ) : null}
