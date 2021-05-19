@@ -11,7 +11,6 @@ import {
 import Layout from "../../../../Layout";
 import InquilinoPropietario from "./Inquilino-Propietario.json";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
 import Alquiler from "./DatosAlquiler";
 import { Link } from "react-router-dom";
 

@@ -31,25 +31,25 @@ document.querySelector("body").style.backgroundSize = `cover`;
           <Row>
           <Col className="d-flex justify-content-center align-items-center">
             
-            <ButtonCard user={user} seccion={"R.Clientes"} link={"link-1"} />
+            <ButtonCard user={user} seccion={"Clientes"} link={"link-1"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
-            <ButtonCard user={user} seccion={"R.EntradasSalidas"} link={"link-3"} />
+            <ButtonCard user={user} seccion={"EntradasSalidas"} link={"link-3"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
-            <ButtonCard user={user} seccion={"R.Transacciones"} link={"link-5"} />
+            <ButtonCard user={user} seccion={"Transacciones"} link={"link-5"} />
             </Col>
             </Row>
 
             <Row>
           <Col className="d-flex justify-content-center align-items-center">
-            <ButtonCard user={user} seccion={"R.Alquileres"} link={"link-2"} />
+            <ButtonCard user={user} seccion={"Alquileres"} link={"link-2"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
-            <ButtonCard user={user} seccion={"R.Propiedades"} link={"link-4"} />
+            <ButtonCard user={user} seccion={"Propiedades"} link={"link-4"} />
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
-            <ButtonCard user={user} seccion={"R.Ventas"} link={"link-6"} />
+            <ButtonCard user={user} seccion={"Ventas"} link={"link-6"} />
             </Col>
             </Row>
           </Col>

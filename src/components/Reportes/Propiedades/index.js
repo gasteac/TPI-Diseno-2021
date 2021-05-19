@@ -11,6 +11,7 @@ export default function ReportePropiedades({ history }) {
   const user = useAuth(history);
   const PropiedadesContext = useContext(propiedadesContext);
   const { propiedades } = PropiedadesContext;
+  document.querySelector('body').style.background = ""
   return (
     <Layout usuario={user}>
       <Row className="justify-content-center">

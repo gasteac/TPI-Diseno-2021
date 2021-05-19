@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Jumbotron, Row, Col, Card } from "react-bootstrap";
-import ButtonCard from "../../../components/ButtonCard";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import ButtonCardCaj from "./ButtonCardCaj";
@@ -27,7 +26,7 @@ document.querySelector('body').style.backgroundSize = `cover`
               <ButtonCardCaj 
               user={user} 
               seccion="EntradaSalida" 
-              link={"link-1"} 
+              link={"link-1"}
               style={{
                 background:"#50628C95",
                 marginTop:'10px',

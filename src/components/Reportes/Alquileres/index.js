@@ -8,6 +8,7 @@ import Layout from "../../../layout/Layout";
 
 export default function Alquileres({ history }) {
     const user = useAuth(history);
+    document.querySelector('body').style.background = ""
   return (
     <Layout
       usuario={user}

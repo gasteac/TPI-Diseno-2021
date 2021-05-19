@@ -69,9 +69,9 @@ const AsignarAgente = ({ history }) => {
       setInterval(() => setAlerta(false), 2000);
     }
   }, [alerta]);
-
+  document.querySelector("body").style.background = "";
   return (
-    <Layout>
+    <Layout user={user}>
       <Container fluid>
         <Row>
           <Col xs={4}>

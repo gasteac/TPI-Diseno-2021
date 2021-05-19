@@ -1,16 +1,8 @@
 import React, {useReducer} from 'react';
-
 import citasContext from './citasContext';
 import citasReducer from './citasReducer';
-
-import solicitudes from '../../layout/usuariosLayout/SecretariaComercializacion/views/Citas/assets/columns2-data.json'
-
-
-import { 
-    OBTENER_CITAS,
-    CITAS_SELECCIONADAS
- } from '../types';
- 
+import solicitudes from '../../layout/usuariosLayout/SecretariaComercializacion/views/Citas/assets/columns2-data.json';
+import {CITAS_SELECCIONADAS} from '../types';
  const CitasState = (props) => {
      const initialState = {
         solicitudes,

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { Card, Carousel, Container, Image, Row, Col } from "react-bootstrap";
 import propiedadesContext from "../../../../context/contextPropiedades/propiedadesContext";
 import useAuth from "../../../../hooks/useAuth";
@@ -8,7 +8,6 @@ import imagen2 from "../../../../components/ListaPropiedades/components/propieda
 import imagen3 from "../../../../components/ListaPropiedades/components/propiedadesIMG/2.jpg";
 import Plus from "../../../../static/images/Plus.jpg";
 import Trash from "../../../../static/images/Trash.svg";
-import { v4 } from "uuid";
 import Imagen from "./Imagen";
 
 const EditarImagenes = ({ history }) => {
@@ -21,7 +20,7 @@ const EditarImagenes = ({ history }) => {
   const imagenes = [imagen, imagen2, imagen3];
 
   return (
-    <Layout>
+    <Layout user={user}>
       <Container fluid className="mt-3">
         <Row className="justify-content-center">
           <Carousel className="w-50">

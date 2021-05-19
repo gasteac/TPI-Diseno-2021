@@ -5,7 +5,6 @@ import Fondo from '../../../../../static/images/casitaQUIENES.jpg'
 import Descripcion from "./components/Descripcion";
 import LogoJumbotron from "./components/Logo";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
 const QuienesSomos = ({history}) => {
   
   const user = useAuth(history)

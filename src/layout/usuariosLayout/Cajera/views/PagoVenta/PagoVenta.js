@@ -13,7 +13,6 @@ import propiedades from "../../../../../assets/propiedades.json";
 import DatosDelInmuebleComponent from "../../../../../components/DatosDelInmuebleComponent";
 import DatosDeContactoComponent from "../../../../../components/DatosDeContactoComponent";
 import useAuth from "../../../../../hooks/useAuth";
-import BackButton from "../../../../../components/BackButton";
 
 const PagoVenta = ({ history }) => {
   useAuth(history);
@@ -41,7 +40,7 @@ const PagoVenta = ({ history }) => {
     setValidated(true);
   };
 
-  const handleClickSubmit = () => handleSubmit();
+
 
   const hanldeChangeForm = (e) => {
     setFormState({
