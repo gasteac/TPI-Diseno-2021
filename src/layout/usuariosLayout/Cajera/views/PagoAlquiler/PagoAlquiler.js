@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Col,
   Container,
@@ -14,11 +14,13 @@ import useAuth from "../../../../../hooks/useAuth";
 import Alquiler from "./DatosAlquiler";
 import { Link } from "react-router-dom";
 import Comprobante from "./pagoalquiler.jpg"
+import globalContext from "../../../../../context/globalContext";
 
 const PagoAlquiler = ({ history }) => {
   useAuth(history);
   const { DatosAlquiler } = InquilinoPropietario[0];
-
+  const GlobalContext = useContext(globalContext);
+  const {setActiveNavbarLink} = GlobalContext;
   const [formState, setFormState] = useState({
     mes: "",
     año: "",
@@ -161,7 +163,7 @@ const PagoAlquiler = ({ history }) => {
                  
 
                       <Link to={`/cajera/inicio`}>
-                        <Button type="primary" className="btn btn-success">
+                        <Button type="primary" className="btn btn-success"  onClick={()=>setActiveNavbarLink("link-0")}>
                           Aceptar
                         </Button>
                       </Link>

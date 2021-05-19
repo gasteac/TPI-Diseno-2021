@@ -83,21 +83,21 @@ export default function JefaComercializacion({ history }) {
             user={user}
             reportes={true}
             seccion={"Alquileres"}
-            link={"link-1"}
+            link={"link-4"}
             style={{ backgroundColor: "#00000080" }}
           />
           <ButtonCard
             user={user}
             reportes={true}
             seccion={"Propiedades"}
-            link={"link-7"}
+            link={"link-4"}
             style={{ backgroundColor: "#00000080" }}
           />
           </Col>
           <Col style={{display:'flex', justifyContent:'center'}}>
-          <ButtonCard user={user} seccion={"Agenda"} link={"link-5"} />
-          <ButtonCard user={user} seccion={"Propiedades"} link={"link-4"} />
-          <ButtonCard user={user} seccion={"Clientes"} link={"link-6"} />
+          <ButtonCard user={user} seccion={"Propiedades"} link={"link-1"} />
+          <ButtonCard user={user} seccion={"Agenda"} link={"link-2"} />
+          <ButtonCard user={user} seccion={"Clientes"} link={"link-3"} />
           </Col>
         </Row>
       </Container>

@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Col,
-  Container,
-  Row,
-  Card,
-  Button,
-  Form,
-} from "react-bootstrap";
+import { Col, Container, Row, Card, Button, Form } from "react-bootstrap";
 import Layout from "../../../../Layout";
 import EnSaPos from "./ensapos.json";
 import EnSaNeg from "./ensaneg.json";
@@ -14,9 +7,7 @@ import { tablaCajera } from "./tabla-entsal";
 import Table from "../../../../../components/Table";
 import useAuth from "../../../../../hooks/useAuth";
 import { useState } from "react";
-import Rentsal from "./ReporteES.jpg"
-
-
+import Rentsal from "./ReporteES.jpg";
 
 export default function EntradaSalida({ history }) {
   const user = useAuth(history);
@@ -81,11 +72,20 @@ export default function EntradaSalida({ history }) {
     });
   };
 
+  const userBolean =
+    user.includes("jefaadministracion") ||
+    user.includes("gerentegeneral") ||
+    user.includes("jefacomercializacion");
+
   return (
     <Layout usuario={user}>
       <Container fluid>
         <Row className="justify-content-center">
-          <h2 className="titulosSecciones">Entradas</h2>
+          {userBolean ? (
+            <h2 className="titulosSecciones">Reportes Entradas</h2>
+          ) : (
+            <h2 className="titulosSecciones">Entradas</h2>
+          )}
         </Row>
 
         <Container
@@ -190,7 +190,14 @@ export default function EntradaSalida({ history }) {
           </Col>
         </Row>
         {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal} target="_blank" rel="noopener noreferrer">
+          <Button
+            style={{ marginTop: "20px" }}
+            type="button"
+            variant="info"
+            href={Rentsal}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Imprimir reporte
           </Button>
         ) : null}
@@ -198,7 +205,11 @@ export default function EntradaSalida({ history }) {
 
       <Container fluid>
         <Row className="justify-content-center">
-          <h2 className="titulosSecciones">Salidas</h2>
+          {userBolean ? (
+            <h2 className="titulosSecciones">Reportes Salidas</h2>
+          ) : (
+            <h2 className="titulosSecciones">Salidas</h2>
+          )}
         </Row>
         <Container
           fluid
@@ -300,13 +311,19 @@ export default function EntradaSalida({ history }) {
             <Table columnas={tablaCajera} datos={EnSaNeg} rows={7} />
           </Col>
         </Row>
-      
+
         {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal} target="_blank" rel="noopener noreferrer">
+          <Button
+            style={{ marginTop: "20px" }}
+            type="button"
+            variant="info"
+            href={Rentsal}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Imprimir reporte
           </Button>
         ) : null}
-       
       </Container>
     </Layout>
   );

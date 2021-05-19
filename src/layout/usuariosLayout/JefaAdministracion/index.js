@@ -29,7 +29,7 @@ export default function JefaAdministracion({ history }) {
                   seccion={"Transacciones"}
                   link={"link-1"}
                   style={{
-                    background: "#50628C",
+                    background: "#50628C90",
                     marginTop: "10px",
                     minWidth: "200px",
                     minHeight: "190px",
@@ -41,7 +41,7 @@ export default function JefaAdministracion({ history }) {
                   seccion={"Clientes"}
                   link={"link-2"}
                   style={{
-                    background: "#50628C",
+                    background: "#50628C90",
                     marginTop: "10px",
                     minWidth: "200px",
                     minHeight: "190px",

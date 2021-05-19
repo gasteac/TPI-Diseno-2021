@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import Table from "../../../../../components/Table";
 import { useContext, useState } from "react";
 import clientesContext from "../../../../../context/contextClientes/clientesContext";
-import Rclientes from "./ReporteClientes.jpg"
+import Rclientes from "./ReporteClientes.jpg";
 
 export default function ListaClientes({ history }) {
   const user = useAuth(history);
@@ -33,14 +33,21 @@ export default function ListaClientes({ history }) {
   };
   document.querySelector("body").style.background = "";
 
-  const userBolean = user.includes('jefaadministracion') || user.includes("gerentegeneral") || user.includes('jefacomercializacion')
+  const userBolean =
+    user.includes("jefaadministracion") ||
+    user.includes("gerentegeneral") ||
+    user.includes("jefacomercializacion");
 
   return (
     <Layout>
       <Container fluid>
         <Row>
           <Col xs={7} className="d-flex justify-content-end">
-            <h2 className="titulosSecciones">Clientes</h2>
+            {userBolean ? (
+              <h2 className="titulosSecciones">Reportes Clientes</h2>
+            ) : (
+              <h2 className="titulosSecciones">Clientes</h2>
+            )}
           </Col>
           {user === "agenteinmobiliario" && (
             <Col
@@ -94,11 +101,18 @@ export default function ListaClientes({ history }) {
           </Col>
         </Row>
         <Row className="justify-content-center mb-5">
-        {userBolean ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rclientes} target="_blank" rel="noopener noreferrer">
-            Imprimir reporte
-          </Button>
-        ) : null}
+          {userBolean ? (
+            <Button
+              style={{ marginTop: "20px" }}
+              type="button"
+              variant="info"
+              href={Rclientes}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Imprimir reporte
+            </Button>
+          ) : null}
         </Row>
       </Container>
       <Modal show={showEliminar} onHide={handleCloseEliminar} backdrop="static">

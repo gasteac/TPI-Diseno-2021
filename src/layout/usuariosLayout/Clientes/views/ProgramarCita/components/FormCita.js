@@ -1,15 +1,18 @@
 import { Button, Card, Form, Modal } from "react-bootstrap";
 import "./FormCita.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../../../../../../src/static/images/caCITA.jpg";
 import useAuth from "../../../../../../hooks/useAuth";
 import Comprobante from "./comprobante.jpg"
+import globalContext from "../../../../../../context/globalContext";
 
 
 // const user = useAuth(history)
 
 const FormCita = (history) => {
+  const GlobalContext = useContext(globalContext);
+  const {setActiveNavbarLink} = GlobalContext;
   const [datos, setDatos] = useState({
     nombre: "",
     apellido: "",
@@ -235,7 +238,7 @@ const FormCita = (history) => {
               Imprimir comprobante
             </Button>
           <Link to={`/cliente/inicio`}>
-            <Button type="primary" className="btn btn-success">
+            <Button type="primary" className="btn btn-success" onClick={()=>setActiveNavbarLink("link-0")}>
               Aceptar
             </Button>
           </Link>

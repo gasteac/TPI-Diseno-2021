@@ -7,6 +7,7 @@ import Layout from '../../../Layout';
 document.querySelector("body").style.background = "";
 const PropiedadesMarketing = ({history}) => {
     const user = useAuth(history);
+    document.querySelector("body").style.background = "";
     return (
         <Layout usuario={user}>
         <Container className="mt-3 flex-column ">

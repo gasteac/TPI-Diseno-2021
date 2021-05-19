@@ -17,7 +17,7 @@ import Comprobante from "./pagoventa.jpg"
 
 const PagoVenta = ({ history }) => {
   useAuth(history);
-  
+
   const { DatosDelInmueble, DatosDeContacto } = propiedades[0];
   const [formState, setFormState] = useState({
     tipo: "",
@@ -31,19 +31,22 @@ const PagoVenta = ({ history }) => {
   const { tipo, comision, formaDePago, precio, moneda, dni } = formState;
 
   const [validated, setValidated] = useState(false);
+  const [compr, setCompr] = useState(false);
   document.querySelector("body").style.background = "";
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       setValidated(false);
+      setCompr(false);
       event.preventDefault();
       event.stopPropagation();
-      setValidated(true);
     }else{
+      setCompr(true);
+      event.preventDefault();
+      event.stopPropagation()
+    };
     setValidated(true);
-    event.preventDefault();
-    event.stopPropagation();
-    console.log(validated)};
+ 
   };
 
   const hanldeChangeForm = (e) => {
@@ -206,7 +209,7 @@ const PagoVenta = ({ history }) => {
                       className="mt-3 ml-1"
                       onClick={handleClose}
                       href={Comprobante} target="_blank" rel="noopener noreferrer"
-                      disabled={!validated}
+                      disabled={!compr}
                     >
                       Imprimir comprobante
                     </Button>
@@ -215,6 +218,7 @@ const PagoVenta = ({ history }) => {
                       variant="outline-success"
                       type="submit"
                       className="mt-3 ml-1"
+                  
                     >
                       Confirmar
                     </Button>

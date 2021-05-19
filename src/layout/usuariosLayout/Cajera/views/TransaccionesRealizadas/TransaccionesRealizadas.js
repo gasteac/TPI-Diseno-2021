@@ -54,7 +54,11 @@ export default function TransaccionesRealizadas({ history }) {
     <Layout>
       <Container fluid>
         <Row className="justify-content-center">
-          <h2 className="titulosSecciones">Transacciones Realizadas</h2>
+        {userBolean ? (
+            <h2 className="titulosSecciones">Reportes Transacciones</h2>
+          ) : (
+            <h2 className="titulosSecciones">Transacciones Realizadas</h2>
+          )}
         </Row>
 
         <Container
