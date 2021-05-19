@@ -85,8 +85,7 @@ a:hover,
   align-content: center;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem 1rem;
-  background: #50628C95 !important;
+  background: #50628C95;
 }
 .container {
   display: flex;

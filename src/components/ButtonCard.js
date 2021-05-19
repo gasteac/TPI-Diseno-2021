@@ -25,8 +25,8 @@ const ButtonCard = ({ user, seccion, link, style, reportes }) => {
       }`}
       onClick={() => setActiveNavbarLink(link)}
     >
-      <div className="btnsuper">
-        <div className="buttonsCard bg-rosa1 btnxd" style={style}>
+      <div className="btnsuper justify-content-center d-flex">
+        <div className="buttonsCard bg-rosa1 btnxd m-2" style={style}>
           <div>
             <img
               src={imagenes[seccion]}
