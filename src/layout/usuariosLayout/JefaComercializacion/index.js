@@ -1,4 +1,4 @@
-import { Card, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import ButtonCard from "../../../components/ButtonCard";
 import Notificaciones from "../../../components/Notificaciones";
 import useAuth from "../../../hooks/useAuth";
@@ -19,6 +19,7 @@ export default function JefaComercializacion({ history }) {
             backgroundColor: "transparent",
             border: "none",
             borderRadius: "50px",
+            marginBottom:'50px'
           }}
         >
           <div
@@ -56,15 +57,22 @@ export default function JefaComercializacion({ history }) {
         </div>
 
 
-        <Container style={{ display: "flex", justifyContent: "space-around" }}>
+            
+          <Row style={{display:'flex', justifyContent:'center'}}>
+            <Col style={{display:'flex', justifyContent:'center'}}>
           <h2 style={{ fontWeight: "900", fontSize: "40px", color: "black" }}>
             Reportes
           </h2>
+          </Col>
+          <Col style={{display:'flex', justifyContent:'center'}}>
           <h2 style={{ fontWeight: "900", fontSize: "40px", color: "white" }}>
             Navegación
           </h2>
-        </Container>
+          </Col>
+          </Row>
+       
         <Row className="d-flex justify-content-center align-items-center mt-2">
+        <Col style={{display:'flex', justifyContent:'center'}}>
           <ButtonCard
             user={user}
             reportes={true}
@@ -86,9 +94,12 @@ export default function JefaComercializacion({ history }) {
             link={"link-7"}
             style={{ backgroundColor: "#00000080" }}
           />
-          <ButtonCard user={user} seccion={"Agenda"} link={"link-1"} />
-          <ButtonCard user={user} seccion={"Propiedades"} link={"link-2"} />
-          <ButtonCard user={user} seccion={"Clientes"} link={"link-3"} />
+          </Col>
+          <Col style={{display:'flex', justifyContent:'center'}}>
+          <ButtonCard user={user} seccion={"Agenda"} link={"link-5"} />
+          <ButtonCard user={user} seccion={"Propiedades"} link={"link-4"} />
+          <ButtonCard user={user} seccion={"Clientes"} link={"link-6"} />
+          </Col>
         </Row>
       </Container>
     </Layout>
