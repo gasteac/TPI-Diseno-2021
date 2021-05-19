@@ -13,6 +13,7 @@ import { tablaCajera } from "./tabla-TransReal";
 import Table from "../../../../../components/Table";
 import useAuth from "../../../../../hooks/useAuth";
 import { useState } from "react";
+import Rtrans from "./ReporteTransacciones.jpg"
 
 export default function TransaccionesRealizadas({ history }) {
   const user = useAuth(history);
@@ -143,7 +144,7 @@ export default function TransaccionesRealizadas({ history }) {
         <Row className="justify-content-center">
           {console.log(user)}
           {userBolean ? (
-            <Button style={{ marginTop: "20px" }} type="button" variant="info">
+            <Button style={{ marginTop: "20px", marginBottom:'20px' }} type="button" variant="info" href={Rtrans}>
               Imprimir reporte
             </Button>
           ) : null}

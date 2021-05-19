@@ -4,7 +4,7 @@ import Table from "../../Table";
 import alquileres from './alquilereslindo.json';
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../../layout/Layout";
-
+import Ralquileres from "./ReporteAlquileres.jpg"
 
 export default function Alquileres({ history }) {
     const user = useAuth(history);
@@ -25,6 +25,7 @@ export default function Alquileres({ history }) {
               style={{ }}
               type="button"
               variant="info"
+              href={Ralquileres}
             >
               Imprimir reporte
         </Button>

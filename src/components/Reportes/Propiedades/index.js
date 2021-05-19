@@ -6,6 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 import propiedadesContext from "../../../context/contextPropiedades/propiedadesContext";
 import { COLUMNS } from "./columnas";
 import Layout from "../../../layout/Layout";
+import Rpropiedades from "./ReportePropiedades.jpg"
 
 export default function ReportePropiedades({ history }) {
   const user = useAuth(history);
@@ -20,12 +21,13 @@ export default function ReportePropiedades({ history }) {
         </Col>
       </Row>
       
-      <Table columnas={COLUMNS} datos={propiedades} rows={7} />
+      <Table columnas={COLUMNS} datos={propiedades} rows={6} />
       <div className='d-flex justify-content-center align-items-center align-content-center'>
         <Button
               style={{ }}
               type="button"
               variant="info"
+              href={Rpropiedades}
             >
               Imprimir reporte
         </Button>

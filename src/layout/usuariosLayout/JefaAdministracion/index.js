@@ -17,7 +17,7 @@ export default function JefaAdministracion({ history }) {
       >
         <Row>
           <Col xs={8} className="justify-content-center">
-            <Notificaciones nombreDeUsuario="Chifflets" />
+            <Notificaciones nombreDeUsuario="Franco" />
           </Col>
           <Col
             xs={4}

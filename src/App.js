@@ -113,6 +113,7 @@ const App = () => {
                   component={Propiedad}
                 />
                 {/* Clientes */}
+                
                 <Route exact path="/cliente/inicio" component={Clientes} />
                 <Route
                   exact
@@ -235,10 +236,10 @@ const App = () => {
                   path="/jefacomercializacion/Propiedades"
                   component={Propiedades}
                 />
-                <Route exact path="/jefacomercializacion/ventas" component={Ventas} />
                 <Route exact path="/jefacomercializacion/alquileres" component={Alquileres} />
-                <Route exact path="/jefacomercializacion/clientes" component={ListaClientes} />
-                <Route exact path="/jefacomercializacion/propiedades" component={ReportePropiedades} />
+                <Route exact path="/jefacomercializacion/rventas" component={Ventas} />
+                <Route exact path="/jefacomercializacion/ralquileres" component={Alquileres} />
+                <Route exact path="/jefacomercializacion/rpropiedades" component={ReportePropiedades} />
 
                 {/* ADMIN */}
                 <Route 
@@ -313,7 +314,7 @@ const App = () => {
                 />
                 <Route exact path="/gerentegeneral/ventas" component={Ventas} />
 
-                <Redirect to="/"/> 
+                {/* <Redirect to="/"/>  */}
               </Switch>
             </Router>
           </CitasState>

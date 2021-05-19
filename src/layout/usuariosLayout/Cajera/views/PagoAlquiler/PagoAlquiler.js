@@ -13,6 +13,7 @@ import InquilinoPropietario from "./Inquilino-Propietario.json";
 import useAuth from "../../../../../hooks/useAuth";
 import Alquiler from "./DatosAlquiler";
 import { Link } from "react-router-dom";
+import Comprobante from "./pagoalquiler.jpg"
 
 const PagoAlquiler = ({ history }) => {
   useAuth(history);
@@ -153,11 +154,11 @@ const PagoAlquiler = ({ history }) => {
                     </Modal.Header>
 
                     <Modal.Footer>
-                      <Link to={`/cajera/inicio`}>
-                        <Button type="primary" variant="outline-success">
+                    
+                        <Button type="primary" href={Comprobante} variant="outline-success">
                           Imprimir comprobante
                         </Button>
-                      </Link>
+                 
 
                       <Link to={`/cajera/inicio`}>
                         <Button type="primary" className="btn btn-success">

@@ -13,9 +13,11 @@ import propiedades from "../../../../../assets/propiedades.json";
 import DatosDelInmuebleComponent from "../../../../../components/DatosDelInmuebleComponent";
 import DatosDeContactoComponent from "../../../../../components/DatosDeContactoComponent";
 import useAuth from "../../../../../hooks/useAuth";
+import Comprobante from "./pagoventa.jpg"
 
 const PagoVenta = ({ history }) => {
   useAuth(history);
+  
   const { DatosDelInmueble, DatosDeContacto } = propiedades[0];
   const [formState, setFormState] = useState({
     tipo: "",
@@ -33,14 +35,16 @@ const PagoVenta = ({ history }) => {
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
+      setValidated(false);
       event.preventDefault();
       event.stopPropagation();
-    }
-
+      setValidated(true);
+    }else{
     setValidated(true);
+    event.preventDefault();
+    event.stopPropagation();
+    console.log(validated)};
   };
-
-
 
   const hanldeChangeForm = (e) => {
     setFormState({
@@ -201,6 +205,8 @@ const PagoVenta = ({ history }) => {
                       variant="outline-success"
                       className="mt-3 ml-1"
                       onClick={handleClose}
+                      href={Comprobante}
+                      disabled={!validated}
                     >
                       Imprimir comprobante
                     </Button>

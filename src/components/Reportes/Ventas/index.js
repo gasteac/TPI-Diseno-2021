@@ -4,6 +4,7 @@ import Layout from "../../../layout/Layout";
 import Table from "../../Table";
 import { COLUMNS } from './columnas';
 import ventas from './ventasEsteSI.json';
+import Rventas from "./ReporteVentas.jpg"
 
 export default function Ventas({ history }) {
     const user = useAuth(history);
@@ -31,6 +32,7 @@ export default function Ventas({ history }) {
               style={{ }}
               type="button"
               variant="info"
+              href={Rventas}
             >
               Imprimir reporte
         </Button>

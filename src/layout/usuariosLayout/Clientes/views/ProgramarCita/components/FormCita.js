@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../../../../../../src/static/images/caCITA.jpg";
 import useAuth from "../../../../../../hooks/useAuth";
+import Comprobante from "./comprobante.jpg"
 
 
 // const user = useAuth(history)
@@ -72,7 +73,7 @@ const FormCita = (history) => {
   return (
 
     <> 
-    
+
       <Card
         style={{
           border: "none",
@@ -211,6 +212,7 @@ const FormCita = (history) => {
               <Form.Control.Feedback className="feedbackCustom"></Form.Control.Feedback>
             </Form.Group>
             <div style={{ display: "flex", justifyContent: "center" }}>
+              
               <Button type="submit" className="botoncita">
                 Programar
               </Button>
@@ -229,6 +231,9 @@ const FormCita = (history) => {
           Atte. Domus.
         </Modal.Body>
         <Modal.Footer>
+        <Button variant="info" href={Comprobante} className="btn btn-success">
+              Imprimir comprobante
+            </Button>
           <Link to={`/cliente/inicio`}>
             <Button type="primary" className="btn btn-success">
               Aceptar

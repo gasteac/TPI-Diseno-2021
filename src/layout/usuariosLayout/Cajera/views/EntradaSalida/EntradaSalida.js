@@ -13,8 +13,8 @@ import EnSaNeg from "./ensaneg.json";
 import { tablaCajera } from "./tabla-entsal";
 import Table from "../../../../../components/Table";
 import useAuth from "../../../../../hooks/useAuth";
-// import globalContext from "../../../../../context/globalContext";
 import { useState } from "react";
+import Rentsal from "./ReporteES.jpg"
 
 
 
@@ -190,7 +190,7 @@ export default function EntradaSalida({ history }) {
           </Col>
         </Row>
         {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info">
+          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal}>
             Imprimir reporte
           </Button>
         ) : null}
@@ -300,11 +300,13 @@ export default function EntradaSalida({ history }) {
             <Table columnas={tablaCajera} datos={EnSaNeg} rows={7} />
           </Col>
         </Row>
+      
         {user.includes("gerentegeneral") ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info">
+          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rentsal}>
             Imprimir reporte
           </Button>
         ) : null}
+       
       </Container>
     </Layout>
   );

@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import Table from "../../../../../components/Table";
 import { useContext, useState } from "react";
 import clientesContext from "../../../../../context/contextClientes/clientesContext";
+import Rclientes from "./ReporteClientes.jpg"
 
 export default function ListaClientes({ history }) {
   const user = useAuth(history);
@@ -92,11 +93,13 @@ export default function ListaClientes({ history }) {
             />
           </Col>
         </Row>
+        <Row className="justify-content-center mb-5">
         {userBolean ? (
-          <Button style={{ marginTop: "20px" }} type="button" variant="info">
+          <Button style={{ marginTop: "20px" }} type="button" variant="info" href={Rclientes}>
             Imprimir reporte
           </Button>
         ) : null}
+        </Row>
       </Container>
       <Modal show={showEliminar} onHide={handleCloseEliminar} backdrop="static">
         <Modal.Header style={{ background: "#e10016", color: "#FAFAFA" }}>

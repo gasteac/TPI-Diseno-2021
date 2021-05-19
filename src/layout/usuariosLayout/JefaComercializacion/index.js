@@ -84,7 +84,7 @@ export default function JefaComercializacion({ history }) {
             user={user}
             reportes={true}
             seccion={"Alquileres"}
-            link={"link-5"}
+            link={"link-1"}
             style={{ backgroundColor: "#00000080" }}
           />
           <ButtonCard

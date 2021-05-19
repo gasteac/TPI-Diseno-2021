@@ -6,7 +6,7 @@ const { Lupa } = imagenes;
 
 const Buscador = () => {
   return (
-    <Jumbotron style={{background: "rgba(255,255,255,.7)"}}>
+    <Jumbotron style={{background: "rgba(255,255,255,.7)", borderRadius:'40px'}}>
       <h1 style={{ color:'#2B3330', marginBottom:'28px'}}>Encuentra la propiedad perfecta en Domus</h1>
       <InputGroup className="mb-3">
         <InputGroup.Prepend>

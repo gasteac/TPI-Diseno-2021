@@ -9,8 +9,8 @@ export default function AgendaSecretaria({ history }) {
     <div class="container-xl">
       <p className="mt-3">{hoy}</p>
 
-      <table class="table-bordered w-100 h-100">
-        <thead>
+      <table class="table-bordered w-100 h-80"  style={{background:'#EEEEEE', border:'black'}}>
+        <thead >
           <tr>
             <th>Lunes</th>
             <th>Martes</th>
