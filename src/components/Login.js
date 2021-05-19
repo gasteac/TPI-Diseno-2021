@@ -65,6 +65,7 @@ const Login = ({ history }) => {
   useEffect(() => {
     setActiveNavbarLink('link-0')
     logOut()
+    // eslint-disable-next-line
   }, [])
 
   document.querySelector('body').style.background = `url(${Fondo})`

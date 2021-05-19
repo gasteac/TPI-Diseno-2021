@@ -69,7 +69,7 @@ const FormCita = (history) => {
   document.querySelector("body").style.background = `url(${img})`;
   document.querySelector("body").style.backgroundSize = `cover`;
 
-  const user = useAuth(history);
+  useAuth(history);
   return (
 
     <> 

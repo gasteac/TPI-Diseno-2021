@@ -14,6 +14,7 @@ const DatosDelPropietario = ({ DatosDeContacto }) => {
     if(DatosDeContacto) {
         setStateForm(DatosDeContacto)
     }
+    // eslint-disable-next-line
   }, [])
   const { nroCliente, tipoCliente, nombre, telefono, email, direccion } = formState;
   const [nombre2, apellido] = nombre.split(" ");

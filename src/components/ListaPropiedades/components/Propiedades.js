@@ -47,6 +47,7 @@ export default function Propiedades({
     if (propiedadesFiltradas) {
       setPropiedadesMostradas(propiedadesFiltradas);
     }
+    // eslint-disable-next-line
   }, [propiedadesFiltradas]);
 
   const [show, setShow] = useState(false);

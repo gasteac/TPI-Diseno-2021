@@ -1,5 +1,6 @@
 import { ELIMINAR_CLIENTE, CLIENTES_SELECCIONADOS } from "../types";
 
+// eslint-disable-next-line
 export default (state, action) => {
   switch (action.type) {
     case ELIMINAR_CLIENTE:

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Col, Form, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Form } from "react-bootstrap";
 
 const DatosDelCliente = () =>{
 

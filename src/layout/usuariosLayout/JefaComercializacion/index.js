@@ -1,6 +1,5 @@
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import ButtonCard from "../../../components/ButtonCard";
-import Notificaciones from "../../../components/Notificaciones";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import img from "../../../../src/static/images/casita.jpg";

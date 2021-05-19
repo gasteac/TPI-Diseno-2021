@@ -89,6 +89,7 @@ export default function Table({
   useEffect(() => {
     setCitasSeleccionadas(selectedFlatRows)
     setClientesSeleccionados(selectedFlatRows);
+    // eslint-disable-next-line
   }, [selectedFlatRows]);
 
   // eslint-disable-next-line

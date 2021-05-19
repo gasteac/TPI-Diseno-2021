@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
 import img from "../../../../src/static/images/casita.jpg";

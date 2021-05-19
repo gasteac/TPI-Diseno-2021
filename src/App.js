@@ -314,7 +314,7 @@ const App = () => {
                 />
                 <Route exact path="/gerentegeneral/ventas" component={Ventas} />
 
-                {/* <Redirect to="/"/>  */}
+                <Redirect to="/"/> 
               </Switch>
             </Router>
           </CitasState>

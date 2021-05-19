@@ -16,7 +16,7 @@ import BackButton from "../../../../../components/BackButton";
 
 export default function ListadoDeUsuarios({ history }) {
     
-  const user = useAuth(history);
+  useAuth(history);
 
   const ClientesContext = useContext(clientesContext);
   const { clientes, setClientesSeleccionados, eliminarCliente } =
