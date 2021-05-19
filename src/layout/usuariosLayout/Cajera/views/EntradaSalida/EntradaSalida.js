@@ -302,7 +302,7 @@ export default function EntradaSalida({ history }) {
               type="submit"
               style={{ marginTop: "60px" }}
             >
-              Agregar entrada
+              Agregar salida
             </Button>
           </div>
         </Container>
