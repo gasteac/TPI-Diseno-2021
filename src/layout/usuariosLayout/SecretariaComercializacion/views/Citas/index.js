@@ -1,13 +1,25 @@
 import Layout from "../../../../Layout";
 import Table from "../../../../../components/Table/";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Modal } from "react-bootstrap";
+import BackButton from "../../../../../components/BackButton";
 import { COLUMNS1, COLUMNS2 } from "./assets/columns.js";
 import columns1Data from "./assets/columns1-data.json";
 import useAuth from "../../../../../hooks/useAuth";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import citasContext from "../../../../../context/citasContext/citasContext";
 
+
 export default function Citas({ history }) {
+
+  const [showEliminar, setShowEliminar] = useState(false);
+  const handleCloseEliminar = () => setShowEliminar(false);
+  
+  const handleShowEliminar = () =>{
+    if (citasSeleccionadas.length !== 0) {
+      setShowEliminar(true);
+    }
+  } 
+
   const user = useAuth(history);
 
   const CitasContext = useContext(citasContext);
@@ -19,6 +31,8 @@ export default function Citas({ history }) {
       history.push("/secretariacomercializacion/citas/asignaragente");
     }
   };
+
+  
   const handleNuevaCita = () => {
     history.push('/secretariacomercializacion/citas/nuevacita')
   }
@@ -56,12 +70,12 @@ export default function Citas({ history }) {
             </Button>
           </Col>
           <Col xs={2}>
-            <Button variant="dark" type="button">
+            <Button variant="dark" type="button" onClick={handleNuevaCita}>
               Editar Citas
             </Button>
           </Col>
           <Col xs={8} className="d-flex justify-content-end">
-            <Button variant="danger" type="button">
+            <Button variant="danger" type="button" onClick={handleShowEliminar}>
               Cancelar Citas
             </Button>
           </Col>
@@ -75,6 +89,23 @@ export default function Citas({ history }) {
           </Col>
         </Row>
       </Container>
+
+      <Modal show={showEliminar} onHide={handleCloseEliminar} backdrop="static">
+        <Modal.Header style={{ background: "#e10016", color: "#FAFAFA" }}>
+          Advertencia
+        </Modal.Header>
+        <Modal.Body>
+          ¿Esta seguro de que quieres calcelar la cita?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline-danger" onClick={handleCloseEliminar}>
+            No cancelar
+          </Button>
+          <Button variant="danger" onClick={handleCloseEliminar}>
+            Cancelar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Layout>
   );
 }

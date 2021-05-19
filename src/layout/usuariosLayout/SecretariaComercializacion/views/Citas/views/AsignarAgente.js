@@ -50,9 +50,11 @@ const AsignarAgente = ({ history }) => {
   };
 
   const { hora, fecha, agente } = formSate;
+ 
   const user = useAuth(history);
+ 
   const {
-    values: { first_name, last_name },
+    values: { first_name, last_name},
   } = cliente;
 
   const handleChange = (e) => {
