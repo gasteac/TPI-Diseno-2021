@@ -13,7 +13,7 @@ export default function CierreCaja({ history }) {
     <Layout usuario={user}>
       <Container fluid>
         <Row className="justify-content-center">
-          <h2 className="titulosSecciones mb-4">Transacciones realizadas</h2>
+          <h2 className="titulosSecciones mb-4">Cierre de Caja</h2>
         </Row>
         <Row className="justify-content-center">
           <Col xs={6} className="d-flex flex-column align-items-center">
