@@ -13,11 +13,9 @@ export default function Citas({ history }) {
   const [showEliminar, setShowEliminar] = useState(false);
   const handleCloseEliminar = () => setShowEliminar(false);
   
-  const handleShowEliminar = () =>{
-    if (citasSeleccionadas.length !== 0) {
-      setShowEliminar(true);
-    }
-  } 
+  const handleShowEliminar = () => setShowEliminar(true);
+    
+  
 
   const user = useAuth(history);
 
@@ -48,6 +46,9 @@ export default function Citas({ history }) {
             <Button variant="success" type="submit" onClick={handleNuevaCita}>
                 Agregar Cita
             </Button>
+            <Button variant="danger" type="button" className="ml-3" onClick={handleShowEliminar}>
+                Cancelar Citas
+            </Button>
           </Col>
         </Row>
         <Row className="justify-content-center">
@@ -59,7 +60,7 @@ export default function Citas({ history }) {
           <Col xs={12} className="d-flex justify-content-center">
             <h2 className="titulosSecciones">Solicitudes de citas</h2>
           </Col>
-          <Col className="d-flex align-items-center" xs={2}>
+          <Col className="d-flex align-items-start" xs={12}>
             <Button
               variant="primary"
               type="button"
@@ -67,17 +68,11 @@ export default function Citas({ history }) {
             >
               Asignar agentes
             </Button>
-          </Col>
-          <Col xs={2}>
-            <Button variant="dark" type="button">
+            <Button variant="dark" type="button" className="ml-3">
               Editar Citas
             </Button>
           </Col>
-          <Col xs={8} className="d-flex justify-content-end">
-            <Button variant="danger" type="button" onClick={handleShowEliminar}>
-              Cancelar Citas
-            </Button>
-          </Col>
+      
           <Col xs={12}>
             <Table
               columnas={COLUMNS2}
