@@ -22,15 +22,8 @@ const NavBar = ({ cliente }) => {
     ],
     marketing: ["Inicio", "Propiedades"],
     admin: [],
-    jefacomercializacion: [
-      "Inicio",
-      "Alquileres",
-      "Clientes",
-      "Propiedades",
-      "Propiedades",
-      "Agenda",
-      "Clientes",
-    ],
+    jefacomercializacion: ["Inicio", "Propiedades", "Agenda", "Clientes"],
+    reportesjefacomercializacion: ["Ventas", "Alquileres", "Propiedades"],
     jefaadministracion: ["Inicio", "Transacciones", "Clientes"],
     gerentegeneral: [
       "Inicio",
@@ -85,6 +78,20 @@ const NavBar = ({ cliente }) => {
                 </Nav.Link>
               </Nav.Item>
             ))}
+          {user === "jefacomercializacion" ? (
+            <NavDropdown title="Reportes" id="nav-dropdown" alignRight>
+              {items[`reportes${user}`].map((item, i) => (
+                <NavDropdown.Item
+                  key={i}
+                  as={Link}
+                  to={`/${user}/r${item}`}
+                  eventKey={`4.${i}`}
+                >
+                  {item}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          ) : null}
           <NavDropdown title="Mi Perfil" id="nav-dropdown" alignRight>
             <NavDropdown.Item eventKey="4.1">Mi perfil</NavDropdown.Item>
             <NavDropdown.Divider />
