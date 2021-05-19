@@ -53,7 +53,7 @@ const Propiedad = ({ history }) => {
                   <Image
                     className="d-block w-100"
                     src={imagen}
-                    style={{ marginBottom: "20px" }}
+                    style={{ marginBottom: "20px", borderRadius:'30px'  }}
                     alt="First slide"
                   />
                   <Carousel.Caption>
@@ -66,8 +66,9 @@ const Propiedad = ({ history }) => {
                   <Image
                     className="d-block w-100"
                     src={imagen2}
-                    style={{ marginBottom: "20px" }}
+                    style={{ marginBottom: "20px", borderRadius:'30px' }}
                     alt="Second slide"
+                    
                   />
                   <Carousel.Caption>
                     <h3>
@@ -79,7 +80,7 @@ const Propiedad = ({ history }) => {
                   <Image
                     className="d-block w-100"
                     src={imagen3}
-                    style={{ marginBottom: "20px" }}
+                    style={{ marginBottom: "20px", borderRadius:'30px'  }}
                     alt="Third slide"
                   />
                   <Carousel.Caption>
@@ -90,7 +91,7 @@ const Propiedad = ({ history }) => {
                 </Carousel.Item>
               </Carousel>
             </Row>
-            <Row>
+            <Row style={{display:'flex', justifyContent:'center'}}>
               <Card className="m-0 p-0">
                 <Card.Header as="h4">Datos de Contacto</Card.Header>
                 <Card.Body>
@@ -118,7 +119,7 @@ const Propiedad = ({ history }) => {
                   <Button
                     style={{ marginTop: "20px" }}
                     type="button"
-                    variant="outline-secondary"
+                    variant="info"
                     onClick={handleClickEditar}
                   >
                     Editar Propiedad
@@ -127,7 +128,7 @@ const Propiedad = ({ history }) => {
                   <Button
                     style={{ marginTop: "20px" }}
                     type="button"
-                    variant="outline-secondary"
+                    variant="info"
                     onClick={handleClickProgramarCita}
                   >
                     Programar cita
@@ -136,7 +137,7 @@ const Propiedad = ({ history }) => {
                   <Button
                     style={{ marginTop: "20px" }}
                     type="button"
-                    variant="outline-secondary"
+                    variant="info"
                     onClick={handleClickEditarImagenes}
                   >
                     Editar Imágenes
@@ -145,7 +146,7 @@ const Propiedad = ({ history }) => {
                   <Button
                     style={{ marginTop: "20px" }}
                     type="button"
-                    variant="secondary"
+                    variant="info"
                     onClick={handleClickSiguiente}
                   >
                     Siguiente

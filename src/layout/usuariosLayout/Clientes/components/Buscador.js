@@ -14,7 +14,7 @@ const Buscador = () => {
         </InputGroup.Prepend>
         <FormControl
           style={{borderRadius:'10px'}}
-          placeholder="Username"
+          placeholder="Ingrese propiedad"
           aria-label="Username"
           aria-describedby="basic-addon1"
         />
