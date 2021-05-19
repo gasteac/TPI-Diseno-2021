@@ -26,7 +26,7 @@ document.querySelector('body').style.backgroundSize = `cover`
               <ButtonCardCaj 
               user={user} 
               seccion="EntradaSalida" 
-              link={"link-1"} 
+              link={"link-1"}
               style={{
                 background:"#50628C95",
                 marginTop:'10px',
