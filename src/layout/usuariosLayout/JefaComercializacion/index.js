@@ -40,7 +40,7 @@ export default function JefaComercializacion({ history }) {
                 fontSize: "50px",
               }}
             >
-              Bienvenid@, Gertrudis.
+              Bienvenid@, Francisca.
             </h1>
           </div>
           <h1
