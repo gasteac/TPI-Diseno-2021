@@ -60,12 +60,12 @@ export default function JefaComercializacion({ history }) {
             
           <Row style={{display:'flex', justifyContent:'center'}}>
             <Col style={{display:'flex', justifyContent:'center'}}>
-          <h2 style={{ fontWeight: "900", fontSize: "40px", color: "black" }}>
+          <h2 style={{ fontWeight: "900", fontSize: "40px", color: "black", textShadow:'2px 2px 25px white'   }}>
             Reportes
           </h2>
           </Col>
           <Col style={{display:'flex', justifyContent:'center'}}>
-          <h2 style={{ fontWeight: "900", fontSize: "40px", color: "white" }}>
+          <h2 style={{ fontWeight: "900", fontSize: "40px", color: "white", textShadow:'2px 2px 25px black'   }}>
             Navegación
           </h2>
           </Col>
@@ -106,24 +106,3 @@ export default function JefaComercializacion({ history }) {
   );
 }
 
-// <Col xs={5} >
-// <Notificaciones nombreDeUsuario="Gertrudis" />
-// </Col>
-
-// <Col className="d-flex align-items-center">
-// <Row>
-//   <ButtonCard user={user} seccion={"Agenda"} link={"link-1"} />
-
-//   <ButtonCard user={user} seccion={"Propiedades"} link={"link-2"} />
-
-//   <ButtonCard user={user} seccion={"Clientes"} link={"link-3"} />
-// </Row>
-// {/* reportes */}
-// <Row>
-//   <ButtonCard user={user} reportes={true} seccion={"Ventas"} link={"link-4"}/>
-
-//   <ButtonCard user={user} reportes={true} seccion={"Alquileres"} link={"link-5"}/>
-
-//   <ButtonCard user={user} reportes={true} seccion={"Propiedades"} link={"link-7"}/>
-// </Row>
-// </Col>

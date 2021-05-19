@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import Layout from "../../Layout";
-import ButtonCardCaj from "./ButtonCardCaj";
 import img from "../../../../src/static/images/casita.jpg";
+import ButtonCard from "../../../components/ButtonCard";
 
 
 
@@ -14,81 +14,85 @@ document.querySelector('body').style.backgroundSize = `cover`
   return (
     <Layout cliente={true}> 
       
-      <Container style={{alignItems:'center'}}>
-        <Card style={{ marginTop:'20px', border:'none', background:'#8E97C860', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px' }}>
-        <Card.Header as='h1' style={{background:'#50628C', border:'none', color:'white', borderTopLeftRadius:'30px', borderTopRightRadius:'30px', textShadow:'2px 2px 10px black'}}> 
-          Bienvenid@, Jett.
-          <h5 style={{marginTop:'2px'}}>Que hacemos hoy? :)</h5>
-        </Card.Header>
-        <Card.Body  style={{background:'#8E97C860', borderBottomLeftRadius:'30px', borderBottomRightRadius:'30px', border:'none'}}>
-          <Row className='d-flex, justify-content-space-around'>
-            <Col >
-              <ButtonCardCaj 
-              user={user} 
-              seccion="EntradaSalida" 
-              link={"link-1"}
+      <Container fluid style={{ marginTop: "40px", justifyContent: "center" }}>
+        <div
+          className="card ml-3 "
+          style={{
+            minWidth: "90px",
+            backgroundColor: "transparent",
+            border: "none",
+            borderRadius: "50px",
+            marginBottom:'50px'
+          }}
+        >
+          <div
+            className="card-header "
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              color: "#FAFAFA",
+              borderRadius: "50px",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
+            <h1
               style={{
-                background:"#50628C95",
-                marginTop:'10px',
-                minWidth: "200px",
-                minHeight: "190px",
-                }}
-                />
-            </Col>
-            <Col>
-              <ButtonCardCaj user={user} seccion="Transacciones" link={"link-2"} 
+                textShadow: "2px 2px 10px black",
+                fontWeight: "900",
+                fontSize: "50px",
+              }}
+            >
+              Bienvenid@, Gastón.
+            </h1>
+          </div>
+          <h1
               style={{
-                marginTop:'10px',
-                minWidth: "200px",
-                minHeight: "190px",
-                }}
-              />
-            </Col>
-            <Col>
-              <ButtonCardCaj
-                user={user}
-                seccion="CierreDeCaja"
-                link={"link-5"}
-                style={{
-                  marginTop:'10px',
-                  minWidth: "200px",
-                  minHeight: "190px",
-                  }}
-              />
-            </Col>
-            <Col>
-              <Row>
-                <ButtonCardCaj
+                textAlign:'center',
+                textShadow: "2px 2px 10px black",
+                fontWeight: "900",
+                fontSize: "25px",
+                color:'white'
+              }}
+            >
+              No tienes notificaciones.
+            </h1>
+        </div>
+
+
+            
+          <Row style={{display:'flex', justifyContent:'center'}}>
+            <Col style={{display:'flex', justifyContent:'center'}}>
+          <h2 style={{ fontWeight: "900", fontSize: "40px", color: "white", textShadow:'2px 2px 25px black'  }}>
+            Navegación
+          </h2>
+          </Col>
+          <Col style={{display:'flex', justifyContent:'center'}}>
+          <h2 style={{ fontWeight: "900", fontSize: "40px", color: "black", textShadow:'2px 2px 25px white' }}>
+            Alquileres / Ventas
+          </h2>
+          </Col>
+          </Row>
+       
+        <Row className="d-flex justify-content-center align-items-center mt-2">
+        <Col style={{display:'flex', justifyContent:'center'}}>
+          <ButtonCard user={user} seccion="EntradaSalida" link={"link-1"}/>
+          <ButtonCard user={user} seccion="Transacciones" link={"link-2"} />
+          <ButtonCard user={user} seccion="CierreDeCaja" link={"link-5"}/>
+          </Col>
+          <Col style={{display:'flex', justifyContent:'center'}}>
+          <ButtonCard
                   user={user}
                   seccion="PagoAlquiler"
                   link={"link-3"}
-                  style={{
-                    minWidth: "185px",
-                    minHeight: "76px",
-                    flexDirection: "row",
-                  }}
-                />
-              </Row>
-              <Row>
-                <ButtonCardCaj
+                  style={{ backgroundColor: "#00000080" }}/>
+          <ButtonCard
                   user={user}
                   seccion="PagoVenta"
                   link={"link-4"}
-                  style={{
-                    minWidth: "185px",
-                    minHeight: "76px",
-                    flexDirection: "row",
-                  }}
-                />
-              </Row>
-            </Col>
-          </Row>
-          <Row>
-            
-           
-          </Row>
-          </Card.Body>
-          </Card>
+                  style={{ backgroundColor: "#00000080" }}/>
+          </Col>
+        </Row>
       </Container>
 
     </Layout>

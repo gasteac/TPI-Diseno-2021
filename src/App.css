@@ -117,7 +117,7 @@ a:hover,
   z-index: 100;
 }
 .nav-pills .nav-link.active {
-  background: #2b3860 !important;
+  background: #2b386099 !important;
 }
 .nav-link {
   color: white !important;
